@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Answers", -1)
 $Author: Swash
 $Created: 11/17/14 at 14:28:09
-$Modified: 01/10/20 at 13:05:24
+$Modified: 01/16/20 at 16:56:48
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -22,11 +22,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 30037.011719, 36624.441406, -192380.265625
++Viewer pos: -20223.312500, -139.947525, 5996.718262
 +Viewer orient:
-	0.939255, -0.000000, 0.343220,
-	-0.091422, 0.963872, 0.250186,
-	-0.330820, -0.266366, 0.905322
+	-0.321626, 0.000000, -0.946867,
+	-0.007074, 0.999972, 0.002403,
+	0.946840, 0.007471, -0.321617
 
 $Starting wing names: ( "Alpha" "Beta" "Mu" )
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Epsilon" "Tau" )
@@ -50,19 +50,24 @@ $Variables:
 #Command Briefing
 
 $Stage Text:
- XSTR("One of Armand Isard's double agents has identified the planetary base of a Rebel cell near the Hapes Cluster, and we are moving to destroy it.  The tracking information we gathered last month was vital in confirming the base's location.  Now is the time to repay our enemies for the lives lost at Bilbringi.", -1)
+ XSTR("One of Armand Isard's double agents has identified the planetary base of a Rebel cell near the Hapes Cluster. 
+The tracking information we gathered last month proved to be useful in confirming the location of the base.  
+We are moving in to destroy it. The rebels will now pay for the lives lost at Bilbringi.", -1)
 $end_multi_text
 $Ani Filename: CB_imp.eff
 +Wave Filename: I1_M4_cb1.ogg
 
 $Stage Text:
- XSTR("The base is hidden in plain sight on one of our worlds.  The Rebels appear to have been supplying their fleet through a local branch of the Ostro shipping conglomerate, one of Xizor Transport Systems' few remaining rivals in this sector.  Our failure to root out this operation until now is worrying, and there will be an investigation of our garrison on the planet's largest moon once the Rebels have been dealt with.", -1)
+ XSTR("Surprisingly, the rebel base is hidden in plain sight on one of our worlds.  
+The Rebels appear to have been supplying their fleet through a local branch of the Ostro shipping conglomerate, one of Xizor Transport Systems' few remaining rivals in this sector.  
+Our failure to root out this operation until now is worrying. 
+There will certainly be an investigation of our garrison on the planet's largest moon once the Rebels have been dealt with.", -1)
 $end_multi_text
 $Ani Filename: CB_imp.eff
 +Wave Filename: I1_M4_cb2.ogg
 
 $Stage Text:
- XSTR("We arrive in three hours$semicolon all personnel, report to your stations to be briefed on your assignments.", -1)
+ XSTR("We arrive in three hours. All personnel report to your stations to be briefed on your assignments.", -1)
 $end_multi_text
 $Ani Filename: CB_imp.eff
 +Wave Filename: I1_M4_cb3.ogg
@@ -581,7 +586,11 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("I have no interest in hearing excuses from a fighter pilot--when a fleet officer gives an order, he expects it to be followed to the letter.  Did you think that a capital ship would put its mission on hold while you chased after some Outer Rim scow drivers?  Captain Norin was absolutely right to leave you behind, and I will be carefully considering his suggestion that I find a new wing commander.  You are confined to quarters pending a review of your actions.", -1)
+    XSTR("I have no interest in hearing excuses from a fighter pilot.
+When a fleet officer gives an order, it is to be followed to the letter.
+Did you think that a capital ship would put its mission on hold while you chased after some Outer Rim scow drivers? 
+Captain Norin was absolutely right to leave you behind.I will certainly be considering his suggestion that I find a new wing commander.
+You are confined to your quarters pending a review of your actions.", -1)
 $end_multi_text
 $Voice: I1_M4_db0.ogg
 $Recommendation text:
@@ -708,11 +717,15 @@ $Formula: ( is-event-true-delay
    0 
 )
 $Multi text
-    XSTR("You have been found guilty of the crime of treason against the Emperor, and are to be executed immediately.  This betrayal is particularly disappointing coming from such a gifted and well bred individual.  You have not only failed yourself, your fleet, and your Emperor, but you family too will lose everything.  Be thankful that the circumstances of our deployment have spared you from Lord Vader's tender mercies.  You have one hour to prepare yourself.", -1)
+    XSTR("You have been found guilty of treason against the Empire and are to be executed.  
+This betrayal is particularly disappointing coming from an individual such as yourself.
+Not only have you failed the Emperor, but you have also failed your family, as they too will now lose all standing they have in Imperial society.
+Be thankful that the circumstances of our deployment have spared you from Vaders hand.
+You have one hour to prepare yourself.", -1)
 $end_multi_text
 $Voice: I1_Traitor.ogg
 $Recommendation text:
-    XSTR("Friendly ships are not valid targets.", -1)
+    XSTR("Do not fire upon friendly craft.", -1)
 $end_multi_text
 
 #Players		;! 1 total
@@ -1481,7 +1494,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 18
-+Special Shield Points: 500
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -1501,7 +1513,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1532,7 +1543,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1563,7 +1573,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1594,7 +1603,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1786,7 +1794,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1815,7 +1822,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1843,7 +1849,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1871,7 +1876,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1899,7 +1903,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1927,7 +1930,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2598,7 +2600,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2626,7 +2627,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2654,7 +2654,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2682,7 +2681,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2740,8 +2738,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 40
-+Special Hitpoints: 1000
-+Special Shield Points: 500
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -3283,7 +3279,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -3314,7 +3309,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -3369,15 +3363,17 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
++Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "no-shields" )
 +Flags2: ( "no_collide" )
 +Respawn priority: 0
++Group: 0
 +Score: 10
 
 #Wings		;! 12 total
@@ -5518,13 +5514,14 @@ $List: (		;! 1 points in list
 
 $Name: Gr - Mission Start
 $Team: -1
-$MessageNew:  XSTR("We have detected several launches from the target spaceport--all squadrons have been released to your command.  The bombardment will begin in thirty seconds.", -1)
+$MessageNew:  XSTR("We have detected several launches from the target spaceport. All squadrons have been released to your command. The bombardment will begin in thirty seconds.", -1)
 $end_multi_text
 +Wave Name: l1_M4_Grilner_1.ogg
 
 $Name: Ors - Strategy
 $Team: -1
-$MessageNew:  XSTR("Alpha, the Rebels will break for the corvette just before coming into range.  I need you to concentrate your efforts on stopping their torpedo attack$semicolon we cannot afford to lose a ship here.", -1)
+$MessageNew:  XSTR("Alpha, the rebels will break for the corvette just before coming into range. I need you to concentrate your efforts on stopping their torpedo attack.
+We cannot afford to lose a ship here.", -1)
 $end_multi_text
 +Wave Name: I1_M4_Ors_1.ogg
 
@@ -5536,13 +5533,13 @@ $end_multi_text
 
 $Name: Nor - Treason
 $Team: -1
-$MessageNew:  XSTR("This is Immolator$semicolon long-range sensors have detected an evacuation in progress at the moon garrison.  It seems our comrades there have as much to fear from us as the Rebels do.", -1)
+$MessageNew:  XSTR("This is Immolator. Long-range sensors have detected an evacuation in progress at the moon garrison.  It seems our comrades there have as much to fear from us as the Rebels do.", -1)
 $end_multi_text
 +Wave Name: I1_M4_Immolator_1.ogg
 
 $Name: Ors - Rendezvous
 $Team: -1
-$MessageNew:  XSTR("Pathetic.  Where do they expect to run?  Alpha 1, eliminate these traitors--see to it personally, Commander.  Rendezvous with Immolator before she jumps out, and assist her in destroying all vessels at the garrison.  They will answer for their perfidy with blood.", -1)
+$MessageNew:  XSTR("Pathetic.  Where do they expect to run?  Alpha 1, eliminate these traitors then rendezvous with Immolator before she jumps out and assist her in destroying all vessels at the garrison.", -1)
 $end_multi_text
 +Wave Name: I1_M4_Ors_2.ogg
 
@@ -5560,13 +5557,13 @@ $end_multi_text
 
 $Name: Nor - Surrender Nao
 $Team: -1
-$MessageNew:  XSTR("This ship may be old, Ledos station, but that ploy was ancient when the Republic was founded.  You are outgunned five to one$semicolon surrender immediately.", -1)
+$MessageNew:  XSTR("This ship may be old, Ledos station, but that ploy was ancient when the Republic was founded.  You are outgunned five to one. Surrender immediately.", -1)
 $end_multi_text
 +Wave Name: I1_M4_Immolator_2.ogg
 
 $Name: Nor - Kill Bombers
 $Team: -1
-$MessageNew:  XSTR("Very well.  Alpha. Take Iota in and sweep those bombers.  It's a standoff until their threat is eliminated, and we can't let them buy any more time.", -1)
+$MessageNew:  XSTR("Very well.  Alpha, take Iota in and sweep those bombers.  It's a standoff until their threat is eliminated, and we can't let them buy any more time.", -1)
 $end_multi_text
 +Wave Name: I1_M4_Immolator_3.ogg
 
@@ -5596,7 +5593,7 @@ $end_multi_text
 
 $Name: Customs Shuttle - Have Pity
 $Team: -1
-$MessageNew:  XSTR("Please, pilots, we have families aboard!", -1)
+$MessageNew:  XSTR("Please pilots, we have families aboard!", -1)
 $end_multi_text
 +Wave Name: I1_M4_Ledos_2.ogg
 
@@ -5608,7 +5605,7 @@ $end_multi_text
 
 $Name: Comp - RTB
 $Team: -1
-$MessageNew:  XSTR("Return to Fighterbay", -1)
+$MessageNew:  XSTR("Return to fighter bay.", -1)
 $end_multi_text
 
 $Name: Gr - Merrock Tan
@@ -5624,7 +5621,7 @@ $end_multi_text
 
 $Name: Ors - Traitor
 $Team: -1
-$MessageNew:  XSTR("Your family will pay the price for this treason, Wing Commander.  Fighters, destroy Alpha 1!", -1)
+$MessageNew:  XSTR("Your family will pay the price for this treason wing Commander. All fighters, destroy Alpha 1!", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_9.ogg
 

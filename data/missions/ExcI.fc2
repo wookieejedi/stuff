@@ -1,0 +1,128 @@
+$Name: 3. A New Enemy
+$Type: single
++Description:
+ XSTR("Following a deadly terror attack by Rebel insurgents, the fighter wing of the elite Star Destroyer Convictor is charged with delivering the Emperor's justice to those responsible.
+ 
+ Length: 5 Missions (Includes Advanced Training)
+ 
+ Difficulty: Expert", -1)
+$end_multi_text
+$Flags: 0
+
+
++Starting Ships: ( "TIE/ln Fighter"  "TIE/ln Fighter#light"  "TIE/ln Fighter#heavy"  "TIE/rc Fighter"  "TIE Advanced X1"  "TIE/sa Bomber" )
+
++Starting Weapons: ( "SFS L-s1"  "SFS L-s7.2"  "SFS L-s9.3"  "Arakyd ST2"  "Krupx MG5"  "Dymek HM-6"  "Krupx MG7-A"  "Dymek HM-8"  "Frei-Tek MAG-2"  "Merr-Sonn NG2"  "Intruder"  "ArmaTek VL-61/79"  "XX-23 Homing Beacon" )
+
+
+$Mission: ExcI_m01.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcI_m01.fs2" 
+         "RTB" 
+      )
+      ( next-mission "ExcI_m02.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcI_m02.fs2" ) )
+)
+
++Level: 0
++Position: 1
+
+$Mission: ExcI_m02.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcI_m02.fs2" 
+         "Mission complete" 
+      )
+      ( next-mission "ExcI_m03.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcI_m02.fs2" ) )
+)
+
++Level: 1
++Position: 1
+
+$Mission: ExcI_m03.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcI_m03.fs2" 
+         "Campaign progress" 
+      )
+      ( next-mission "ExcI_m04.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcI_m03.fs2" ) )
+)
+
++Level: 2
++Position: 1
+
+$Mission: ExcI_m04.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcI_m04.fs2" 
+         "Campaign Progress - Yes TA"  
+      )
+      ( next-mission "ExcI_m05_yesTIEadv.fs2" )
+   )
+   (
+      ( is-previous-event-true 
+         "ExcI_m04.fs2" 
+         "Campaign Progress - No TA" 
+      )
+      ( next-mission "ExcI_m05_noTIEadv.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcI_m04.fs2" ) )
+)
+
++Level: 3
++Position: 1
+
+$Mission: ExcI_m05_yesTIEadv.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcI_m05_yesTIEadv.fs2" 
+         "Campaign Progress" 
+      )
+      ( end-of-campaign )
+   )
+   ( ( true ) ( next-mission "ExcI_m05_yesTIEadv.fs2" ) )
+)
+
++Level: 4
++Position: 0
+
+$Mission: ExcI_m05_noTIEadv.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcI_m05_noTIEadv.fs2" 
+         "Campaign Progress" 
+      )
+      ( end-of-campaign )
+   )
+   ( ( true ) ( next-mission "ExcI_m05_noTIEadv.fs2" ) )
+)
+
++Level: 4
++Position: 2
+
+#End
+

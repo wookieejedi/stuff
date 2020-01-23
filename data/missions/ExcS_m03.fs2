@@ -1,0 +1,3033 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Limited Liability", -1)
+$Author: Swash
+$Created: 07/16/10 at 22:21:02
+$Modified: 01/10/20 at 13:12:36
+$Notes:
+$End Notes:
+
+$Mission Desc:
+ XSTR("", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 393230
++NebAwacs: 6000.000000
+
++Storm: s_standard
+
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 227167.531250, 56202.453125, 118314.476563
++Viewer orient:
+	0.097615, 0.000002, 0.995224,
+	-0.206871, 0.978158, 0.020289,
+	-0.973486, -0.207863, 0.095483
+
+$Starting wing names: ( "Traveller" "Green" "Gold" )
+$Squadron wing names: ( "Red" "Green" "Gold" "Tin" "Opener" )
+$Team-versus-team wing names: ( "Traveller" "Zeta" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: FOTG
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"Money"		"5"		"number"		"save-on-mission-progress"
+		1		"Persuasion"		"0"		"number"
+		2		"Pirates_or_Imps"		"Imps"		"string"		"save-on-mission-progress"
+		3		"Player_Hull"		"100"		"number"		"save-on-mission-progress"
+		4		"TS_Damage_Threshold"		"50"		"number"
+		5		"TS_Hull"		"100"		"number"		"save-on-mission-progress"
+)
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 2
+$start_stage
+$multi_text
+ XSTR("We are six hours from the Koordan system, mistress.  The Blue Skull pirate base is hidden deep within the atmosphere of the cloud moon of Koordan III.  In order to learn the base's exact location, we will have to make contact with Rohm N'jikko and convince him to allow us to land.  He will almost certainly want the weapons and fighter parts in our secondary cargo bay, but he will also be interested in capturing and murdering us, particularly after you sold him those bad converters on Tanaab.", -1)
+$end_multi_text
+$voice: S1_M3_b1.ogg
+$camera_pos: 155.687973, 120.688156, -67.050583
+$camera_orient:
+	0.160223, 0.000002, 0.987081,
+	-0.006405, 0.999979, 0.001038,
+	-0.987060, -0.006489, 0.160220
+$camera_time: 500
+$num_lines: 0
+$num_icons: 1
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Civilian
+$class: XQ1 Platform
+$pos: -5886.040039, 0.000044, 749.244812
+$label:  XSTR("Blue Skulls", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("It is very important to me that you not get us killed.  We have information that is valuable to him, but individuals in his business are not noted for their patience, and he could as easily destroy us as listen to us.  The way we approach this situation will be as important as the goods and information we carry.  You will have to give him enough to convince him to disclose his location, but not enough to make him feel that he can profit by our demise.  I recommend that only I speak directly to the pirates during the initial negotiations.  Your colorful exchanges over the years may have left him less likely to listen to you.", -1)
+$end_multi_text
+$voice: S1_M3_b2.ogg
+$camera_pos: -5454.086914, 83.808907, 843.531189
+$camera_orient:
+	0.160223, 0.000002, 0.987081,
+	-0.006405, 0.999979, 0.001038,
+	-0.987060, -0.006489, 0.160220
+$camera_time: 500
+$num_lines: 0
+$num_icons: 2
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Civilian
+$class: XQ1 Platform
+$pos: -24048.005859, 0.000041, 6939.970703
+$label:  XSTR("Blue Skulls", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: -62446.468750, 0.000058, -944.558777
+$label:  XSTR("Tayana Star", -1)
++id: 2
+$hlight: 0
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 5
+
+$Formula: ( is-event-true-delay 
+   "Failed to Persuade" 
+   0 
+)
+$Multi text
+    XSTR("I am sorry we did not have the opportunity to offload our merchandise, mistress, but it is just as well.  Even the Hutts do not deal with these pirate organizations, and we still have good contacts with the Alliance.  With luck, we will be able to get more money out of them.", -1)
+$end_multi_text
+$Voice: S1_M3_db1.ogg
+$Recommendation text:
+    XSTR("The pirates are interested in merchandise and in information regarding potential targets for their shipping raids, while making unrealistic proposals, threats, or offers will set your efforts back. It also wouldn't hurt to break the ice with a few choice words about the pirates' mothers to put everyone at ease.  Lowering the difficulty level will reduce the number of correct choices you have to make.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Pirates Defeated" 
+      0 
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Pirates Turn Against You" 
+         0 
+      )
+   )
+)
+$Multi text
+    XSTR("Truly inspired negotiating, mistress, though I must once again protest my being wired into Tayana Star's self-destruct mechanism.  The Cloakshape parts proved to be a prescient acquisition, and the money for the Koordan Run coordinates has more than paid for our Verpine friend's services.", -1)
+$end_multi_text
+$Voice: S1_M3_db2.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Pirates Defeated" 
+      0 
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Pirates Turn Against You" 
+         0 
+      )
+   )
+)
+$Multi text
+    XSTR("As you anticipated, a homing beacon was attached to the outer hull while we unloaded our cargo.  If I understand the logic behind your decision to leave it there, I must protest.  Prolonging our dealings with these pirates any longer than absolutely necessary is a terrible risk, both to ourselves physically and for our hopes of continuing to do business with the Rebel Alliance.", -1)
+$end_multi_text
+$Voice: S1_M3_db3.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( and 
+      ( is-event-true-delay 
+         "Pirates Defeated" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Pirates Turn Against You" 
+            0 
+         )
+      )
+   )
+   ( is-event-true-delay 
+      "Too Much Damage" 
+      0 
+   )
+)
+$Multi text
+    XSTR("Regrettably, we suffered extensive damage in the attack.  Factoring in the cost of repairs, we will likely come out on the losing end of this leg of our journey.  We will have to do better if we hope to successfully transplant our operations to Hutt space.", -1)
+$end_multi_text
+$Voice: S1_M3_db4.ogg
+$Recommendation text:
+    XSTR("The lighter enemy craft pose little threat to Tayana Star.  Concentrate your efforts on intercepting any torpedoes fired by the Cloakshapes of Hunter wing.", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay 
+   "Pirates Turn Against You" 
+   0 
+)
+$Multi text
+    XSTR("I'm sorry about the Star, Emora.  I know how much she meant to you.  The Commodore isn't happy about this, but we can still use your help.  We've been trying to get your people off Duro, but it's not gonna be easy.  Let me know if you change your mind about my offer--the Rebellion needs pilots like you, and it's not like you've got a lot of profitable avenues left to explore.  Take care.
+
+-Avon Du'Elo", -1)
+$end_multi_text
+$Voice: S1_M1_db5.ogg
+$Recommendation text:
+    XSTR("Do not attack the Wolf's Heart or the Blue Skull's Station.  The lighter enemy craft pose little threat to Tayana Star.  Concentrate your efforts on the Cloakshapes, as they are armed with torpedoes.  Remember that your ship carries secondary weapons as well.", -1)
+$end_multi_text
+
+#Callsigns:
+$Callsign: Vorin
+$Callsign: Gan
+$Callsign: Bodo
+
+#end
+
+
+#Players		;! 1 total
+
+$Starting Shipname: Traveller 1
+$Ship Choices: (
+)
+
++Weaponry Pool: (
+	"T&B KX-9"	0
+	"Krupx MG7-A"	5
+	"SFS L-s7.2"	0
+	"T&B IX4#imp"	1
+	"Krupx VL-4a"	10
+)
+
+#Objects		;! 14 total
+
+$Name: Traveller 1		;! Object #0
+$Class: N-1 Starfighter
+$Team: Friendly
+$Location: -25.532684, 15.299999, -63.963200
+$Orientation:
+	0.230598, 0.179695, 0.956314,
+	-0.604686, 0.796455, -0.003848,
+	-0.762352, -0.577381, 0.292320
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 20
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "primaries-locked" "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+$Texture Replace:
++old: n-1
++new: n-1_gray
+
+$Name: Tayana Star		;! Object #1
+$Class: Corellian Star Shuttle
+$Team: Friendly
+$Location: -48.582390, -43.521381, 11.488860
+$Orientation:
+	0.356860, 0.284366, 0.889827,
+	-0.682472, 0.729793, 0.040479,
+	-0.637878, -0.621725, 0.454504
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 66
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 20
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+$Texture Replace:
++old: starshuttle
++new: starshuttle_blue
+
+$Name: Unknown Source		;! Object #2
+$Class: XQ1 Platform
+$Team: Friendly
+$Location: -1774143.750000, 0.000020, 536766.687500
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Captain
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "hidden-from-sensors" "stealth" )
++Flags2: ( "cloaked" )
++Respawn priority: 0
++Group: 0
++Score: 0
+
+$Name: Blue Skull Manor		;! Object #3
+$Class: XQ1 Platform
+$Team: Civilian
+$Location: 19869.832031, 0.055294, 100659.820313
+$Orientation:
+	0.044123, -0.997482, -0.055569,
+	0.995021, 0.038902, 0.091776,
+	-0.089383, -0.059342, 0.994231
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 1000
+
+$Name: Wolf's Heart		;! Object #4
+$Class: Marauder-class corvette
+$Team: Civilian
+$Location: 24087.695313, 1624.828125, 98171.000000
+$Orientation:
+	-0.048815, 0.718536, -0.693777,
+	0.944419, 0.259293, 0.202097,
+	0.325105, -0.645349, -0.691255
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 200
+
+$Name: Tayana Star#2		;! Object #5
+$Class: Corellian Star Shuttle
+$Team: Civilian
+$Location: 26147.263672, 2120.772217, 95773.093750
+$Orientation:
+	0.185773, -0.941723, -0.280440,
+	0.734221, -0.056632, 0.676544,
+	-0.652998, -0.331588, 0.680912
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+$Texture Replace:
++old: starshuttle
++new: starshuttle_blue
+
+$Name: Slasher 1		;! Object #6
+$Class: TYE-wing
+$Team: Hostile
+$Location: 20526.673828, -0.002937, 101314.000000
+$Orientation:
+	-0.215009, 0.973485, -0.078097,
+	0.914996, 0.228753, 0.332349,
+	0.341401, 0.000000, -0.939918
+$AI Behavior: None
++AI Class: Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Slasher 2		;! Object #7
+$Class: TYE-wing
+$Team: Hostile
+$Location: 20445.300781, 170.768295, 101420.460938
+$Orientation:
+	-0.215009, 0.973485, -0.078096,
+	0.914995, 0.228753, 0.332349,
+	0.341401, 0.000000, -0.939918
+$AI Behavior: None
++AI Class: Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Decision 1		;! Object #8
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: -90414.078125, 0.000225, 290363.968750
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "stealth" "friendly-stealth-invisible" )
++Flags2: ( "no-builtin-messages" "cloaked" "weapons-locked" "no_collide" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Hunter 1		;! Object #9
+$Class: Cloakshape Fighter
+$Team: Hostile
+$Location: 19519.294922, -450.014130, 102031.789063
+$Orientation:
+	-0.215009, 0.973485, -0.078096,
+	0.914995, 0.228753, 0.332349,
+	0.341401, 0.000000, -0.939918
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "T&B IX4" )
++Secondary Banks: ( "Krupx VL-4a" )
++Sbank Ammo: ( 16 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Hunter 2		;! Object #10
+$Class: Cloakshape Fighter
+$Team: Hostile
+$Location: 20669.863281, -354.911926, 101164.054688
+$Orientation:
+	-0.215009, 0.973485, -0.078096,
+	0.914995, 0.228753, 0.332349,
+	0.341401, 0.000000, -0.939918
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "T&B IX4" )
++Secondary Banks: ( "Krupx VL-4a" )
++Sbank Ammo: ( 33 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Decision 2		;! Object #11
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: -57113.296875, 0.000229, 248565.406250
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "stealth" "friendly-stealth-invisible" )
++Flags2: ( "no-builtin-messages" "cloaked" "weapons-locked" "no_collide" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Decision 3		;! Object #12
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: -48658.304688, 0.000274, 237897.468750
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "stealth" "friendly-stealth-invisible" )
++Flags2: ( "no-builtin-messages" "cloaked" "weapons-locked" "no_collide" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Hyperspace Preload_Ship		;! Object #13
+$Class: Nav Buoy
+$Team: Friendly
+$Location: 33388.453125, -0.003906, 220884.343750
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "no_collide" )
++Respawn priority: 0
++Score: 10
+
+#Wings		;! 4 total
+
+$Name: Traveller
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Traveller 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 1 total
+	"Traveller 1"
+)
++Flags: ( )
+
+$Name: Slasher
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Slasher 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 1 "Hunter" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Slasher 1"
+	"Slasher 2"
+)
+$AI Goals: ( goals ( ai-guard-wing "Hunter" 50 ) )
++Flags: ( )
+
+$Name: Hunter
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Hunter 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Scene Change" 
+   1 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 2 total
+	"Hunter 1"
+	"Hunter 2"
+)
+$AI Goals: ( goals ( ai-chase "Tayana Star#2" 50 ) )
++Flags: ( )
+
+$Name: Decision
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Decision 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Decision 1"
+	"Decision 2"
+	"Decision 3"
+)
++Flags: ( )
+
+#Events		;! 71 total
+
+$Formula: ( when 
+   ( true ) 
+   ( never-warp "Traveller 1" ) 
+   ( lock-primary-weapon "Traveller 1" ) 
+   ( lock-secondary-weapon "Traveller 1" ) 
+   ( fade-in 3000 3 ) 
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Greetings" 
+      4000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Slag Yourself" 
+      21000 
+      "Tayana Star" 
+      "High" 
+      "9s - How to Proceed" 
+      9000 
+   )
+   ( script-eval 
+      "show_jumpoutpoint(false)" 
+   )
+   ( ship-stealthy 
+      "Blue Skull Manor" 
+      "Wolf's Heart" 
+      "Tayana Star#2" 
+   )
+   ( set-subsystem-strength 
+      "Tayana Star" 
+      "Hull" 
+      @TS_Hull[100] 
+   )
+   ( when 
+      ( skill-level-at-least "Very Easy" ) 
+      ( modify-variable 
+         @TS_Damage_Threshold[50] 
+         ( - ( hits-left "Tayana Star" ) 30 ) 
+      )
+   )
+   ( when 
+      ( skill-level-at-least "Easy" ) 
+      ( modify-variable 
+         @TS_Damage_Threshold[50] 
+         ( - ( hits-left "Tayana Star" ) 25 ) 
+      )
+   )
+   ( when 
+      ( skill-level-at-least "Medium" ) 
+      ( modify-variable 
+         @TS_Damage_Threshold[50] 
+         ( - ( hits-left "Tayana Star" ) 20 ) 
+      )
+   )
+   ( when 
+      ( skill-level-at-least "Hard" ) 
+      ( modify-variable 
+         @TS_Damage_Threshold[50] 
+         ( - ( hits-left "Tayana Star" ) 15 ) 
+      )
+   )
+   ( when 
+      ( skill-level-at-least "Insane" ) 
+      ( modify-variable 
+         @TS_Damage_Threshold[50] 
+         ( - ( hits-left "Tayana Star" ) 10 ) 
+      )
+   )
+   ( mission-set-nebula 0 ) 
+   ( set-subsystem-strength 
+      "Traveller 1" 
+      "Hull" 
+      @Player_Hull[100] 
+   )
+)
++Name: Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( repair-subsystem 
+      "Traveller 1" 
+      "Hull" 
+      20 
+   )
+   ( repair-subsystem 
+      "Tayana Star" 
+      "Hull" 
+      15 
+   )
+)
++Name: Repair Player Ships
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 45 ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+   ( training-msg 
+      "Options 1" 
+      "Options 1" 
+      0 
+      10 
+   )
+)
++Name: Decision 1 Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-disabled-delay 0 "Decision 1" ) 
+   ( do-nothing ) 
+)
++Name: Decision 1 Order
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Choose an Opening Tactic", -1)
++Objective key:  XSTR("Press $1$, $2$, $3$, or $4$", -1)
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( is-event-true-delay "Placate" 0 ) 
+         ( is-event-true-delay "Insult" 0 ) 
+         ( is-event-true-delay "Threaten" 0 ) 
+         ( is-event-true-delay "Leave" 0 ) 
+      )
+      ( is-event-true-delay 
+         "Decision 1 Trigger" 
+         0 
+      )
+   )
+   ( destroy-subsys-instantly 
+      "Decision 1" 
+      "<all engines>" 
+   )
+)
++Name: Decision 1 Instruction
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 1 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Insult" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Threaten" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Leave" 0 ) 
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Placate" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Placate Response" 
+      16000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( - @Persuasion[0] 1 ) 
+   )
+)
++Name: Placate
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 1 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Placate" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Threaten" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Leave" 0 ) 
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Insult" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Insult Response" 
+      17000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( + @Persuasion[0] 1 ) 
+   )
+)
++Name: Insult
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 1 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Insult" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Placate" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Leave" 0 ) 
+      )
+      ( key-pressed "3" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Threaten" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Threat Response" 
+      13000 
+   )
+)
++Name: Threaten
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 1 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Insult" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Threaten" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Placate" 0 ) 
+      )
+      ( key-pressed "4" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Leave
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( is-event-true-delay "Leave" 9 ) 
+         ( is-event-true-delay "Leave 2" 9 ) 
+         ( is-event-true-delay "Leave 3" 9 ) 
+         ( is-event-true-delay 
+            "Sweet-Pushy LEAVE" 
+            9 
+         )
+         ( is-event-true-delay 
+            "Long-Pushy LEAVE" 
+            9 
+         )
+         ( is-event-true-delay 
+            "Long-Sweet LEAVE" 
+            9 
+         )
+         ( is-event-true-delay "Long LEAVE" 9 ) 
+         ( is-event-true-delay "Sweet LEAVE" 9 ) 
+         ( is-event-true-delay "Pushy LEAVE" 9 ) 
+         ( is-event-true-delay 
+            "All possibilities explored" 
+            9 
+         )
+      )
+      ( or 
+         ( and 
+            ( not 
+               ( skill-level-at-least "Medium" ) 
+            )
+            ( <= @Persuasion[0] 0 ) 
+         )
+         ( and 
+            ( and 
+               ( not 
+                  ( skill-level-at-least "Insane" ) 
+               )
+               ( skill-level-at-least "Medium" ) 
+            )
+            ( <= @Persuasion[0] 1 ) 
+         )
+         ( and 
+            ( skill-level-at-least "Insane" ) 
+            ( <= @Persuasion[0] 2 ) 
+         )
+      )
+   )
+   ( send-message-list 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Letting you go" 
+      0 
+   )
+)
++Name: Failed to Persuade
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( script-eval 
+      "show_jumpoutpoint(true)" 
+   )
+   ( script-eval 
+      "blink_jumpoutpoint(true)" 
+   )
+   ( allow-warp "Traveller 1" ) 
+   ( add-goal 
+      "Tayana Star" 
+      ( ai-warp-out 89 ) 
+   )
+)
++Name: Show You The Door
++Repeat Count: 1
++Interval: 1
++Chained: 6
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Traveller 1" ) 
+   ( do-nothing ) 
+)
++Name: Hyper Out
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Hyperspace", -1)
++Objective key:  XSTR("Face Exit and press $Enter$", -1)
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay "Placate" 21 ) 
+      ( is-event-true-delay "Insult" 27 ) 
+      ( is-event-true-delay "Threaten" 29 ) 
+   )
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+   ( training-msg 
+      "Options 2" 
+      "Options 2" 
+      0 
+      10 
+   )
+)
++Name: Decision 2 Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-disabled-delay 0 "Decision 2" ) 
+   ( do-nothing ) 
+)
++Name: Decision 2 Order
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Make an Offer", -1)
++Objective key:  XSTR("Press $1$, $2$, $3$, or $4$", -1)
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( is-event-true-delay 
+            "Offer Supplies" 
+            0 
+         )
+         ( is-event-true-delay 
+            "Offer Koordan Run" 
+            0 
+         )
+         ( is-event-true-delay 
+            "Offer Rebel Rendezvous" 
+            0 
+         )
+         ( is-event-true-delay "Leave 2" 0 ) 
+      )
+      ( is-event-true-delay 
+         "Decision 2 Trigger" 
+         0 
+      )
+   )
+   ( destroy-subsys-instantly 
+      "Decision 2" 
+      "<all engines>" 
+   )
+)
++Name: Decision 2 Instruction
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 2 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Koordan Run" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Rebel Rendezvous" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay "Leave 2" 0 ) 
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Offer Supplies" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Supplies Response" 
+      14000 
+   )
+)
++Name: Offer Supplies
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 2 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Supplies" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Rebel Rendezvous" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay "Leave 2" 0 ) 
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Offer Koordan Run" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Koordan Run Response" 
+      7000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( + @Persuasion[0] 1 ) 
+   )
+)
++Name: Offer Koordan Run
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 2 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Koordan Run" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Supplies" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay "Leave 2" 0 ) 
+      )
+      ( key-pressed "3" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Offer Rebel Coordinates" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Rebel Response" 
+      12000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( - @Persuasion[0] 1 ) 
+   )
+)
++Name: Offer Rebel Rendezvous
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 2 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Koordan Run" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Rebel Rendezvous" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Offer Supplies" 
+            0 
+         )
+      )
+      ( key-pressed "4" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Leave 2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Offer Supplies" 
+         30 
+      )
+      ( is-event-true-delay 
+         "Offer Koordan Run" 
+         18 
+      )
+      ( is-event-true-delay 
+         "Offer Rebel Rendezvous" 
+         24 
+      )
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Final Round" 
+      1000 
+   )
+)
++Name: Be Careful Message
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+   ( training-msg 
+      "Options 3" 
+      "Options 3" 
+      0 
+      10 
+   )
+)
++Name: Decision 3 Trigger
++Repeat Count: 1
++Interval: 1
++Chained: 10
+
+$Formula: ( when 
+   ( is-disabled-delay 0 "Decision 3" ) 
+   ( do-nothing ) 
+)
++Name: Decision 3 Order
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Press Your Case", -1)
++Objective key:  XSTR("Press $1$, $2$, $3$, or $4$", -1)
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( is-event-true-delay "Leave 3" 0 ) 
+         ( is-event-true-delay 
+            "Sweet-Pushy LEAVE" 
+            0 
+         )
+         ( is-event-true-delay 
+            "Long-Pushy LEAVE" 
+            0 
+         )
+         ( is-event-true-delay 
+            "Long-Sweet LEAVE" 
+            0 
+         )
+         ( is-event-true-delay "Long LEAVE" 0 ) 
+         ( is-event-true-delay "Sweet LEAVE" 0 ) 
+         ( is-event-true-delay "Pushy LEAVE" 0 ) 
+         ( is-event-true-delay 
+            "All possibilities explored" 
+            0 
+         )
+      )
+      ( is-event-true-delay 
+         "Decision 3 Trigger" 
+         0 
+      )
+   )
+   ( destroy-subsys-instantly 
+      "Decision 3" 
+      "<all engines>" 
+   )
+)
++Name: Decision 3 Instruction
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 3 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweeten Supply Deal" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay "Get Pushy" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Leave 3" 0 ) 
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Long Term Services" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Long Term Response" 
+      17000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( - @Persuasion[0] 1 ) 
+   )
+)
++Name: Long Term Services
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 3 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweeten Supply Deal" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay "Get Pushy" 0 ) 
+      )
+      ( not 
+         ( is-event-true-delay "Leave 3" 0 ) 
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Sweeten Supplies Deal" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Sweet Deal Response" 
+      9000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( + @Persuasion[0] 1 ) 
+   )
+)
++Name: Sweeten Supply Deal
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 3 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweeten Supply Deal" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long Term Services" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay "Leave 3" 0 ) 
+      )
+      ( key-pressed "3" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Muscle In" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Muscle Response" 
+      10000 
+   )
+)
++Name: Get Pushy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Decision 3 Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long Term Services" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweeten Supply Deal" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay "Get Pushy" 0 ) 
+      )
+      ( key-pressed "4" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Leave 3
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Long Term Services" 
+      30 
+   )
+   ( training-msg "Options Sweet/Pushy" ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+)
++Name: Sweet-Pushy Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Sweet-Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweet-Pushy PUSHY" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweet-Pushy LEAVE" 
+            0 
+         )
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Sweeten Supplies Deal" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Sweet Deal Response" 
+      9000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( + @Persuasion[0] 1 ) 
+   )
+)
++Name: Sweet-Pushy SWEET
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Sweet-Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweet-Pushy SWEET" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweet-Pushy LEAVE" 
+            0 
+         )
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Muscle In" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Muscle Response" 
+      10000 
+   )
+)
++Name: Sweet-Pushy PUSHY
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Sweet-Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweet-Pushy SWEET" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Sweet-Pushy Pushy" 
+            0 
+         )
+      )
+      ( key-pressed "3" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Sweet-Pushy LEAVE
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Sweeten Supply Deal" 
+      17 
+   )
+   ( training-msg "Options Long/Pushy" ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+)
++Name: Long-Pushy Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long-Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Pushy PUSHY" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Pushy LEAVE" 
+            0 
+         )
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Long Term Services" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Long Term Response" 
+      17000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( - @Persuasion[0] 1 ) 
+   )
+)
++Name: Long-Pushy LONG
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long-Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Pushy LONG" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Pushy LEAVE" 
+            0 
+         )
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Muscle In" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Muscle Response" 
+      10000 
+   )
+)
++Name: Long-Pushy PUSHY
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long-Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Pushy LONG" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Pushy PUSHY" 
+            0 
+         )
+      )
+      ( key-pressed "3" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Long-Pushy LEAVE
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay "Get Pushy" 22 ) 
+   ( training-msg "Options Long/Pushy" ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+)
++Name: Long-Sweet Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long-Sweet Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Sweet SWEET" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Sweet LEAVE" 
+            0 
+         )
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Long Term Services" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Long Term Response" 
+      17000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( - @Persuasion[0] 1 ) 
+   )
+)
++Name: Long-Sweet LONG
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long-Sweet Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Sweet LONG" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Sweet LEAVE" 
+            0 
+         )
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Sweeten Supplies Deal" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Sweet Deal Response" 
+      9000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( + @Persuasion[0] 1 ) 
+   )
+)
++Name: Long-Sweet SWEET
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long-Sweet Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Sweet LONG" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Long-Sweet SWEET" 
+            0 
+         )
+      )
+      ( key-pressed "3" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Long-Sweet LEAVE
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( is-event-true-delay "Get Pushy" 22 ) 
+         ( is-event-true-delay 
+            "Long-Sweet SWEET" 
+            17 
+         )
+      )
+      ( and 
+         ( is-event-true-delay 
+            "Long-Pushy PUSHY" 
+            22 
+         )
+         ( is-event-true-delay 
+            "Sweeten Supply Deal" 
+            17 
+         )
+      )
+   )
+   ( training-msg "Options Long" ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+)
++Name: Long Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Long LEAVE" 0 ) 
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Long Term Services" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Long Term Response" 
+      17000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( - @Persuasion[0] 1 ) 
+   )
+)
++Name: Long LONG
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Long Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Long LONG" 0 ) 
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Long LEAVE
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( is-event-true-delay "Get Pushy" 22 ) 
+         ( is-event-true-delay 
+            "Long-Sweet LONG" 
+            30 
+         )
+      )
+      ( and 
+         ( is-event-true-delay 
+            "Sweet-Pushy PUSHY" 
+            22 
+         )
+         ( is-event-true-delay 
+            "Long Term Services" 
+            30 
+         )
+      )
+   )
+   ( training-msg "Options Sweet" ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+)
++Name: Sweet Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Sweet Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Sweet LEAVE" 0 ) 
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Sweeten Supplies Deal" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Sweet Deal Response" 
+      9000 
+   )
+   ( modify-variable 
+      @Persuasion[0] 
+      ( + @Persuasion[0] 1 ) 
+   )
+)
++Name: Sweet SWEET
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Sweet Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Sweet SWEET" 0 ) 
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Sweet LEAVE
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( is-event-true-delay 
+            "Sweeten Supply Deal" 
+            17 
+         )
+         ( is-event-true-delay 
+            "Long-Pushy LONG" 
+            30 
+         )
+      )
+      ( and 
+         ( is-event-true-delay 
+            "Sweet-Pushy SWEET" 
+            17 
+         )
+         ( is-event-true-delay 
+            "Long Term Services" 
+            30 
+         )
+      )
+   )
+   ( training-msg "Options Pushy" ) 
+   ( key-reset-multiple "1" "2" "3" "4" ) 
+)
++Name: Pushy Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Pushy LEAVE" 0 ) 
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Muscle In" 
+      1000 
+      "Unknown Source" 
+      "High" 
+      "Rohm - Muscle Response" 
+      10000 
+   )
+)
++Name: Pushy PUSHY
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Pushy Trigger" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Pushy PUSHY" 0 ) 
+      )
+      ( key-pressed "2" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: Pushy LEAVE
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Pushy PUSHY" 
+         22 
+      )
+      ( is-event-true-delay 
+         "Sweet SWEET" 
+         17 
+      )
+      ( is-event-true-delay "Long LONG" 30 ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "9s - Leaving" 
+      1000 
+   )
+)
++Name: All possibilities explored
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( is-event-true-delay "Leave" 9 ) 
+         ( is-event-true-delay "Leave 2" 9 ) 
+         ( is-event-true-delay "Leave 3" 9 ) 
+         ( is-event-true-delay 
+            "Sweet-Pushy LEAVE" 
+            9 
+         )
+         ( is-event-true-delay 
+            "Long-Pushy LEAVE" 
+            9 
+         )
+         ( is-event-true-delay 
+            "Long-Sweet LEAVE" 
+            9 
+         )
+         ( is-event-true-delay "Long LEAVE" 9 ) 
+         ( is-event-true-delay "Sweet LEAVE" 9 ) 
+         ( is-event-true-delay "Pushy LEAVE" 9 ) 
+         ( is-event-true-delay 
+            "All possibilities explored" 
+            9 
+         )
+      )
+      ( or 
+         ( and 
+            ( not 
+               ( skill-level-at-least "Medium" ) 
+            )
+            ( > @Persuasion[0] 0 ) 
+         )
+         ( and 
+            ( and 
+               ( not 
+                  ( skill-level-at-least "Insane" ) 
+               )
+               ( skill-level-at-least "Medium" ) 
+            )
+            ( > @Persuasion[0] 1 ) 
+         )
+         ( and 
+            ( skill-level-at-least "Insane" ) 
+            ( > @Persuasion[0] 2 ) 
+         )
+      )
+   )
+   ( send-message-list 
+      "Unknown Source" 
+      "High" 
+      "Rohm - You can land" 
+      0 
+      "Tayana Star" 
+      "High" 
+      "9s - Probably a Trap" 
+      8000 
+   )
+   ( clear-goals "Tayana Star#2" ) 
+   ( add-goal 
+      "Tayana Star#2" 
+      ( ai-waypoints-once "Star Path" 89 ) 
+   )
+   ( cap-waypoint-speed 
+      "Tayana Star#2" 
+      50 
+   )
+)
++Name: Persuasion Successful
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( fade-out 3000 3 ) ) 
++Name: Fade Out
++Repeat Count: 1
++Interval: 1
++Chained: 12
+
+$Formula: ( when 
+   ( true ) 
+   ( remove-background-bitmap 0 ) 
+   ( remove-background-bitmap 0 ) 
+   ( mission-set-nebula 1 ) 
+   ( nebula-change-pattern "nbackbrown" ) 
+   ( nebula-toggle-poof 
+      "PoofTan01" 
+      ( true ) 
+   )
+   ( nebula-change-storm "s_active" ) 
+   ( set-skybox-model 
+      "starfield_trans.pof" 
+   )
+)
++Name: Scene Change
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-copy-damage 
+      "Tayana Star" 
+      "Tayana Star#2" 
+   )
+   ( add-remove-escort "Tayana Star" 0 ) 
+   ( add-remove-escort 
+      "Tayana Star#2" 
+      20 
+   )
+   ( ship-unstealthy 
+      "Blue Skull Manor" 
+      "Wolf's Heart" 
+      "Tayana Star#2" 
+      "Traveller 1" 
+   )
+   ( set-object-position 
+      "Traveller 1" 
+      26395 
+      2204 
+      95650 
+   )
+   ( set-object-orientation 
+      "Traveller 1" 
+      34 
+      266 
+      316 
+   )
+   ( change-iff 
+      "Friendly" 
+      "Tayana Star#2" 
+   )
+   ( change-iff "Civilian" "Tayana Star" ) 
+   ( change-soundtrack "Dantooine" ) 
+   ( fade-in 3000 3 ) 
+   ( ship-vanish 
+      "Tayana Star" 
+      "Unknown Source" 
+   )
+   ( unlock-primary-weapon "Traveller 1" ) 
+   ( unlock-secondary-weapon 
+      "Traveller 1" 
+   )
+)
++Name: Switch Ships and Fade In
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( send-message-list 
+      "Wolf's Heart" 
+      "High" 
+      "Rohm - Those Darned Pirates" 
+      0 
+      "Tayana Star#2" 
+      "High" 
+      "9s - It's a trap" 
+      12000 
+   )
+)
++Name: Trouble
++Repeat Count: 1
++Interval: 1
++Chained: 8
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Slasher" 
+      "Hunter" 
+   )
+   ( do-nothing ) 
+)
++Name: Kill Pirates
++Repeat Count: 1
++Interval: 1
++Chained: 16
++Objective:  XSTR("Destroy Rogue Pirates", -1)
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Switch Ships and Fade In" 
+      60 
+   )
+   ( add-goal 
+      "Wolf's Heart" 
+      ( ai-waypoints-once "Wolf Path" 60 ) 
+   )
+   ( cap-waypoint-speed 
+      "Wolf's Heart" 
+      50 
+   )
+)
++Name: Wolf's Heart Follows
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-destroyed-delay 
+         1 
+         "Tayana Star#2" 
+      )
+      ( < ( hits-left "Wolf's Heart" ) 99 ) 
+      ( < 
+         ( hits-left "Blue Skull Manor" ) 
+         99 
+      )
+   )
+   ( send-message-list 
+      "Wolf's Heart" 
+      "High" 
+      "Rohm - Tayana Star Destroyed" 
+      1000 
+   )
+   ( change-iff 
+      "Hostile" 
+      "Wolf's Heart" 
+      "Blue Skull Manor" 
+   )
+   ( add-goal 
+      "Wolf's Heart" 
+      ( ai-chase "Traveller 1" 79 ) 
+   )
+   ( add-goal 
+      "Wolf's Heart" 
+      ( ai-chase "Tayana Star" 89 ) 
+   )
+   ( ship-invulnerable 
+      "Wolf's Heart" 
+      "Blue Skull Manor" 
+   )
+)
++Name: Pirates Turn Against You
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( key-reset "1" ) ) 
++Name: Press 1 to Flee
++Repeat Count: 1
++Interval: 1
++Chained: 10
+
+$Formula: ( when 
+   ( key-pressed "1" ) 
+   ( fade-out 3000 3 ) 
+)
++Name: Fade Out
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Flee The System", -1)
++Objective key:  XSTR("Press $1$", -1)
+
+$Formula: ( when ( true ) ( end-mission ) ) 
++Name: Real Bad Ending
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "Pirates Turn Against You" 
+            0 
+         )
+      )
+      ( percent-ships-destroyed 
+         1 
+         "Slasher" 
+         "Hunter" 
+      )
+   )
+   ( send-message-list 
+      "Wolf's Heart" 
+      "High" 
+      "Rohm - You killed a fighter" 
+      1000 
+   )
+)
++Name: Killed a Fighter message
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "Pirates Turn Against You" 
+            0 
+         )
+      )
+      ( is-destroyed-delay 
+         1 
+         "Slasher" 
+         "Hunter" 
+      )
+   )
+   ( send-message-list 
+      "Wolf's Heart" 
+      "High" 
+      "Rohm - You won" 
+      1000 
+   )
+   ( modify-variable 
+      @Player_Hull[100] 
+      ( hits-left "Traveller 1" ) 
+   )
+   ( modify-variable 
+      @TS_Hull[100] 
+      ( hits-left "Tayana Star#2" ) 
+   )
+   ( modify-variable 
+      "@Pirates_or_Imps[Imps]" 
+      "Pirates" 
+   )
+)
++Name: Pirates Defeated
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "Pirates Turn Against You" 
+            0 
+         )
+      )
+      ( < 
+         ( distance-ship-subsystem 
+            "Traveller 1" 
+            "Blue Skull Manor" 
+            "MainCrane" 
+         )
+         450 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Approach Platform 3
++Repeat Count: 1
++Interval: 1
++Chained: 9
++Objective:  XSTR("Enter The Hangar", -1)
+
+$Formula: ( when ( true ) ( end-mission ) ) 
++Name: Success End Mission
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Persuasion Successful" 
+         0 
+      )
+      ( < 
+         ( hits-left "Tayana Star#2" ) 
+         @TS_Damage_Threshold[50] 
+      )
+   )
+   ( modify-variable 
+      @Money[5] 
+      ( - @Money[5] 1 ) 
+   )
+   ( send-message 
+      "Tayana Star#2" 
+      "High" 
+      "Damage 2" 
+   )
+)
++Name: Too Much Damage
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Pirates Defeated" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Pirates Turn Against You" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Money[5] 
+      ( + @Money[5] 1 ) 
+   )
+)
++Name: In the Money
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Approach Platform 3" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Show You The Door" 
+         0 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Campaign Progress
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Persuasion Successful" 
+         0 
+      )
+      ( < 
+         ( hits-left "Tayana Star#2" ) 
+         ( + @TS_Damage_Threshold[50] 7 ) 
+      )
+   )
+   ( send-message-list 
+      "Tayana Star#2" 
+      "High" 
+      "Damage 1" 
+      0 
+   )
+)
++Name: TS Damage Warning
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Persuasion Successful" 
+         0 
+      )
+      ( < ( hits-left "Tayana Star#2" ) 15 ) 
+   )
+   ( send-message-list 
+      "Tayana Star#2" 
+      "High" 
+      "Damage 3" 
+      0 
+   )
+)
++Name: TS Damage Critical
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Persuasion Successful" 
+         0 
+      )
+      ( < ( hits-left "Tayana Star#2" ) 2 ) 
+   )
+   ( send-message-list 
+      "Tayana Star#2" 
+      "High" 
+      "TS X" 
+      0 
+   )
+)
++Name: TS Death Scream
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( self-destruct "Tayana Star#2" ) 
+)
++Name: TS X
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+#Goals		;! 3 total
+
+$Type: Primary
++Name: Contact Blue Skulls
+$MessageNew:  XSTR("Make Contact with the Blue Skull Pirates", -1)
+$end_multi_text
+$Formula: ( or 
+   ( is-event-true-delay 
+      "Persuasion Successful" 
+      3 
+   )
+   ( is-event-true-delay 
+      "Show You The Door" 
+      3 
+   )
+)
+
+$Type: Primary
++Name: Defend Tayana Star
+$MessageNew:  XSTR("Defend Tayana Star from the Blue Skull Pirates", -1)
+$end_multi_text
+$Formula: ( and 
+   ( not 
+      ( is-event-true-delay 
+         "Too Much Damage" 
+         0 
+      )
+   )
+   ( is-event-true-delay 
+      "Pirates Defeated" 
+      0 
+   )
+)
++No music
+
+$Type: Secondary
++Name: Profit
+$MessageNew:  XSTR("Profit", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "In the Money" 
+   3 
+)
+
+#Waypoints		;! 3 lists total
+
+$Name: JumpOutPoint
+$List: (		;! 1 points in list
+	( 6321.574219, 364.882111, -2868.698486 )
+)
+
+$Name: Star Path
+$List: (		;! 2 points in list
+	( 25525.697266, 1896.992432, 96359.093750 )
+	( 20596.802734, 0.054089, 101337.625000 )
+)
+
+$Name: Wolf Path
+$List: (		;! 1 points in list
+	( 20978.830078, 0.054016, 101239.085938 )
+)
+
+#Messages		;! 44 total
+
+
+$Name: 9s - Greetings
+$Team: -1
+$MessageNew:  XSTR("Greetings, exalted friends.  I wish to address Grand Admiral Rohm N'jikko on behalf of my mistress, Captain Emora Leciq.  My mistress wishes to continue our lucrative partnership with your organization.  We have come a great distance in the hopes that you will listen to our proposal.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_1.ogg
+
+$Name: Rohm - Slag Yourself
+$Team: -1
+$MessageNew:  XSTR("Hello, Nines, it's been a long time.  You can tell your mistress to go slag herself.  We don't want your Core slime out here.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_1.ogg
+
+$Name: 9s - How to Proceed
+$Team: -1
+$MessageNew:  XSTR("How rude.  I would vent our waste onto his base if I could determine where the signal was coming from.  He seems disinclined to listen to our proposal--how should we proceed?", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_2.ogg
+
+$Name: 9s - Placate
+$Team: -1
+$MessageNew:  XSTR("Admiral, I sincerely apologize for my Captain's behavior at our last meeting.  I can assure you that her comments do not reflect the opinions of the Tayana Starlanes Corporation and its subsidiaries.  My only concern in bringing this proposal is our mutual benefit, and I would-", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_3.ogg
+
+$Name: Rohm - Placate Response
+$Team: -1
+$MessageNew:  XSTR("Don't patronize me, droid.  I'd prefer a straight offer to this merchant sniveling.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_2.ogg
+
+$Name: 9s - Insult
+$Team: -1
+$MessageNew:  XSTR("You may rest assured, sir, that I had no say in the decision to bring our business --out here--.  My mistress has an occasional use for skidcrust lowlifes such as yourself, and we knew your kind could at least be relied upon to accumulate around a purge hole like this place.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_4.ogg
+
+$Name: Rohm - Insult Response
+$Team: -1
+$MessageNew:  XSTR("I'm glad that manka spit mistress of yours hasn't crinked up your programming, Nines.  You were always good for a laugh.  What's your business?", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_3.ogg
+
+$Name: 9s - Threaten
+$Team: -1
+$MessageNew:  XSTR("It would be most unfortunate if we could not come to an understanding, Admiral.  The price on your head has been raised again, and the Empire would be very interested in learning the location of your hidden base.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_5.ogg
+
+$Name: Rohm - Threat Response
+$Team: -1
+$MessageNew:  XSTR("Don't make me laugh, droid.  We could hide in this storm for years.  Unless the Empire can blow up the entire moon, we aren't going anywhere.  Besides, you two wouldn't be here if you had solid contacts with the Imps.  What's your business?", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_4.ogg
+
+$Name: 9s - Leaving
+$Team: -1
+$MessageNew:  XSTR("You are throwing away a fortune.  Perhaps one of the pirate organizations that have not been scared out of Tanaab will be interested in our offer.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_6.ogg
+
+$Name: Rohm - Letting you go
+$Team: -1
+$MessageNew:  XSTR("Don't let the blast doors crush you on your way out.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_5.ogg
+
+$Name: 9s - Offer Supplies
+$Team: -1
+$MessageNew:  XSTR("We are carrying a large shipment of parts and weapons for Kuat Systems Engineering flightcraft.  If your organization still operates Cloakshape fighters, we are in a position to give you a heavy discount.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_7.ogg
+
+$Name: Rohm - Supplies Response
+$Team: -1
+$MessageNew:  XSTR("We've got Cloakshapes, no thanks to the parts you sold us last time.  My techs will be making a thorough inspection of every unit if we decide to buy.  We'll meet you to discuss the details two days from now at the usual place on Tanaab.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_6.ogg
+
+$Name: 9s - Offer Koordan Run
+$Team: -1
+$MessageNew:  XSTR("We have obtained the time tables and locations for the next mining run in this system.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_8.ogg
+
+$Name: Rohm - Koordan Run Response
+$Team: -1
+$MessageNew:  XSTR("That is interesting.  Your Verpine friend?  I'll pay for that information, but you'll be my guest until we're sure it's good.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_7.ogg
+
+$Name: 9s - Offer Rebel Coordinates
+$Team: -1
+$MessageNew:  XSTR("We will be delivering parts to another client in the Japrael system in three days.  For a half share of the ransom, we will lead you to their freighter and help you disable it.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_9.ogg
+
+$Name: Rohm - Rebel Response
+$Team: -1
+$MessageNew:  XSTR("Do you really expect me to believe that you would go pirate and betray your little revolutionary buddies for the likes of me?  Everyone knows who you've been dealing with--try again, princess.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_8.ogg
+
+$Name: 9s - Final Round
+$Team: -1
+$MessageNew:  XSTR("Mistress, it seems clear that he will not allow us to land and leave in time to make our rendezvous with the Alliance.  We will have to be extremely careful from here on.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_10.ogg
+
+$Name: 9s - Long Term Services
+$Team: -1
+$MessageNew:  XSTR("I am afraid we do not have time to deal at our leisure, but if you clear us to land now, we are prepared to make exclusive runs to Hutt Space for you.  We know the clans will not deal with you directly, and we can give you XTS rates or better.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_11.ogg
+
+$Name: Rohm - Long Term Response
+$Team: -1
+$MessageNew:  XSTR("You guys must really be desperate, but I'm afraid that's not how it works.  I've been promised a whole lot of things by a whole lot of smugglers in my time.  You're not getting anything without giving me something right now.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_9.ogg
+
+$Name: 9s - Sweeten Supplies Deal
+$Team: -1
+$MessageNew:  XSTR("We really cannot stay, but if you buy now, we can give you two complete Cloakshape kits for 5000 credits each.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_12.ogg
+
+$Name: Rohm - Sweet Deal Response
+$Team: -1
+$MessageNew:  XSTR("I'll think about it.  I don't like dealing in a hurry--people get sloppy.  What else can you give me?", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_10.ogg
+
+$Name: 9s - Muscle In
+$Team: -1
+$MessageNew:  XSTR("We are a busy organization and cannot waste time in idle chatter.  If you will not clear a space for us to land, we will be forced to clear one for ourselves.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_13.ogg
+
+$Name: Rohm - Muscle Response
+$Team: -1
+$MessageNew:  XSTR("You're welcome to try, Leciq.  My pilots are always looking for a bit of live practice, and I wouldn't mind adding another freighter to the fleet, even a piece of chizk like yours.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_11.ogg
+
+$Name: Rohm - You can land
+$Team: -1
+$MessageNew:  XSTR("Hold on, Nines.  I'm a reasonable man. Come on down and we can work this deal out face to face.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_12.ogg
+
+$Name: 9s - Probably a Trap
+$Team: -1
+$MessageNew:  XSTR("The odds that this is a trap are approximately... It's a trap. ", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_14.ogg
+
+$Name: Rohm - Those Darned Pirates
+$Team: -1
+$MessageNew:  XSTR("Some of my less disciplined pilots have gotten it into their heads to take your ship for a prize, Leciq. Do me a favor by killing them.  I was afraid I'd have to do it myself, but then you fell right out of the sky.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_13.ogg
+
+$Name: 9s - It's a trap
+$Team: -1
+$MessageNew:  XSTR("I knew it was a trap.  If we can reach the platform, we will regain control of the situation.  Good luck, mistress.", -1)
+$end_multi_text
++Wave Name: S1_M3_Nines_15.ogg
+
+$Name: Rohm - Tayana Star Destroyed
+$Team: -1
+$MessageNew:  XSTR("Too bad, Leciq$semicolon looks like you weren't that good after all.  Still, can't have you out to get revenge on me.  Nice knowing you, kid.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_14.ogg
+
+$Name: Rohm - You won
+$Team: -1
+$MessageNew:  XSTR("Very impressive, Emora. You're sharp as ever.  You know, I could use someone with your skills.  Park yourselves on Platform 3.  I'll meet you at the airlock.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_15.ogg
+
+$Name: Rohm - You killed a fighter
+$Team: -1
+$MessageNew:  XSTR("I'll be taking the cost of any ships you destroy out of your payment of course.", -1)
+$end_multi_text
++Wave Name: S1_M3_Njikko_16.ogg
+
+$Name: Options 1
+$Team: -1
+$MessageNew:  XSTR("$1$ - Placate
+$2$ - Insult
+$3$ - Threaten
+$4$ - Leave", -1)
+$end_multi_text
+
+$Name: Options 2
+$Team: -1
+$MessageNew:  XSTR("$1$ - Offer Supplies
+$2$ - Offer Koordan Run Coordinates
+$3$ - Offer Rebel Coordinates
+$4$ - Leave", -1)
+$end_multi_text
+
+$Name: Options 3
+$Team: -1
+$MessageNew:  XSTR("$1$ - Offer Long-Term Services
+$2$ - Sweeten Supply Deal
+$3$ - Get Pushy
+$4$ - Leave", -1)
+$end_multi_text
+
+$Name: Options Sweet/Pushy
+$Team: -1
+$MessageNew:  XSTR("$1$ - Sweeten Supply Deal
+$2$ - Get Pushy
+$3$ - Leave", -1)
+$end_multi_text
+
+$Name: Options Long/Pushy
+$Team: -1
+$MessageNew:  XSTR("$1$ - Offer Long-Term Services
+$2$ - Get Pushy
+$3$ - Leave", -1)
+$end_multi_text
+
+$Name: Options Long/Sweet
+$Team: -1
+$MessageNew:  XSTR("$1$ - Offer Long-Term Services
+$2$ - Sweeten Supply Deal
+$3$ - Leave", -1)
+$end_multi_text
+
+$Name: Options Long
+$Team: -1
+$MessageNew:  XSTR("$1$ - Offer Long-Term Services
+$2$ - Leave", -1)
+$end_multi_text
+
+$Name: Options Sweet
+$Team: -1
+$MessageNew:  XSTR("$1$ - Sweeten Supply Deal
+$2$ - Leave", -1)
+$end_multi_text
+
+$Name: Options Pushy
+$Team: -1
+$MessageNew:  XSTR("$1$ - Get Pushy
+$2$ - Leave", -1)
+$end_multi_text
+
+$Name: Damage 1
+$Team: -1
+$MessageNew:  XSTR("We are taking considerable damage, mistress.", -1)
+$end_multi_text
++Wave Name: S1_Nines_Hull_75.ogg
+
+$Name: Damage 2
+$Team: -1
+$MessageNew:  XSTR("The hull has been breached. Deploying repair droids.", -1)
+$end_multi_text
++Wave Name: S1_Nines_Hull_50.ogg
+
+$Name: Damage 3
+$Team: -1
+$MessageNew:  XSTR("We have sustained critical damage!", -1)
+$end_multi_text
++Wave Name: S1_Nines_Hull_25.ogg
+
+$Name: TS X
+$Team: -1
+$MessageNew:  XSTR("Even a used escape pod would ha--", -1)
+$end_multi_text
++Wave Name: S1_Nines_Death.ogg
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 3 total
+
+$Num stars: 0
+$Ambient light level: 7566225
++Neb2: nbackbrown
+
++Neb2Flags: 1
+
+
+$Bitmap List:
+$Sun: SunRed
++Angles: 0.000000 0.000000 4.921829
++Scale: 2.000000
+$Starbitmap: Planet_Bespin
++Angles: 0.000000 2.967060 0.942478
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_CloudMoon
++Angles: 0.000000 5.742134 1.431170
++ScaleX: 8.000000
++ScaleY: 8.000000
++DivX: 5
++DivY: 5
+$Starbitmap: Planet_Moon01
++Angles: 0.000000 3.141593 3.490659
++ScaleX: 0.100000
++ScaleY: 0.100000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: Dantooine
+$Briefing Music: Brief5
+
+#End
+

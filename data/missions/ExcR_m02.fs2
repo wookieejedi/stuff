@@ -1,0 +1,5571 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Jewel Heist", -1)
+$Author: TopAce
+$Created: 07/01/10 at 20:29:38
+$Modified: 01/10/20 at 13:08:47
+$Notes:
+BoardingCountdown is 4 minutes 40 seconds.$End Notes:
+
+$Mission Desc:
+ XSTR("", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 0
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 1
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 20680.333984, 110617.578125, -108613.820313
++Viewer orient:
+	0.998240, 0.000000, 0.059297,
+	-0.038911, 0.754589, 0.655043,
+	-0.044745, -0.656198, 0.753261
+
+$Starting wing names: ( "Red" "Lime" "Green" )
+$Squadron wing names: ( "Red" "Lime" "Green" "Gold" "Blue" )
+$Team-versus-team wing names: ( "Red" "Lime" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: FOTG
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"A1Pri"		"50"		"number"
+		1		"A2Pri"		"50"		"number"
+		2		"A3Pri"		"50"		"number"
+		3		"A4Pri"		"50"		"number"
+		4		"A5Pri"		"50"		"number"
+		5		"A6Pri"		"50"		"number"
+		6		"B1Pri"		"50"		"number"
+		7		"B2Pri"		"50"		"number"
+		8		"B3Pri"		"50"		"number"
+		9		"B4Pri"		"50"		"number"
+		10		"B5Pri"		"50"		"number"
+		11		"BoardingCountDown"		"340"		"number"
+		12		"D4-SubScans-Needed"		"9"		"number"
+		13		"Davro4Turrets"		"18"		"number"
+		14		"EpsilonArrive"		"314"		"number"
+		15		"G1Pri"		"50"		"number"
+		16		"G2Pri"		"50"		"number"
+		17		"G3Pri"		"50"		"number"
+		18		"G4Pri"		"50"		"number"
+		19		"G5Pri"		"50"		"number"
+		20		"G6Pri"		"50"		"number"
+		21		"Gold2"		"1"		"number"		"save-on-mission-progress"
+		22		"Gold3"		"1"		"number"		"save-on-mission-progress"
+		23		"Gold6"		"1"		"number"		"save-on-mission-progress"
+		24		"KraytArrive"		"110"		"number"
+		25		"KraytGotMoney"		"no"		"string"		"save-on-mission-progress"
+		26		"KraytOkay"		"no"		"string"		"save-on-mission-progress"
+		27		"LastBeepLength"		"0"		"number"
+		28		"LastBeepTime"		"0"		"number"
+		29		"RiderOkay"		"no"		"string"		"save-on-mission-progress"
+		30		"RightSubsysString"		"MainCrane"		"string"
+		31		"scanningdir"		"yes"		"string"
+		32		"SubsysCounter"		"11"		"number"
+		33		"ThetaArrive"		"52"		"number"
+)
+
+#Command Briefing
+
+$Stage Text:
+ XSTR("$f Paradigm $f Shift
+
+Last week's incident at the Bilbringi shipyards has triggered a wave of patriotic fervor throughout the Empire and shaken the confidence of many of our backers.  Although the fallout from this incident has weakened us, it may also provide an opportunity to strike a meaningful symbolic blow against the Emperor's war machine.  
+
+Our fleet's raids on Imperial shipping have been a thorn in the side of the regional governors, but they have done little to legitimize the war effort or separate us from the type of radicals accused of causing the Bilbringi catastrophe.  Our next series of operations aims to change that.", -1)
+$end_multi_text
+$Ani Filename: CB_reb
++Wave Filename: R1_M2_cb1.ogg
+
+$Stage Text:
+ XSTR("$f New $f Opportunity
+
+As you know, the Emperor himself has arranged to visit the site of the disaster in the central event of a highly publicized tour.  Thousands of ships, representing every controlled sector, have been drawn up in order to form his escort and parade the Empire's strength.  Due to the scale of this event, several battle groups will be temporarily under strength.  Our aim is to stretch out one of these forces and bring down an Imperial Star Destroyer.", -1)
+$end_multi_text
+$Ani Filename: CB_reb
++Wave Filename: R1_M2_cb2.ogg
+
+$Stage Text:
+ XSTR("$f Excoriator (Page 1)
+
+Of our potential targets, we have determined that the Excoriator is by far the most strategically vulnerable.  Perhaps equally importantly, this vessel's role in the bombardment of Thisspias will make her destruction a powerful political statement.  The objective of our next sequence of missions is to divide Excoriator from her support vessels, particularly Carrack cruiser group Manarai.  This group is presently stationed in the Tanaab system for the purpose of suppressing seasonal pirate activity.", -1)
+$end_multi_text
+$Ani Filename: CB_reb
++Wave Filename: R1_M2_cb3.ogg
+
+$Stage Text:
+ XSTR("$f Excoriator (Page 2)
+
+Tanaab is an agricultural hub on the Perlemian trade route and is a frequent target for outlaw groups who prey on shipping.  Excoriator's presence has not stopped these pirate attacks but merely moved them into other nearby systems, forcing the Empire to take on escort duty for those convoys deemed essential to military operations.  The total number of vessels present in the sector has been substantially reduced for the occasion of the Emperor's rally, and the destroyer's fighter wing has been weakened by our disruption of their supply chains.", -1)
+$end_multi_text
+$Ani Filename: CB_reb
++Wave Filename: R1_M2_cb4.ogg
+
+$Stage Text:
+ XSTR("$f The $f Task $f Ahead
+
+Though we possess substantial advantages over Excoriator, this task will not be easy.  Under ideal circumstances, a ship of this class would outgun our entire combined force.  Our intention is to make the circumstances of the engagement as far from ideal as possible.  
+
+For security purposes, no personal transmissions will be permitted until these operations are concluded.  Captain Du'Elo?", -1)
+$end_multi_text
+$Ani Filename: CB_reb
++Wave Filename: R1_M2_cb5.ogg
+
+#Briefing
+$start_briefing
+$num_stages: 5
+$start_stage
+$multi_text
+ XSTR("Posing as pirates, $f Z-95 $f Red and Y-wing $f Gold will hit orbital platform $h Davro $h 4 over Onderon, one of Tanaab's trade partners.  The station itself is lightly defended, though a single flight of TIEs may be on patrol.  Red will destroy all fighter craft in the area and then assist Gold in disabling the platform's defenses.", -1)
+$end_multi_text
+$voice: R1_M2_B1.ogg
+$camera_pos: -1285.464844, 4951.288574, 3000.716309
+$camera_orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.000000, 1.000000,
+	0.000000, -1.000000, 0.000000
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Hostile
+$class: XQ2 Platform
+$pos: -1079.085693, -1249.999756, 3238.052246
+$label:  XSTR("Davro 4", -1)
++id: 1
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: Z-95 Headhunter
+$pos: -2447.157715, -0.000150, 3083.105957
+$label:  XSTR("Red", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 17
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: -1845.713867, -0.000220, 2358.077637
+$label:  XSTR("Gold", -1)
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("The fighters will be followed in by $f transport $f Krayt $f Pearl, which will dock with the station and insert a commando team.  The team will make their way to the central concourse and steal the Imperial garrison's procurement funds for this month's grain shipment.  Onderon's governor pays in untraceable Electrite crystals, so this would be quite a prize for pirates.  Some of Colonel Cracken's best operatives will be going in on the Pearl, and with the threat of a torpedo through the window, we don't expect much resistance to our boarding party.", -1)
+$end_multi_text
+$voice: R1_M2_B2.ogg
+$camera_pos: -1285.464844, 4951.288574, 3000.716309
+$camera_orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.000000, 1.000000,
+	0.000000, -1.000000, 0.000000
+$camera_time: 500
+$num_lines: 0
+$num_icons: 4
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Hostile
+$class: XQ2 Platform
+$pos: -1079.085693, -1249.999756, 3238.052246
+$label:  XSTR("Davro 4", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: Z-95 Headhunter
+$pos: -2447.157715, -0.000150, 3083.105957
+$label:  XSTR("Red", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 17
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: -1845.713867, -0.000220, 2358.077637
+$label:  XSTR("Gold", -1)
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Action VI Transport
+$pos: -117.975372, 749.999390, 2707.096191
+$label:  XSTR("Krayt Pearl", -1)
++id: 4
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("While awaiting transport, the payment is kept in an unmarked container that can be identified only by a unique transponder signal which we won't know until we're on the station.  $f Reds $f 1 and $f 2 have been equipped with advanced sensor packages to assist the boarding party in locating the payment once the correct frequency has been isolated.", -1)
+$end_multi_text
+$voice: R1_M2_B3.ogg
+$camera_pos: -776.795959, 4951.288574, 3334.810547
+$camera_orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.000000, 1.000000,
+	0.000000, -1.000000, 0.000000
+$camera_time: 500
+$num_lines: 0
+$num_icons: 4
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Hostile
+$class: XQ2 Platform
+$pos: -1079.085693, -1249.999756, 3238.052246
+$label:  XSTR("Davro 4", -1)
++id: 1
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: Z-95 Headhunter
+$pos: -2136.223633, 0.000192, 3647.890869
+$label:  XSTR("Red", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 17
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: -1831.382324, 0.000036, 2832.234131
+$label:  XSTR("Gold", -1)
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Action VI Transport
+$pos: -189.555740, 749.999512, 3278.882813
+$label:  XSTR("Krayt Pearl", -1)
++id: 4
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("A five-minute window has been allotted to the retrieval operation, but if things get too hot, don't hesitate to abort the mission.  We really do need the money, but failing to pull off the heist would be an insignificant setback compared to losing the freighter and boarding party.  You're all officers, and the safety of the freighter crew and commando team depends on your good judgment.", -1)
+$end_multi_text
+$voice: R1_M2_B4.ogg
+$camera_pos: -606.155640, 4951.288574, 3509.311035
+$camera_orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.000000, 1.000000,
+	0.000000, -1.000000, 0.000000
+$camera_time: 500
+$num_lines: 0
+$num_icons: 7
+$Flags: 1
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Hostile
+$class: XQ2 Platform
+$pos: -1079.085693, -1249.999756, 3238.052246
+$label:  XSTR("Davro 4", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Friendly
+$class: Z-95 Headhunter
+$pos: -2136.223633, 0.000192, 3647.890869
+$label:  XSTR("Red", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 17
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: -1831.382324, 0.000036, 2832.234131
+$label:  XSTR("Gold", -1)
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Action VI Transport
+$pos: -189.555740, 749.999512, 3278.882813
+$label:  XSTR("Krayt Pearl", -1)
++id: 4
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: T.I.E. Fighter
+$pos: -1380.617554, -0.000025, 4003.648438
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: T.I.E. Fighter
+$pos: 885.095276, -0.000055, 3361.009766
++id: 6
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: T.I.E. Fighter
+$pos: 866.739014, 0.000000, 4662.666504
++id: 7
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Once the platform is secure, the greatest threat will come from the planet's surface.  There's a fast-response Imperial garrison on the northern continent that houses upwards of $h three $h full $h TIE $h fighter squadrons.  Unfortunately, it also serves as a training post for the Onderon security force.  Avoid engaging the local law enforcement if possible - our business is with the Empire.  We don't know what kind of response times we're looking at, but if you're quick, they should arrive too late to hinder the Pearl.  Good luck.", -1)
+$end_multi_text
+$voice: R1_M2_B5.ogg
+$camera_pos: 1167.596313, 4735.732910, 3502.556641
+$camera_orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.000000, 1.000000,
+	0.000000, -1.000000, 0.000000
+$camera_time: 500
+$num_lines: 0
+$num_icons: 6
+$Flags: 2
+$Formula: ( true ) 
+$start_icon
+$type: 1
+$team: Friendly
+$class: Z-95 Headhunter
+$pos: -2136.223633, 0.000192, 3647.890869
+$label:  XSTR("Red", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 17
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: -1831.382324, 0.000036, 2832.234131
+$label:  XSTR("Gold", -1)
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Action VI Transport
+$pos: 1147.699463, 749.998901, 3389.808105
+$label:  XSTR("Krayt Pearl", -1)
++id: 4
+$hlight: 0
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: T.I.E. Fighter
+$pos: -1380.617554, -0.000025, 4003.648438
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: T.I.E. Fighter
+$pos: 1401.282837, 0.000000, 4532.913574
++id: 7
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 0
+$team: Friendly
+$class: T-65c X-wing
+$pos: 0.000000, 0.000000, 0.000000
++id: 0
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 8
+
+$Formula: ( or 
+   ( is-destroyed-delay 0 "Krayt Pearl" ) 
+   ( is-event-false-delay 
+      "Conditions to depart" 
+      0 
+   )
+)
+$Multi text
+    XSTR("This mission was a disaster.  You failed to protect the Pearl and her boarding party, and the Empire's successful defense of the station has given them little reason to redeploy their ships.  The only good news, if you can call it that, is that none of our people survived to be interrogated by Imperial intelligence, so for the time being our primary mission hasn't been compromised.  
+
+Red Squadron, it was your responsibility to keep the freighter safe and to call off the mission if things got out of hand.  You overestimated your abilities, and our team paid for it.  One and two, you of all people should have had the experience and discipline to quit while you were ahead.  If this were the Imperial Starfleet...  Fortunately for you, there's no one in this outfit who can take your place, so you'll get another chance to show you belong in those cockpits.", -1)
+$end_multi_text
+$Voice: R1_M2_DB1.ogg
+$Recommendation text:
+    XSTR("Use missiles to quickly destroy turrets.  You can abort the boarding action as soon as the team slices into the station's security net.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( has-departed-delay 0 "Krayt Pearl" ) 
+   ( is-event-true-delay 
+      "Boarding abort" 
+      0 
+   )
+)
+$Multi text
+    XSTR("Well done, pilots.  We weren't able to secure the payment, but the fact that we came close and shot the place up in the attempt has achieved our primary objective.  Onderon's governor is screaming at the Japrael sector Moff for greater protection, and our sources have indicated that another Carrack cruiser will be dispatched from Excoriator's group inTanaab to patrol here.
+
+Ordering the withdrawal demonstrated key command qualities that will serve us well in the fight to come.  Corellians sometimes push their luck in these situations, so I'm glad you were there to keep things under control.  The crew of the Pearl sends their thanks.", -1)
+$end_multi_text
+$Voice: R1_M2_DB2.ogg
+$Recommendation text:
+    XSTR("In order to spare the freighter's hull, cycle through oncoming targets and prioritize attackers that are targeting her, leaving those targeting the fighters for later.  The primary threat is the TIE bombers.  Lowering the difficulty level will speed up the boarding action.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( has-departed-delay 0 "Krayt Pearl" ) 
+   ( is-event-false-delay 
+      "Boarding abort" 
+      0 
+   )
+)
+$Multi text
+    XSTR("Congratulations, pilots. We have the merchandise.  Onderon's Governor is screaming at the sector Moff for greater protection, and our sources have indicated that another Carrack cruiser will be dispatched from Excoriator's group in Tanaab to patrol here.  Fly like this every time out, and we'll have the Empire on the run.", -1)
+$end_multi_text
+$Voice: R1_M2_DB3.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-destroyed-delay 0 "Omega 5" ) 
+   ( has-departed-delay 0 "Krayt Pearl" ) 
+)
+$Multi text
+    XSTR("We haven't been able to determine what the Lambda shuttle you destroyed was up to, but shooting her down while she was fleeing the combat zone wouldn't have been my first choice.  Just because a ship is flagged Imperial doesn't mean the people aboard deserve to die.  In the future, stick to the mission. You put the people on the Freighter at risk by wasting time with the shuttle. However, the success of the mission and your effectiveness against all targets seems to have earned you some slack from the Commodore, at least this time.", -1)
+$end_multi_text
+$Voice: R1_M2_DB4.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( has-departed-delay 
+   0 
+   "Omega 5" 
+   "Krayt Pearl" 
+)
+$Multi text
+    XSTR("While you were busy with the TIE Fighters, a Lambda-class shuttle left the station's hangar bay and entered hyperspace. We have no information regarding her purpose or destination$semicolon it may just have been an unsuccessful diversion.", -1)
+$end_multi_text
+$Voice: R1_M2_DB5.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( has-departed-delay 
+   0 
+   "Rider 1" 
+   "Rider 2" 
+   "Rider 3" 
+   "Rider 4" 
+   "Krayt Pearl" 
+)
+$Multi text
+    XSTR("You did well to avoid the Onderon security patrol.  Their refusal to participate in the counterattack against us could engender resentment between local and Imperial forces.
+
+Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M2_DB6.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( percent-ships-destroyed 1 "Rider" ) 
+   ( has-departed-delay 0 "Krayt Pearl" ) 
+)
+$Multi text
+    XSTR("I'm sorry to see you were unable to refrain from engaging the Onderon defense force trainees.  This could make subsequent operations in the system more difficult and compromise future support for the Alliance if it ever comes out that we are responsible for this attack.
+
+Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M2_DB7.ogg
+$Recommendation text:
+    XSTR("Dispatch Beta wing as swiftly as possible.", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay 
+   "Perfect performance" 
+   0 
+)
+$Multi text
+    XSTR("Two, you did well out there.  I don't think I could have flown any better myself.  You made the right choices and demonstrated superb skill under fire - even the Commodore was impressed...  Take it easy.", -1)
+$end_multi_text
+$Voice: R1_M2_DB8.ogg
+$Recommendation text:
+    XSTR("Nice flying.", -1)
+$end_multi_text
+
+#Callsigns:
+$Callsign: Vorin
+$Callsign: Gan
+$Callsign: Bodo
+$Callsign: Tir
+$Callsign: Semb
+$Callsign: Reego
+$Callsign: Bolk
+$Callsign: Besto
+$Callsign: Mok
+
+#end
+
+
+#Players		;! 1 total
+
+$Starting Shipname: Red 2
+$Ship Choices: (
+	"BTL-A4 Y-wing"	4
+)
+
++Weaponry Pool: (
+	"T&B KX-5"	8
+	"ArMek SW-4"	4
+	"Krupx MG7-A"	32
+	"Krupx MG5"	32
+)
+
+#Objects		;! 53 total
+
+$Name: Red 1		;! Object #0
+$Class: Z-95 Headhunter
+$Callsign: Vorin
+
+$Team: Friendly
+$Location: -7.648716, 9.591004, -2515.295898
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
++Persona Index: 1
+
+$Name: Red 2		;! Object #1
+$Class: Z-95 Headhunter
+$Team: Friendly
+$Location: 101.699997, -20.000000, -2706.461914
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 80
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 1.20
+$Warpin decel exp: 0.66
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Red 3		;! Object #2
+$Class: Z-95 Headhunter
+$Callsign: Gan
+
+$Team: Friendly
+$Location: -105.354332, 43.994080, -2628.132324
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
++Persona Index: 2
+
+$Name: Red 4		;! Object #3
+$Class: Z-95 Headhunter
+$Callsign: Bodo
+
+$Team: Friendly
+$Location: -158.536026, -53.071667, -2767.101563
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
++Persona Index: 7
+
+$Name: Gold 1		;! Object #4
+$Class: BTL-A4 Y-wing
+$Callsign: Tir
+
+$Team: Friendly
+$Location: -555.915527, 35.605381, -2995.849609
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 0
+
+$Name: Gold 2		;! Object #5
+$Class: BTL-A4 Y-wing
+$Callsign: Semb
+
+$Team: Friendly
+$Location: -658.715088, -66.755066, -3040.542969
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 9
+
+$Name: Gold 3		;! Object #6
+$Class: BTL-A4 Y-wing
+$Callsign: Reego
+
+$Team: Friendly
+$Location: -754.009094, -19.958885, -3105.804199
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 18
+
+$Name: Gold 4		;! Object #7
+$Class: BTL-A4 Y-wing
+$Callsign: Bolk
+
+$Team: Friendly
+$Location: 363.323273, -35.623867, -2918.639648
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 13
+
+$Name: Gold 5		;! Object #8
+$Class: BTL-A4 Y-wing
+$Callsign: Besto
+
+$Team: Friendly
+$Location: 449.972626, 56.927895, -2969.916992
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 10
+
+$Name: Davro 4		;! Object #9
+$Class: XQ2 Platform
+$Team: Hostile
+$Location: -299.100006, -1250.000000, 4057.600098
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
++Subsystem: Communications01
++Cargo Name: XSTR("Weapons", -1)
++Subsystem: Communications02
++Cargo Name: XSTR("Power Cells", -1)
++Subsystem: Communications03
++Cargo Name: XSTR("Droid Parts", -1)
++Subsystem: Sensors01
++Cargo Name: XSTR("Equipment", -1)
++Subsystem: Sensors02
++Cargo Name: XSTR("Stabilizers", -1)
++Subsystem: Sensors03
++Cargo Name: XSTR("Broken Devices", -1)
++Subsystem: Sensors04
++Cargo Name: XSTR("E-11 Rifles", -1)
++Subsystem: Sensors05
++Cargo Name: XSTR("Droid Parts", -1)
++Subsystem: Sensors06
++Cargo Name: XSTR("Morgue", -1)
++Subsystem: Antennae01
++Cargo Name: XSTR("Rubble", -1)
++Subsystem: Antennae02
++Cargo Name: XSTR("Rubble", -1)
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "escort" "scannable" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Group: 0
++Use Table Score:
++Score: 1000
+
+$Name: Alpha 1		;! Object #10
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -497.329407, -894.290710, 4339.735352
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 9
+
+$Name: Alpha 2		;! Object #11
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -448.904022, -894.290710, 4369.407227
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 9
+
+$Name: Alpha 3		;! Object #12
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -393.017822, -894.290710, 4365.669434
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 9
+
+$Name: Alpha 4		;! Object #13
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -337.626068, -894.290710, 4365.669434
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 9
+
+$Name: Alpha 5		;! Object #14
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -274.321198, -894.290710, 4365.669922
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 9
+
+$Name: Alpha 6		;! Object #15
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -215.816284, -894.290710, 4358.219238
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 9
+
+$Name: Krayt Pearl		;! Object #16
+$Class: Action VI Transport
+$Team: Friendly
+$Location: -1469.900024, 750.000000, 1593.099976
+$Orientation:
+	0.837703, 0.000000, 0.546125,
+	-0.242984, 0.895569, 0.372714,
+	-0.489093, -0.444923, 0.750221
+$AI Behavior: None
+$AI Goals: ( goals ( ai-dock "Davro 4" "Docking Point" "Platform 02" 50 ) )
+$Cargo 1:  XSTR("#Soldiers", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-time-elapsed 126 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Pearl undock" 
+   72 
+)
+$Determination: 10
++Flags: ( "cargo-known" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 100
++Special Hitpoints: 8000
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
+$Name: Beta 1		;! Object #17
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 215.561844, -276.435608, 24292.144531
+$Orientation:
+	-0.993780, 0.000000, -0.111362,
+	0.000000, 1.000000, 0.000000,
+	0.111362, 0.000000, -0.993780
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 2		;! Object #18
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 179.400726, -178.495041, 24227.759766
+$Orientation:
+	-0.993780, 0.000000, -0.111362,
+	0.000000, 1.000000, 0.000000,
+	0.111362, 0.000000, -0.993780
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 3		;! Object #19
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 131.588593, -155.651337, 24226.691406
+$Orientation:
+	-0.993780, 0.000000, -0.111362,
+	0.000000, 1.000000, 0.000000,
+	0.111362, 0.000000, -0.993780
+$AI Behavior: None
++AI Class: Jedi
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 24
+
+$Name: Beta 4		;! Object #20
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 78.408348, -232.336945, 24231.261719
+$Orientation:
+	-0.993780, 0.000000, -0.111362,
+	0.000000, 1.000000, 0.000000,
+	0.111362, 0.000000, -0.993780
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Gamma 1		;! Object #21
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 96.552078, -189.302719, 18554.017578
+$Orientation:
+	-0.996928, 0.000000, 0.078327,
+	0.000000, 1.000000, 0.000000,
+	-0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Gamma 2		;! Object #22
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 34.662857, -239.103226, 18530.466797
+$Orientation:
+	-0.996928, 0.000000, 0.078327,
+	0.000000, 1.000000, 0.000000,
+	-0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Gamma 3		;! Object #23
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: -42.109055, -188.655807, 18534.435547
+$Orientation:
+	-0.996928, 0.000000, 0.078327,
+	0.000000, 1.000000, 0.000000,
+	-0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Gamma 4		;! Object #24
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: -103.992416, -243.643997, 18561.742188
+$Orientation:
+	-0.996928, 0.000000, 0.078327,
+	0.000000, 1.000000, 0.000000,
+	-0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Rider 1		;! Object #25
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 243.521149, -101.210503, 24597.703125
+$Orientation:
+	-0.984128, 0.000000, 0.177462,
+	0.000000, 1.000000, 0.000000,
+	-0.177462, 0.000000, -0.984128
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rider 2		;! Object #26
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 98.780396, -135.339035, 24539.273438
+$Orientation:
+	-0.984128, 0.000000, 0.177462,
+	0.000000, 1.000000, 0.000000,
+	-0.177462, 0.000000, -0.984128
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rider 3		;! Object #27
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: -55.981567, -28.170298, 24528.820313
+$Orientation:
+	-0.984128, 0.000000, 0.177462,
+	0.000000, 1.000000, 0.000000,
+	-0.177462, 0.000000, -0.984128
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rider 4		;! Object #28
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: -234.740204, -237.655853, 24581.466797
+$Orientation:
+	-0.984128, 0.000000, 0.177462,
+	0.000000, 1.000000, 0.000000,
+	-0.177462, 0.000000, -0.984128
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Epsilon 1		;! Object #29
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 69.986855, 0.000285, 21898.296875
+$Orientation:
+	-0.999944, 0.000000, 0.010567,
+	-0.000500, 0.998881, -0.047288,
+	-0.010555, -0.047290, -0.998825
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Epsilon 2		;! Object #30
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 5.387169, 0.000285, 21781.437500
+$Orientation:
+	-0.999967, 0.000000, 0.008157,
+	-0.000387, 0.998871, -0.047499,
+	-0.008147, -0.047501, -0.998838
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Epsilon 3		;! Object #31
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: -164.044464, 0.000285, 21882.908203
+$Orientation:
+	-0.999999, 0.000000, 0.001704,
+	-0.000081, 0.998880, -0.047320,
+	-0.001702, -0.047320, -0.998878
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Epsilon 4		;! Object #32
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 218.450073, 0.000285, 21830.980469
+$Orientation:
+	-0.999868, 0.000000, 0.016230,
+	-0.000769, 0.998876, -0.047401,
+	-0.016212, -0.047407, -0.998744
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Theta 1		;! Object #33
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 387.230408, -221.707397, 19908.132813
+$Orientation:
+	-0.995808, 0.000000, 0.091465,
+	0.000000, 1.000000, 0.000000,
+	-0.091465, 0.000000, -0.995808
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 12
+
+$Name: Theta 2		;! Object #34
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 246.435135, -131.920425, 19942.392578
+$Orientation:
+	-0.995809, 0.000000, 0.091465,
+	0.000000, 1.000000, 0.000000,
+	-0.091465, 0.000000, -0.995809
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 12
+
+$Name: Theta 3		;! Object #35
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 108.985916, -344.845032, 19955.015625
+$Orientation:
+	-0.995808, 0.000000, 0.091465,
+	0.000000, 1.000000, 0.000000,
+	-0.091465, 0.000000, -0.995808
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 12
+
+$Name: Gamma 5		;! Object #36
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 48.877823, -237.516815, 18592.550781
+$Orientation:
+	-0.996928, 0.000000, 0.078327,
+	0.000000, 1.000000, 0.000000,
+	-0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Gamma 6		;! Object #37
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: -8.104111, -221.707306, 18608.150391
+$Orientation:
+	-0.996928, 0.000000, 0.078327,
+	0.000000, 1.000000, 0.000000,
+	-0.078327, 0.000000, -0.996928
+$AI Behavior: None
++AI Class: Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Omega 5		;! Object #38
+$Class: Lambda-class T-4a shuttle
+$Team: Hostile
+$Location: -867.976379, -0.000000, 4081.463867
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: None
+$AI Goals: ( goals ( ai-waypoints-once "LambdaEscape" 52 ) ( ai-warp-out 50 ) )
+$Cargo 1:  XSTR("#Stormtroopers", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: AftTurret
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Davro 4
++Arrival Paths: ( "$bay16_vip-left" )
+$Arrival Cue: ( or 
+   ( < 
+      ( distance "Gamma 1" "Krayt Pearl" ) 
+      1400 
+   )
+   ( < 
+      ( distance "Gamma 2" "Krayt Pearl" ) 
+      1400 
+   )
+   ( < 
+      ( distance "Gamma 3" "Krayt Pearl" ) 
+      1400 
+   )
+   ( < 
+      ( distance "Gamma 4" "Krayt Pearl" ) 
+      1400 
+   )
+   ( < 
+      ( distance "Gamma 5" "Krayt Pearl" ) 
+      1400 
+   )
+   ( < 
+      ( distance "Gamma 6" "Krayt Pearl" ) 
+      1400 
+   )
+   ( percent-ships-destroyed 50 "Gamma" ) 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( has-arrived-delay 16 "Omega 5" ) 
+$Determination: 10
++Flags: ( "protect-ship" "no-dynamic" )
++Flags2: ( "no-builtin-messages" "primaries-locked" "secondaries-locked" "lock-all-turrets" )
++Respawn priority: 0
++Special Hitpoints: 1000
++Special Shield Points: 500
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Upsilon 1		;! Object #39
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 221.250229, -445.376343, 19157.052734
+$Orientation:
+	-0.998829, 0.000000, 0.048388,
+	0.000000, 1.000000, 0.000000,
+	-0.048388, 0.000000, -0.998829
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Arakyd ST2" "" )
++Sbank Ammo: ( 33 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "no-dynamic" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 25
+
+$Name: Upsilon 2		;! Object #40
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 67.788956, -315.361511, 18837.541016
+$Orientation:
+	-0.998828, 0.000000, 0.048388,
+	0.000000, 1.000000, 0.000000,
+	-0.048388, 0.000000, -0.998828
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Arakyd ST2" "" )
++Sbank Ammo: ( 33 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "no-dynamic" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 25
+
+$Name: Upsilon 3		;! Object #41
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 102.069870, -739.099854, 19411.060547
+$Orientation:
+	-0.998829, 0.000000, 0.048388,
+	0.000000, 1.000000, 0.000000,
+	-0.048388, 0.000000, -0.998829
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Arakyd ST2" "" )
++Sbank Ammo: ( 33 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "no-dynamic" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 25
+
+$Name: Master		;! Object #42
+$Class: Carrack-class Light Cruiser
+$Team: Hostile
+$Location: -11936.098633, -3500.003906, 16156.609375
+$Orientation:
+	-0.748694, 0.000000, -0.662916,
+	0.000000, 1.000000, 0.000000,
+	0.662916, 0.000000, -0.748694
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "Warlock arrival" 
+      0 
+   )
+   ( not 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "ignore-count" "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 400
+
+$Name: Beta 5		;! Object #43
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 48.251503, -232.336945, 24260.128906
+$Orientation:
+	-0.993780, 0.000000, -0.111362,
+	0.000000, 1.000000, 0.000000,
+	0.111362, 0.000000, -0.993780
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Mu 1		;! Object #44
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 349.106323, -195.584274, 18594.933594
+$Orientation:
+	-0.963345, 0.000000, -0.268266,
+	0.000000, 1.000000, 0.000000,
+	0.268266, 0.000000, -0.963345
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Mu 2		;! Object #45
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 323.248352, -276.619812, 18566.517578
+$Orientation:
+	-0.963345, 0.000000, -0.268266,
+	0.000000, 1.000000, 0.000000,
+	0.268266, 0.000000, -0.963345
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Mu 3		;! Object #46
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 252.832901, -161.446930, 18559.912109
+$Orientation:
+	-0.963345, 0.000000, -0.268266,
+	0.000000, 1.000000, 0.000000,
+	0.268266, 0.000000, -0.963345
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Mu 4		;! Object #47
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 202.542831, -261.878662, 18568.238281
+$Orientation:
+	-0.963345, 0.000000, -0.268266,
+	0.000000, 1.000000, 0.000000,
+	0.268266, 0.000000, -0.963345
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Mu 5		;! Object #48
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 227.212265, -221.707291, 18619.943359
+$Orientation:
+	-0.963345, 0.000000, -0.268266,
+	0.000000, 1.000000, 0.000000,
+	0.268266, 0.000000, -0.963345
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Mu 6		;! Object #49
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 302.599915, -285.435852, 18639.683594
+$Orientation:
+	-0.963345, 0.000000, -0.268266,
+	0.000000, 1.000000, 0.000000,
+	0.268266, 0.000000, -0.963345
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Primary Banks: ( "SFS L-s9.3" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: TIE Ghost		;! Object #50
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: 0.000000, 50000.000000, 0.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" "no-arrival-music" "stealth" )
++Flags2: ( "immobile" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Gold 6		;! Object #51
+$Class: BTL-A4 Y-wing
+$Callsign: Mok
+
+$Team: Friendly
+$Location: 553.978027, 0.001700, -2988.450928
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Colonel
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 17
+
+$Name: Hyperspace Preload_Ship		;! Object #52
+$Class: Nav Buoy
+$Team: Friendly
+$Location: 126113.179688, 0.000000, 64207.976563
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" )
++Flags2: ( "no_collide" )
++Respawn priority: 0
++Group: 0
++Score: 10
+
+#Wings		;! 10 total
+
+$Name: Red
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Red 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Conditions to depart" 
+   5 
+)
+$Ships: (		;! 4 total
+	"Red 1"
+	"Red 2"
+	"Red 3"
+	"Red 4"
+)
+$AI Goals: ( goals ( ai-chase-wing "Alpha" 42 ) ( ai-disarm-ship "Davro 4" 40 ) )
++Hotkey: 0
++Flags: ( )
+
+$Name: Gold
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gold 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Conditions to depart" 
+   3 
+)
+$Ships: (		;! 6 total
+	"Gold 1"
+	"Gold 2"
+	"Gold 3"
+	"Gold 4"
+	"Gold 5"
+	"Gold 6"
+)
+$AI Goals: ( goals ( ai-disarm-ship "Davro 4" 38 ) ( ai-chase-wing "Alpha" 32 ) )
++Hotkey: 1
++Flags: ( )
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 6 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+	"Alpha 4"
+	"Alpha 5"
+	"Alpha 6"
+)
+$AI Goals: ( goals ( ai-guard "Davro 4" 30 ) )
++Hotkey: 2
++Flags: ( "no-arrival-warp" )
+
+$Name: Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Beta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 37 "Krayt Pearl" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 5 total
+	"Beta 1"
+	"Beta 2"
+	"Beta 3"
+	"Beta 4"
+	"Beta 5"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-music" "no-arrival-message" "no-arrival-warp" )
+
+$Name: Gamma
+$Waves: 2
+$Wave Threshold: 0
+$Special Ship: 0		;! Gamma 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 4 "Mu" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 6 total
+	"Gamma 1"
+	"Gamma 2"
+	"Gamma 3"
+	"Gamma 4"
+	"Gamma 5"
+	"Gamma 6"
+)
+$AI Goals: ( goals ( ai-chase "Krayt Pearl" 52 ) ( ai-chase-any 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-music" "no-arrival-message" "no-arrival-warp" )
++Wave Delay Min: 30
++Wave Delay Max: 60
+
+$Name: Rider
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Rider 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 22 "Beta" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Rider turning back" 
+   26 
+)
+$Ships: (		;! 4 total
+	"Rider 1"
+	"Rider 2"
+	"Rider 3"
+	"Rider 4"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-message" "no-arrival-warp" )
+
+$Name: Epsilon
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Epsilon 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "Epsilon may arrive" 
+      0 
+   )
+   ( not 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Epsilon 1"
+	"Epsilon 2"
+	"Epsilon 3"
+	"Epsilon 4"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-warp" )
++Wave Delay Min: 50
++Wave Delay Max: 100
+
+$Name: Theta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Theta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "Theta may arrive" 
+      0 
+   )
+   ( not 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Theta 1"
+	"Theta 2"
+	"Theta 3"
+)
+$AI Goals: ( goals ( ai-chase "Krayt Pearl" 52 ) ( ai-chase-any 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-warp" )
++Wave Delay Min: 20
++Wave Delay Max: 40
+
+$Name: Upsilon
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Upsilon 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( has-arrived-delay 2 "Mu" ) 
+   ( not 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Upsilon 1"
+	"Upsilon 2"
+	"Upsilon 3"
+)
+$AI Goals: ( goals ( ai-chase "Krayt Pearl" 50 ) )
++Hotkey: 3
++Flags: ( "no-arrival-music" "no-arrival-message" "no-arrival-warp" )
++Wave Delay Min: 10
++Wave Delay Max: 20
+
+$Name: Mu
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Mu 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( has-arrived-delay 125 "Rider" ) 
+   ( not 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 6 total
+	"Mu 1"
+	"Mu 2"
+	"Mu 3"
+	"Mu 4"
+	"Mu 5"
+	"Mu 6"
+)
+$AI Goals: ( goals ( ai-guard-wing "Gamma" 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-warp" )
+
+#Events		;! 115 total
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-guardian-threshold 15 "Red 1" ) 
+   ( ship-guardian-threshold 15 "Gold 1" ) 
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Red 1" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Gold 1" 
+      "<all engines>" 
+   )
+   ( modify-variable 
+      @A1Pri[50] 
+      ( rand 40 60 ) 
+   )
+   ( modify-variable 
+      @A2Pri[50] 
+      ( rand 40 60 ) 
+   )
+   ( modify-variable 
+      @A3Pri[50] 
+      ( rand 40 60 ) 
+   )
+   ( modify-variable 
+      @A4Pri[50] 
+      ( rand 40 60 ) 
+   )
+   ( modify-variable 
+      @A5Pri[50] 
+      ( rand 40 60 ) 
+   )
+   ( modify-variable 
+      @A6Pri[50] 
+      ( rand 40 60 ) 
+   )
+   ( send-message-list 
+      "Red 1" 
+      "Normal" 
+      "R1 - Dead ahead" 
+      4400 
+      "Gold 1" 
+      "Normal" 
+      "G1 - Copy" 
+      7000 
+      "Gold 3" 
+      "Normal" 
+      "G3 - Give up (Rodian)" 
+      4000 
+      "Red 1" 
+      "Normal" 
+      "R1 - Tactics" 
+      8000 
+      "Red 3" 
+      "Normal" 
+      "R3 - Going in" 
+      6000 
+   )
+   ( ship-guardian-threshold 
+      31 
+      "Davro 4" 
+   )
+   ( modify-variable 
+      @B1Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @B2Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @B3Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @B4Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @G1Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @G2Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @G3Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @G4Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @G5Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @G6Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( modify-variable 
+      @B5Pri[50] 
+      ( rand 45 55 ) 
+   )
+   ( when-argument 
+      ( every-of 
+         "Antennae01" 
+         "Antennae02" 
+         "Sensors01" 
+         "Sensors02" 
+         "Sensors03" 
+         "Sensors04" 
+         "Sensors05" 
+         "Sensors06" 
+         "Communications01" 
+         "Communications02" 
+         "Communications03" 
+      )
+      ( true ) 
+      ( ship-subsys-untargetable 
+         "Davro 4" 
+         "<argument>" 
+      )
+   )
+)
++Name: Start
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when-argument 
+   ( random-of 
+      "Antennae01" 
+      "Antennae02" 
+      "Sensors01" 
+      "Sensors02" 
+      "Sensors03" 
+      "Sensors04" 
+      "Sensors05" 
+      "Sensors06" 
+      "Communications01" 
+      "Communications02" 
+      "Communications03" 
+   )
+   ( has-time-elapsed 2 ) 
+   ( modify-variable 
+      "@RightSubsysString[MainCrane]" 
+      "<argument>" 
+   )
+   ( set-cargo 
+      "Codes" 
+      "Davro 4" 
+      "<argument>" 
+   )
+)
++Name: Pick cargo location
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "R1 scan order" 
+      2 
+   )
+   ( hud-gauge-set-active 
+      "SignalBar" 
+      ( true ) 
+   )
+   ( modify-variable 
+      @LastBeepTime[0] 
+      ( mission-time-msecs ) 
+   )
+   ( modify-variable 
+      @LastBeepLength[0] 
+      "2000" 
+   )
+)
++Name: Start scanning
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Start scanning" 
+      0 
+   )
+   ( lua-mark-subsystem 
+      "Davro 4" 
+      "Subsystems to Scan" 
+      "Communications01" 
+      "Communications02" 
+      "Communications03" 
+      "Sensors01" 
+      "Sensors02" 
+      "Sensors03" 
+      "Sensors04" 
+      "Sensors05" 
+      "Sensors06" 
+      "Antennae01" 
+      "Antennae02" 
+   )
+)
++Name: Turn on D4 Targeting
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Communications01" 
+      "Communications02" 
+      "Communications03" 
+      "Sensors01" 
+      "Sensors02" 
+      "Sensors03" 
+      "Sensors04" 
+      "Sensors05" 
+      "Sensors06" 
+      "Antennae01" 
+      "Antennae02" 
+   )
+   ( and 
+      ( cap-subsys-cargo-known-delay 
+         1 
+         "Davro 4" 
+         "<argument>" 
+      )
+      ( true ) 
+   )
+   ( ship-subsys-untargetable 
+      "Davro 4" 
+      "<argument>" 
+   )
+   ( script-eval "MarkBox:ClearList()" ) 
+   ( when-argument 
+      ( any-of 
+         "Communications01" 
+         "Communications02" 
+         "Communications03" 
+         "Sensors01" 
+         "Sensors02" 
+         "Sensors03" 
+         "Sensors04" 
+         "Sensors05" 
+         "Sensors06" 
+         "Antennae01" 
+         "Antennae02" 
+      )
+      ( not 
+         ( cap-subsys-cargo-known-delay 
+            0 
+            "Davro 4" 
+            "<argument>" 
+         )
+      )
+      ( lua-mark-subsystem 
+         "Davro 4" 
+         "Subsystem to Scan" 
+         "<argument>" 
+      )
+      ( invalidate-argument "<argument>" ) 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Remove D4 Subsystem from Target
++Repeat Count: -1
++Trigger Count: 11
++Interval: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Start scanning" 
+         0 
+      )
+      ( != @BoardingCountDown[340] 0 ) 
+   )
+   ( hud-set-frame 
+      "SignalBar" 
+      ( - 
+         9 
+         ( / 
+            ( max 
+               10 
+               ( - 
+                  ( mission-time-msecs ) 
+                  @LastBeepTime[0] 
+               )
+            )
+            ( max 
+               ( / 
+                  ( + 
+                     100 
+                     ( / 
+                        1900 
+                        ( / 
+                           3000 
+                           ( min 
+                              ( max 
+                                 1 
+                                 ( distance-ship-subsystem 
+                                    "Red 2" 
+                                    "Davro 4" 
+                                    "@RightSubsysString[MainCrane]" 
+                                 )
+                              )
+                              3000 
+                           )
+                        )
+                     )
+                  )
+                  9 
+               )
+               1 
+            )
+         )
+      )
+   )
+)
++Name: Signal display
++Repeat Count: 999999
++Trigger Count: 999999
++Interval: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Start scanning" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Scan station directive" 
+            0 
+         )
+      )
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( > 
+         ( mission-time-msecs ) 
+         ( + 
+            @LastBeepTime[0] 
+            ( + 
+               100 
+               ( / 
+                  1900 
+                  ( / 
+                     3000 
+                     ( min 
+                        ( max 
+                           1 
+                           ( distance-ship-subsystem 
+                              "Red 2" 
+                              "Davro 4" 
+                              "@RightSubsysString[MainCrane]" 
+                           )
+                        )
+                        3000 
+                     )
+                  )
+               )
+            )
+         )
+      )
+      ( != @BoardingCountDown[340] 0 ) 
+      ( not 
+         ( is-event-true-delay 
+            "Moving out msg 1" 
+            3 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            3 
+         )
+      )
+   )
+   ( play-sound-from-table 
+      ( get-object-x 
+         "Davro 4" 
+         "@RightSubsysString[MainCrane]" 
+      )
+      ( get-object-y 
+         "Davro 4" 
+         "@RightSubsysString[MainCrane]" 
+      )
+      ( get-object-z 
+         "Davro 4" 
+         "@RightSubsysString[MainCrane]" 
+      )
+      79 
+   )
+   ( modify-variable 
+      @LastBeepLength[0] 
+      ( - 
+         ( mission-time-msecs ) 
+         @LastBeepTime[0] 
+      )
+   )
+   ( modify-variable 
+      @LastBeepTime[0] 
+      ( mission-time-msecs ) 
+   )
+)
++Name: Cargo scan beep
++Repeat Count: 999999
++Trigger Count: 999999
++Interval: 0
+
+$Formula: ( when 
+   ( false ) 
+   ( protect-ship "Red 2" ) 
+   ( ship-invulnerable "Red 2" ) 
+)
++Name: DEBUG
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay "DEBUG" 0 ) 
+      ( has-arrived-delay 0 "Krayt Pearl" ) 
+   )
+   ( ship-invulnerable "Krayt Pearl" ) 
+   ( training-msg "Dev msg" ) 
+)
++Name: DEBUG - KP
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-time-elapsed @KraytArrive[110] ) 
+   ( do-nothing ) 
+)
++Name: Krayt may arrive
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Alpha" ) 
+   ( do-nothing ) 
+)
++Name: Alpha directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Alpha", -1)
++Team: 0
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Turret01" 
+      "Turret02" 
+      "Turret03" 
+      "Turret04" 
+      "Turret05" 
+      "Turret06" 
+      "Turret07" 
+      "Turret08" 
+      "Turret09" 
+      "Turret10" 
+      "Turret11" 
+      "Turret12" 
+      "Turret13" 
+      "Turret14" 
+      "Turret15" 
+      "Turret16" 
+      "Turret17" 
+      "Turret18" 
+   )
+   ( is-subsystem-destroyed-delay 
+      "Davro 4" 
+      "<argument>" 
+      0 
+   )
+   ( modify-variable 
+      @Davro4Turrets[18] 
+      ( - @Davro4Turrets[18] 1 ) 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Davro 4 turret counter
++Repeat Count: -1
++Trigger Count: 18
++Interval: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-disarmed-delay 0 "Davro 4" ) 
+      ( directive-value @Davro4Turrets[18] ) 
+   )
+   ( add-remove-escort "Davro 4" 1 ) 
+)
++Name: Disarm directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Disarm Davro 4", -1)
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Alpha" ) 
+      ( is-disarmed-delay 0 "Davro 4" ) 
+   )
+   ( change-iff "Friendly" "Davro 4" ) 
+   ( send-message-list 
+      "Red 1" 
+      "Low" 
+      "R1 - Area clear" 
+      600 
+   )
+   ( add-goal 
+      "Gold" 
+      ( ai-guard "Davro 4" 55 ) 
+   )
+   ( protect-ship "Davro 4" ) 
+)
++Name: Station friendly
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Station friendly" 
+         4 
+      )
+      ( not 
+         ( percent-ships-destroyed 
+            1 
+            "Red" 
+            "Gold" 
+         )
+      )
+   )
+   ( send-message 
+      "Red 1" 
+      "Low" 
+      "R1 - Everyone made it" 
+   )
+)
++Name: Everyone made it through
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Station friendly" 
+         0 
+      )
+      ( not 
+         ( has-arrived-delay 0 "Krayt Pearl" ) 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Wait dir chain
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Krayt Pearl" ) 
+   ( do-nothing ) 
+)
++Name: Wait directive
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Wait for Krayt Pearl", -1)
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Krayt Pearl" ) 
+   ( modify-variable 
+      "@KraytOkay[no]" 
+      "yes" 
+   )
+)
++Name: Pearl directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Defend Krayt Pearl", -1)
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( has-departed-delay 0 "Krayt Pearl" ) 
+      ( is-event-false-delay 
+         "Boarding abort" 
+         0 
+      )
+   )
+   ( modify-variable 
+      "@KraytGotMoney[no]" 
+      "yes" 
+   )
+)
++Name: Pearl has the money
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Beta" ) 
+   ( do-nothing ) 
+)
++Name: Beta directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Beta", -1)
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 1 "Upsilon" ) 
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - More TIEs" 
+   )
+)
++Name: Upsilon here
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Upsilon" ) 
+   ( do-nothing ) 
+)
++Name: Upsilon directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Upsilon", -1)
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 2 "Gamma" ) 
+   ( when 
+      ( is-in-mission "Krayt Pearl" ) 
+      ( add-goal 
+         "Gamma 1" 
+         ( ai-chase "Krayt Pearl" @G1Pri[50] ) 
+      )
+      ( add-goal 
+         "Gamma 2" 
+         ( ai-chase "Krayt Pearl" @G2Pri[50] ) 
+      )
+      ( add-goal 
+         "Gamma 3" 
+         ( ai-chase "Krayt Pearl" @G3Pri[50] ) 
+      )
+      ( add-goal 
+         "Gamma 4" 
+         ( ai-chase "Krayt Pearl" @G4Pri[50] ) 
+      )
+      ( add-goal 
+         "Gamma 5" 
+         ( ai-chase "Krayt Pearl" @G1Pri[50] ) 
+      )
+      ( add-goal 
+         "Gamma 6" 
+         ( ai-chase "Krayt Pearl" @G1Pri[50] ) 
+      )
+   )
+   ( when 
+      ( destroyed-or-departed-delay 
+         0 
+         "Krayt Pearl" 
+      )
+      ( add-goal 
+         "Gamma" 
+         ( ai-chase "Red" 89 ) 
+      )
+   )
+)
++Name: Gamma here
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Gamma" ) 
+   ( do-nothing ) 
+)
++Name: Gamma directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Gamma", -1)
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 
+      @EpsilonArrive[314] 
+      "Rider" 
+   )
+   ( do-nothing ) 
+)
++Name: Epsilon may arrive
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Epsilon" ) 
+   ( do-nothing ) 
+)
++Name: Epsilon directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Epsilon", -1)
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 
+      @ThetaArrive[52] 
+      "Epsilon" 
+   )
+   ( do-nothing ) 
+)
++Name: Theta may arrive
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Theta" ) 
+   ( do-nothing ) 
+)
++Name: Theta directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Theta", -1)
+
+$Formula: ( when 
+   ( < 
+      ( distance "<any friendly>" "Davro 4" ) 
+      2800 
+   )
+   ( clear-goals "Alpha" ) 
+   ( add-goal 
+      "Alpha 1" 
+      ( ai-chase "Red" 50 ) 
+   )
+   ( add-goal 
+      "Alpha 2" 
+      ( ai-chase "Red" 50 ) 
+   )
+   ( add-goal 
+      "Alpha 3" 
+      ( ai-chase "Red" 50 ) 
+   )
+   ( add-goal 
+      "Alpha 4" 
+      ( ai-chase "Red" 50 ) 
+   )
+   ( add-goal 
+      "Alpha 5" 
+      ( ai-chase "Red" 50 ) 
+   )
+   ( add-goal 
+      "Alpha 6" 
+      ( ai-chase "Red" 50 ) 
+   )
+   ( add-goal 
+      "Alpha 1" 
+      ( ai-chase "Gold" @A1Pri[50] ) 
+   )
+   ( add-goal 
+      "Alpha 1" 
+      ( ai-chase "Gold" @A1Pri[50] ) 
+   )
+   ( add-goal 
+      "Alpha 2" 
+      ( ai-chase "Gold" @A1Pri[50] ) 
+   )
+   ( add-goal 
+      "Alpha 3" 
+      ( ai-chase "Gold" @A2Pri[50] ) 
+   )
+   ( add-goal 
+      "Alpha 4" 
+      ( ai-chase "Gold" @A3Pri[50] ) 
+   )
+   ( add-goal 
+      "Alpha 1" 
+      ( ai-chase "Gold" @A4Pri[50] ) 
+   )
+   ( add-goal 
+      "Alpha 5" 
+      ( ai-chase "Gold" @A5Pri[50] ) 
+   )
+   ( add-goal 
+      "Alpha 6" 
+      ( ai-chase "Gold" @A6Pri[50] ) 
+   )
+)
++Name: Alpha attacking
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 1 "Krayt Pearl" ) 
+   ( send-message 
+      "Krayt Pearl" 
+      "Low" 
+      "KP - Arrived" 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-guard "Krayt Pearl" 55 ) 
+   )
+   ( ship-subsys-guardian-threshold 
+      88 
+      "Krayt Pearl" 
+      "<all engines>" 
+   )
+)
++Name: KP here
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( < ( hits-left "Krayt Pearl" ) 76 ) 
+   ( send-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Damage 1" 
+   )
+)
++Name: KP damage level 1
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( < ( hits-left "Krayt Pearl" ) 26 ) 
+   ( send-message 
+      "Gold 4" 
+      "Normal" 
+      "G4 - Scan faster" 
+   )
+)
++Name: KP damage level 2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Krayt Pearl" ) 26 ) 
+   ( send-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Damage 2" 
+   )
+)
++Name: KP damage level 3
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 1 "Krayt Pearl" ) 
+   ( send-message 
+      "Red 1" 
+      "High" 
+      "R1 - KP X" 
+   )
+)
++Name: KP X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-departed-delay 3 "Krayt Pearl" ) 
+   ( turret-protect-ship 
+      "laser" 
+      "Red 1" 
+      "Red 2" 
+   )
+)
++Name: Carrack temp turret lock on
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-departed-delay 6 "Krayt Pearl" ) 
+   ( turret-unprotect-ship 
+      "laser" 
+      "Red 1" 
+      "Red 2" 
+   )
+)
++Name: Carrack temp turret lock off
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Pearl undock" 
+         70 
+      )
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+   )
+   ( send-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Out" 
+   )
+)
++Name: Krayt says THX
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 15 "Rider" ) 
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Onderon SecForce" 
+   )
+   ( validate-goal "Save Riders" ) 
+)
++Name: Onderonians here
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Rider" ) 
+   ( do-nothing ) 
+)
++Name: Rider directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Spare Rider", -1)
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Beta" ) 
+      ( not 
+         ( percent-ships-destroyed 1 "Rider" ) 
+      )
+   )
+   ( change-iff "Friendly" "Rider" ) 
+   ( protect-ship 
+      "Rider 1" 
+      "Rider 2" 
+      "Rider 3" 
+      "Rider 4" 
+   )
+   ( send-message-list 
+      "Red 1" 
+      "Normal" 
+      "R1 - Riders escaping" 
+      1000 
+   )
+   ( clear-goals "Rider" ) 
+   ( add-goal 
+      "Rider" 
+      ( ai-waypoints-once "RiderEscape" 89 ) 
+   )
+   ( ship-invulnerable 
+      "Rider 1" 
+      "Rider 2" 
+      "Rider 3" 
+      "Rider 4" 
+   )
+   ( modify-variable 
+      "@RiderOkay[no]" 
+      "yes" 
+   )
+)
++Name: Rider turning back
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Omega 5" ) 
+   ( send-message-list 
+      "Red 1" 
+      "Low" 
+      "R1 - Shuttle" 
+      800 
+   )
+)
++Name: Shuttle here
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Omega 5" ) 
+   ( do-nothing ) 
+)
++Name: Shuttle X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 1 "Master" ) 
+   ( add-goal 
+      "Master" 
+      ( ai-waypoints-once 
+         "WarlockWaypoint" 
+         89 
+      )
+   )
+   ( send-message-list 
+      "Gold 1" 
+      "Normal" 
+      "G1 - Warlock approaching" 
+      500 
+   )
+)
++Name: Warlock do waypoint
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( add-remove-escort "Master" 25 ) 
+)
++Name: Warlock on escort list
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Master" ) 
+   ( do-nothing ) 
+)
++Name: Carrack X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Krayt Pearl" ) 
+   ( send-message 
+      "Red 1" 
+      "High" 
+      "R1 - RTB" 
+   )
+)
++Name: Krayt Pearl Departed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      1 
+      "Krayt Pearl" 
+   )
+   ( script-eval 
+      "blink_jumpoutpoint(true)" 
+   )
+)
++Name: Conditions to depart
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Red 2" ) 
+   ( do-nothing ) 
+)
++Name: Depart
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Hyperspace", -1)
++Objective key:  XSTR("Face Exit and Press $Enter$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      0 
+      "Krayt Pearl" 
+   )
+   ( do-nothing ) 
+)
++Name: Campaign progress allowed
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-goal-true-delay "Disarm" 0 ) 
+      ( is-goal-true-delay "Boarding" 0 ) 
+      ( is-goal-true-delay "Save Riders" 0 ) 
+      ( is-goal-true-delay "Shuttle" 0 ) 
+      ( has-departed-delay 0 "Krayt Pearl" ) 
+      ( is-event-true-delay 
+         "Bonus score - 4 Alpha kills" 
+         0 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Perfect performance
++Repeat Count: 1
++Interval: 1
++Score: 100
+
+$Formula: ( when 
+   ( and 
+      ( > ( num_kills "Red 2" ) 3 ) 
+      ( not ( has-arrived-delay 0 "Beta" ) ) 
+   )
+   ( do-nothing ) 
+)
++Name: Bonus score - 4 Alpha kills
++Repeat Count: 1
++Interval: 1
++Score: 30
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Omega 5" ) 
+      ( has-departed-delay 0 "Krayt Pearl" ) 
+   )
+   ( do-nothing ) 
+)
++Name: Lambda X bonus
++Repeat Count: 1
++Interval: 1
++Score: 50
++Team: 0
+
+$Formula: ( when 
+   ( > ( num_kills "Red 2" ) 7 ) 
+   ( do-nothing ) 
+)
++Name: Dogfighter level 1
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( > ( num_kills "Red 2" ) 10 ) 
+   ( do-nothing ) 
+)
++Name: Dogfighter level 2
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Gold 2" ) 
+   ( modify-variable @Gold2[1] 0 ) 
+)
++Name: Gold  2 X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Gold 3" ) 
+   ( modify-variable @Gold3[1] 0 ) 
+)
++Name: Gold 3  X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Gold 6" ) 
+   ( modify-variable @Gold6[1] 0 ) 
+)
++Name: Gold 6 X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( not ( skill-level-at-least "Easy" ) ) 
+   ( modify-variable 
+      @EpsilonArrive[314] 
+      ( + @EpsilonArrive[314] 25 ) 
+   )
+   ( modify-variable 
+      @KraytArrive[110] 
+      ( + @KraytArrive[110] 20 ) 
+   )
+   ( modify-variable 
+      @BoardingCountDown[340] 
+      ( - @BoardingCountDown[340] 30 ) 
+   )
+   ( modify-variable 
+      @ThetaArrive[52] 
+      ( + @ThetaArrive[52] 15 ) 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Red 2" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Red 2" 
+      "Communications" 
+      "Navigation" 
+      "Weapons" 
+      "Sensors" 
+   )
+)
++Name: Very Easy - Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( skill-level-at-least "Easy" ) 
+      ( not 
+         ( skill-level-at-least "Medium" ) 
+      )
+   )
+   ( modify-variable 
+      @BoardingCountDown[340] 
+      ( - @BoardingCountDown[340] 40 ) 
+   )
+   ( modify-variable 
+      @EpsilonArrive[314] 
+      ( + @EpsilonArrive[314] 35 ) 
+   )
+   ( modify-variable 
+      @ThetaArrive[52] 
+      ( + @ThetaArrive[52] 35 ) 
+   )
+   ( modify-variable 
+      @KraytArrive[110] 
+      ( + @KraytArrive[110] 20 ) 
+   )
+)
++Name: Easy - Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( skill-level-at-least "Medium" ) 
+      )
+      ( is-disarmed-delay 0 "Davro 4" ) 
+   )
+   ( change-ai-class "Major" "Red 1" ) 
+   ( change-ai-class "Captain" "Red 2" ) 
+   ( change-ai-class "Captain" "Red 3" ) 
+   ( change-ai-class "Captain" "Red 4" ) 
+   ( change-ai-class "Officer" "Gold 1" ) 
+   ( change-ai-class "Officer" "Gold 2" ) 
+   ( change-ai-class "Officer" "Gold 3" ) 
+   ( change-ai-class "Officer" "Gold 4" ) 
+   ( change-ai-class "Officer" "Gold 5" ) 
+)
++Name: Easy - Friendly AI after disarm
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 2 "Gamma" ) 
+      ( not 
+         ( skill-level-at-least "Medium" ) 
+      )
+   )
+   ( change-ai-class "Major" "Gamma 1" ) 
+   ( change-ai-class "Major" "Gamma 2" ) 
+   ( change-ai-class "Major" "Gamma 3" ) 
+   ( change-ai-class "Major" "Gamma 4" ) 
+   ( change-ai-class "Major" "Gamma 5" ) 
+   ( change-ai-class "Major" "Gamma 6" ) 
+)
++Name: Easy - Gamma boost
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( skill-level-at-least "Medium" ) 
+      ( not ( skill-level-at-least "Hard" ) ) 
+   )
+   ( do-nothing ) 
+)
++Name: Medium - Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Warlock do waypoint" 
+         0 
+      )
+      ( skill-level-at-least "Medium" ) 
+   )
+   ( cap-waypoint-speed "Master" 125 ) 
+)
++Name: Medium - Warlock slower
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( skill-level-at-least "Hard" ) 
+      ( not 
+         ( skill-level-at-least "Insane" ) 
+      )
+   )
+   ( modify-variable 
+      @BoardingCountDown[340] 
+      ( + @BoardingCountDown[340] 10 ) 
+   )
+   ( modify-variable 
+      @EpsilonArrive[314] 
+      ( - @EpsilonArrive[314] 5 ) 
+   )
+   ( modify-variable 
+      @ThetaArrive[52] 
+      ( - @ThetaArrive[52] 5 ) 
+   )
+   ( modify-variable 
+      @KraytArrive[110] 
+      ( - @KraytArrive[110] 15 ) 
+   )
+)
++Name: Hard - Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( skill-level-at-least "Hard" ) 
+      ( is-event-true-delay 
+         "Alpha attacking" 
+         2 
+      )
+   )
+   ( change-ai-class "Major" "Alpha 1" ) 
+   ( change-ai-class "Major" "Alpha 2" ) 
+   ( change-ai-class "Major" "Alpha 3" ) 
+   ( change-ai-class "Major" "Alpha 4" ) 
+   ( change-ai-class "Major" "Alpha 5" ) 
+   ( change-ai-class "Major" "Alpha 6" ) 
+)
++Name: Hard - Alpha
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( skill-level-at-least "Insane" ) 
+   ( modify-variable 
+      @BoardingCountDown[340] 
+      ( + @BoardingCountDown[340] 25 ) 
+   )
+   ( modify-variable 
+      @KraytArrive[110] 
+      ( - @KraytArrive[110] 15 ) 
+   )
+   ( modify-variable 
+      @D4-SubScans-Needed[9] 
+      ( - @D4-SubScans-Needed[9] 1 ) 
+   )
+)
++Name: Insane - Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 5 "Krayt Pearl" ) 
+      ( not 
+         ( is-disarmed-delay 0 "Davro 4" ) 
+      )
+   )
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Suggest KP stay away" 
+   )
+)
++Name: Red 1 - Stay back
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 11 "Krayt Pearl" ) 
+      ( not 
+         ( is-disarmed-delay 0 "Davro 4" ) 
+      )
+   )
+   ( send-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - We aint got time" 
+   )
+)
++Name: We have no time
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( distance "Mu 1" "Davro 4" ) 
+      2900 
+   )
+   ( add-goal "Mu" ( ai-chase-any 60 ) ) 
+   ( add-goal 
+      "Mu" 
+      ( ai-ignore-new "Davro 4" 60 ) 
+   )
+)
++Name: Mu engages
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Mu" ) 
+   ( do-nothing ) 
+)
++Name: Mu directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Mu", -1)
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( has-arrived-delay 
+            ( - @EpsilonArrive[314] 22 ) 
+            "Rider" 
+         )
+         ( not 
+            ( skill-level-at-least "Medium" ) 
+         )
+      )
+      ( and 
+         ( has-arrived-delay 
+            ( - @EpsilonArrive[314] 55 ) 
+            "Rider" 
+         )
+         ( skill-level-at-least "Medium" ) 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Warlock arrival
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( > 
+         ( distance "Red 2" "Krayt Pearl" ) 
+         5100 
+      )
+      ( has-arrived-delay 10 "Krayt Pearl" ) 
+      ( not 
+         ( has-undocked-delay 
+            "Krayt Pearl" 
+            "Davro 4" 
+            1 
+            15 
+         )
+      )
+   )
+   ( send-random-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Stop approach 1" 
+      "R1 - Stop approach 2" 
+   )
+)
++Name: Player wandering away - warning
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( > 
+         ( distance "Red 2" "Krayt Pearl" ) 
+         7250 
+      )
+      ( has-arrived-delay 10 "Krayt Pearl" ) 
+      ( not 
+         ( has-undocked-delay 
+            "Krayt Pearl" 
+            "Davro 4" 
+            1 
+            15 
+         )
+      )
+   )
+   ( send-random-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Stop approach 5" 
+      "R1 - Stop approach 6" 
+      "R1 - Stop approach 4" 
+   )
+)
++Name: Player wandering away - w2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 19 ) 
+   ( trigger-submodel-animation 
+      "Davro 4" 
+      "scripted" 
+      0 
+      1 
+   )
+)
++Name: Close blastdoors
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-docked-delay 
+         "Krayt Pearl" 
+         "Davro 4" 
+         1 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Moving out msg 2" 
+            0 
+         )
+      )
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( != @BoardingCountDown[340] 0 ) 
+   )
+   ( modify-variable 
+      @BoardingCountDown[340] 
+      ( - @BoardingCountDown[340] 1 ) 
+   )
+)
++Name: Docking countdown
++Repeat Count: -1
++Trigger Count: 360
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 1 "Beta" ) 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+   )
+   ( send-message-list 
+      "Gold 1" 
+      "Normal" 
+      "G1 - Beta inbound" 
+      500 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Hold position" 
+      6000 
+      "Red 1" 
+      "Low" 
+      "R1 - Five minutes X" 
+      9000 
+   )
+   ( add-goal 
+      "Beta 1" 
+      ( ai-chase "Krayt Pearl" @B1Pri[50] ) 
+   )
+   ( add-goal 
+      "Beta 2" 
+      ( ai-chase "Krayt Pearl" @B2Pri[50] ) 
+   )
+   ( add-goal 
+      "Beta 3" 
+      ( ai-chase "Krayt Pearl" @B3Pri[50] ) 
+   )
+   ( add-goal 
+      "Beta 4" 
+      ( ai-chase "Krayt Pearl" @B4Pri[50] ) 
+   )
+   ( add-goal 
+      "Beta 5" 
+      ( ai-chase "Krayt Pearl" @B5Pri[50] ) 
+   )
+)
++Name: Beta here
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-event-true-delay "KP docked 2" 5 ) 
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Scan order" 
+   )
+   ( set-unscanned "Davro 4" ) 
+   ( when-argument 
+      ( every-of 
+         "Antennae01" 
+         "Antennae02" 
+         "Sensors01" 
+         "Sensors02" 
+         "Sensors03" 
+         "Sensors04" 
+         "Sensors05" 
+         "Sensors06" 
+         "Communications01" 
+         "Communications02" 
+         "Communications03" 
+      )
+      ( true ) 
+      ( ship-subsys-targetable 
+         "Davro 4" 
+         "<argument>" 
+      )
+   )
+   ( when-argument 
+      ( every-of 
+         "DockArm01" 
+         "DockArm02" 
+         "DockArm03" 
+         "DockArm04" 
+         "DockArm05" 
+         "DockArm06" 
+         "MainHangarDeck" 
+         "LowerHangarDeck" 
+         "MainCrane" 
+         "Crane01" 
+         "Crane02" 
+         "Crane03" 
+         "HangarDoor01" 
+         "HangarDoor02" 
+         "HangarDoor03" 
+      )
+      ( true ) 
+      ( ship-subsys-untargetable 
+         "Davro 4" 
+         "<argument>" 
+      )
+   )
+)
++Name: R1 scan order
++Repeat Count: 1
++Interval: 1
++Chained: 10
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Sensors01" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Sensors01" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Sensors02" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Sensors02" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Sensors03" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Sensors03" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Antennae01" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Antennae01" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Antennae02" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Antennae02" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Sensors04" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Sensors04" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Sensors05" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Sensors05" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Sensors06" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Sensors06" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Communications01" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Communications01" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Communications02" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Communications02" 
+            )
+         )
+         ( and 
+            ( cap-subsys-cargo-known-delay 
+               1 
+               "Davro 4" 
+               "Communications03" 
+            )
+            ( string-equals 
+               "@RightSubsysString[MainCrane]" 
+               "Communications03" 
+            )
+         )
+         ( and 
+            ( <= 
+               @SubsysCounter[11] 
+               @D4-SubScans-Needed[9] 
+            )
+            ( true ) 
+         )
+      )
+      ( not 
+         ( is-destroyed-delay 0 "TIE Ghost" ) 
+      )
+      ( directive-value @SubsysCounter[11] ) 
+   )
+   ( add-remove-escort "Davro 4" 0 ) 
+   ( modify-variable 
+      @BoardingCountDown[340] 
+      139 
+   )
+   ( modify-variable 
+      @SubsysCounter[11] 
+      0 
+   )
+   ( do-nothing ) 
+)
++Name: Scan station directive
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Scan Davro 4 Subsystems", -1)
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "R1 scan order" 
+         18 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Scan station directive" 
+            0 
+         )
+      )
+   )
+   ( training-msg 
+      "Subsystem scan" 
+      "Subsystem scan" 
+      0 
+      20 
+   )
+)
++Name: Subsystem scan advice
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Moving out msg 1" 
+            0 
+         )
+      )
+      ( is-event-true-delay 
+         "R1 scan order" 
+         50 
+      )
+   )
+   ( send-random-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Hurry up 1" 
+      "KP - Hurry up 2" 
+   )
+)
++Name: Hurry up 1 random msgs
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Moving out msg 1" 
+            0 
+         )
+      )
+   )
+   ( send-random-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Hurry up 3" 
+      "KP - Hurry up 4" 
+   )
+)
++Name: Hurry Up 2 random msgs
++Repeat Count: 1
++Interval: 1
++Chained: 40
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Moving out msg 1" 
+            0 
+         )
+      )
+   )
+   ( send-random-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Hurry up 5" 
+      "KP - Hurry up 6" 
+   )
+)
++Name: Hurry Up 3 random msgs
++Repeat Count: 1
++Interval: 1
++Chained: 40
+
+$Formula: ( when 
+   ( and 
+      ( < @BoardingCountDown[340] 140 ) 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+   )
+   ( send-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Moving out" 
+   )
+   ( do-nothing ) 
+)
++Name: Moving out msg 1
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+   )
+   ( send-message 
+      "Krayt Pearl" 
+      "High" 
+      "KP - Moving out 2" 
+   )
+)
++Name: Moving out msg 2
++Repeat Count: 1
++Interval: 1
++Chained: 46
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+   )
+   ( send-message 
+      "Krayt Pearl" 
+      "High" 
+      "KP - Loading the sled" 
+   )
+)
++Name: Moving out msg 3
++Repeat Count: 1
++Interval: 1
++Chained: 45
+
+$Formula: ( when 
+   ( has-docked-delay 
+      "Krayt Pearl" 
+      "Davro 4" 
+      1 
+      2 
+   )
+   ( send-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Boarded" 
+   )
+   ( set-shield-energy 0 "Krayt Pearl" ) 
+)
++Name: KP docked
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( has-docked-delay 
+         "Krayt Pearl" 
+         "Davro 4" 
+         1 
+         32 
+      )
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+   )
+   ( send-message 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Boarded 2" 
+   )
+)
++Name: KP docked 2
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( is-event-true-delay 
+            "Moving out msg 2" 
+            150 
+         )
+         ( not 
+            ( is-event-true-delay 
+               "Boarding abort" 
+               0 
+            )
+         )
+      )
+      ( is-event-true-delay 
+         "Boarding abort" 
+         25 
+      )
+   )
+   ( add-goal 
+      "Krayt Pearl" 
+      ( ai-undock 70 ) 
+   )
+   ( send-message-list 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Undocking" 
+      1500 
+   )
+   ( add-goal 
+      "Krayt Pearl" 
+      ( ai-waypoints-once "KraytHeadOut" 60 ) 
+   )
+   ( clear-goals "Gold" ) 
+   ( add-goal 
+      "Gold" 
+      ( ai-guard "Krayt Pearl" 62 ) 
+   )
+)
++Name: Pearl undock
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "R1 scan order" 
+         30 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Pearl undock" 
+            0 
+         )
+      )
+   )
+   ( training-msg 
+      "Press 1" 
+      "Press 1" 
+      0 
+      8 
+   )
+   ( key-reset "1" ) 
+)
++Name: Boarding becomes abortable
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "1" ) 
+      ( not 
+         ( is-event-true-delay 
+            "Pearl undock" 
+            0 
+         )
+      )
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+   )
+   ( training-msg "Aborted" ) 
+   ( send-message-list 
+      "Krayt Pearl" 
+      "Normal" 
+      "KP - Aborted" 
+      2000 
+   )
+)
++Name: Boarding abort
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Team: 0
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Antennae01" 
+      "Antennae02" 
+      "Sensors01" 
+      "Sensors02" 
+      "Sensors03" 
+      "Sensors04" 
+      "Sensors05" 
+      "Sensors06" 
+      "Communications01" 
+      "Communications02" 
+      "Communications03" 
+   )
+   ( and 
+      ( cap-subsys-cargo-known-delay 
+         0 
+         "Davro 4" 
+         "<argument>" 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Moving out msg 1" 
+            0 
+         )
+      )
+   )
+   ( if-then-else 
+      ( >= @BoardingCountDown[340] 10 ) 
+      ( modify-variable 
+         @BoardingCountDown[340] 
+         ( - @BoardingCountDown[340] 10 ) 
+      )
+      ( modify-variable 
+         @BoardingCountDown[340] 
+         30 
+      )
+   )
+   ( modify-variable 
+      @SubsysCounter[11] 
+      ( - @SubsysCounter[11] 1 ) 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Subsys timer
++Repeat Count: -1
++Trigger Count: 11
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-time-elapsed 30 ) 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+   ( self-destruct 
+      "Alpha 1" 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+      "Alpha 5" 
+      "Alpha 6" 
+   )
+   ( sabotage-subsystem 
+      "Davro 4" 
+      "<all turrets>" 
+      80 
+   )
+)
++Name: DEBUG - Alpha, st
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 30 "Beta" ) 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+   ( self-destruct 
+      "Beta 1" 
+      "Beta 2" 
+      "Beta 3" 
+      "Beta 4" 
+      "Upsilon 1" 
+      "Upsilon 2" 
+      "Upsilon 3" 
+   )
+)
++Name: DEBUG - wave 2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay "KP docked" 0 ) 
+      ( not 
+         ( is-event-true-delay 
+            "Moving out msg 1" 
+            0 
+         )
+      )
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+   ( training-msg "Dev msg 2" ) 
+)
++Name: Dev - view timer
++Repeat Count: -1
++Trigger Count: 300
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Conditions to depart" 
+      4 
+   )
+   ( clear-goals "Red" "Gold" ) 
+   ( add-goal "Red 1" ( ai-warp-out 95 ) ) 
+   ( add-goal "Gold" ( ai-warp-out 95 ) ) 
+   ( add-goal "Red 3" ( ai-warp-out 95 ) ) 
+   ( add-goal "Red 4" ( ai-warp-out 95 ) ) 
+)
++Name: Fighters jump
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Boarding abort" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Scan station directive" 
+         2 
+      )
+      ( is-destroyed-delay 0 "Krayt Pearl" ) 
+      ( is-event-true-delay 
+         "Moving out msg 1" 
+         2 
+      )
+   )
+   ( ship-subsys-untargetable 
+      "Davro 4" 
+      "Communications01" 
+      "Communications02" 
+      "Communications03" 
+      "Sensors01" 
+      "Sensors02" 
+      "Sensors03" 
+      "Sensors04" 
+      "Sensors05" 
+      "Sensors06" 
+      "Antennae01" 
+      "Antennae02" 
+   )
+)
++Name: Transponder subsys untargetable
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: PlayerArrivesFromHyperspace
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Red 1" 
+      "Red 2" 
+      "Red 3" 
+      "Red 4" 
+      "Gold 1" 
+      "Gold 2" 
+      "Gold 3" 
+      "Gold 4" 
+      "Gold 5" 
+      "Gold 6" 
+   )
+   ( true ) 
+   ( set-mobile "<argument>" ) 
+   ( enable-ets "<argument>" ) 
+   ( ship-unstealthy 
+      "Alpha 1" 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+      "Alpha 5" 
+      "Alpha 6" 
+      "Davro 4" 
+   )
+)
++Name: Awaken fighters
++Repeat Count: 1
++Interval: 1
++Chained: 4
+
+$Formula: ( when 
+   ( < ( hits-left "Gold 1" ) 15 ) 
+   ( clear-goals "Gold 1" ) 
+   ( add-goal 
+      "Gold 1" 
+      ( ai-warp-out 100 ) 
+   )
+   ( send-message 
+      "Gold 1" 
+      "Normal" 
+      "G1 - Can't stay with you" 
+   )
+)
++Name: Gold 1 bugs out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay "Beta here" 1 ) 
+   ( unprotect-ship "Gold 1" ) 
+   ( ship-guardian-threshold 12 "Gold 1" ) 
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Gold 1" 
+      "<all engines>" 
+   )
+)
++Name: Gold 1 can be targeted
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-guardian-threshold 
+      10 
+      "Gold 4" 
+      "Gold 5" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Red 1" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Red 3" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Red 4" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Gold 1" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Gold 4" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Gold 5" 
+      "<all engines>" 
+   )
+)
++Name: Guardianed Pilots
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Gold 4" ) 15 ) 
+   ( clear-goals "Gold 4" ) 
+   ( add-goal 
+      "Gold 4" 
+      ( ai-warp-out 100 ) 
+   )
+   ( send-message 
+      "Gold 4" 
+      "Normal" 
+      "G4 - Bolk Retreats" 
+   )
+)
++Name: Gold 4 Bugs out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Gold 5" ) 15 ) 
+   ( clear-goals "Gold 5" ) 
+   ( add-goal 
+      "Gold 5" 
+      ( ai-warp-out 100 ) 
+   )
+   ( send-message 
+      "Gold 5" 
+      "Normal" 
+      "G5 - Besto Retreats" 
+   )
+)
++Name: Gold 5 bugs out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Red 3" ) 15 ) 
+   ( clear-goals "Gold 3" ) 
+   ( add-goal 
+      "Red 3" 
+      ( ai-warp-out 100 ) 
+   )
+   ( send-message 
+      "Red 3" 
+      "Normal" 
+      "R3 - Gan Retreats" 
+   )
+)
++Name: Red 3 Retreats
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Red 4" ) 15 ) 
+   ( clear-goals "Red 4" ) 
+   ( add-goal 
+      "Red 4" 
+      ( ai-warp-out 100 ) 
+   )
+   ( send-message 
+      "Red 4" 
+      "Normal" 
+      "R4 - Bodo Retreats" 
+   )
+)
++Name: Red 4 Retreats
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Pearl undock" 
+         60 
+      )
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Krayt Pearl" 
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Boarding abort" 
+            0 
+         )
+      )
+      ( not 
+         ( percent-ships-destroyed 
+            1 
+            "Red" 
+            "Gold" 
+         )
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Piracy FTW
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: Perl
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( distance-ship-subsystem 
+         "Krayt Pearl" 
+         "Davro 4" 
+         "HangarDoor02" 
+      )
+      300 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-guard "Davro 4" 57 ) 
+   )
+)
++Name: KP Reaches Station
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-undocked-delay 
+      "Krayt Pearl" 
+      "Davro 4" 
+      1 
+      3 
+   )
+   ( remove-goal 
+      "Red" 
+      ( ai-guard "Davro 4" 57 ) 
+   )
+)
++Name: Pearl Undocks
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      0 
+      "Red 3" 
+      "Red 4" 
+      "Gold 2" 
+      "Gold 3" 
+      "Gold 4" 
+      "Gold 5" 
+      "Gold 6" 
+   )
+   ( unprotect-ship "Red 1" ) 
+)
++Name: Unprotect Vorin
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-undocked-delay 
+      "Krayt Pearl" 
+      "Davro 4" 
+      1 
+      0 
+   )
+   ( set-shield-energy 
+      ( + 
+         ( shield-recharge-pct "Krayt Pearl" ) 
+         5 
+      )
+      "Krayt Pearl" 
+   )
+)
++Name: Krayt Pearl shield regen
++Repeat Count: -1
++Trigger Count: 1000
++Interval: 5
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Moving out msg 1" 
+      3 
+   )
+   ( destroy-instantly "TIE Ghost" ) 
+)
++Name: Destroy TIE Ghost
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 2 "Epsilon" ) 
+   ( add-goal 
+      "Gamma" 
+      ( ai-chase "Red" 89 ) 
+   )
+)
++Name: Epsilon Here
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 2 "Theta" ) 
+   ( add-goal 
+      "Gamma" 
+      ( ai-chase-any 89 ) 
+   )
+)
++Name: Theta Here
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: DisablePlanetBankRotation
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 5 total
+
+$Type: Primary
++Name: Disarm
+$MessageNew:  XSTR("Disarm Davro 4", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "Disarm directive" 
+   0 
+)
++No music
+
+$Type: Primary
++Name: KP Goal
+$MessageNew:  XSTR("Protect Krayt Pearl", -1)
+$end_multi_text
+$Formula: ( has-departed-delay 0 "Krayt Pearl" ) 
++Score: 100
+
+$Type: Primary
++Name: Boarding
+$MessageNew:  XSTR("Assist Boarding Operation", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "Pearl undock" 
+   0 
+)
++No music
++Score: 50
+
+$Type: Secondary
++Name: Save Riders
+$MessageNew:  XSTR("Keep Rider Wing Alive", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "Rider turning back" 
+   0 
+)
++Invalid
++No music
++Score: 75
+
+$Type: Bonus
++Name: Shuttle
+$MessageNew:  XSTR("Destroy Omega 5", -1)
+$end_multi_text
+$Formula: ( is-destroyed-delay 0 "Omega 5" ) 
++No music
++Score: 150
+
+#Waypoints		;! 6 lists total
+
+$Name: KraytHeadOut
+$List: (		;! 1 points in list
+	( 20000.000000, 0.000000, -20000.000000 )
+)
+
+$Name: RiderEscape
+$List: (		;! 1 points in list
+	( -11734.400391, 5000.000000, 12537.500000 )
+)
+
+$Name: MasterWaypoint
+$List: (		;! 1 points in list
+	( 0.000000, -400.000000, 0.000000 )
+)
+
+$Name: LambdaEscape
+$List: (		;! 1 points in list
+	( -6934.600098, -1250.000000, 4032.699951 )
+)
+
+$Name: WarlockWaypoint
+$List: (		;! 2 points in list
+	( -1182.175415, -0.000000, 4214.215820 )
+	( 85.000000, -400.000000, -36.099998 )
+)
+
+$Name: JumpOutPoint Friendly
+$List: (		;! 1 points in list
+	( 41381.878906, 0.006744, -41243.843750 )
+)
+
+#Messages		;! 55 total
+
+$Command Sender: Restoration
+
+$Name: R1 - Dead ahead
+$Team: -1
+$MessageNew:  XSTR("Target confirmed.  Reading six eyeballs, dead ahead. Gold group, get set to start your run.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_1.ogg
+
+$Name: G1 - Copy
+$Team: -1
+$MessageNew:  XSTR("Copy, Red Leader.", -1)
+$end_multi_text
++Wave Name: R1_M2_Tir_1.ogg
+
+$Name: G3 - Give up (Rodian)
+$Team: -1
+$MessageNew:  XSTR("Station Davro 4, abandon your defenses and prepare to be boarded.  Comply or be destroyed!", -1)
+$end_multi_text
++Wave Name: R1_M2_Reego_1.ogg
+
+$Name: R1 - Tactics
+$Team: -1
+$MessageNew:  XSTR("Red group, get ready to draw their fire off the bombers.  Deflectors on double front for the first pass. ", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_2.ogg
+
+$Name: KP - Arrived
+$Team: -1
+$MessageNew:  XSTR("This is the Pearl. We're making our approach.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_1.ogg
+
+$Name: KP - Damage 1
+$Team: -1
+$MessageNew:  XSTR("We're under fire. We need some cover, pilots!", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_2.ogg
+
+$Name: KP - Damage 2
+$Team: -1
+$MessageNew:  XSTR("Hurry up, pilots! We can't take this kind of punishment!", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_3.ogg
+
+$Name: R1 - KP X
+$Team: -1
+$MessageNew:  XSTR("We've lost her - Sithspit!  How the hell did...  All ships, return to base.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_3.ogg
+
+$Name: R1 - Area clear
+$Team: -1
+$MessageNew:  XSTR("The area is secured.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_4.ogg
+
+$Name: G1 - Beta inbound
+$Team: -1
+$MessageNew:  XSTR("Aw great, enemy ships inbound.", -1)
+$end_multi_text
++Wave Name: Reb_1_Arrive_Enemy.ogg
+
+$Name: KP - Hold position
+$Team: -1
+$MessageNew:  XSTR("Hold your positions, pilots.  If you try to intercept them now, they'll split their group and make a run on us while you're busy.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_4.ogg
+
+$Name: R1 - Five minutes X
+$Team: -1
+$MessageNew:  XSTR("They must have been en route already.  Looks like you might not get your five minutes, Pearl.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_5.ogg
+
+$Name: KP - Boarded
+$Team: -1
+$MessageNew:  XSTR("We've docked with the platform.  The boarding party is in and our scanning crews are moving to the central concourse.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_5.ogg
+
+$Name: KP - Boarded 2
+$Team: -1
+$MessageNew:  XSTR("All right, our team has patched in to the security network. Red Leader, help us locate the package.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_6.ogg
+
+$Name: R1 - Scan order
+$Team: -1
+$MessageNew:  XSTR("I'll stay back and scan the main cargo bays.  Red 2, the subsystems are yours.  Get right on top of the system you're targeting, and point your nose at it. I want every part of this station checked.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_6.ogg
+
+$Name: KP - Moving out
+$Team: -1
+$MessageNew:  XSTR("We have a lock on the transponder.  The team is moving out.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_7.ogg
+
+$Name: KP - Moving out 2
+$Team: -1
+$MessageNew:  XSTR("Our team has reached the target chamber$semicolon they're cutting in now.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_8.ogg
+
+$Name: KP - Undocking
+$Team: -1
+$MessageNew:  XSTR("We're pulling out. Keep us covered.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_9.ogg
+
+$Name: KP - Aborted
+$Team: -1
+$MessageNew:  XSTR("Copy that. Recalling the team.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_10.ogg
+
+$Name: R1 - Onderon SecForce
+$Team: -1
+$MessageNew:  XSTR("The local security's on its way. If we can make a clean sweep of Beta wing, we might persuade their dispatcher to wait for the next wave before sending them in.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_7.ogg
+
+$Name: R1 - Riders escaping
+$Team: -1
+$MessageNew:  XSTR("Rider flight is bugging out - Nice shooting, pilots!", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_8.ogg
+
+$Name: KP - Out
+$Team: -1
+$MessageNew:  XSTR("Thanks for the escort, pilots.  We'll meet you back at the fleet.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_11.ogg
+
+$Name: R1 - RTB
+$Team: -1
+$MessageNew:  XSTR("All ships, return to base.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_9.ogg
+
+$Name: Press 1
+$Team: -1
+$MessageNew:  XSTR("Press $1$ to abort boarding operation", -1)
+$end_multi_text
+
+$Name: R1 - Stop approach 1
+$Team: -1
+$MessageNew:  XSTR("Where are you going?  Stay with us, Red 2!", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_10.ogg
+
+$Name: R1 - Stop approach 2
+$Team: -1
+$MessageNew:  XSTR("You're too far out, Red 2.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_11.ogg
+
+$Name: R1 - Stop approach 5
+$Team: -1
+$MessageNew:  XSTR("What in the four moons are you doing?", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_12.ogg
+
+$Name: R1 - Stop approach 6
+$Team: -1
+$MessageNew:  XSTR("Come back now, Red 2. That's an order!", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_13.ogg
+
+$Name: KP - Hurry up 1
+$Team: -1
+$MessageNew:  XSTR("Help us sweep this station, Red 2 - scan those subsystems.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_12.ogg
+
+$Name: KP - Hurry up 2
+$Team: -1
+$MessageNew:  XSTR("We've still got a lot of area to cover, Red Leader.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_13.ogg
+
+$Name: KP - Hurry up 3
+$Team: -1
+$MessageNew:  XSTR("Everything alright, Red 2?", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_14.ogg
+
+$Name: KP - Hurry up 4
+$Team: -1
+$MessageNew:  XSTR("We're pushinig our luck here.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_15.ogg
+
+$Name: KP - Hurry up 5
+$Team: -1
+$MessageNew:  XSTR("No sign of the cargo so far. We're sitting ducks out here.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_16.ogg
+
+$Name: KP - Hurry up 6
+$Team: -1
+$MessageNew:  XSTR("We've been here way too long. Speed up the scans or call the mission off.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_17.ogg
+
+$Name: R1 - Shuttle
+$Team: -1
+$MessageNew:  XSTR("We've got a shuttle leaving the station's hangar bay.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_15.ogg
+
+$Name: G1 - Warlock approaching
+$Team: -1
+$MessageNew:  XSTR("A Carrack cruiser just jumped in. I got a bad feeling about this.", -1)
+$end_multi_text
++Wave Name: R1_M2_Tir_2.ogg
+
+$Name: Subsystem scan
+$Team: -1
+$MessageNew:  XSTR("To scan a subsystem first target the station and press $S$ to target a subsystem. Then approach the subsystem - indicated by a cube on in the lower left of your HUD - and then wait until your computer finishes the scan. The word 'Scanned' will appear below the cube when the scan is complete. Press $S$ to target the next subsystem.", -1)
+$end_multi_text
+
+$Name: R1 - Everyone made it
+$Team: -1
+$MessageNew:  XSTR("Glad to see everyone made it through.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_17.ogg
+
+$Name: Aborted
+$Team: -1
+$MessageNew:  XSTR("Boarding operation cancelled. The commandos are being called back.", -1)
+$end_multi_text
++Wave Name: R1_M2_Tir_2.ogg
+
+$Name: R1 - Suggest KP stay away
+$Team: -1
+$MessageNew:  XSTR("We're not done with the station yet, Pearl.  Keep your distance.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_18.ogg
+
+$Name: KP - We aint got time
+$Team: -1
+$MessageNew:  XSTR("We don't have time to hang back, Red Leader. Make it fast!", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_18.ogg
+
+$Name: Dev msg
+$Team: -1
+$MessageNew:  XSTR("$RightSubsysString", -1)
+$end_multi_text
+
+$Name: Dev msg 2
+$Team: -1
+$MessageNew:  XSTR("Time: $BoardingCountDown", -1)
+$end_multi_text
+
+$Name: R1 - Stop approach 4
+$Team: -1
+$MessageNew:  XSTR("Red 2, have you lost your mind?", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_14.ogg
+
+$Name: R1 - More TIEs
+$Team: -1
+$MessageNew:  XSTR("I'm detecting more fighters coming from the surface.  It's getting crowded up here.", -1)
+$end_multi_text
++Wave Name: R1_M2_Vorin_16.ogg
+
+$Name: G1 - Carrack Here
+$Team: -1
+$MessageNew:  XSTR("A Carrack cruiser just jumped in... I have a bad feeling about this.", -1)
+$end_multi_text
++Wave Name: R1_M2_Tir_2.ogg
+
+$Name: G1 - Can't stay with you
+$Team: -1
+$MessageNew:  XSTR("Sorry, I can't stay with you!", -1)
+$end_multi_text
++Wave Name: R1_M2_Tir_3.ogg
+
+$Name: KP - Loading the sled
+$Team: -1
+$MessageNew:  XSTR("We're in. Just give us a few seconds to load the sled.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_19.ogg
+
+$Name: G5 - Besto Retreats
+$Team: -1
+$MessageNew:  XSTR("I'm vape-bait if I don't clear out of here!", -1)
+$end_multi_text
++Wave Name: R1_M2_Besto_1.ogg
+
+$Name: R4 - Bodo Retreats
+$Team: -1
+$MessageNew:  XSTR("My stabilizers are shot. I have to withdraw.", -1)
+$end_multi_text
++Wave Name: R1_M2_Bodo_1.ogg
+
+$Name: G4 - Bolk Retreats
+$Team: -1
+$MessageNew:  XSTR("I'm hit! Weapons out, life support gone. Returning to base.", -1)
+$end_multi_text
++Wave Name: R1_M2_Bolk_1.ogg
+
+$Name: G4 - Scan faster
+$Team: -1
+$MessageNew:  XSTR("Come on, Red group! That freighter won't last much longer!", -1)
+$end_multi_text
++Wave Name: R1_M2_Bolk_2.ogg
+
+$Name: G4 - Onderonian pirates we
+$Team: -1
+$MessageNew:  XSTR("We got the money and no casualties! I think we're in the wrong line of work, boss.", -1)
+$end_multi_text
++Wave Name: R1_M2_Bolk_3.ogg
+
+$Name: R3 - Going in
+$Team: -1
+$MessageNew:  XSTR("Stay with me, 4! I'm going in!", -1)
+$end_multi_text
++Wave Name: R1_M2_Gan_1.ogg
+
+$Name: R3 - Gan Retreats
+$Team: -1
+$MessageNew:  XSTR("I'm hit! I have to pull out.", -1)
+$end_multi_text
++Wave Name: R1_M2_Gan_2.ogg
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 3 total
+
+$Num stars: 500
+$Ambient light level: 4408131
+
+$Bitmap List:
+$Sun: SunWhite
++Angles: 5.724680 0.366519 1.431170
++Scale: 0.500000
+$Starbitmap: Planet_Endor
++Angles: 5.881760 0.000000 6.195919
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_Moon02
++Angles: 6.003932 2.495821 1.989675
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_Dagobah
++Angles: 1.308997 1.692969 4.206244
++ScaleX: 0.250000
++ScaleY: 0.250000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: Tatooine
+$Briefing Music: Brief1
+
+#End
+

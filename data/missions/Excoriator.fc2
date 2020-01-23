@@ -1,0 +1,114 @@
+$Name: 1. Excoriator
+$Type: single
++Description:
+ XSTR("Seeking to rally the nascent Alliance, one small Rebel cell launches a bold campaign to hunt down the Star Destroyer Excoriator.
+
+Length: 5 Missions (Includes Basic Training)
+
+Difficulty: Beginner", -1)
+$end_multi_text
+$Flags: 0
+
+
++Starting Ships: ( "T-65c X-wing"  "Z-95 Headhunter"  "BTL-A4 Y-wing" )
+
++Starting Weapons: ( "T&B KX-5"  "T&B KX-9"  "T&B IX4"  "Gyrhil R-9X"  "Borstel RG-9"  "T&B KT6"  "Gyrhil 72"  "ArMek SW-4"  "ArMek SW-7a"  "Arakyd ST2"  "Krupx MG5"  "Dymek HM-6"  "Krupx MG7-A"  "Dymek HM-8"  "Frei-Tek MAG-2"  "Merr-Sonn NG2" )
+
+
+$Mission: ExcR_intro.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   ( ( true ) ( next-mission "ExcR_m01.fs2" ) )
+)
+
++Level: 0
++Position: 0
+
+$Mission: ExcR_m01.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-goal-false 
+         "ExcR_m01.fs2" 
+         "Training" 
+      )
+      ( next-mission "ExcR_m01.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcR_m02.fs2" ) )
+)
+
++Level: 1
++Position: 0
+
+$Mission: ExcR_m02.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-false 
+         "ExcR_m02.fs2" 
+         "Campaign progress allowed" 
+      )
+      ( next-mission "ExcR_m02.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcR_m03.fs2" ) )
+)
+
++Level: 2
++Position: 0
+
+$Mission: ExcR_m03.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-false 
+         "ExcR_m03.fs2" 
+         "Campaign progress allowed" 
+      )
+      ( next-mission "ExcR_m03.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcR_m04.fs2" ) )
+)
+
++Level: 3
++Position: 0
+
+$Mission: ExcR_m04.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-false 
+         "ExcR_m04.fs2" 
+         "Campaign progress" 
+      )
+      ( next-mission "ExcR_m04.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcR_m05.fs2" ) )
+)
+
++Level: 4
++Position: 0
+
+$Mission: ExcR_m05.fs2
++Flags: 0
++Main Hall: 0
++Formula: ( cond
+   (
+      ( is-previous-event-false 
+         "ExcR_m05.fs2" 
+         "Campaign won" 
+      )
+      ( next-mission "ExcR_m05.fs2" )
+   )
+   ( ( true ) ( end-of-campaign ) )
+)
+
++Level: 5
++Position: 0
+
+#End
+

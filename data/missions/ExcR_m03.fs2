@@ -1,0 +1,4828 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Surface Lure", -1)
+$Author: TopAce
+$Created: 07/07/10 at 15:10:31
+$Modified: 01/10/20 at 13:09:34
+$Notes:
+Hi.$End Notes:
+
+$Mission Desc:
+ XSTR("", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 131072
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 1
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 196.893555, 45768.050781, -37983.652344
++Viewer orient:
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.569020, 0.822324,
+	0.000000, -0.822324, 0.569020
+
+$Starting wing names: ( "Red" "Blue" "Gamma" )
+$Squadron wing names: ( "Red" "Blue" "Gamma" "Delta" "Epsilon" )
+$Team-versus-team wing names: ( "Red" "Zeta" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: FOTG
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"ClawCounter"		"0"		"number"
+		1		"ClawParTime"		"28"		"number"
+		2		"ConvoyDepart"		"126"		"number"
+		3		"ConvoySpeed"		"80"		"number"
+		4		"FreighterCaptured"		"no"		"string"		"save-on-mission-progress"
+		5		"FreighterDisabledTracker"		"3"		"number"
+		6		"FreighterFateSealed"		"0"		"number"
+		7		"KinrathHull"		"100"		"number"		"save-on-mission-progress"
+		8		"KinTurrets"		"6"		"number"
+		9		"ShuttleAttacker"		"0"		"number"
+)
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 7
+$start_stage
+$multi_text
+ XSTR("Thanks to the recent actions of our resistance cells in Thisspias, over half of $h Excoriator's support ships have been reassigned to a low orbit of that planet in anticipation of the Bilbringi rally.", -1)
+$end_multi_text
+$voice: R1_M3_B1.ogg
+$camera_pos: 0.000000, 815.540405, -90.742409
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.000093, 1.000000,
+	0.000000, -1.000000, -0.000093
+$camera_time: 2000
+$num_lines: 0
+$num_icons: 2
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: -99.065552, -0.000023, -98.960625
+$label:  XSTR("Manarai", -1)
++id: 1
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Civilian
+$class: TYE-Vulture
+$pos: 146.563278, 0.000007, -131.530273
+$label:  XSTR("Thisspias", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("We had hoped that one of her escort cruisers might be moved to $h Onderon after our raid, where it would be vulnerable to capture once Excoriator was detained, but as a civilian station and a few TIE fighters managed to repel our attack, the Empire saw no reason to spread themselves even thinner.", -1)
+$end_multi_text
+$voice: R1_M3_B2.ogg
+$camera_pos: 0.000000, 815.540405, -90.742409
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.000093, 1.000000,
+	0.000000, -1.000000, -0.000093
+$camera_time: 2000
+$num_lines: 0
+$num_icons: 2
+$Flags: 1
+$Formula: ( is-previous-event-true 
+   "ExcR_m02" 
+   "KP X" 
+)
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: -99.065552, -0.000023, -98.960625
+$label:  XSTR("Manarai", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Civilian
+$class: TYE-Vulture
+$pos: 146.563278, 0.000007, -131.530273
+$label:  XSTR("Thisspias", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Furthermore, because of our raid on the orbital platform last week, Carrack cruiser $h Manarai has been split off and deployed to $h Onderon, stretching $h Excoriator group to the absolute limit allowed for by Imperial doctrine.  This will enable us to stage a capture-or-destroy operation involving the majority of our forces once Excoriator is detained.", -1)
+$end_multi_text
+$voice: R1_M3_B3.ogg
+$camera_pos: 0.000000, 815.540405, -90.742409
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.000093, 1.000000,
+	0.000000, -1.000000, -0.000093
+$camera_time: 2000
+$num_lines: 0
+$num_icons: 2
+$Flags: 1
+$Formula: ( is-previous-event-false 
+   "ExcR_m02" 
+   "KP X" 
+)
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: -99.065552, -0.000023, -98.960625
+$label:  XSTR("Manarai", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Civilian
+$class: TYE-Vulture
+$pos: 146.563278, 0.000007, -131.530273
+$label:  XSTR("Thisspias", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Although her support ships have been effectively removed from the equation, we can't attack $h Excoriator in $h Tanaab due to the presence of significant planetary defenses and the large volume of traffic in the system.  We need a more secluded battlefield to have a chance at a clean kill.", -1)
+$end_multi_text
+$voice: R1_M3_B4.ogg
+$camera_pos: 0.000000, 815.540405, -90.742409
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.000093, 1.000000,
+	0.000000, -1.000000, -0.000093
+$camera_time: 2000
+$num_lines: 0
+$num_icons: 4
+$Flags: 2
+$Formula: ( true ) 
+$start_icon
+$type: 6
+$team: Hostile
+$class: Imperial Star Destroyer
+$pos: 14.927686, -0.000001, -97.603561
+$label:  XSTR("Excoriator", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Civilian
+$class: TYE-Vulture
+$pos: 842.742859, -0.000018, -172.242691
+$label:  XSTR("Thisspias", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: TIE/ln Fighter
+$pos: -195.418381, -0.000010, -160.028915
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 28
+$team: Hostile
+$class: Strike-class Medium Cruiser
+$pos: 965.054993, -3000.000244, 54.930801
+$label:  XSTR("Opias", -1)
++id: 7
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Our plan for luring the destroyer out is to disable one of the corvettes that have been escorting mining convoys to and from the remote $h Koordan system, where pirates displaced from $h Tanaab have been known to leave their victims alive but adrift while making off with the cargo.  During this mission, it will be imperative that we once again maintain the deception of our being common pirates.  If the Empire were to suspect Alliance involvement, $h Excoriator would have to assemble a complete task force before conducting a retrieval operation.", -1)
+$end_multi_text
+$voice: R1_M3_B5.ogg
+$camera_pos: -2641.747559, 5957.700684, 12380.799805
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.000093, 1.000000,
+	0.000000, -1.000000, -0.000093
+$camera_time: 2000
+$num_lines: 0
+$num_icons: 2
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 14
+$team: Hostile
+$class: Action VI Transport
+$pos: -3658.080566, -1000.000122, 12032.484375
+$label:  XSTR("Borleias", -1)
++id: 5
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: CR90 Corvette
+$pos: -1888.314331, -0.002412, 12628.085938
+$label:  XSTR("Kinrath", -1)
++id: 11
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("$f Red squadron will skim the rings of $h Koordan $h V, arriving at the mining site shortly before the convoy jumps in.  Red group was chosen because precision bombing won't be required, and they're our best dogfighters in case hostile snubs are present.  The miners are on the lookout for pirates, so they'll stop at the edge of the system to make a sensor sweep before jumping to the field.  Your ships will have to play dead during that sweep or they'll detect you and pull up short.  Once the convoy arrives, quickly disable escort $h Corvette $h Kinrath along with as many freighters as possible.  Kinrath will signal their distress back to $h Excoriator as soon as the convoy comes under attack, setting the bait.", -1)
+$end_multi_text
+$voice: R1_M3_B6.ogg
+$camera_pos: -2641.747559, 4357.653320, 12380.675781
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.000093, 1.000000,
+	0.000000, -1.000000, -0.000093
+$camera_time: 2000
+$num_lines: 0
+$num_icons: 8
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 6
+$team: Hostile
+$class: Imperial Star Destroyer
+$pos: 14.927686, -0.000001, -97.603561
+$label:  XSTR("Excoriator", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: TIE/ln Fighter
+$pos: -195.418381, -0.000010, -160.028915
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 14
+$team: Hostile
+$class: Action VI Transport
+$pos: -3791.811035, -1000.000183, 11907.670898
+$label:  XSTR("Borleias", -1)
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 17
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: -2619.994141, 0.000004, 12373.019531
+$label:  XSTR("Red", -1)
++id: 6
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 28
+$team: Hostile
+$class: Strike-class Medium Cruiser
+$pos: 965.054993, -3000.000244, 54.930801
+$label:  XSTR("Opias", -1)
++id: 7
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: 23870.210938, -0.003559, 7248.605469
+$label:  XSTR("Red 4", -1)
++id: 9
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Traitor
+$class: CR90 Corvette
+$pos: 14177.433594, -0.000234, 20076.865234
+$label:  XSTR("T-65c X-wing 28", -1)
++id: 10
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: CR90 Corvette
+$pos: -1445.315186, -0.002222, 12663.063477
+$label:  XSTR("Kinrath", -1)
++id: 11
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Once $h Kinrath's engines are disabled, you may destroy the corvette's other subsystems at your convenience, but it must be completely crippled in order for the next phase of the operation to succeed, so use ion cannons to avoid unnecessary risk.  If you manage to disable any of the mining ships as well, $f shuttle $f group $f Neebray will then jump in and capture these vessels, completing the deception that this was a typical, if unusually bold, pirate attack.  Good hunting.", -1)
+$end_multi_text
+$voice: R1_M3_B7.ogg
+$camera_pos: -2641.747559, 4357.653320, 12380.675781
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.000093, 1.000000,
+	0.000000, -1.000000, -0.000093
+$camera_time: 2000
+$num_lines: 0
+$num_icons: 9
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 6
+$team: Hostile
+$class: Imperial Star Destroyer
+$pos: 14.927686, -0.000001, -97.603561
+$label:  XSTR("Excoriator", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Civilian
+$class: TYE-Vulture
+$pos: 842.742859, -0.000018, -172.242691
+$label:  XSTR("Thisspias", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: TIE/ln Fighter
+$pos: -195.418381, -0.000010, -160.028915
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 14
+$team: Hostile
+$class: Action VI Transport
+$pos: -3791.811035, -1000.000183, 11907.670898
+$label:  XSTR("Borleias", -1)
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 17
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: -2619.994141, 0.000004, 12373.019531
+$label:  XSTR("Red", -1)
++id: 6
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 28
+$team: Hostile
+$class: Strike-class Medium Cruiser
+$pos: 965.054993, -3000.000244, 54.930801
+$label:  XSTR("Opias", -1)
++id: 7
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: 23870.210938, -0.003559, 7248.605469
+$label:  XSTR("Red 4", -1)
++id: 9
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Traitor
+$class: CR90 Corvette
+$pos: 14177.433594, -0.000234, 20076.865234
+$label:  XSTR("T-65c X-wing 28", -1)
++id: 10
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: CR90 Corvette
+$pos: -1445.315186, -0.002222, 12663.063477
+$label:  XSTR("Kinrath", -1)
++id: 11
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 6
+
+$Formula: ( or 
+   ( is-event-true-delay 
+      "Convoy here (bad)" 
+      0 
+   )
+   ( has-departed-delay 0 "Kinrath" ) 
+   ( is-destroyed-delay 0 "Kinrath" ) 
+   ( is-event-false-delay 
+      "Disarm Kinrath directive" 
+      0 
+   )
+)
+$Multi text
+    XSTR("Without the corvette to lure Excoriator to the Koordan system, we have no hope of success.  This was our golden opportunity to strike at the Empire, and we blew it.  Fleet Command understands the pirate presence was unexpected and that you did the best you could, but I can't help but think there could have been a better outcome.  I just hope we'll get another chance like this in the future.  You're dismissed.", -1)
+$end_multi_text
+$Voice: R1_M3_DB1.ogg
+$Recommendation text:
+    XSTR("Ordering your wingmen to gang up on the pirates one by one will keep the battle from stretching out for too long a time.  Use ion cannons on Kinrath's subsystems to disable her quickly, focusing on the engines first.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Disarm Kinrath directive" 
+      0 
+   )
+   ( not 
+      ( is-goal-true-delay 
+         "Capture Freighters" 
+         0 
+      )
+   )
+   ( not 
+      ( is-destroyed-delay 0 "Kinrath" ) 
+   )
+   ( is-event-false-delay "Aborted" 0 ) 
+)
+$Multi text
+    XSTR("While we didn't succeed in capturing all of the ore ships, Kinrath has been set as bait and Excoriator should be underway from Tanaab shortly.  The pirates you ran into were from the Blue Skulls, a group that's become increasingly active over the past few months.  We didn't expect them to remain in the area, but it's disturbing that they knew the convoy's time and place of arrival.  All told, your performance today was solid, but we'll need to do better than that tomorrow if we're going to pull this off.  
+
+I recommend you get some sleep - You'll be reporting for your next op in seven hours.  Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M3_DB2.ogg
+$Recommendation text:
+    XSTR("As soon as Kinrath's engines are disabled, immediately move to do the same to the freighters - you can come back and take care of Kinrath's other systems afterwards.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "All shuttles X" 
+      0 
+   )
+   ( has-arrived-delay 0 "Hook" ) 
+   ( is-event-true-delay 
+      "Disarm Kinrath directive" 
+      0 
+   )
+)
+$Multi text
+    XSTR("You did well out there, Reds.  The loss of the shuttles is a hard blow, but you couldn't have predicted that those pirates would arrive in such numbers.  We should have assigned them a fighter escort of their own.  Unfortunately, our squadrons are only just now returning from diversionary missions on Thisspias.  Still, the primary objective of drawing out Excoriator was achieved, and she should be en route shortly.  
+
+I recommend you get some sleep - You'll be reporting for your next op in seven hours.  Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M3_DB3.ogg
+$Recommendation text:
+    XSTR("Make for Neebray group at full throttle as soon as it appears, and attack the fighters targeting the shuttles first.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Pirate directive" 
+      0 
+   )
+   ( is-event-false-delay 
+      "All shuttles X" 
+      0 
+   )
+   ( is-event-false-delay "Aborted" 0 ) 
+)
+$Multi text
+    XSTR("Excellent job, Reds. Your quick response to the pirate threat and efficient work with the Imperials has secured valuable assets for our war effort.  The pirates you tangled with were from the Blue Skull organization, a group that has become very active in the past year.  The fact that they were privy to the same information we had regarding the time and place of the convoy's arrival could indicate that our sources have been compromised, but it's more likely the leak occurred higher up the chain.  In any case, we'll be keeping our eyes open ahead of tomorrow's mission.  
+
+I recommend you get some sleep - You'll be reporting for your next op in seven hours.  Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M3_DB4.ogg
+$Recommendation text:
+    XSTR("This mission was a resounding success. You accomplished all of your objectives, with superb performance under fire.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Disarm Kinrath directive" 
+      0 
+   )
+   ( is-event-true-delay "Aborted" 0 ) 
+   ( percent-ships-departed 
+      10 
+      "Neebray" 
+      "Rellio" 
+      "Velorum" 
+   )
+   ( not 
+      ( destroyed-or-departed-delay 
+         0 
+         "Hook" 
+         "Blood" 
+         "Ryloth Queen" 
+         "Gundark" 
+      )
+   )
+)
+$Multi text
+    XSTR("Solid work, Red group.  The pirates you ran into were from the Blue Skulls, a group that's become increasingly active over the past few months.  It's disturbing that they knew the convoy's time and place of arrival, and you were right to call off the capture operation before the situation got out of hand. Luckily for us, they didn't touch the Corvette after you departed, so the bait is set and Excoriator should be underway from Tanaab shortly.  Command is satisfied with your performance, but we'll need to do better tomorrow if we're gonna pull this off.  
+
+I recommend you get some sleep - You'll be reporting for your next op in seven hours.  Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M3_DB5.ogg
+$Recommendation text:
+    XSTR("The shuttles will be safe if you manage to intercept the pirate fighters quickly enough.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Disarm Kinrath directive" 
+      0 
+   )
+   ( is-event-true-delay "Aborted" 0 ) 
+   ( percent-ships-departed 
+      10 
+      "Neebray" 
+      "Rellio" 
+      "Velorum" 
+   )
+   ( destroyed-or-departed-delay 
+      0 
+      "Hook" 
+      "Blood" 
+      "Ryloth Queen" 
+      "Gundark" 
+   )
+)
+$Multi text
+    XSTR("Solid work, Red Group.  The pirates you ran into were from the Blue Skulls, a group that's become increasingly active over the past few months.  It's disturbing that they knew the convoy's time and place of arrival, and you were right to call off the capture operation before the situation got out of hand.  You gave them a bloody nose they won't forget, but they came back and took the freighters after you departed.  Lucky for us, they didn't touch the Corvette, so the bait is set and Excoriator should be underway from Tanaab shortly.  Command is satisfied with your performance, but we'll need to do better tomorrow if we're gonna pull this off. 
+
+I recommend you get some sleep - You'll be reporting for your next op in seven hours.", -1)
+$end_multi_text
+$Voice: R1_M3_DB6.ogg
+$Recommendation text:
+    XSTR("The shuttles will be safe if you manage to intercept the pirate fighters quickly enough.", -1)
+$end_multi_text
+
+#Callsigns:
+$Callsign: Vorin
+$Callsign: Gan
+$Callsign: Bodo
+
+#end
+
+
+#Players		;! 1 total
+
+$Starting Shipname: Red 2
+$Ship Choices: (
+	"BTL-A4 Y-wing"	5
+)
+
++Weaponry Pool: (
+	"T&B KX-5"	4
+	"ArMek SW-4"	4
+	"Krupx MG7-A"	32
+	"ArmaTek VL-61/79"	0
+)
+
+#Objects		;! 29 total
+
+$Name: Red 1		;! Object #0
+$Class: BTL-A4 Y-wing
+$Callsign: Vorin
+
+$Team: Friendly
+$Location: 3573.800049, 0.000000, -945.799988
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "secondaries-locked" "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 1
+
+$Name: Red 2		;! Object #1
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 3523.548828, 0.000000, -995.761841
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 100 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 1.20
+$Warpin decel exp: 0.66
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Red 3		;! Object #2
+$Class: BTL-A4 Y-wing
+$Callsign: Gan
+
+$Team: Friendly
+$Location: 3638.305176, 0.000000, -999.434204
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "secondaries-locked" "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 2
+
+$Name: Red 4		;! Object #3
+$Class: BTL-A4 Y-wing
+$Callsign: Bodo
+
+$Team: Friendly
+$Location: 3692.747070, 0.000000, -1066.189697
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "secondaries-locked" "immobile" "no-ets" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 7
+
+$Name: Kinrath		;! Object #4
+$Class: CR90 Corvette#Imperial
+$Team: Hostile
+$Location: -1996.699951, -1000.000000, 12787.099609
+$Orientation:
+	-0.994034, 0.000000, -0.109073,
+	0.017315, 0.987320, -0.157797,
+	0.107690, -0.158744, -0.981429
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "KinrathWaypoint" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++AI Class: Lieutenant
++Primary Banks: ( "SFS L-s1" )
++Subsystem: Turret02
++AI Class: Lieutenant
++Primary Banks: ( "SFS L-s1" )
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( or 
+   ( and 
+      ( is-event-true-delay "Claw msg" 110 ) 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Claw" 
+         )
+      )
+   )
+   ( is-event-true-delay 
+      "Key bind help" 
+      10 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Convoy jumping out" 
+   0 
+)
+$Determination: 10
++Flags: ( "protect-ship" "escort" )
++Flags2: ( "lock-all-turrets" )
++Respawn priority: 0
++Escort priority: 100
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
+
+$Name: Neebray		;! Object #5
+$Class: Lambda-class T-4a shuttle
+$Team: Friendly
+$Location: -1477.662964, -1000.000000, 12534.918945
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-dock "Borleias 1" "Landing Point" "Docking Point" 50 ) )
+$Cargo 1:  XSTR("Infiltrators", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: AftTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "At least 1 freighter disabled" 
+      ( rand-multiple 10 12 ) 
+   )
+   ( is-event-true-delay 
+      "Disable Kinrath Directive" 
+      0 
+   )
+   ( = 
+      ( num-ships-in-battle "Borleias 1" ) 
+      1 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( or 
+   ( is-event-true-delay "Aborted" 20 ) 
+   ( is-event-true-delay 
+      "Shuttle 1 waypoint" 
+      29 
+   )
+)
+$Determination: 10
++Flags: ( "cargo-known" "escort" "no-dynamic" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 100
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 1
++Use Table Score:
++Score: 16
+
+$Name: Rellio		;! Object #6
+$Class: Lambda-class T-4a shuttle
+$Team: Friendly
+$Location: -1410.041748, -1000.000000, 12567.063477
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-dock "Borleias 2" "Landing Point" "Docking Point" 50 ) )
+$Cargo 1:  XSTR("Infiltrators", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: AftTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "At least 1 freighter disabled" 
+      ( rand-multiple 10 12 ) 
+   )
+   ( is-event-true-delay 
+      "Disable Kinrath Directive" 
+      0 
+   )
+   ( = 
+      ( num-ships-in-battle "Borleias 2" ) 
+      1 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( or 
+   ( is-event-true-delay "Aborted" 20 ) 
+   ( is-event-true-delay 
+      "Shuttle 2 waypoint" 
+      17 
+   )
+)
+$Determination: 10
++Flags: ( "cargo-known" "escort" "no-dynamic" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 100
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 1
++Use Table Score:
++Score: 16
+
+$Name: Velorum		;! Object #7
+$Class: Lambda-class T-4a shuttle
+$Team: Friendly
+$Location: -1332.283569, -1000.000000, 12530.672852
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-dock "Borleias 3" "Landing Point" "Docking Point" 50 ) )
+$Cargo 1:  XSTR("Infiltrators", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: AftTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( is-event-true-delay 
+      "At least 1 freighter disabled" 
+      ( rand-multiple 10 12 ) 
+   )
+   ( is-event-true-delay 
+      "Disable Kinrath Directive" 
+      0 
+   )
+   ( = 
+      ( num-ships-in-battle "Borleias 3" ) 
+      1 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( or 
+   ( is-event-true-delay "Aborted" 19 ) 
+   ( is-event-true-delay 
+      "Shuttle 3 waypoint" 
+      22 
+   )
+)
+$Determination: 10
++Flags: ( "cargo-known" "escort" "no-dynamic" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 100
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 1
++Use Table Score:
++Score: 16
+
+$Name: Borleias 1		;! Object #8
+$Class: Action VI Transport
+$Team: Hostile
+$Location: -1652.500000, -1000.000000, 12577.900391
+$Orientation:
+	-0.993882, 0.000000, -0.110444,
+	0.017517, 0.987342, -0.157637,
+	0.109046, -0.158607, -0.981301
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Bor1Waypoint" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Special Hitpoints: 9000
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
+$Name: Borleias 2		;! Object #9
+$Class: Action VI Transport
+$Team: Hostile
+$Location: -2367.300049, -1000.000000, 12604.200195
+$Orientation:
+	-0.993977, 0.000000, -0.109585,
+	0.017402, 0.987310, -0.157847,
+	0.108194, -0.158804, -0.981364
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Bor2Waypoint" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Special Hitpoints: 9000
++Special Shield Points: 2500
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
+$Name: Borleias 3		;! Object #10
+$Class: Action VI Transport
+$Team: Hostile
+$Location: -2816.100098, -1000.000000, 12462.799805
+$Orientation:
+	-0.994128, 0.000000, -0.108213,
+	0.017163, 0.987343, -0.157670,
+	0.106844, -0.158601, -0.981545
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Bor3Waypoint" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Special Hitpoints: 9000
++Special Shield Points: 2500
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
+$Name: Convoy Arrival		;! Object #11
+$Class: Nav Buoy
+$Team: Friendly
+$Location: 27.536936, 0.000000, 8850.130859
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Convoy is due" 
+   2 
+)
+$Determination: 10
++Flags: ( "cargo-known" "ignore-count" "no-shields" "escort" "no-departure-warp" )
++Flags2: ( "no_collide" )
++Respawn priority: 0
++Escort priority: 10
++Group: 0
++Use Table Score:
++Score: 0
+
+$Name: Claw 1		;! Object #12
+$Class: Cloakshape Fighter
+$Team: Hostile
+$Location: -7257.736328, 200.000000, 8294.704102
+$Orientation:
+	0.924909, 0.000000, -0.380188,
+	0.000000, 1.000000, 0.000000,
+	0.380188, 0.000000, 0.924909
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "hidden-from-sensors" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 8
+
+$Name: Claw 2		;! Object #13
+$Class: Cloakshape Fighter
+$Team: Hostile
+$Location: -7375.355957, 250.000000, 8225.279297
+$Orientation:
+	0.924909, 0.000000, -0.380188,
+	-0.000000, 1.000000, 0.000000,
+	0.380188, 0.000000, 0.924909
+$AI Behavior: None
++AI Class: Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "hidden-from-sensors" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 8
+
+$Name: Claw 3		;! Object #14
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: -7278.517578, 150.000000, 8183.038086
+$Orientation:
+	0.924909, 0.000000, -0.380188,
+	-0.000000, 1.000000, 0.000000,
+	0.380188, 0.000000, 0.924909
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-arrival-warp" "hidden-from-sensors" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 1		;! Object #15
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -2203.977051, -950.000000, 12320.714844
+$Orientation:
+	-0.999501, 0.000000, 0.031587,
+	0.000000, 1.000000, 0.000000,
+	-0.031587, 0.000000, -0.999501
+$AI Behavior: None
++AI Class: Farmboy
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Alpha 2		;! Object #16
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -2268.628418, -950.000000, 12285.400391
+$Orientation:
+	-0.999501, 0.000000, 0.031587,
+	0.000000, 1.000000, 0.000000,
+	-0.031587, 0.000000, -0.999501
+$AI Behavior: None
++AI Class: Farmboy
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Alpha 3		;! Object #17
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -2332.568848, -950.000000, 12326.938477
+$Orientation:
+	-0.999501, 0.000000, 0.031587,
+	0.000000, 1.000000, 0.000000,
+	-0.031587, 0.000000, -0.999501
+$AI Behavior: None
++AI Class: Farmboy
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Alpha 4		;! Object #18
+$Class: T.I.E. Fighter
+$Team: Hostile
+$Location: -2426.596191, -950.000000, 12374.356445
+$Orientation:
+	-0.999501, 0.000000, 0.031587,
+	0.000000, 1.000000, 0.000000,
+	-0.031587, 0.000000, -0.999501
+$AI Behavior: None
++AI Class: Farmboy
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Gundark		;! Object #19
+$Class: Action VI Transport
+$Team: Hostile
+$Location: 7375.700195, -228.000000, 6774.799805
+$Orientation:
+	0.175978, 0.000000, 0.984394,
+	-0.176311, 0.983830, 0.031519,
+	-0.968476, -0.179106, 0.173132
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "GundarkWaypoint" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 9 "Neebray" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Pirate wave 2 withdraws" 
+   0 
+)
+$Determination: 10
++Flags: ( "protect-ship" "no-arrival-music" "hidden-from-sensors" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
+$Name: Ryloth Queen		;! Object #20
+$Class: Action VI Transport
+$Team: Hostile
+$Location: 7497.367188, -178.065308, 7568.881836
+$Orientation:
+	0.696707, 0.000000, 0.717356,
+	0.000000, 1.000000, 0.000000,
+	-0.717356, 0.000000, 0.696707
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "RylothWaypoint" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Gundark" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Pirate wave 2 withdraws" 
+   0 
+)
+$Determination: 10
++Flags: ( "protect-ship" "no-arrival-music" "hidden-from-sensors" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
+$Name: Hook 1		;! Object #21
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 7429.979492, 72.772057, 6965.087891
+$Orientation:
+	0.696707, -0.000000, 0.717356,
+	0.000000, 1.000000, 0.000000,
+	-0.717356, 0.000000, 0.696707
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "hidden-from-sensors" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Hook 2		;! Object #22
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 7481.827148, 72.772057, 6983.844727
+$Orientation:
+	0.696707, -0.000000, 0.717356,
+	0.000000, 1.000000, 0.000000,
+	-0.717356, 0.000000, 0.696707
+$AI Behavior: None
++AI Class: Officer
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "hidden-from-sensors" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Hook 3		;! Object #23
+$Class: ZY-wing
+$Team: Hostile
+$Location: 7529.138184, 72.772057, 7011.395508
+$Orientation:
+	0.696707, -0.000000, 0.717356,
+	0.000000, 1.000000, 0.000000,
+	-0.717356, 0.000000, 0.696707
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "hidden-from-sensors" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 8
+
+$Name: Blood 1		;! Object #24
+$Class: Cloakshape Fighter
+$Team: Hostile
+$Location: 7655.178223, 122.738075, 7737.725586
+$Orientation:
+	0.696707, -0.000000, 0.717356,
+	0.000000, 1.000000, 0.000000,
+	-0.717356, 0.000000, 0.696707
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Krupx VL-4a" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "hidden-from-sensors" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Blood 2		;! Object #25
+$Class: Cloakshape Fighter
+$Team: Hostile
+$Location: 7713.587402, 122.738075, 7754.916016
+$Orientation:
+	0.696707, -0.000000, 0.717356,
+	0.000000, 1.000000, 0.000000,
+	-0.717356, 0.000000, 0.696707
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Krupx VL-4a" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "hidden-from-sensors" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: Blood 3		;! Object #26
+$Class: Cloakshape Fighter
+$Team: Hostile
+$Location: 7769.143066, 122.738075, 7803.601563
+$Orientation:
+	0.696707, -0.000000, 0.717356,
+	0.000000, 1.000000, 0.000000,
+	-0.717356, 0.000000, 0.696707
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Krupx VL-4a" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "hidden-from-sensors" )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 10
+
+$Name: EscapeVector Dummy		;! Object #27
+$Class: T.I.E. Fighter
+$Team: Civilian
+$Location: 5441.000000, 0.000000, 13296.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" "no-departure-warp" "invulnerable" "stealth" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: Hyperspace Preload_Ship		;! Object #28
+$Class: Nav Buoy
+$Team: Friendly
+$Location: 31795.460938, 0.000000, 3925.687500
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "no_collide" )
++Respawn priority: 0
++Score: 10
+
+#Wings		;! 6 total
+
+$Name: Red
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Red 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Red 1"
+	"Red 2"
+	"Red 3"
+	"Red 4"
+)
++Hotkey: 0
++Flags: ( )
+
+$Name: Claw
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Claw 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-time-elapsed 5 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Claw 1"
+	"Claw 2"
+	"Claw 3"
+)
+$AI Goals: ( goals ( ai-waypoints "ClawWaypoint" 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-music" "no-arrival-message" "no-arrival-warp" )
+
+$Name: Borleias
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Borleias 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Kinrath" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Convoy jumping out" 
+   0 
+)
+$Ships: (		;! 3 total
+	"Borleias 1"
+	"Borleias 2"
+	"Borleias 3"
+)
++Flags: ( "no-arrival-music" "no-arrival-message" )
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( and 
+   ( has-arrived-delay 0 "Kinrath" ) 
+   ( is-event-true-delay 
+      "Convoy here (good)" 
+      0 
+   )
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+	"Alpha 4"
+)
+$AI Goals: ( goals ( ai-guard "Kinrath" 50 ) )
++Hotkey: 2
++Flags: ( "no-arrival-music" "no-arrival-message" )
+
+$Name: Hook
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Hook 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Gundark" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Pirate wave 2 withdraws" 
+   0 
+)
+$Ships: (		;! 3 total
+	"Hook 1"
+	"Hook 2"
+	"Hook 3"
+)
+$AI Goals: ( goals ( ai-guard "Gundark" 50 ) ( ai-chase-any 48 ) )
++Hotkey: 2
++Flags: ( "no-arrival-music" "no-arrival-message" )
+
+$Name: Blood
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Blood 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 0 "Ryloth Queen" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Pirate wave 2 withdraws" 
+   0 
+)
+$Ships: (		;! 3 total
+	"Blood 1"
+	"Blood 2"
+	"Blood 3"
+)
+$AI Goals: ( goals ( ai-guard "Ryloth Queen" 50 ) ( ai-chase-any 48 ) )
++Hotkey: 2
++Flags: ( "no-arrival-music" "no-arrival-message" )
+
+#Events		;! 128 total
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: PlayerArrivesFromHyperspace
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Red 1" 
+      "Red 2" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( has-time-elapsed 4 ) 
+   ( set-mobile "<argument>" ) 
+   ( enable-ets "<argument>" ) 
+)
++Name: Awaken Red
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-guardian-threshold 
+      15 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Red 1" 
+      "<all engines>" 
+      "Navigation" 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-guard "Red 2" 20 ) 
+   )
+   ( modify-variable 
+      @ShuttleAttacker[0] 
+      ( rand 1 6 ) 
+   )
+   ( lock-primary-weapon 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( lock-secondary-weapon 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( ship-subsys-guardian-threshold 
+      32 
+      "Red 2" 
+      "Navigation" 
+   )
+)
++Name: Start
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( false ) 
+   ( ship-invulnerable "Red 2" ) 
+)
++Name: DEBUG
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( has-time-elapsed 30 ) 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+   ( self-destruct 
+      "Claw 1" 
+      "Claw 2" 
+      "Claw 3" 
+   )
+)
++Name: DEBUG - Stage 1
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Stay put directive" 
+         20 
+      )
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+   ( set-subsystem-strength 
+      "Borleias 1" 
+      "<all engines>" 
+      0 
+   )
+   ( set-subsystem-strength 
+      "Borleias 2" 
+      "<all engines>" 
+      0 
+   )
+   ( set-subsystem-strength 
+      "Borleias 3" 
+      "<all engines>" 
+      0 
+   )
+   ( set-subsystem-strength 
+      "Kinrath" 
+      "<all engines>" 
+      0 
+   )
+   ( set-subsystem-strength 
+      "Kinrath" 
+      "<all turrets>" 
+      0 
+   )
+   ( set-subsystem-strength 
+      "Kinrath" 
+      "Communications" 
+      0 
+   )
+   ( self-destruct 
+      "Alpha 1" 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+   )
+)
++Name: DEBUG - Stage 2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( not ( skill-level-at-least "Easy" ) ) 
+   ( modify-variable 
+      @ConvoyDepart[126] 
+      ( + @ConvoyDepart[126] 15 ) 
+   )
+   ( modify-variable 
+      @ClawParTime[28] 
+      ( + @ClawParTime[28] 25 ) 
+   )
+)
++Name: Difficulty Very Easy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( != ( hits-left "Red 2" ) 100 ) 
+      ( not ( skill-level-at-least "Easy" ) ) 
+   )
+   ( repair-subsystem "Red 2" "Hull" 2 ) 
+)
++Name: Very Easy - player regen
++Repeat Count: -1
++Trigger Count: 1000
++Interval: 16
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Difficulty Very Easy" 
+         0 
+      )
+      ( has-arrived-delay 2 "Kinrath" ) 
+   )
+   ( sabotage-subsystem 
+      "Kinrath" 
+      "<all engines>" 
+      40 
+   )
+   ( sabotage-subsystem 
+      "Kinrath" 
+      "<all turrets>" 
+      40 
+   )
+   ( sabotage-subsystem 
+      "Kinrath" 
+      "Communications" 
+      40 
+   )
+   ( when-argument 
+      ( every-of 
+         "Borleias 1" 
+         "Borleias 2" 
+         "Borleias 3" 
+      )
+      ( true ) 
+      ( sabotage-subsystem 
+         "<argument>" 
+         "<all engines>" 
+         50 
+      )
+   )
+)
++Name: Very Easy - Convoy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( skill-level-at-least "Easy" ) 
+      ( not 
+         ( skill-level-at-least "Medium" ) 
+      )
+   )
+   ( modify-variable 
+      @ConvoyDepart[126] 
+      ( + @ConvoyDepart[126] 15 ) 
+   )
+   ( modify-variable 
+      @ClawParTime[28] 
+      ( + @ClawParTime[28] 8 ) 
+   )
+)
++Name: Difficulty Easy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( skill-level-at-least "Medium" ) 
+      ( not ( skill-level-at-least "Hard" ) ) 
+   )
+   ( do-nothing ) 
+)
++Name: Difficulty Medium
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( skill-level-at-least "Hard" ) 
+      ( not 
+         ( skill-level-at-least "Insane" ) 
+      )
+   )
+   ( modify-variable 
+      @ConvoyDepart[126] 
+      ( - @ConvoyDepart[126] 10 ) 
+   )
+)
++Name: Difficulty Hard
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( skill-level-at-least "Insane" ) 
+   ( modify-variable 
+      @ConvoyDepart[126] 
+      ( - @ConvoyDepart[126] 10 ) 
+   )
+)
++Name: Difficulty Insane
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 5 ) 
+   ( send-message-list 
+      "Red 4" 
+      "High" 
+      "R4 - Start" 
+      200 
+      "Red 1" 
+      "Normal" 
+      "R1 - Reading this?" 
+      7000 
+      "Red 4" 
+      "Normal" 
+      "R4 - Interference" 
+      7000 
+      "Red 1" 
+      "Normal" 
+      "R1 - Engage them" 
+      6000 
+   )
+)
++Name: Start conversation
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( distance "Red 2" "Claw 1" ) 
+      7000 
+   )
+   ( send-message-list 
+      "Claw 1" 
+      "High" 
+      "C1 - Power down" 
+      0 
+      "Red 4" 
+      "Normal" 
+      "R4 - Schedule" 
+      9000 
+      "Red 1" 
+      "Normal" 
+      "R1 - Cut chatter" 
+      4000 
+   )
+   ( ship-visible 
+      "Claw 1" 
+      "Claw 2" 
+      "Claw 3" 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-chase "Claw" 55 ) 
+   )
+)
++Name: Claw msg
++Repeat Count: 1
++Interval: 1
++Chained: 10
++Objective:  XSTR("Check Signals", -1)
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Claw" ) 
+   ( modify-variable 
+      @ClawCounter[0] 
+      ( mission-time ) 
+   )
+)
++Name: Destroy Claw
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Destroy Pirates", -1)
+
+$Formula: ( when 
+   ( or 
+      ( < 
+         ( distance "<any friendly>" "Claw 1" ) 
+         3300 
+      )
+      ( has-time-elapsed 55 ) 
+   )
+   ( add-goal 
+      "Claw 2" 
+      ( ai-guard "Claw 1" 70 ) 
+   )
+   ( ship-guardian-threshold 
+      ( rand 62 98 ) 
+      "Red 3" 
+   )
+   ( ship-guardian-threshold 
+      ( rand 62 98 ) 
+      "Red 4" 
+   )
+   ( add-goal 
+      "Claw 1" 
+      ( ai-chase-any 75 ) 
+   )
+   ( add-goal 
+      "Claw 3" 
+      ( ai-guard "Claw 1" 70 ) 
+   )
+)
++Name: Claw attacks
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Red 1" 
+      "Red 2" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( or 
+      ( < 
+         ( distance "Claw 1" "<argument>" ) 
+         1500 
+      )
+      ( < 
+         ( distance "Claw 2" "<argument>" ) 
+         1500 
+      )
+      ( < 
+         ( distance "Claw 3" "<argument>" ) 
+         1500 
+      )
+   )
+   ( clear-goals "Claw" ) 
+   ( add-goal "Claw" ( ai-chase-any 65 ) ) 
+)
++Name: Claw chase-any
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Red 3" ) 20 ) 
+   ( clear-goals "Red 3" ) 
+   ( add-goal 
+      "Red 3" 
+      ( ai-warp-out 101 ) 
+   )
+   ( send-message 
+      "Red 3" 
+      "Normal" 
+      "R3 - Gan bugs out" 
+   )
+)
++Name: Red 3 bugs out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Red 4" ) 20 ) 
+   ( clear-goals "Red 4" ) 
+   ( add-goal 
+      "Red 4" 
+      ( ai-warp-out 101 ) 
+   )
+   ( send-message 
+      "Red 4" 
+      "Normal" 
+      "R4 - Bodo bugs out" 
+   )
+)
++Name: Red 4 bugs out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( has-time-elapsed @ClawParTime[28] ) 
+      ( has-arrived-delay 0 "Kinrath" ) 
+   )
+   ( unlock-secondary-weapon 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+)
++Name: Red sec unlock Claw
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Claw attacks" 
+         45 
+      )
+      ( not ( skill-level-at-least "Easy" ) ) 
+   )
+   ( unlock-secondary-weapon 
+      "Claw 1" 
+      "Claw 2" 
+      "Claw 3" 
+   )
+)
++Name: Diff - Claw unlock secondary
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Claw" ) 
+      ( not 
+         ( is-event-true-delay 
+            "Claw attacks" 
+            @ClawParTime[28] 
+         )
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Claw down on par time
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( > ( num_kills "Red 2" ) 3 ) 
+      ( not 
+         ( has-arrived-delay 0 "Kinrath" ) 
+      )
+   )
+   ( training-msg "RX - Compliment" ) 
+)
++Name: R5-X3 compliment
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance "Red 2" "Convoy Arrival" ) 
+         800 
+      )
+      ( destroyed-or-departed-delay 
+         2 
+         "Claw" 
+      )
+      ( not 
+         ( has-arrived-delay 0 "Kinrath" ) 
+      )
+   )
+   ( player-use-ai ) 
+   ( clear-goals "Red" ) 
+   ( add-goal "Red" ( ai-play-dead 89 ) ) 
+   ( lock-primary-weapon "Red 2" ) 
+   ( lock-secondary-weapon "Red 2" ) 
+   ( change-ai-class "Colonel" "Red 1" ) 
+   ( change-ai-class "Colonel" "Red 3" ) 
+   ( change-ai-class "Colonel" "Red 4" ) 
+)
++Name: Approach Buoy
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Approach Nav Buoy", -1)
++Objective key:  XSTR("Press $e$ to target", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Kinrath" ) 
+   ( unlock-primary-weapon "Red 2" ) 
+   ( unlock-secondary-weapon "Red 2" ) 
+   ( hud-disable-except-messages 0 ) 
+)
++Name: Stay put directive
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Wait for Convoy", -1)
++Objective key:  XSTR("Controls Disabled", -1)
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( is-disarmed-delay 0 "Kinrath" ) 
+         ( is-event-true-delay 
+            "DEBUG - Stage 2" 
+            0 
+         )
+      )
+      ( directive-value @KinTurrets[6] ) 
+   )
+   ( ship-guardian-threshold 
+      10 
+      "Kinrath" 
+   )
+)
++Name: Disarm Kinrath directive
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Disarm Kinrath", -1)
++Objective key:  XSTR("Press $k$ to cycle turrets", -1)
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( is-disabled-delay 0 "Kinrath" ) 
+         ( is-subsystem-destroyed-delay 
+            "Kinrath" 
+            "Communications" 
+            0 
+         )
+      )
+      ( is-event-true-delay 
+         "DEBUG - Stage 2" 
+         0 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Disable Kinrath Directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Disable Engines and Comms", -1)
++Objective key:  XSTR("Press $s$ to cycle systems", -1)
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Disarm Kinrath directive" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Disable Kinrath Directive" 
+         0 
+      )
+   )
+   ( change-iff "Friendly" "Kinrath" ) 
+   ( ship-invulnerable "Kinrath" ) 
+   ( modify-variable 
+      @KinrathHull[100] 
+      ( hits-left "Kinrath" ) 
+   )
+   ( protect-ship "Kinrath" ) 
+)
++Name: Kinrath Crippled
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Borleias" ) 
+   ( do-nothing ) 
+)
++Name: Convoy dir chain 2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-disabled-delay 
+         0 
+         "Borleias 1" 
+         "Borleias 2" 
+         "Borleias 3" 
+      )
+      ( directive-value 
+         @FreighterDisabledTracker[3] 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Convoy directive
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Disable All Freighters", -1)
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 0 "Kinrath" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Claw" 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Convoy here (bad)" 
+            0 
+         )
+      )
+   )
+   ( training-msg 
+      "RX - Arrival" 
+      "RX - Arrival" 
+      0 
+      14 
+   )
+   ( protect-ship 
+      "Red 1" 
+      "Red 2" 
+      "Red 3" 
+      "Red 4" 
+   )
+)
++Name: Convoy here (good)
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 0 "Kinrath" ) 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Claw" 
+         )
+      )
+   )
+   ( send-message 
+      "Red 1" 
+      "High" 
+      "R1 - Fail (1st stage)" 
+   )
+   ( ship-subsys-guardian-threshold 
+      20 
+      "Borleias 1" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      20 
+      "Borleias 2" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      20 
+      "Borleias 3" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      20 
+      "Kinrath" 
+      "<all engines>" 
+   )
+   ( ship-vanish "Convoy Arrival" ) 
+)
++Name: Convoy here (bad)
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 1 "Claw" ) 
+      ( not 
+         ( is-event-true-delay 
+            "Convoy here (bad)" 
+            0 
+         )
+      )
+   )
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Claw X good" 
+   )
+)
++Name: Destroy Claw (good)
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Approach Buoy" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Destroy Claw (good)" 
+         0 
+      )
+   )
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Convoy due" 
+   )
+)
++Name: Convoy is due
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Kinrath" ) 
+   ( cap-waypoint-speed 
+      "Kinrath" 
+      @ConvoySpeed[80] 
+   )
+   ( cap-waypoint-speed 
+      "Borleias 1" 
+      @ConvoySpeed[80] 
+   )
+   ( cap-waypoint-speed 
+      "Borleias 2" 
+      @ConvoySpeed[80] 
+   )
+   ( cap-waypoint-speed 
+      "Borleias 3" 
+      @ConvoySpeed[80] 
+   )
+   ( ship-guardian-threshold 
+      20 
+      "Borleias 1" 
+   )
+   ( ship-guardian-threshold 
+      20 
+      "Borleias 2" 
+   )
+   ( ship-guardian-threshold 
+      20 
+      "Borleias 3" 
+   )
+   ( ship-subsys-untargetable 
+      "Kinrath" 
+      "Sensors" 
+   )
+   ( ship-subsys-untargetable 
+      "Borleias 1" 
+      "Communications" 
+      "Sensors" 
+      "Stem" 
+   )
+   ( ship-subsys-untargetable 
+      "Borleias 2" 
+      "Communications" 
+      "Sensors" 
+      "Stem" 
+   )
+   ( ship-subsys-untargetable 
+      "Borleias 3" 
+      "Communications" 
+      "Sensors" 
+      "Stem" 
+   )
+)
++Name: Convoy setup (neutral)
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Convoy ambushed" 
+      18 
+   )
+   ( training-msg "RX - Direct source" ) 
+)
++Name: Direct source message
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when-argument 
+   ( every-of 
+      "Borleias 1" 
+      "Borleias 2" 
+      "Borleias 3" 
+      "Kinrath" 
+   )
+   ( is-event-true-delay 
+      "Convoy here (bad)" 
+      1 
+   )
+   ( ship-invulnerable "<argument>" ) 
+)
++Name: Convoy setup (bad)
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Convoy is due" 
+      7 
+   )
+   ( if-then-else 
+      ( < @ClawCounter[0] 110 ) 
+      ( training-msg "RX - Assessment 1" ) 
+      ( if-then-else 
+         ( and 
+            ( > @ClawCounter[0] 110 ) 
+            ( < @ClawCounter[0] 140 ) 
+         )
+         ( training-msg "RX - Assessment 2" ) 
+         ( training-msg "RX - Assessment 3" ) 
+      )
+   )
+)
++Name: Droid assessment done
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Kinrath" ) 41 ) 
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Kinrath damaged" 
+   )
+)
++Name: Kinrath damaged
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Kinrath" ) 14 ) 
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Kinrath damaged 2" 
+   )
+)
++Name: Kinrath damaged 2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Kinrath damaged" 
+         6 
+      )
+      ( is-destroyed-delay 0 "Alpha" ) 
+   )
+   ( lock-secondary-weapon 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+)
++Name: AI - Red sec lock
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Disarm Kinrath directive" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "All freighters out" 
+            0 
+         )
+      )
+   )
+   ( unlock-secondary-weapon 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+)
++Name: AI - Red sec unlock
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 1 "Kinrath" ) 
+   ( send-message 
+      "Red 1" 
+      "High" 
+      "R1 - Kinrath X" 
+   )
+)
++Name: Kinrath X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Alpha" ) 
+   ( change-ai-class "Captain" "Red 1" ) 
+   ( change-ai-class "Captain" "Red 3" ) 
+   ( change-ai-class "Captain" "Red 4" ) 
+)
++Name: Alpha directive
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Alpha", -1)
++Team: 0
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Borleias 1" 
+      "Borleias 2" 
+      "Borleias 3" 
+   )
+   ( is-disabled-delay 2 "<argument>" ) 
+   ( add-remove-escort "<argument>" 0 ) 
+   ( change-iff "Friendly" "<argument>" ) 
+   ( invalidate-argument "<argument>" ) 
+   ( ship-invulnerable "<argument>" ) 
+)
++Name: Borleias friendly
++Repeat Count: -1
++Trigger Count: 3
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Kinrath" ) 
+   ( do-nothing ) 
+)
++Name: Kinrath out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( percent-ships-departed 
+         100 
+         "Borleias" 
+      )
+      ( >= @FreighterDisabledTracker[3] 3 ) 
+   )
+   ( send-message 
+      "Red 1" 
+      "High" 
+      "R1 - All freighters escaped" 
+   )
+)
++Name: All freighters out
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( percent-ships-disabled 
+         33 
+         "Borleias 1" 
+         "Borleias 2" 
+         "Borleias 3" 
+      )
+      ( is-event-true-delay 
+         "Kinrath Crippled" 
+         0 
+      )
+      ( destroyed-or-departed-delay 
+         0 
+         "Alpha" 
+      )
+      ( = @FreighterFateSealed[0] 3 ) 
+   )
+   ( send-message-list 
+      "Red 1" 
+      "High" 
+      "R1 - Neebray may arrive" 
+      4000 
+   )
+)
++Name: At least 1 freighter disabled
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 2 "Neebray" ) 
+   ( send-message-list 
+      "Neebray" 
+      "Normal" 
+      "Neeb1 - Here" 
+      0 
+      "Velorum" 
+      "Normal" 
+      "Neeb1 - Incoming" 
+      6500 
+      "Red 1" 
+      "Low" 
+      "R1 - Intercept new targets" 
+      8000 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Neebray" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Rellio" 
+      "<all engines>" 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Velorum" 
+      "<all engines>" 
+   )
+)
++Name: Neebray here messages
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Neebray" 
+      "Rellio" 
+      "Velorum" 
+   )
+   ( send-message 
+      "Red 1" 
+      "Normal" 
+      "R1 - Shuttles X" 
+   )
+)
++Name: All shuttles X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( < ( hits-left "Neebray" ) 9 ) 
+   ( send-message 
+      "Neebray" 
+      "High" 
+      "Neeb - Death" 
+   )
+)
++Name: Neebray X
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( self-destruct "Neebray" ) 
+)
++Name: Kill Neebray
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( or 
+      ( percent-ships-destroyed 
+         80 
+         "Hook" 
+         "Blood" 
+      )
+      ( percent-ships-destroyed 
+         50 
+         "Gundark" 
+         "Ryloth Queen" 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Pirate wave 2 withdraws
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay 
+            "All shuttles X" 
+            0 
+         )
+      )
+      ( destroyed-or-departed-delay 
+         4 
+         "Blood" 
+         "Hook" 
+         "Gundark" 
+         "Ryloth Queen" 
+      )
+   )
+   ( send-message-list 
+      "Red 1" 
+      "High" 
+      "R1 - Success" 
+      0 
+   )
+   ( modify-variable 
+      "@FreighterCaptured[no]" 
+      "yes" 
+   )
+)
++Name: Mission complete
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "3 shuttles survive" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Claw down on par time" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Campaign progress allowed" 
+         0 
+      )
+      ( is-disabled-delay 
+         0 
+         "Borleias 1" 
+         "Borleias 2" 
+         "Borleias 3" 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Perfect outcome
++Repeat Count: 1
++Interval: 1
++Score: 100
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 15 "Kinrath" ) 
+   ( send-message-list 
+      "Red 1" 
+      "High" 
+      "R1 - Take em down" 
+      0 
+      "Red 1" 
+      "Normal" 
+      "R1 - Threatening Kinrath" 
+      6000 
+   )
+   ( unprotect-ship 
+      "Alpha 1" 
+      "Alpha 2" 
+      "Alpha 3" 
+      "Alpha 4" 
+      "Red 1" 
+      "Red 2" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-chase "Alpha" 70 ) 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-disarm-ship "Kinrath" 65 ) 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-destroy-subsystem 
+         "Kinrath" 
+         "Communications" 
+         62 
+      )
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-guard "Red 2" 25 ) 
+   )
+   ( player-not-use-ai ) 
+)
++Name: Convoy ambushed
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Convoy here (good)" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Convoy ambushed" 
+         16 
+      )
+   )
+   ( turret-free-all "Kinrath" ) 
+)
++Name: Convoy reacts
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Convoy reacts" 
+      4 
+   )
+   ( add-goal 
+      "Alpha" 
+      ( ai-chase "Red" 60 ) 
+   )
+)
++Name: Alpha new orders
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Convoy ambushed" 
+         ( + @ConvoyDepart[126] 60 ) 
+      )
+      ( is-event-true-delay 
+         "Convoy here (bad)" 
+         28 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Convoy jumping out
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( or 
+      ( is-disabled-delay 0 "Borleias 1" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Borleias 1" 
+      )
+   )
+   ( modify-variable 
+      @FreighterFateSealed[0] 
+      ( + @FreighterFateSealed[0] 1 ) 
+   )
+)
++Name: Borleias 1 fate sealed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-disabled-delay 0 "Borleias 2" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Borleias 2" 
+      )
+   )
+   ( modify-variable 
+      @FreighterFateSealed[0] 
+      ( + @FreighterFateSealed[0] 1 ) 
+   )
+)
++Name: Borleias 2 fate sealed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-disabled-delay 0 "Borleias 3" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Borleias 3" 
+      )
+   )
+   ( modify-variable 
+      @FreighterFateSealed[0] 
+      ( + @FreighterFateSealed[0] 1 ) 
+   )
+)
++Name: Borleias 3 fate sealed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 1 "Neebray" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Borleias 1" 
+      )
+   )
+   ( clear-goals "Neebray" ) 
+   ( add-goal 
+      "Neebray" 
+      ( ai-stay-near-ship "Red 2" 89 ) 
+   )
+)
++Name: Neebray new order
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 1 "Rellio" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Borleias 2" 
+      )
+   )
+   ( clear-goals "Rellio" ) 
+   ( add-goal 
+      "Rellio" 
+      ( ai-stay-near-ship "Red 2" 89 ) 
+   )
+)
++Name: Rellio new order
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 1 "Velorum" ) 
+      ( destroyed-or-departed-delay 
+         0 
+         "Borleias 3" 
+      )
+   )
+   ( clear-goals "Velorum" ) 
+   ( add-goal 
+      "Velorum" 
+      ( ai-stay-near-ship "Red 2" 89 ) 
+   )
+)
++Name: Velorum new order
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Neebray here messages" 
+      14 
+   )
+   ( add-goal 
+      "Red" 
+      ( ai-guard "Red 2" 89 ) 
+   )
+)
++Name: Pirate directive trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      0 
+      "Hook" 
+      "Blood" 
+      "Ryloth Queen" 
+      "Gundark" 
+   )
+   ( ship-invulnerable 
+      "Neebray" 
+      "Rellio" 
+      "Velorum" 
+   )
+   ( hud-set-retail-gauge-active 
+      ( true ) 
+      "Escort list" 
+   )
+   ( add-remove-escort 
+      "Convoy Arrival" 
+      50 
+   )
+)
++Name: Pirate directive
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Engage New Hostiles", -1)
++Objective key:  XSTR("Press $1$ to abort op", -1)
+
+$Formula: ( every-time-argument 
+   ( any-of 
+      "Hook 1" 
+      "Hook 2" 
+      "Hook 3" 
+      "Blood 1" 
+      "Blood 2" 
+      "Blood 3" 
+      "Ryloth Queen" 
+      "Gundark" 
+   )
+   ( < 
+      ( distance 
+         "<any friendly>" 
+         "<argument>" 
+      )
+      2800 
+   )
+   ( ship-visible "<argument>" ) 
+)
++Name: Pirate wave 2 on radar
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( every-time-argument 
+   ( any-of 
+      "Hook 1" 
+      "Hook 2" 
+      "Hook 3" 
+      "Blood 1" 
+      "Blood 2" 
+      "Blood 3" 
+      "Ryloth Queen" 
+      "Gundark" 
+   )
+   ( > 
+      ( distance "Red 2" "<argument>" ) 
+      2800 
+   )
+   ( ship-invisible "<argument>" ) 
+)
++Name: Pirate wave 2 off radar
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      0 
+      "Hook" 
+      "Blood" 
+   )
+   ( unprotect-ship 
+      "Gundark" 
+      "Ryloth Queen" 
+   )
+)
++Name: Unprotect pirate Action 6s
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Gundark" 
+      "Ryloth Queen" 
+   )
+   ( do-nothing ) 
+)
++Name: Bonus - Pirate Action 6s X
++Repeat Count: 1
++Interval: 1
++Score: 30
++Team: 0
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Blood 1" 
+      "Blood 2" 
+      "Blood 3" 
+      "Hook 1" 
+      "Hook 2" 
+      "Hook 3" 
+   )
+   ( < 
+      ( distance 
+         "<any friendly>" 
+         "<argument>" 
+      )
+      1200 
+   )
+   ( add-goal 
+      "<argument>" 
+      ( ai-chase-any 62 ) 
+   )
+)
++Name: Pirate wave 2 FFA
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "All freighters out" 
+         6 
+      )
+      ( is-destroyed-delay 2 "Alpha" ) 
+      ( or 
+         ( is-event-true-delay "Kinrath out" 2 ) 
+         ( is-event-true-delay 
+            "Kinrath Crippled" 
+            5 
+         )
+      )
+   )
+   ( send-message 
+      "Red 1" 
+      "High" 
+      "R1 - Return to base (Fr out)" 
+   )
+)
++Name: Red 1 says RTB
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Mission complete" 
+         0 
+      )
+      ( is-event-true-delay 
+         "All shuttles X" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Convoy here (bad)" 
+         0 
+      )
+      ( is-event-true-delay "Kinrath X" 0 ) 
+      ( has-departed-delay 0 "Kinrath" ) 
+      ( is-event-true-delay 
+         "Red 1 says RTB" 
+         0 
+      )
+      ( is-event-true-delay "Aborted" 0 ) 
+   )
+   ( script-eval 
+      "blink_jumpoutpoint(true)" 
+   )
+)
++Name: Conditions to depart
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Red 2" ) 
+   ( do-nothing ) 
+)
++Name: Depart
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Hyperspace", -1)
++Objective key:  XSTR("Face Exit and Press $Enter$", -1)
+
+$Formula: ( when 
+   ( and 
+      ( is-goal-true-delay 
+         "Disable Kinrath" 
+         0 
+      )
+      ( not 
+         ( is-destroyed-delay 0 "Kinrath" ) 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Campaign progress allowed
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-docked-delay 
+         "Neebray" 
+         "Borleias 1" 
+         1 
+         0 
+      )
+      ( is-event-false-delay "Aborted" 0 ) 
+   )
+   ( do-nothing ) 
+)
++Name: Bonus - Shuttle 1 docked
++Repeat Count: 1
++Interval: 1
++Score: 25
+
+$Formula: ( when 
+   ( and 
+      ( has-docked-delay 
+         "Rellio" 
+         "Borleias 2" 
+         1 
+         0 
+      )
+      ( is-event-false-delay "Aborted" 0 ) 
+   )
+   ( do-nothing ) 
+)
++Name: Bonus - Shuttle 2 docked
++Repeat Count: 1
++Interval: 1
++Score: 25
+
+$Formula: ( when 
+   ( and 
+      ( has-docked-delay 
+         "Velorum" 
+         "Borleias 3" 
+         1 
+         0 
+      )
+      ( is-event-false-delay "Aborted" 0 ) 
+   )
+   ( do-nothing ) 
+)
++Name: Bonus - Shuttle 3 docked
++Repeat Count: 1
++Interval: 1
++Score: 25
+
+$Formula: ( when 
+   ( and 
+      ( percent-ships-destroyed 
+         66 
+         "Neebray" 
+         "Rellio" 
+         "Velorum" 
+      )
+      ( = 
+         ( num-ships-in-battle 
+            "Neebray" 
+            "Rellio" 
+            "Velorum" 
+         )
+         1 
+      )
+      ( is-event-true-delay 
+         "Pirate directive" 
+         1 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: 1 shuttle survives
++Repeat Count: 1
++Interval: 1
++Score: 10
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( percent-ships-destroyed 
+         33 
+         "Neebray" 
+         "Rellio" 
+         "Velorum" 
+      )
+      ( = 
+         ( num-ships-in-battle 
+            "Neebray" 
+            "Rellio" 
+            "Velorum" 
+         )
+         2 
+      )
+      ( is-event-true-delay 
+         "Pirate directive" 
+         1 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: 2 shuttles survive
++Repeat Count: 1
++Interval: 1
++Score: 20
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( percent-ships-destroyed 
+         0 
+         "Neebray" 
+         "Rellio" 
+         "Velorum" 
+      )
+      ( = 
+         ( num-ships-in-battle 
+            "Neebray" 
+            "Rellio" 
+            "Velorum" 
+         )
+         3 
+      )
+      ( is-event-true-delay 
+         "Pirate directive" 
+         1 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: 3 shuttles survive
++Repeat Count: 1
++Interval: 1
++Score: 30
++Team: 0
+
+$Formula: ( when 
+   ( percent-ships-destroyed 
+      100 
+      "Neebray" 
+      "Rellio" 
+      "Velorum" 
+   )
+   ( do-nothing ) 
+)
++Name: No shuttle survives
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Alpha" ) 
+   ( change-ai-class "Major" "Red 1" ) 
+   ( change-ai-class "Major" "Red 3" ) 
+   ( change-ai-class "Major" "Red 4" ) 
+)
++Name: Diff - Red convoy stage
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 15 "Hook 1" ) 
+   ( training-msg "Press 1" ) 
+   ( key-reset "1" ) 
+)
++Name: Press 1 to abort
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "1" ) 
+      ( not 
+         ( destroyed-or-departed-delay 
+            0 
+            "Gundark" 
+            "Ryloth Queen" 
+            "Hook" 
+            "Blood" 
+         )
+      )
+   )
+   ( if-then-else 
+      ( has-docked-delay 
+         "Neebray" 
+         "Borleias 1" 
+         1 
+         0 
+      )
+      ( when 
+         ( true ) 
+         ( clear-goals "Neebray" ) 
+         ( add-goal "Neebray" ( ai-undock 60 ) ) 
+         ( add-goal 
+            "Neebray" 
+            ( ai-waypoints-once "EscapeVector" 55 ) 
+         )
+      )
+      ( when 
+         ( true ) 
+         ( clear-goals "Neebray" ) 
+         ( add-goal 
+            "Neebray" 
+            ( ai-waypoints-once "EscapeVector" 55 ) 
+         )
+      )
+   )
+   ( if-then-else 
+      ( has-docked-delay 
+         "Rellio" 
+         "Borleias 2" 
+         1 
+         0 
+      )
+      ( when 
+         ( true ) 
+         ( clear-goals "Rellio" ) 
+         ( add-goal "Rellio" ( ai-undock 60 ) ) 
+         ( add-goal 
+            "Rellio" 
+            ( ai-waypoints-once "EscapeVector" 55 ) 
+         )
+      )
+      ( when 
+         ( true ) 
+         ( clear-goals "Rellio" ) 
+         ( add-goal 
+            "Rellio" 
+            ( ai-waypoints-once "EscapeVector" 55 ) 
+         )
+      )
+   )
+   ( if-then-else 
+      ( has-docked-delay 
+         "Velorum" 
+         "Borleias 3" 
+         1 
+         0 
+      )
+      ( when 
+         ( true ) 
+         ( clear-goals "Velorum" ) 
+         ( add-goal "Velorum" ( ai-undock 60 ) ) 
+         ( add-goal 
+            "Velorum" 
+            ( ai-waypoints-once "EscapeVector" 55 ) 
+         )
+      )
+      ( when 
+         ( true ) 
+         ( clear-goals "Velorum" ) 
+         ( add-goal 
+            "Velorum" 
+            ( ai-waypoints-once "EscapeVector" 55 ) 
+         )
+      )
+   )
+)
++Name: Aborted
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance "Neebray" "Borleias 1" ) 
+         1200 
+      )
+      ( not 
+         ( is-event-true-delay "Aborted" 0 ) 
+      )
+   )
+   ( script-eval 
+      "close_wings('Neebray')" 
+   )
+)
++Name: Close Neebray wings
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance "Rellio" "Borleias 2" ) 
+         1200 
+      )
+      ( not 
+         ( is-event-true-delay "Aborted" 0 ) 
+      )
+   )
+   ( script-eval "close_wings('Rellio')" ) 
+)
++Name: Close Rellio wings
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance "Velorum" "Borleias 3" ) 
+         1200 
+      )
+      ( not 
+         ( is-event-true-delay "Aborted" 0 ) 
+      )
+   )
+   ( script-eval 
+      "close_wings('Velorum')" 
+   )
+)
++Name: Close Velorum wings
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-undocked-delay 
+         "Neebray" 
+         "Borleias 1" 
+         1 
+         5 
+      )
+      ( is-event-true-delay 
+         "Close Neebray wings" 
+         5 
+      )
+   )
+   ( script-eval "open_wings('Neebray')" ) 
+)
++Name: Open Neebray wings
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-undocked-delay 
+         "Rellio" 
+         "Borleias 2" 
+         1 
+         5 
+      )
+      ( is-event-true-delay 
+         "Close Rellio wings" 
+         5 
+      )
+   )
+   ( script-eval "open_wings('Rellio')" ) 
+)
++Name: Open Rellio wings
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-undocked-delay 
+         "Velorum" 
+         "Borleias 3" 
+         1 
+         5 
+      )
+      ( is-event-true-delay 
+         "Close Velorum wings" 
+         5 
+      )
+   )
+   ( script-eval "open_wings('Velorum')" ) 
+)
++Name: Open Velorum wings
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 5 "Claw" ) 
+      ( is-event-true-delay "DEBUG" 0 ) 
+   )
+   ( training-msg "Debug" ) 
+)
++Name: Dev - Counter
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Pirate wave 2 FFA" 
+      1 
+   )
+   ( when 
+      ( = @ShuttleAttacker[0] 1 ) 
+      ( add-goal 
+         "Hook 1" 
+         ( ai-chase "Neebray" 80 ) 
+      )
+      ( add-goal 
+         "Hook 1" 
+         ( ai-chase "Rellio" 80 ) 
+      )
+      ( add-goal 
+         "Hook 1" 
+         ( ai-chase "Velorum" 80 ) 
+      )
+   )
+   ( when 
+      ( = @ShuttleAttacker[0] 2 ) 
+      ( add-goal 
+         "Hook 2" 
+         ( ai-chase "Neebray" 80 ) 
+      )
+      ( add-goal 
+         "Hook 2" 
+         ( ai-chase "Rellio" 80 ) 
+      )
+      ( add-goal 
+         "Hook 2" 
+         ( ai-chase "Velorum" 80 ) 
+      )
+   )
+   ( when 
+      ( = @ShuttleAttacker[0] 3 ) 
+      ( add-goal 
+         "Hook 3" 
+         ( ai-chase "Neebray" 80 ) 
+      )
+      ( add-goal 
+         "Hook 3" 
+         ( ai-chase "Rellio" 80 ) 
+      )
+      ( add-goal 
+         "Hook 3" 
+         ( ai-chase "Velorum" 80 ) 
+      )
+   )
+   ( when 
+      ( = @ShuttleAttacker[0] 4 ) 
+      ( add-goal 
+         "Blood 1" 
+         ( ai-chase "Neebray" 80 ) 
+      )
+      ( add-goal 
+         "Blood 1" 
+         ( ai-chase "Rellio" 80 ) 
+      )
+      ( add-goal 
+         "Blood 1" 
+         ( ai-chase "Velorum" 80 ) 
+      )
+   )
+   ( when 
+      ( = @ShuttleAttacker[0] 5 ) 
+      ( add-goal 
+         "Blood 2" 
+         ( ai-chase "Neebray" 80 ) 
+      )
+      ( add-goal 
+         "Blood 2" 
+         ( ai-chase "Rellio" 80 ) 
+      )
+      ( add-goal 
+         "Blood 2" 
+         ( ai-chase "Velorum" 80 ) 
+      )
+   )
+   ( when 
+      ( = @ShuttleAttacker[0] 6 ) 
+      ( add-goal 
+         "Blood 3" 
+         ( ai-chase "Neebray" 80 ) 
+      )
+      ( add-goal 
+         "Blood 3" 
+         ( ai-chase "Rellio" 80 ) 
+      )
+      ( add-goal 
+         "Blood 3" 
+         ( ai-chase "Velorum" 80 ) 
+      )
+   )
+)
++Name: Pick shuttle attacker
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and-in-sequence 
+      ( percent-ships-departed 
+         33 
+         "Neebray" 
+         "Rellio" 
+         "Velorum" 
+      )
+      ( destroyed-or-departed-delay 
+         0 
+         "Hook" 
+         "Blood" 
+         "Ryloth Queen" 
+         "Gundark" 
+      )
+   )
+   ( when 
+      ( = ( num-ships-in-battle "Red 1" ) 1 ) 
+      ( send-message 
+         "Red 1" 
+         "High" 
+         "R1 - Special compliment" 
+      )
+   )
+)
++Name: Vorin's special compliment
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Conditions to depart" 
+         0 
+      )
+      ( = 
+         ( num-ships-in-battle "Borleias 1" ) 
+         0 
+      )
+   )
+   ( clear-goals "Neebray" ) 
+   ( add-goal 
+      "Neebray" 
+      ( ai-waypoints-once 
+         "EscapeVector" 
+         100 
+      )
+   )
+)
++Name: Neebray bugging out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-facing 
+      "Neebray" 
+      "EscapeVector:1" 
+      10 
+   )
+   ( do-nothing ) 
+)
++Name: Neebray facing EV
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Conditions to depart" 
+         0 
+      )
+      ( = 
+         ( num-ships-in-battle "Borleias 2" ) 
+         0 
+      )
+   )
+   ( clear-goals "Rellio" ) 
+   ( add-goal 
+      "Rellio" 
+      ( ai-waypoints-once 
+         "EscapeVector" 
+         100 
+      )
+   )
+)
++Name: Rellio bugging out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-facing 
+      "Rellio" 
+      "EscapeVector:1" 
+      10 
+   )
+   ( do-nothing ) 
+)
++Name: Rellio facing EV
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Conditions to depart" 
+         0 
+      )
+      ( = 
+         ( num-ships-in-battle "Borleias 3" ) 
+         0 
+      )
+   )
+   ( clear-goals "Velorum" ) 
+   ( add-goal 
+      "Velorum" 
+      ( ai-waypoints-once 
+         "EscapeVector" 
+         100 
+      )
+   )
+)
++Name: Velorum bugging out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-facing 
+      "Velorum" 
+      "EscapeVector:1" 
+      10 
+   )
+   ( do-nothing ) 
+)
++Name: Velorum facing EV
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( is-event-true-delay 
+            "Conditions to depart" 
+            3 
+         )
+         ( < 
+            ( num-ships-in-battle "Hostile" ) 
+            2 
+         )
+         ( not 
+            ( is-event-true-delay "Aborted" 0 ) 
+         )
+      )
+      ( and 
+         ( is-event-true-delay "Aborted" 8 ) 
+         ( destroyed-or-departed-delay 
+            0 
+            "Neebray" 
+            "Rellio" 
+            "Velorum" 
+         )
+      )
+   )
+   ( when-argument 
+      ( every-of 
+         "Red 1" 
+         "Red 2" 
+         "Red 3" 
+         "Red 4" 
+      )
+      ( true ) 
+      ( set-player-orders 
+         "<argument>" 
+         ( false ) 
+         "Destroy my target" 
+         "Disable my target" 
+         "Disarm my target" 
+         "Destroy subsystem" 
+         "Protect my target" 
+         "Ignore my target" 
+         "Form on my wing" 
+         "Cover me" 
+         "Engage enemy" 
+      )
+   )
+   ( clear-goals "Red" ) 
+   ( add-goal 
+      "Red 1" 
+      ( ai-warp-out 100 ) 
+   )
+   ( add-goal 
+      "Red 3" 
+      ( ai-warp-out 100 ) 
+   )
+   ( add-goal 
+      "Red 4" 
+      ( ai-warp-out 100 ) 
+   )
+)
++Name: Red departs
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 1 "Blood" "Hook" ) 
+      ( not 
+         ( skill-level-at-least "Medium" ) 
+      )
+   )
+   ( lock-secondary-weapon 
+      "Hook 1" 
+      "Hook 2" 
+      "Hook 3" 
+      "Blood 1" 
+      "Blood 2" 
+      "Blood 3" 
+   )
+)
++Name: Easy - Z-95 missiles
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: manual s-foils
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Droid assessment done" 
+      8 
+   )
+   ( training-msg "R1 - Key bind" ) 
+)
++Name: Key bind help
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 30 ) 
+   ( unlock-primary-weapon 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+   ( unlock-secondary-weapon 
+      "Red 1" 
+      "Red 3" 
+      "Red 4" 
+   )
+)
++Name: Unlock Red Weapons
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Alpha" ) 
+      ( is-disarmed-delay 0 "Kinrath" ) 
+   )
+   ( disable-builtin-messages 
+      "<any wingman>" 
+   )
+)
++Name: Disable built in messages
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Kinrath Crippled" 
+      0 
+   )
+   ( enable-builtin-messages 
+      "<any wingman>" 
+   )
+)
++Name: Enable Built In Messages
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-docked-delay 
+      "Neebray" 
+      "Borleias 1" 
+      1 
+      ( rand 92 135 ) 
+   )
+   ( change-iff "Friendly" "Borleias 1" ) 
+   ( add-goal "Neebray" ( ai-undock 89 ) ) 
+   ( repair-subsystem 
+      "Borleias 1" 
+      "Engines" 
+      ( rand 28 49 ) 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Borleias 1" 
+      "<all engines>" 
+   )
+)
++Name: Shuttle 1 undock
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-docked-delay 
+      "Rellio" 
+      "Borleias 2" 
+      1 
+      ( rand 92 135 ) 
+   )
+   ( change-iff "Friendly" "Borleias 2" ) 
+   ( add-goal "Rellio" ( ai-undock 89 ) ) 
+   ( repair-subsystem 
+      "Borleias 2" 
+      "Engines" 
+      ( rand 28 49 ) 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Borleias 2" 
+      "<all engines>" 
+   )
+)
++Name: Shuttle 2 undock
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-docked-delay 
+      "Velorum" 
+      "Borleias 3" 
+      1 
+      ( rand 92 135 ) 
+   )
+   ( change-iff "Friendly" "Borleias 3" ) 
+   ( add-goal "Velorum" ( ai-undock 89 ) ) 
+   ( repair-subsystem 
+      "Borleias 3" 
+      "Engines" 
+      ( rand 28 49 ) 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Borleias 3" 
+      "<all engines>" 
+   )
+)
++Name: Shuttle 3 undock
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-undocked-delay 
+      "Neebray" 
+      "Borleias 1" 
+      1 
+      0 
+   )
+   ( add-goal 
+      "Neebray" 
+      ( ai-waypoints-once "EscapeVector" 89 ) 
+   )
+)
++Name: Shuttle 1 waypoint
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-undocked-delay 
+      "Rellio" 
+      "Borleias 2" 
+      1 
+      0 
+   )
+   ( add-goal 
+      "Rellio" 
+      ( ai-waypoints-once "EscapeVector" 89 ) 
+   )
+)
++Name: Shuttle 2 waypoint
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-undocked-delay 
+      "Velorum" 
+      "Borleias 3" 
+      1 
+      0 
+   )
+   ( add-goal 
+      "Velorum" 
+      ( ai-waypoints-once "EscapeVector" 89 ) 
+   )
+)
++Name: Shuttle 3 waypoint
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Shuttle 1 waypoint" 
+      18 
+   )
+   ( add-goal 
+      "Borleias 1" 
+      ( ai-waypoints-once "EscapeVector" 89 ) 
+   )
+)
++Name: Borleias 1 out wp - friendly
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Shuttle 2 waypoint" 
+      18 
+   )
+   ( add-goal 
+      "Borleias 2" 
+      ( ai-waypoints-once "EscapeVector" 89 ) 
+   )
+)
++Name: Borleias 2 out wp - friendly
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Shuttle 3 waypoint" 
+      18 
+   )
+   ( add-goal 
+      "Borleias 3" 
+      ( ai-waypoints-once "EscapeVector" 89 ) 
+   )
+)
++Name: Borleias 3 out wp - friendly
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Borleias 1 out wp - friendly" 
+      ( rand 18 33 ) 
+   )
+   ( add-goal 
+      "Borleias 1" 
+      ( ai-warp-out 100 ) 
+   )
+)
++Name: Borleias 1 jump - friendly
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Borleias 2 out wp - friendly" 
+      ( rand 18 33 ) 
+   )
+   ( add-goal 
+      "Borleias 2" 
+      ( ai-warp-out 100 ) 
+   )
+)
++Name: Borleias 2 jump - friendly
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Borleias 3 out wp - friendly" 
+      ( rand 18 33 ) 
+   )
+   ( add-goal 
+      "Borleias 3" 
+      ( ai-warp-out 100 ) 
+   )
+)
++Name: Borleias 3 jump - friendly
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 1 "Kinrath" ) 
+      ( is-goal-true-delay 
+         "Claw Par Time" 
+         0 
+      )
+   )
+   ( change-ai-class 
+      "Lieutenant" 
+      "Kinrath" 
+   )
+)
++Name: Kinrath easier
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( percent-ships-arrived 
+      33 
+      "Neebray" 
+      "Rellio" 
+      "Velorum" 
+   )
+   ( add-remove-escort "Kinrath" 0 ) 
+)
++Name: Kinrath off the EL
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Turret01" 
+      "Turret02" 
+      "Turret03" 
+      "Turret04" 
+      "Turret05" 
+      "Turret06" 
+   )
+   ( is-subsystem-destroyed-delay 
+      "Kinrath" 
+      "<argument>" 
+      0 
+   )
+   ( modify-variable 
+      @KinTurrets[6] 
+      ( - @KinTurrets[6] 1 ) 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Track Kinrath Turrets
++Repeat Count: -1
++Trigger Count: 6
++Interval: 0
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Borleias 1" 
+      "Borleias 2" 
+      "Borleias 3" 
+   )
+   ( and 
+      ( <= ( hits-left "<argument>" ) 35 ) 
+      ( is-iff "Hostile" "<argument>" ) 
+   )
+   ( set-subsystem-strength 
+      "<argument>" 
+      "<all engines>" 
+      0 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Bor Hull->Engines Down
++Repeat Count: -1
++Trigger Count: 3
++Interval: 0
+
+$Formula: ( when 
+   ( <= ( hits-left "Red 1" ) 50 ) 
+   ( modify-variable 
+      @ConvoyDepart[126] 
+      ( + @ConvoyDepart[126] 35 ) 
+   )
+)
++Name: Aid R2
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Borleias 1" 
+      "Borleias 2" 
+      "Borleias 3" 
+   )
+   ( and 
+      ( is-disabled-delay 0 "<argument>" ) 
+      ( is-iff "Hostile" "<argument>" ) 
+   )
+   ( modify-variable 
+      @FreighterDisabledTracker[3] 
+      ( - @FreighterDisabledTracker[3] 1 ) 
+   )
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Track Bor Disabled
++Repeat Count: -1
++Trigger Count: 3
++Interval: 0
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: DisablePlanetBankRotation
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 6 total
+
+$Type: Primary
++Name: ArrivalPoint
+$MessageNew:  XSTR("Reach Convoy Arrival Point and Shut Down", -1)
+$end_multi_text
+$Formula: ( and-in-sequence 
+   ( is-destroyed-delay 0 "Claw" ) 
+   ( has-arrived-delay 0 "Kinrath" ) 
+)
++No music
+
+$Type: Primary
++Name: Disable Kinrath
+$MessageNew:  XSTR("Cripple Kinrath", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "Disarm Kinrath directive" 
+   0 
+)
++Score: 50
+
+$Type: Primary
++Name: Capture Kinrath (disabled)
+$MessageNew:  XSTR("Capture Kinrath", -1)
+$end_multi_text
+$Formula: ( and 
+   ( has-arrived-delay 9 "Neebray" ) 
+   ( not 
+      ( destroyed-or-departed-delay 
+         0 
+         "Kinrath" 
+      )
+   )
+)
++Invalid
+
+$Type: Secondary
++Name: Freighters
+$MessageNew:  XSTR("Disable Freighters", -1)
+$end_multi_text
+$Formula: ( percent-ships-disabled 
+   33 
+   "Borleias 1" 
+   "Borleias 2" 
+   "Borleias 3" 
+)
++No music
+
+$Type: Secondary
++Name: Capture Freighters
+$MessageNew:  XSTR("Capture Freighters", -1)
+$end_multi_text
+$Formula: ( and 
+   ( destroyed-or-departed-delay 
+      0 
+      "Hook" 
+      "Blood" 
+      "Ryloth Queen" 
+      "Gundark" 
+   )
+   ( not 
+      ( destroyed-or-departed-delay 
+         0 
+         "Neebray" 
+         "Rellio" 
+         "Velorum" 
+      )
+   )
+)
++No music
+
+$Type: Bonus
++Name: Claw Par Time
+$MessageNew:  XSTR("Finish off Claw Wing within Par Time", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "Claw down on par time" 
+   0 
+)
++No music
+
+#Waypoints		;! 10 lists total
+
+$Name: NavBuoyWaypoint
+$List: (		;! 1 points in list
+	( -10.300000, 200.000000, 8832.077148 )
+)
+
+$Name: KinrathWaypoint
+$List: (		;! 1 points in list
+	( -945.040283, -3000.000000, -4237.835938 )
+)
+
+$Name: Bor1Waypoint
+$List: (		;! 1 points in list
+	( -582.568115, -3000.000000, -4456.095703 )
+)
+
+$Name: Bor2Waypoint
+$List: (		;! 1 points in list
+	( -1309.802002, -3000.000000, -4415.271973 )
+)
+
+$Name: Bor3Waypoint
+$List: (		;! 1 points in list
+	( -1773.891846, -3000.000000, -4574.747070 )
+)
+
+$Name: GundarkWaypoint
+$List: (		;! 1 points in list
+	( -583.799988, -1700.000000, 7597.653809 )
+)
+
+$Name: RylothWaypoint
+$List: (		;! 1 points in list
+	( -473.506470, -1700.000000, 8488.423828 )
+)
+
+$Name: EscapeVector
+$List: (		;! 1 points in list
+	( 5441.925293, 0.000365, 13296.202148 )
+)
+
+$Name: JumpOutPoint Red
+$List: (		;! 1 points in list
+	( 4020.260010, -0.005990, -24151.626953 )
+)
+
+$Name: ClawWaypoint
+$List: (		;! 8 points in list
+	( -5877.399902, 215.000000, 7999.299805 )
+	( -4750.114746, -0.000732, 8184.206055 )
+	( -3629.282227, 111.550049, 8143.181641 )
+	( -2985.133789, 135.814941, 7602.796875 )
+	( -3686.714111, -385.961182, 7008.823242 )
+	( -4616.253418, 309.464111, 6749.402832 )
+	( -5550.098145, -465.905273, 6837.520020 )
+	( -6396.756836, 439.114258, 7003.986328 )
+)
+
+#Messages		;! 37 total
+
+
+$Name: R4 - Start
+$Team: -1
+$MessageNew:  XSTR("We're right on target. Estimate 5 minutes to convoy arrival.", -1)
+$end_multi_text
++Wave Name: R1_M3_Bodo_1.ogg
+
+$Name: R1 - Reading this?
+$Team: -1
+$MessageNew:  XSTR("Are you reading this, 4?  Someone's already out there.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_1.ogg
+
+$Name: R4 - Interference
+$Team: -1
+$MessageNew:  XSTR("There's too much interference on my end, but they're running hot if we can read them from this range.", -1)
+$end_multi_text
++Wave Name: R1_M3_Bodo_2.ogg
+
+$Name: R1 - Engage them
+$Team: -1
+$MessageNew:  XSTR("Whoever they are, they're gonna blow this operation if they don't clear out of here in a hurry.  Prepare to engage.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_2.ogg
+
+$Name: C1 - Power down
+$Team: -1
+$MessageNew:  XSTR("Hello there, Y-wings. I don't know who sold you the information, but this convoy is ours.  Power off and surrender your ships or we burn you down.", -1)
+$end_multi_text
++Wave Name: R1_M3_Claw_1.ogg
+
+$Name: R4 - Schedule
+$Team: -1
+$MessageNew:  XSTR("The Empire must be handing out schedules for these things.", -1)
+$end_multi_text
++Wave Name: R1_M3_Bodo_3.ogg
+
+$Name: R1 - Cut chatter
+$Team: -1
+$MessageNew:  XSTR("Cut the chatter, 4. It's us or them.  Break in pairs and attack.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_3.ogg
+
+$Name: R1 - Fail (1st stage)
+$Team: -1
+$MessageNew:  XSTR("It's the convoy!  They pulled up short - we'll never reach them in time.  Abort the mission.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_4.ogg
+
+$Name: R1 - Claw X good
+$Team: -1
+$MessageNew:  XSTR("Nice flying, pilots. Now get to the waypoint!", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_5.ogg
+
+$Name: R1 - Convoy due
+$Team: -1
+$MessageNew:  XSTR("They're due any second. Shut down all nonessential systems.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_6.ogg
+
+$Name: RX - Arrival
+$Team: -1
+$MessageNew:  XSTR("R5-X3: The convoy has arrived: 3 bulk transports and corvette Kinrath.  It appears that a group of TIE Fighters has been brought along on a cargo rack.", -1)
+$end_multi_text
++Wave Name: Dro_1_Backup.ogg
+
+$Name: RX - Assessment 1
+$Team: -1
+$MessageNew:  XSTR("R5-X3: You are a talented pilot. You will not get us killed!", -1)
+$end_multi_text
++Wave Name: Dro_1_High_Praise.ogg
+
+$Name: RX - Assessment 2
+$Team: -1
+$MessageNew:  XSTR("R5-X3: Can we let the other pilots handle the convoy?", -1)
+$end_multi_text
++Wave Name: Dro_1_Depart.ogg
+
+$Name: RX - Assessment 3
+$Team: -1
+$MessageNew:  XSTR("R5-X3: Judging by data gathered from our first engagement, our chances of surviving the coming battle are approximately 15 to 1!", -1)
+$end_multi_text
++Wave Name: Dro_1_Disable_Target.ogg
+
+$Name: R1 - Take em down
+$Team: -1
+$MessageNew:  XSTR("Go! Go! Red 2, disable Kinrath - I'm on the fighters!", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_7.ogg
+
+$Name: R1 - Threatening Kinrath
+$Team: -1
+$MessageNew:  XSTR("Kinrath convoy, power down and surrender your ships immediately.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_8.ogg
+
+$Name: RX - Direct source
+$Team: -1
+$MessageNew:  XSTR("R5-X3: Please keep us away from the TIE Fighters!", -1)
+$end_multi_text
++Wave Name: Dro_1_Repair.ogg
+
+$Name: R1 - Kinrath X
+$Team: -1
+$MessageNew:  XSTR("We've lost Kinrath.  All ships, return to base.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_9.ogg
+
+$Name: R1 - All freighters escaped
+$Team: -1
+$MessageNew:  XSTR("Looks like we weren't fast enough to land a freighter.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_10.ogg
+
+$Name: R1 - Neebray may arrive
+$Team: -1
+$MessageNew:  XSTR("Neebray Group, you are cleared for approach.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_11.ogg
+
+$Name: Neeb1 - Here
+$Team: -1
+$MessageNew:  XSTR("Neebray Group is inbound.", -1)
+$end_multi_text
++Wave Name: R1_M3_Neebray_1.ogg
+
+$Name: Neeb1 - Incoming
+$Team: -1
+$MessageNew:  XSTR("Red leader, we have unknown forces incoming. What do you want us to do?", -1)
+$end_multi_text
++Wave Name: R1_M3_Neebray_2.ogg
+
+$Name: R1 - Intercept new targets
+$Team: -1
+$MessageNew:  XSTR("Red group, move to intercept now!  This is way too soon for an Imperial response.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_12.ogg
+
+$Name: R1 - Shuttles X
+$Team: -1
+$MessageNew:  XSTR("We've lost the shuttles!  All ships, return to base.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_13.ogg
+
+$Name: R1 - Success
+$Team: -1
+$MessageNew:  XSTR("We've done all we can here. It's up to the repair crews to get the material out of here.  Return to base - We'll have a quick turnaround on this one.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_14.ogg
+
+$Name: Neeb - Death
+$Team: -1
+$MessageNew:  XSTR("Shields down! Red lea---", -1)
+$end_multi_text
++Wave Name: R1_M3_Neebray_4.ogg
+
+$Name: R1 - Return to base (Fr out)
+$Team: -1
+$MessageNew:  XSTR("We're done here. Return to base.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_15.ogg
+
+$Name: RX - Compliment
+$Team: -1
+$MessageNew:  XSTR("R5-X3: Where did you learn to fly?", -1)
+$end_multi_text
++Wave Name: Dro_1_Praise_Self.ogg
+
+$Name: R1 - Kinrath damaged
+$Team: -1
+$MessageNew:  XSTR("Careful, we need Kinrath alive!", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_16.ogg
+
+$Name: R1 - Kinrath damaged 2
+$Team: -1
+$MessageNew:  XSTR("The Kinrath is going critical! Ion cannons only!", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_17.ogg
+
+$Name: Press 1
+$Team: -1
+$MessageNew:  XSTR("Press $1$ to abort operation", -1)
+$end_multi_text
+
+$Name: Neeb - Copy, aborting
+$Team: -1
+$MessageNew:  XSTR("Copy that, Red two. we're pulling out.", -1)
+$end_multi_text
++Wave Name: R1_M3_Neebray_3.ogg
+
+$Name: Debug
+$Team: -1
+$MessageNew:  XSTR("Time: $ClawCounter s", -1)
+$end_multi_text
+
+$Name: R1 - Special compliment
+$Team: -1
+$MessageNew:  XSTR("Nice flying, but our shuttles are long gone and we don't have time to call them back.  Return to base.", -1)
+$end_multi_text
++Wave Name: R1_M3_Vorin_18.ogg
+
+$Name: R1 - Key bind
+$Team: -1
+$MessageNew:  XSTR("R5-X3:  Remember: Press $S$ to toggle subsystems and $K$ to browse turrets.", -1)
+$end_multi_text
+
+$Name: R4 - Bodo bugs out
+$Team: -1
+$MessageNew:  XSTR("My stabilizers are shot. I have to withdraw.", -1)
+$end_multi_text
++Wave Name: R1_M2_Bodo_1.ogg
+
+$Name: R3 - Gan bugs out
+$Team: -1
+$MessageNew:  XSTR("I'm hit! I have to pull out.", -1)
+$end_multi_text
++Wave Name: R1_M2_Gan_2.ogg
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 3 total
+
+$Num stars: 500
+$Ambient light level: 4605530
+
+$Bitmap List:
+$Sun: SunRed
++Angles: 5.881760 0.000000 4.276057
++Scale: 1.000000
+$Sun: SunWhite
++Angles: 0.331613 6.248279 5.602507
++Scale: 0.200000
+$Starbitmap: Planet_Yavin
++Angles: 0.000000 0.000000 0.401426
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_Moon02
++Angles: 0.593412 2.426008 4.991642
++ScaleX: 0.500000
++ScaleY: 0.500000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_Hoth
++Angles: 5.532694 0.837758 1.308997
++ScaleX: 0.100000
++ScaleY: 0.100000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+$Density: 512
++Field Type: 1
++Debris Genre: 0
++Field Debris Type: 0
+$Average Speed: 3.993989
+$Minimum: -6000.000000, -4000.000000, -5000.000000
+$Maximum: 8000.000000, 4000.000000, 12000.000000
+
+#Music
+
+$Event Music: Hoth
+$Briefing Music: Brief2
+
+#End
+

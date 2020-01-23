@@ -1,0 +1,1866 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Y-wing Qualification", -1)
+$Author: TopAce
+$Created: 07/01/10 at 13:54:46
+$Modified: 01/10/20 at 13:07:57
+$Notes:
+-- Two features require implementation: linked fire and changing torpedo seeking method
+- Needs a neat skybox
+- The pods are currently placeheld by TIE shuttles$End Notes:
+
+$Mission Desc:
+ XSTR("Excoriator campaign mission 1", -1)
+$end_multi_text
++Game Type Flags: 4
++Flags: 131098
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 1
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 10788.808594, 26111.158203, -50780.781250
++Viewer orient:
+	0.939643, 0.000001, -0.342156,
+	0.199021, 0.813425, 0.546562,
+	0.278319, -0.581670, 0.764329
++SquadReassignName: Rebel Alliance
+
+$Starting wing names: ( "Blue" "Green" "Red" )
+$Squadron wing names: ( "Blue" "Green" "Red" "Delta" "Epsilon" )
+$Team-versus-team wing names: ( "Blue" "Zeta" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: FOTG
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"DefendPodNumber"		"0"		"number"
+)
+
+#Command Briefing
+
+$Stage Text:
+ XSTR("$f Welcome (Part 1)
+
+Welcome to the Restoration, pilot, I'm Commodore Rulona. I approved your transfer from Yavin Base because we need your skills, but I'm demoting you to flight officer effective immediately.  This is a Corellian unit, and the other pilots won't follow an outsider they haven't flown with.  Things out here will be different from what you're used to, but we under General Bel Iblis see more action in a month than you'll ever have gotten with the Chandrilans.", -1)
+$end_multi_text
+$Ani Filename: CB_reb
++Wave Filename: R1_M1_cb1.ogg
+
+$Stage Text:
+ XSTR("$f Welcome (Part 2)
+
+Restoration is the best ship in the fleet, but our fighter wing has been under strength since Dantooine.  We expect our new X-wings to be cleared shortly, but for the time being you'll be flying Z-95 Headhunters similar to those you've used before.  We also rely on the Y-wing when greater firepower is needed, and we require all of our pilots to be qualified on both classes.  Report to Captain Du'Elo of Starfighter Command when you're ready to check out on the bombers.  Dismissed.", -1)
+$end_multi_text
+$Ani Filename: CB_reb
++Wave Filename: R1_M1_cb2.ogg
+
+#Briefing
+$start_briefing
+$num_stages: 3
+$start_stage
+$multi_text
+ XSTR("At ease, pilot.  I'm Captain Du'Elo, I'll be giving you your assignments during your tour aboard $f Restoration.  I understand Garven Dreis wasn't happy to lose you.  Good to have you with us.", -1)
+$end_multi_text
+$voice: R1_M1_B1.ogg
+$camera_pos: 0.000000, 5991.133789, 24.425201
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.004077, 0.999992,
+	0.000000, -0.999992, -0.004077
+$camera_time: 500
+$num_lines: 0
+$num_icons: 1
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 16
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: 0.000000, 0.000000, 0.000000
+$label:  XSTR("You!", -1)
++id: 1
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("I'll be pairing you with $f Lieutenant $f Vorin in Red squadron.  Fleet Command is shuffling our unit around while the new T-65s are phased into service.  Red group will be Vorin's first command, and I want you on his wing.  It never hurts to have someone who knows what they're doing watching your back.", -1)
+$end_multi_text
+$voice: R1_M1_B2.ogg
+$camera_pos: 394.187683, 4393.405762, 558.650513
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.004077, 0.999992,
+	0.000000, -0.999992, -0.004077
+$camera_time: 500
+$num_lines: 0
+$num_icons: 2
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 16
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: 0.000000, 0.000000, 0.000000
+$label:  XSTR("You!", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 0
+$team: Friendly
+$class: T-65c X-wing
+$pos: 930.900024, 0.000000, 775.500000
+$label:  XSTR("Vorin", -1)
++id: 2
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("On to the matter at hand, you still need to qualify on the $f Y-wing.  They're a bit less responsive than the $f Headhunter, but they can take a beating and still bring you home.  Meet me at the simulators on deck 8 in half an hour and I'll run you through the basics.", -1)
+$end_multi_text
+$voice: R1_M1_B3.ogg
+$camera_pos: 0.000000, 5991.133789, 24.425201
+$camera_orient:
+	1.000000, 0.000000, 0.000000,
+	0.000000, -0.004077, 0.999992,
+	0.000000, -0.999992, -0.004077
+$camera_time: 500
+$num_lines: 0
+$num_icons: 1
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 16
+$team: Friendly
+$class: BTL-A4 Y-wing
+$pos: 0.000000, 0.000000, 0.000000
+$label:  XSTR("You!", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 7
+
+$Formula: ( is-event-true-delay 
+   "Duel concluded" 
+   0 
+)
+$Multi text
+    XSTR("You looked alright in there.  It always takes some time to get used to a new class, but that's what the sims are for.  We'll be running patrols to scout out shipping lanes over the next few days, so you'll get some experience with the real thing before flying in harm's way.", -1)
+$end_multi_text
+$Voice: R1_M1_DB1.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay 
+   "Duel concluded" 
+   0 
+)
+$Multi text
+    XSTR("If you've been keeping up with the news, the preliminary counts came in from Bilbringi while you were in the sim, and it looks pretty bad.  I know the Alliance had a presence in the system, but there's no way we could have had anything to do with it.  That said, incidents like this with civilians are never good for us.", -1)
+$end_multi_text
+$Voice: R1_M1_DB2.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-destroyed-delay 0 "Alliance Pod" ) 
+   ( is-event-true-delay 
+      "Duel concluded" 
+      0 
+   )
+)
+$Multi text
+    XSTR("I'm a little worried about your failure to intercept the Bomber, but I'll chalk it up to rust if you get back in the sim and show me you can do it right.  Steering a Y-wing feels like herding nerfs, but a pilot with your experience should be able to defend any target against a single attacker.", -1)
+$end_multi_text
+$Voice: R1_M1_DB3.ogg
+$Recommendation text:
+    XSTR("Divert power to your engines to close with the target and use your torpedoes too if need be.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Imp Pod 2 fail" 
+      0 
+   )
+   ( is-event-true-delay 
+      "Duel concluded" 
+      0 
+   )
+)
+$Multi text
+    XSTR("It seems you managed to launch all eight torpedoes and failed to hit a stationary target.  I know it's tradition to try to impress the instructor with your Jedi blind aiming skills, but given that performance, you might wanna try the targeting computer.", -1)
+$end_multi_text
+$Voice: R1_M1_DB4.ogg
+$Recommendation text:
+    XSTR("Wait until you gain aspect lock on your target. A single torpedo is enough to destroy a fighter-sized ship.", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay 
+   "Subdue Vorin" 
+   0 
+)
+$Multi text
+    XSTR("Nice work taking down Vorin, by the way.  He's no bantha out there, and you beat him flat out with a less capable fighter.  Red group will be carrying out missions independent of the fleet once you've switched over to the X-wing, and it's good to know we'll have some of our best pilots there.  
+
+It's back in the sims all day tomorrow - you'd better go get settled down.  Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M1_DB5.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay "Vorin won" 0 ) 
+$Multi text
+    XSTR("Don't feel too bad about losing to Vorin$semicolon those X-wings are made to dominate that sort of fight.  I'm looking forward to your insights as a Headhunter jock when you get to try one out yourself.
+
+It's back in the sims all day tomorrow - you'd better go get settled down.  Dismissed.", -1)
+$end_multi_text
+$Voice: R1_M1_DB6.ogg
+$Recommendation text:
+    XSTR("In a duel you can afford to slow down to cut inside your opponent's turn.", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay 
+   "Instructor X" 
+   0 
+)
+$Multi text
+    XSTR("So either there's something medically wrong with you or you're just a damn fool.  Either way, you're not flying with us.  We're gonna have our med droids take a look at you.  If they don't find anything wrong with your brain, we're putting you on the next freighter out of here.  Good luck, Flight Officer.", -1)
+$end_multi_text
+$Voice: R1_M1_DB7.ogg
+$Recommendation text:
+    XSTR("The instructor is not a valid target.", -1)
+$end_multi_text
+
+#Callsigns:
+$Callsign: Minion
+
+#end
+
+
+#Players		;! 1 total
+
+$Starting Shipname: Green 1
+$Ship Choices: (
+)
+
++Weaponry Pool: (
+	"T&B KX-5"	1
+	"ArMek SW-4"	1
+	"Krupx MG7-A"	8
+	"ArmaTek VL-61/79"	12
+)
+
+#Objects		;! 11 total
+
+$Name: Du'Elo		;! Object #0
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 31.000000, -10.000000, 50.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Vorin challenge" 
+   0 
+)
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" "guardian" )
++Flags2: ( "primaries-locked" "secondaries-locked" "no-ets" )
++Respawn priority: 0
++Special Hitpoints: 2000
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 0
+
+$Name: Green 1		;! Object #1
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 0.000000, 0.000000, 0.000000
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" "invulnerable" )
++Flags2: ( "primaries-locked" "secondaries-locked" "immobile" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Imperial Pod 1		;! Object #2
+$Class: Escape Pod
+$Team: Hostile
+$Location: 20.000000, 15.000000, 350.000000
+$Orientation:
+	-0.948683, 0.000000, -0.316228,
+	-0.019960, 0.998006, 0.059880,
+	0.315597, 0.063119, -0.946792
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Imps", -1)
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Target directive" 
+   6 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 0
+
+$Name: Imperial Pod 2		;! Object #3
+$Class: Escape Pod#Training
+$Team: Hostile
+$Location: -50.000000, -30.000000, 302.090363
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Imps", -1)
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Target directive" 
+   5 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "no-arrival-warp" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 0
+
+$Name: Alliance Pod		;! Object #4
+$Class: Escape Pod
+$Team: Friendly
+$Location: 130.133835, -0.000000, 336.874573
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Friendlies", -1)
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Cycle H EP dir" 
+   3 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( has-arrived-delay 2 "Vorin" ) 
+$Determination: 10
++Flags: ( "cargo-known" "no-shields" "no-arrival-music" "no-arrival-warp" "no-departure-warp" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 0
+
+$Name: Mu 1		;! Object #5
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 3613.103027, -500.000000, 3307.546631
+$Orientation:
+	-0.709359, 0.000000, 0.704847,
+	0.128588, 0.983218, 0.129411,
+	-0.693018, 0.182434, -0.697455
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( "secondaries-locked" )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 0
+
+$Name: Red 1		;! Object #6
+$Class: Z-95 Headhunter
+$Callsign: Minion
+
+$Team: Friendly
+$Location: -742.610474, 0.000000, 941.574524
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Engine power distribution" 
+   4 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" "no-arrival-music" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 16384		;! note that this is a bitfield!!!
++Group: 0
++Score: 0
++Persona Index: 0
+
+$Name: Vorin		;! Object #7
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 8855.460938, 700.001465, 3169.236816
+$Orientation:
+	-0.275501, 0.000000, 0.961301,
+	-0.430242, 0.894253, -0.123304,
+	-0.859646, -0.447562, -0.246367
+$AI Behavior: None
++AI Class: General
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( or 
+   ( is-event-true-delay 
+      "Bomber directive" 
+      3 
+   )
+   ( is-event-true-delay "Destroy TB" 0 ) 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Duel concluded" 
+   3 
+)
+$Determination: 10
++Flags: ( "cargo-known" "escort" "no-arrival-music" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 15
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Score: 0
++Persona Index: 1
+
+$Name: Bodo		;! Object #8
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 9263.128906, 633.182190, 2841.274902
+$Orientation:
+	0.050775, 0.000000, 0.998710,
+	-0.333057, 0.942755, 0.016933,
+	-0.941539, -0.333487, 0.047868
+$AI Behavior: None
++AI Class: Commander
+$AI Goals: ( goals ( ai-guard "Vorin" 70 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 2 "Vorin" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Duel concluded" 
+   4 
+)
+$Determination: 10
++Flags: ( "cargo-known" "escort" "no-arrival-music" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 5
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 7
+
+$Name: Gan		;! Object #9
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 2041.776733, -0.006357, 543.116516
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$AI Goals: ( goals ( ai-guard "Green 1" 70 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-arrived-delay 5 "Vorin" ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( is-event-true-delay 
+   "Duel concluded" 
+   6 
+)
+$Determination: 10
++Flags: ( "escort" "no-arrival-music" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 10
++Orders Accepted: 33015		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 2
+
+$Name: Hyperspace Preload_Ship		;! Object #10
+$Class: Nav Buoy
+$Team: Friendly
+$Location: 51730.980469, 0.000000, 1333.222656
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "no_collide" )
++Respawn priority: 0
++Score: 10
+
+#Wings		;! 2 total
+
+$Name: Mu
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Mu 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay "Comm dir" 16 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 1 total
+	"Mu 1"
+)
+$AI Goals: ( goals ( ai-chase "Alliance Pod" 50 ) )
++Hotkey: 3
++Flags: ( "no-arrival-message" )
+
+$Name: Green
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Green 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 1 total
+	"Green 1"
+)
++Flags: ( )
+
+#Events		;! 57 total
+
+$Formula: ( when 
+   ( has-time-elapsed 1 ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Target - 1" 
+   )
+)
++Name: Start
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( targeted "Du'Elo" ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "B1 targeted" 
+   )
+   ( add-goal 
+      "Du'Elo" 
+      ( ai-waypoints-once 
+         "DuEloWaypoint" 
+         50 
+      )
+   )
+)
++Name: Target directive
++Repeat Count: 1
++Interval: 1
++Chained: 6
++Objective:  XSTR("Target Blue 1", -1)
++Objective key:  XSTR("Press $T$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( targeted "Imperial Pod 1" ) 
+   ( do-nothing ) 
+)
++Name: Cycle H EP dir
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Cycle Hostile Targets", -1)
++Objective key:  XSTR("Keep Pressing $H$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Alliance Pod" ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Target Fr EP" 
+   )
+   ( set-immobile "Imperial Pod 2" ) 
+)
++Name: Target F EP trigger
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( targeted "Alliance Pod" ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Subsystem cycle" 
+      1500 
+   )
+)
++Name: Target F EP dir
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Target Alliance Pod", -1)
++Objective key:  XSTR("Press $F$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( targeted "Du'Elo" 0 "EngineRight" ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "Normal" 
+      "Accelerate" 
+      700 
+   )
+   ( set-training-context-speed 10 300 ) 
+)
++Name: Subsystem cycle dir
++Repeat Count: 1
++Interval: 1
++Chained: 6
++Objective:  XSTR("Cycle Du'Elo's Subsystems", -1)
++Objective key:  XSTR("Using $S$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( speed 2 ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Decelerate" 
+   )
+   ( set-training-context-speed 0 5 ) 
+)
++Name: Accelerate dir
++Repeat Count: 1
++Interval: 1
++Chained: 12
++Objective:  XSTR("Accelerate", -1)
++Objective key:  XSTR("Press $A$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Subsystem cycle dir" 
+      13 
+   )
+   ( set-mobile "Green 1" ) 
+)
++Name: Engines online
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( speed 2 ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Engine preset" 
+      200 
+   )
+   ( key-reset "[" ) 
+)
++Name: Decelerate dir
++Repeat Count: 1
++Interval: 1
++Chained: 8
++Objective:  XSTR("Decelerate", -1)
++Objective key:  XSTR("Press $Z$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( key-pressed "[" ) 
+   ( key-reset "]" ) 
+)
++Name: 1/3 thrust
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Set Thrust to 1/3", -1)
++Objective key:  XSTR("Press $[$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( key-pressed "]" ) 
+   ( key-reset "\" ) 
+)
++Name: 2/3 thrust
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Set Thrust to 2/3", -1)
++Objective key:  XSTR("Press $]$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( key-pressed "\" ) 
+   ( key-reset "Backspace" ) 
+)
++Name: Full thrust
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Set Thrust to 100%", -1)
++Objective key:  XSTR("Press $\$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( key-pressed "Backspace" ) 
+   ( do-nothing ) 
+)
++Name: No thrust
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Set Thrust to 0%", -1)
++Objective key:  XSTR("Press $Backspace$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( targeted "Imperial Pod 1" ) 
+   ( do-nothing ) 
+)
++Name: Pod 1 targeted
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( targeted "Imperial Pod 2" ) 
+   ( do-nothing ) 
+)
++Name: Pod 2 targeted
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-event-true-delay "No thrust" 4 ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Destroy EP" 
+   )
+   ( ship-invulnerable "Imperial Pod 2" ) 
+   ( unlock-primary-weapon "Green 1" ) 
+)
++Name: Destroy EP trigger
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Imperial Pod 1" 
+   )
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Disable EP" 
+      500 
+   )
+   ( ship-vulnerable "Imperial Pod 2" ) 
+   ( ship-guardian-threshold 
+      20 
+      "Imperial Pod 2" 
+   )
+   ( lock-secondary-weapon "Green 1" ) 
+   ( key-reset "Left Ctrl" ) 
+)
++Name: Destroy EP dir
++Repeat Count: 1
++Interval: 1
++Chained: 5
++Objective:  XSTR("Destroy Pod 1", -1)
++Objective key:  XSTR("Press $Left Ctrl$ to fire", -1)
++Team: 0
+
+$Formula: ( when 
+   ( is-disabled-delay 
+      0 
+      "Imperial Pod 2" 
+   )
+   ( do-nothing ) 
+)
++Name: Disable EP 2 dir
++Repeat Count: 1
++Interval: 1
++Chained: 6
++Objective:  XSTR("Disable Pod 2", -1)
++Objective key:  XSTR("Press $.$ to Cycle Weapons", -1)
++Team: 0
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Disable EP 2 dir" 
+      2 
+   )
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Linking guns" 
+   )
+   ( key-reset "O" ) 
+)
++Name: Linking guns msg
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( key-pressed "O" ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "AspectDumbfire" 
+      500 
+   )
+   ( key-reset "X" ) 
+)
++Name: Linking guns dir
++Repeat Count: 1
++Interval: 1
++Chained: 5
++Objective:  XSTR("Link Guns", -1)
++Objective key:  XSTR("Press $O$", -1)
+
+$Formula: ( when 
+   ( key-pressed "X" ) 
+   ( do-nothing ) 
+)
++Name: Aspect Dumbfire dir
++Repeat Count: 1
++Interval: 1
++Chained: 8
++Objective:  XSTR("Switch to Targeting Computer", -1)
++Objective key:  XSTR("Press $X$", -1)
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Aspect Dumbfire dir" 
+      1 
+   )
+   ( unlock-secondary-weapon "Green 1" ) 
+   ( lock-primary-weapon "Green 1" ) 
+   ( ship-no-guardian "Imperial Pod 2" ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Try missiles" 
+      0 
+   )
+   ( key-reset "Spacebar" ) 
+)
++Name: Proton torp trigger
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 
+         0 
+         "Imperial Pod 2" 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Torpedoes splurged" 
+            0 
+         )
+      )
+   )
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Double fire mode" 
+      0 
+   )
+   ( key-reset "/" ) 
+)
++Name: Destroy Pod 2 Dir
++Repeat Count: 1
++Interval: 1
++Chained: 1
++Objective:  XSTR("Destroy Pod 2", -1)
++Objective key:  XSTR("Target it and Press $Spacebar$", -1)
+
+$Formula: ( when 
+   ( key-pressed "/" ) 
+   ( lock-secondary-weapon "Green 1" ) 
+   ( key-reset "Up Arrow" ) 
+)
++Name: Link Torps Dir
++Repeat Count: 1
++Interval: 1
++Chained: 6
++Objective:  XSTR("Link Torpedo Banks", -1)
++Objective key:  XSTR("Press $/$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Link Torps Dir" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Imp Pod 2 fail" 
+         0 
+      )
+   )
+   ( set-shield-energy 30 "Green 1" ) 
+   ( key-reset "Up Arrow" ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Front power" 
+      1000 
+   )
+)
++Name: Disable shields 1
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( key-pressed "Up Arrow" ) 
+   ( key-reset "Q" ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Equalize" 
+      1000 
+   )
+)
++Name: Front shields dir
++Repeat Count: 1
++Interval: 1
++Chained: 6
++Objective:  XSTR("Empower Front Shields", -1)
++Objective key:  XSTR("Press $Up Arrow$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( key-pressed "Q" ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Shield ETS" 
+   )
+   ( key-reset "Home" "End" ) 
+)
++Name: Equalize shields dir
++Repeat Count: 1
++Interval: 1
++Chained: 2
++Objective:  XSTR("Equalize Shields", -1)
++Objective key:  XSTR("Press $Q$", -1)
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "Home" ) 
+      ( key-pressed "End" ) 
+   )
+   ( key-reset "Insert" "Delete" ) 
+)
++Name: Increase shield power
++Repeat Count: 1
++Interval: 1
++Chained: 8
++Objective:  XSTR("Distribute Shield Power", -1)
++Objective key:  XSTR("Press $Home$, $End$", -1)
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "Insert" ) 
+      ( key-pressed "Delete" ) 
+   )
+   ( key-reset "Page Up" "Page Down" ) 
+)
++Name: Primary power distribution
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Practice Primary Distribution", -1)
++Objective key:  XSTR("Press $Insert$, $Delete$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( key-pressed "Page Up" ) 
+      ( key-pressed "Page Down" ) 
+   )
+   ( send-message "Du'Elo" "High" "Comm" ) 
+)
++Name: Engine power distribution
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Practice Engine Distribution", -1)
++Objective key:  XSTR("Press $Page Up$, $Page Down$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 1 "Red 1" ) 
+   ( do-nothing ) 
+)
++Name: Comm dir trigger
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Red 1" ) 
+   ( send-message-list 
+      "Du'Elo" 
+      "High" 
+      "Bomber" 
+      2000 
+   )
+   ( unlock-primary-weapon "Green 1" ) 
+   ( unlock-secondary-weapon "Green 1" ) 
+   ( ship-vulnerable "Alliance Pod" ) 
+)
++Name: Comm dir
++Repeat Count: 1
++Interval: 1
++Chained: 4
++Objective:  XSTR("Communicate With Red 1", -1)
++Objective key:  XSTR("Press $C$", -1)
++Team: 0
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Mu" ) 
+   ( ship-vulnerable "Alliance Pod" ) 
+   ( unlock-secondary-weapon "Green 1" ) 
+   ( add-remove-escort 
+      "Alliance Pod" 
+      100 
+   )
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Alliance Pod" 
+      "<all engines>" 
+   )
+   ( clear-goals "Du'Elo" ) 
+   ( add-goal 
+      "Du'Elo" 
+      ( ai-play-dead 89 ) 
+   )
+   ( change-soundtrack "Hoth" ) 
+)
++Name: Bomber arrived
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Mu" ) 
+      ( not 
+         ( is-destroyed-delay 0 "Alliance Pod" ) 
+      )
+      ( directive-value 0 ) 
+   )
+   ( ship-invulnerable "Alliance Pod" ) 
+   ( add-remove-escort "Alliance Pod" 0 ) 
+)
++Name: Bomber directive
++Repeat Count: 1
++Interval: 1
++Chained: 2
++Objective:  XSTR("Defend Alliance Pod", -1)
++Objective key:  XSTR("Press $B$ to Target Bomb(er)s", -1)
+
+$Formula: ( when 
+   ( has-arrived-delay 9 "Vorin" ) 
+   ( send-message-list 
+      "Vorin" 
+      "High" 
+      "Vorin jump in" 
+      0 
+      "Gan" 
+      "High" 
+      "Gan standing by" 
+      11000 
+      "Bodo" 
+      "High" 
+      "Bodo Attack" 
+      4000 
+      "Gan" 
+      "High" 
+      "Gan Attack" 
+      2000 
+   )
+)
++Name: Vorin challenge
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Vorin challenge" 
+      15 
+   )
+   ( ship-vulnerable "Green 1" ) 
+   ( ship-vulnerable "Vorin" ) 
+   ( ship-guardian-threshold 
+      10 
+      "Green 1" 
+      "Vorin" 
+      "Bodo" 
+      "Gan" 
+   )
+   ( change-iff "Hostile" "Vorin" "Bodo" ) 
+   ( add-goal 
+      "Vorin" 
+      ( ai-chase "Green 1" 65 ) 
+   )
+   ( script-eval "open_wings('Vorin')" ) 
+   ( script-eval "open_wings('Bodo')" ) 
+   ( add-goal 
+      "Bodo" 
+      ( ai-chase "Green 1" 89 ) 
+   )
+   ( add-goal 
+      "Gan" 
+      ( ai-chase "Bodo" 89 ) 
+   )
+)
++Name: Setup duel
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( < ( hits-left "Vorin" ) 11 ) 
+      ( not 
+         ( < ( hits-left "Green 1" ) 11 ) 
+      )
+   )
+   ( send-message-list 
+      "Vorin" 
+      "High" 
+      "Vorin lost" 
+      500 
+   )
+   ( change-iff 
+      "Friendly" 
+      "Vorin" 
+      "Bodo" 
+   )
+   ( training-msg "Vorin Eliminated" ) 
+)
++Name: Subdue Vorin
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Defeat Vorin", -1)
+
+$Formula: ( when 
+   ( < ( hits-left "Green 1" ) 11 ) 
+   ( send-message-list 
+      "Vorin" 
+      "High" 
+      "Vorin won" 
+      500 
+   )
+   ( change-iff 
+      "Friendly" 
+      "Vorin" 
+      "Bodo" 
+   )
+   ( training-msg "Player Eliminated" ) 
+)
++Name: Vorin won
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Subdue Vorin" 
+         10 
+      )
+      ( is-event-true-delay "Vorin won" 10 ) 
+   )
+   ( allow-warp "Green 1" ) 
+   ( ship-invulnerable "Green 1" "Vorin" ) 
+   ( repair-subsystem 
+      "Green 1" 
+      "EngineRight" 
+      100 
+   )
+   ( repair-subsystem 
+      "Vorin" 
+      "<all engines>" 
+      100 
+   )
+   ( lock-primary-weapon "Green 1" ) 
+   ( lock-secondary-weapon "Green 1" ) 
+   ( clear-goals "Vorin" ) 
+)
++Name: Duel concluded
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Green 1" ) 
+   ( do-nothing ) 
+)
++Name: Depart
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Hyperspace", -1)
++Objective key:  XSTR("Find Vector Then Press $Enter$", -1)
+
+$Formula: ( when 
+   ( true ) 
+   ( never-warp "Green 1" ) 
+)
++Name: Player never-warp
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Alliance Pod" ) 
+   ( send-message 
+      "Du'Elo" 
+      "Normal" 
+      "Escape pod X" 
+   )
+)
++Name: Alliance Pod lost
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Mu" ) 
+   ( do-nothing ) 
+)
++Name: Destroy TB
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Destroy Mu", -1)
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Instructor X" 
+      4 
+   )
+   ( end-mission ) 
+)
++Name: end-mission
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( = 
+      ( get-secondary-ammo "Green 1" 0 ) 
+      0 
+   )
+   ( do-nothing ) 
+)
++Name: Torpedoes splurged
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Torpedoes splurged" 
+         10 
+      )
+      ( not 
+         ( is-destroyed-delay 
+            0 
+            "Imperial Pod 2" 
+         )
+      )
+   )
+   ( training-msg "Impressive" ) 
+   ( self-destruct "Imperial Pod 2" ) 
+)
++Name: Imp Pod 2 fail
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 0 "Mu" ) 
+      ( not 
+         ( is-destroyed-delay 0 "Alliance Pod" ) 
+      )
+   )
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Bomber X" 
+   )
+)
++Name: You're a natural message
++Repeat Count: 1
++Interval: 1
++Team: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Alliance Pod" 
+      "Mu" 
+   )
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Vorin here - TB failed" 
+   )
+)
++Name: Continue to Vorin (TB fail)
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Duel concluded" 
+      3 
+   )
+   ( add-goal "Vorin" ( ai-warp-out 95 ) ) 
+)
++Name: Vorin jumps
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: manual s-foils
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Du'Elo" ) 2 ) 
+   ( fade-out 3000 ) 
+   ( send-message 
+      "#Command" 
+      "High" 
+      "Failure" 
+   )
+)
++Name: Instructor X
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Duel concluded" 
+      0 
+   )
+   ( script-eval 
+      "blink_jumpoutpoint(true)" 
+   )
+)
++Name: Show Jumpout Indicator
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Gan" ) 11 ) 
+   ( send-message-list 
+      "Gan" 
+      "High" 
+      "Gan Departs" 
+      1000 
+   )
+   ( clear-goals "Gan" ) 
+   ( add-goal "Gan" ( ai-warp-out 111 ) ) 
+   ( training-msg "Gan Eliminated" ) 
+   ( protect-ship "Gan" ) 
+)
++Name: Gan Beaten
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Bodo" ) 11 ) 
+   ( send-message-list 
+      "Bodo" 
+      "High" 
+      "Bodo No Way" 
+      500 
+      "Bodo" 
+      "Normal" 
+      "Bodo Departs" 
+      4000 
+   )
+   ( clear-goals "Bodo" ) 
+   ( add-goal "Bodo" ( ai-warp-out 111 ) ) 
+   ( training-msg "Bodo Eliminated" ) 
+   ( protect-ship "Bodo" ) 
+)
++Name: Bodo Beaten
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Du'Elo" ) 95 ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Instructor Shot" 
+   )
+)
++Name: Instructor Shot
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Du'Elo" ) 50 ) 
+   ( send-message 
+      "Du'Elo" 
+      "High" 
+      "Instructor Attacked" 
+   )
+)
++Name: Instructor Attacked
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( are-waypoints-done-delay 
+      "Du'Elo" 
+      "DuEloWaypoint" 
+      0 
+   )
+   ( clear-goals "Du'Elo" ) 
+   ( add-goal 
+      "Du'Elo" 
+      ( ai-play-dead 89 ) 
+   )
+)
++Name: DuElo WP Done
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 1 total
+
+$Type: Primary
++Name: Training
+$MessageNew:  XSTR("Complete Basic Y-wing Training", -1)
+$end_multi_text
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Duel concluded" 
+      0 
+   )
+   ( not 
+      ( is-event-true-delay 
+         "Instructor X" 
+         0 
+      )
+   )
+)
++No music
+
+#Waypoints		;! 2 lists total
+
+$Name: DuEloWaypoint
+$List: (		;! 3 points in list
+	( -20.043949, 0.000000, 121.507225 )
+	( -135.110992, 5.000000, 92.391724 )
+	( -182.263062, 15.000061, 207.580627 )
+)
+
+$Name: JumpOutPoint Friendly
+$List: (		;! 2 points in list
+	( 280.720276, -0.000026, 196.079849 )
+	( 49231.199219, -4720.000000, -30965.300781 )
+)
+
+#Messages		;! 40 total
+
+
+$Name: Target - 1
+$Team: -1
+$MessageNew:  XSTR("You in?  Right.  Getting used to the more sophisticated targeting computer can be a problem switching over to bombers, so let's start there.  Target my ship.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_1.ogg
+
+$Name: B1 targeted
+$Team: -1
+$MessageNew:  XSTR("Notice above the view screen the distance to the target and its speed are both displayed.   In a fight you'll want to quickly target nearby hostile ships exclusively - I've dropped a couple pods into the sim.  Cycle through the closest enemy targets.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_2.ogg
+
+$Name: Target Fr EP
+$Team: -1
+$MessageNew:  XSTR("I've created an ally nearby - try cycling friendly targets only.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_3.ogg
+
+$Name: Subsystem cycle
+$Team: -1
+$MessageNew:  XSTR("As a Y-wing pilot, you'll be required to target and disable specific subsystems with your ion cannons.  Target my fighter and cycle through its subsystems.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_4.ogg
+
+$Name: Accelerate
+$Team: -1
+$MessageNew:  XSTR("Proper subsystem targeting ensures that the computer's aiming assist helps rather than hinders you.  Without the added precision, you'd have to fly like a Jedi to hit such small targets in combat.  Speaking of which, I'm activating your engines now.  Throttle up and get a feel for how she accelerates.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_5.ogg
+
+$Name: Decelerate
+$Team: -1
+$MessageNew:  XSTR("I know it's depressing coming from the Z-95, but you'll feel better about her when you get to the ordnance.  Cut thrust.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_6.ogg
+
+$Name: Engine preset
+$Team: -1
+$MessageNew:  XSTR("We use four engine presets on our fighters: no thrust, 1$slash3, 2$slash3, and full power.  Try them all.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_7.ogg
+
+$Name: Destroy EP
+$Team: -1
+$MessageNew:  XSTR("I've turned on your primary weapons, target the first enemy, aim for the lead indicator, and dust it.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_8.ogg
+
+$Name: Disable EP
+$Team: -1
+$MessageNew:  XSTR("Normally we'd frown on your vaporizing a defenseless target, but we'll let this one slide.  Let's do it the right way on the second pod.  Switch over to ion cannons, target the engine subsystem, and disable it.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_9.ogg
+
+$Name: Linking guns
+$Team: -1
+$MessageNew:  XSTR("Just like on the Headhunter, you can also toggle how your weapons are linked to obtain a better rate of fire or harder single-hit punch.  Try linking your guns.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_10.ogg
+
+$Name: AspectDumbfire
+$Team: -1
+$MessageNew:  XSTR("Unlike the missiles you're used to in the Z-95, the Y-wing has sophisticated aspect seeking hardware which demands that you hold a steady bead on your target to achieve a lock.  Switch to targeting computer.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_11.ogg
+
+$Name: Try missiles
+$Team: -1
+$MessageNew:  XSTR("I've activated your proton torpedo banks.  Make sure your computer is getting a signal, line up a shot on the second pod, wait for the lock, and fire away.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_12.ogg
+
+$Name: Double fire mode
+$Team: -1
+$MessageNew:  XSTR("You can link up both torpedo banks for a stronger punch if you need it, but remember you only have eight in total.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_13.ogg
+
+$Name: Front power
+$Team: -1
+$MessageNew:  XSTR("The Y-wing has strong shields, and you can throw them all the way to the front or back if you want.  This is especially important during bombing runs.  Try putting your deflectors on double front.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_14.ogg
+
+$Name: Equalize
+$Team: -1
+$MessageNew:  XSTR("Don't forget to stabilize your rear deflectors when you're pulling out of the assault or you'll get pulverized.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_15.ogg
+
+$Name: Shield ETS
+$Team: -1
+$MessageNew:  XSTR("You can increase your shield recharge rate by boosting the power to them with your systems controls.  Likewise, sending more energy to the guns will quicken their energy recharge, and power to the engines will improve the maximum speed you can achieve.  Play with your power distribution to get a feel for how she responds at different levels.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_16.ogg
+
+$Name: Comm
+$Team: -1
+$MessageNew:  XSTR("Alright, the last step is communications.  I'm sure you're already familiar with this, so punch up your transmitter, use the comm switchboard to select a ship to talk to, and try to be brief.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_17.ogg
+
+$Name: Bomber
+$Team: -1
+$MessageNew:  XSTR("Ok, let's give you something to shoot at.  I'm dropping a TIE bomber in, and he'll do his best to kill our escape pod over there.  Your targeting computer can assess threats and target the closest bomb or bomber to you.  Use this feature and go get him.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_19.ogg
+
+$Name: Bomber X
+$Team: -1
+$MessageNew:  XSTR("Nice work, pilot. You're a natural.  Lieutenant Vorin just stepped in, so I'll let you two practice for a while.  Report back to me in my office when you're done here.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_18.ogg
+
+$Name: Vorin jump in
+$Team: -1
+$MessageNew:  XSTR("Ready for some live opposition?  This is the new Incom fighter that's replacing the Headhunter, and  we've get the first set off the line.  If you can beat me in that bucket, I'll buy.", -1)
+$end_multi_text
++Wave Name: R1_M1_Vorin_1.ogg
+
+$Name: Vorin lost
+$Team: -1
+$MessageNew:  XSTR("Whoa, enough!  You're a hot hand, kid.  I'm heading out.  See you back here tomorrow morning.", -1)
+$end_multi_text
++Wave Name: R1_M1_Vorin_2.ogg
+
+$Name: Vorin won
+$Team: -1
+$MessageNew:  XSTR("Don't sweat it, kid.  Sabacc game's at 19:30$semicolon watch your head getting out of the sim.", -1)
+$end_multi_text
++Wave Name: R1_M1_Vorin_3.ogg
+
+$Name: Failure
+$Team: -1
+$MessageNew:  XSTR("All right, we're done here.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_21.ogg
+
+$Name: Escape pod X
+$Team: -1
+$MessageNew:  XSTR("There goes our escape pod. Better luck next time, rookie. Finish the bomber and let's wrap it up.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_20.ogg
+
+$Name: Vorin here - TB failed
+$Team: -1
+$MessageNew:  XSTR("Nice work, pilot. You're a natural.  Lieutenant Vorin just stepped in, so I'll let you two practice for a while.  Report back to me in my office when you're done here.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_18.ogg
+
+$Name: Rear shields
+$Team: -1
+$MessageNew:  XSTR("You'd do well to divert some power to your rear shields when you pick up a tail.", -1)
+$end_multi_text
++Wave Name: R1_M1_DuElo_22.ogg
+
+$Name: About 1/3
+$Team: -1
+$MessageNew:  XSTR("And if anyone tells you that your throttle setting influences your turning speed, they've been playing too many games.  That only happens in low-tech sims that can't properly model the etheric rudder.", -1)
+$end_multi_text
+
+$Name: Impressive
+$Team: -1
+$MessageNew:  XSTR("Impressive.  Most Impressive.", -1)
+$end_multi_text
+
+$Name: Gan Departs
+$Team: -1
+$MessageNew:  XSTR("Heading out...", -1)
+$end_multi_text
++Wave Name: Reb_3_Depart.ogg
+
+$Name: Gan Eliminated
+$Team: -1
+$MessageNew:  XSTR("Flight Officer Moas Gan has been eliminated.", -1)
+$end_multi_text
+
+$Name: Bodo Eliminated
+$Team: -1
+$MessageNew:  XSTR("Flight Officer Landro Bodo has been eliminated.", -1)
+$end_multi_text
+
+$Name: Vorin Eliminated
+$Team: -1
+$MessageNew:  XSTR("Lieutenant Galenes Vorin has been eliminated.", -1)
+$end_multi_text
+
+$Name: Player Eliminated
+$Team: -1
+$MessageNew:  XSTR("You have been eliminated.", -1)
+$end_multi_text
+
+$Name: Bodo Departs
+$Team: -1
+$MessageNew:  XSTR("Departing now.", -1)
+$end_multi_text
++Wave Name: Imp_2_Depart.ogg
+
+$Name: Bodo No Way
+$Team: -1
+$MessageNew:  XSTR("There's no way!", -1)
+$end_multi_text
++Wave Name: Imp_2_No.ogg
+
+$Name: Gan standing by
+$Team: -1
+$MessageNew:  XSTR("Backup, standing by.", -1)
+$end_multi_text
++Wave Name: Reb_3_Backup.ogg
+
+$Name: Bodo Attack
+$Team: -1
+$MessageNew:  XSTR("Engaging.", -1)
+$end_multi_text
++Wave Name: Imp_2_Engage.ogg
+
+$Name: Gan Attack
+$Team: -1
+$MessageNew:  XSTR("Going in full throttle!", -1)
+$end_multi_text
++Wave Name: Reb_3_Engage.ogg
+
+$Name: Instructor Shot
+$Team: -1
+$MessageNew:  XSTR("That's hilarious, pilot.  You're killing me.", -1)
+$end_multi_text
++Wave Name: Instructor_Hit.ogg
+
+$Name: Instructor Attacked
+$Team: -1
+$MessageNew:  XSTR("You're wasting my time, flight officer.  If you wanna wash out, you can just ask.", -1)
+$end_multi_text
++Wave Name: Instructor_Attack.ogg
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 1 total
+
+$Num stars: 0
+$Ambient light level: 4473924
+
+$Bitmap List:
+$Sun: SunGold
++Angles: 0.349066 0.000000 5.794493
++Scale: 2.000000
+$Starbitmap: Planet_Coruscant
++Angles: 5.602507 0.000000 0.366519
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: Brief4
+$Debriefing Success Music: Brief4
+$Debriefing Average Music: Brief4
+$Debriefing Fail Music: Brief4
+
+#End
+

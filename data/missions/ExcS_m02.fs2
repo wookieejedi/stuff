@@ -1,0 +1,3173 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("The Taste", -1)
+$Author: Swash
+$Created: 11/17/14 at 14:28:09
+$Modified: 01/10/20 at 13:11:56
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("The smugglers must bribe their way past a corrupt Imperial customs station.", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 393234
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 1
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 205005.125000, 142553.718750, -74561.578125
++Viewer orient:
+	0.867887, 0.000000, 0.496761,
+	-0.269098, 0.840569, 0.470138,
+	-0.417562, -0.541704, 0.729519
+
+$Starting wing names: ( "Traveller" "Beta" "Mu" )
+$Squadron wing names: ( "Traveller" "Beta" "Gamma" "Epsilon" "Tau" )
+$Team-versus-team wing names: ( "Traveller" "Zeta" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: FOTG
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"Bribe_1"		"100"		"number"
+		1		"Bribe_2"		"400"		"number"
+		2		"Bribe_3"		"800"		"number"
+		3		"Funds"		"1500"		"number"
+		4		"Money"		"5"		"number"		"save-on-mission-progress"
+		5		"Player_Hull"		"100"		"number"		"save-on-mission-progress"
+		6		"Submission_1"		"0"		"number"
+		7		"Submission_2"		"0"		"number"
+		8		"Submission_3"		"0"		"number"
+		9		"TS_Hull"		"100"		"number"		"save-on-mission-progress"
+)
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 7
+$start_stage
+$multi_text
+ XSTR("We will arrive at Ledos in two hours, mistress.  The Ostro Shipping complex is our destination, but we will have to pass through an Imperial customs station in orbit of the first moon before we can proceed.  I have shifted our transponders to read as the Solar Flair, but any close scan will reveal our identity to the authorities.  Given the circumstances of our departure from Bilbringi, that would be very bad.", -1)
+$end_multi_text
+$voice: S1_M2_b1.ogg
+$camera_pos: 3738.712891, 4007.521240, -1280.016357
+$camera_orient:
+	-0.392716, 0.000000, 0.919660,
+	-0.671900, 0.682810, -0.286917,
+	-0.627953, -0.730596, -0.268150
+$camera_time: 500
+$num_lines: 0
+$num_icons: 1
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Civilian
+$class: XQ1 Platform
+$pos: 368.398560, 0.006056, -2798.125488
+$label:  XSTR("Ledos Customs", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Fortunately, the men who run these types of facilities are known for being flexible when it comes to the thoroughness of their inspections. A little Nar Shaddaa tribute should ensure that we are hurried along.  Of course, our business here cannot be carried out in the open as all transmissions are logged and eventually inspected by the ISB's automated intelligence services.", -1)
+$end_multi_text
+$voice: S1_M2_b2.ogg
+$camera_pos: 3157.688965, 3218.906250, -1044.124023
+$camera_orient:
+	0.238092, 0.000000, 0.971243,
+	-0.764253, 0.617104, 0.187350,
+	-0.599357, -0.786882, 0.146927
+$camera_time: 500
+$num_lines: 0
+$num_icons: 2
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Civilian
+$class: XQ1 Platform
+$pos: 565.859619, 0.005086, -1086.813110
+$label:  XSTR("Ledos Customs", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: 676.474670, -260.486694, -16.022718
+$label:  XSTR("Solar Flair", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("When we approach the station, one or more escort wings will fly out to bring us in.  In order to communicate the desired sum to us, the wing's lead ship will carry a transponder that lists their price along with the frequency and codes we will need to make a deposit in whatever dummy account they have set up.  Scanning that ship will make this information available to us while keeping Imperial Security in the dark.", -1)
+$end_multi_text
+$voice: S1_M2_b3.ogg
+$camera_pos: 3234.278320, 3351.786133, -1180.010864
+$camera_orient:
+	0.194468, 0.000000, 0.980909,
+	-0.771860, 0.617103, 0.153023,
+	-0.605322, -0.786882, 0.120007
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Civilian
+$class: XQ1 Platform
+$pos: 636.757507, 0.004793, -1623.988403
+$label:  XSTR("Ledos Customs", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: 557.745667, -260.487000, -703.051453
+$label:  XSTR("Solar Flair", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Civilian
+$class: T.I.E. Fighter
+$pos: 776.241272, 0.001352, 360.198029
+$label:  XSTR("Ledos Patrol", -1)
++id: 3
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("It is important to note that we do not need to transfer the exact amount that they indicate.  This type of dealing is extremely fluid, and the Imperials do not actually want to process our ship.  Their continued prosperity depends on traders like us moving through Ledos, so a little reasoned haggling is in everyone's best interest.  Once you have scanned the lead ship, tell me the amount you wish to transfer I will take care of accessing your accounts.  Lowbanding them could result in a second round of demands, and declining to pay at all would be inadvisable.", -1)
+$end_multi_text
+$voice: S1_M2_b4.ogg
+$camera_pos: 3738.712891, 4007.521240, -1280.016357
+$camera_orient:
+	0.194468, 0.000000, 0.980909,
+	-0.771860, 0.617103, 0.153023,
+	-0.605322, -0.786882, 0.120007
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 15
+$team: Civilian
+$class: XQ1 Platform
+$pos: 476.183563, 0.005234, -2067.803955
+$label:  XSTR("Ledos Customs", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: 891.418579, -260.486938, 645.422546
+$label:  XSTR("Solar Flair", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 21
+$team: Hostile
+$class: TIE/ln Fighter
+$pos: 696.878540, 0.000285, -737.047913
+$label:  XSTR("BRIBE", -1)
++id: 4
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Assuming fulfillment of our contract with the Alliance, we have almost $B 1500 credits to bargain with.  I do not believe that they will ask for anywhere near that amount, but you must be prepared to haggle anyway in order to avoid suspicion.  We will need every credit we can get to move our business off of Duro.  Good luck, mistress.", -1)
+$end_multi_text
+$voice: S1_M2_b5.ogg
+$camera_pos: 2064.724365, 1398.816650, -1652.590088
+$camera_orient:
+	0.867887, -0.000000, 0.496761,
+	-0.269098, 0.840569, 0.470138,
+	-0.417562, -0.541704, 0.729519
+$camera_time: 500
+$num_lines: 0
+$num_icons: 1
+$Flags: 0
+$Formula: ( = @Money[5] 6 ) 
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: 786.181458, -260.487030, 560.725708
+$label:  XSTR("Solar Flair", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Assuming fulfillment of our contract with the Alliance and subtracting for repairs, we have almost $B 1000 credits to bargain with.  They could well ask for close to that amount, but we must turn a profit here if we still hope to move our business off of Duro.  Good luck, mistress.", -1)
+$end_multi_text
+$voice: S1_M2_b6.ogg
+$camera_pos: 2064.724365, 1398.816650, -1652.590088
+$camera_orient:
+	0.867887, -0.000000, 0.496761,
+	-0.269098, 0.840569, 0.470138,
+	-0.417562, -0.541704, 0.729519
+$camera_time: 500
+$num_lines: 0
+$num_icons: 1
+$Flags: 0
+$Formula: ( = @Money[5] 5 ) 
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: 786.181458, -260.487030, 560.725708
+$label:  XSTR("Solar Flair", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Assuming fulfillment of our contract with the Alliance and subtracting for extensive repair work in our near future, we have almost $B 500 credits to bargain with.  I do not know if this will be enough, but going into debt here will greatly hinder out efforts to move our business off of Duro.  Good luck, mistress.", -1)
+$end_multi_text
+$voice: S1_M2_b7.ogg
+$camera_pos: 2064.724365, 1398.816650, -1652.590088
+$camera_orient:
+	0.867887, -0.000000, 0.496761,
+	-0.269098, 0.840569, 0.470138,
+	-0.417562, -0.541704, 0.729519
+$camera_time: 500
+$num_lines: 0
+$num_icons: 2
+$Flags: 0
+$Formula: ( = @Money[5] 4 ) 
+$start_icon
+$type: 15
+$team: Civilian
+$class: XQ1 Platform
+$pos: 476.183563, 0.005234, -2067.803955
+$label:  XSTR("Ledos Customs", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: 786.181458, -260.487030, 560.725708
+$label:  XSTR("Solar Flair", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 8
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Bribe 3 Fail" 
+      0 
+   )
+   ( not 
+      ( is-destroyed-delay 0 "Solar Flair" ) 
+   )
+)
+$Multi text
+    XSTR("That did not go well.  It will be some time before we can reestablish contact with the Alliance to make our rendezvous, and our operations on Duro are almost surely forfeit by this point.  ", -1)
+$end_multi_text
+$Voice: S1_M2_db1.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Bribe 3 Fail" 
+      0 
+   )
+   ( not 
+      ( is-destroyed-delay 0 "Solar Flair" ) 
+   )
+)
+$Multi text
+    XSTR("I know it is not my place to question your methods, mistress, but I fear our prospects will continue to sour if you insist on terminating our business associates in this fashion.  Perhaps you could find equal satisfaction in a line of work not involving laser cannons?", -1)
+$end_multi_text
+$Voice: S1_M2_db2.ogg
+$Recommendation text:
+    XSTR("Your bribe will have to be large enough to satisfy the Imperials' third and final demand.  Giving at least half of what you are asked for will satisfy the Imperials in any given round.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Bribe 3 Successful" 
+      0 
+   )
+   ( < 
+      ( + 
+         @Submission_1[0] 
+         @Submission_2[0] 
+         @Submission_3[0] 
+      )
+      1000 
+   )
+)
+$Multi text
+    XSTR("I must say I am impressed that we were allowed to pass through customs with such a small bribe.  It is obvious that Imperial security forces are putting on a show of strength following the Bilbringi incident, yet you were as stingy as ever.  You are almost droid-like in your dispassion and efficiency, mistress.", -1)
+$end_multi_text
+$Voice: S1_M2_db3.ogg
+$Recommendation text:
+    XSTR("You have achieved optimal stinginess.  Money gets tighter on higher difficulty settings, so increase the difficulty for a greater challenge.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Bribe 3 Successful" 
+      0 
+   )
+   ( and 
+      ( >= 
+         ( + 
+            @Submission_1[0] 
+            @Submission_2[0] 
+            @Submission_3[0] 
+         )
+         1000 
+      )
+      ( <= 
+         ( + 
+            @Submission_1[0] 
+            @Submission_2[0] 
+            @Submission_3[0] 
+         )
+         1500 
+      )
+   )
+)
+$Multi text
+    XSTR("We have expended more of our funds getting through customs than I was anticipating, but I believe we will still be able to break even once our delivery is complete.  Undoubtedly, the furor over the Bilbringi incident has emboldened these local officials to increase their take.  Hopefully business as usual will resume in a few weeks.", -1)
+$end_multi_text
+$Voice: S1_M2_db4.ogg
+$Recommendation text:
+    XSTR("The Imperials didn't totally clean you out, but it is possible to slip through with a smaller overall bribe.  Money gets tighter on higher difficulty settings, so lower the difficulty if you wish to pass more easily.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Bribe 3 Successful" 
+      0 
+   )
+   ( > 
+      ( + 
+         @Submission_1[0] 
+         @Submission_2[0] 
+         @Submission_3[0] 
+      )
+      1500 
+   )
+)
+$Multi text
+    XSTR("If this type of harassment is going to become the norm, I don't see how any honest smuggler will be able to continue doing business on Imperial worlds.  Whatever profits we could have hoped to make on this trip have just been flushed into the station commander's private accounts.  I don't wish to sound presumptuous, mistress, but perhaps you should consider allowing me to deal with these situations in the future?", -1)
+$end_multi_text
+$Voice: S1_M2_db5.ogg
+$Recommendation text:
+    XSTR("Though you passed the mission, the Imperials took you to the cleaners, and your prospects have been diminished.  Money gets tighter on higher difficulty settings, so lower the difficulty if you wish to pass more easily.", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay 
+   "Bribe 3 Successful" 
+   0 
+)
+$Multi text
+    XSTR("On to the matter at hand, we have received our partial payment from the Alliance along with a rendezvous time in the Japrael system, but we are not expected for several days.  As per your orders, I have been monitoring your communications with the Verpine slicer we met at Tanaab.  If I am not mistaken, the information he obtained for you relates to the scheduling for the next Koordan Run.", -1)
+$end_multi_text
+$Voice: S1_M2_db6.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( is-event-true-delay 
+   "Bribe 3 Successful" 
+   0 
+)
+$Multi text
+    XSTR("Since our Imperial shipping contract has most certainly been revoked, I feel safe in assuming that you do not intend for us to make the run ourselves.  This being the case, I can conclude that you intend to sell the information and, as the only parties who would have an interest in this would be pirates.  The odds are approximately 35 to 1 that you mean to visit our friend Rohm N'jikko.  If this is the case, may I point out that now would be an ideal time to purchase and install my patiently awaited escape pod.", -1)
+$end_multi_text
+$Voice: S1_M2_db7.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( is-destroyed-delay 0 "Solar Flair" ) 
+$Multi text
+    XSTR("I'm sorry about the Star, Emora. I know how much she meant to you.  The Commodore isn't happy about this, but we can still use your help.  We've been trying to get your people off Duro, but it's not gonna be easy.  Let me know if you change your mind about my offer.  The Rebellion needs pilots like you, and it's not like you've got a lot of profitable avenues left to explore.  Take care-
+
+-Avon Du'Elo", -1)
+$end_multi_text
+$Voice: S1_M1_db5.ogg
+$Recommendation text:
+    XSTR("Your bribe will have to be large enough to satisfy the Imperials' third and final demand.  Giving at least half of what you are asked for will satisfy the Imperials in any given round.", -1)
+$end_multi_text
+
+#Players		;! 1 total
+
+$Starting Shipname: Traveller 1
+$Ship Choices: (
+	"RZ-1 A-wing"	5
+)
+
++Weaponry Pool: (
+	"T&B KX-5"	16
+	"T&B KX-9"	16
+	"T&B IX4"	17
+	"T&B IX4#imp"	17
+	"Gyrhil R-9X"	16
+	"Borstel RG-9"	16
+	"T&B KT6"	16
+	"Gyrhil 72"	16
+	"SFS L-s1"	16
+	"SFS L-s7.2"	16
+	"SFS L-s9.3"	16
+	"ArMek SW-4"	16
+	"ArMek SW-7a"	16
+	"Borstel NK-3"	16
+	"CEC AG-2G"	16
+	"Gunner control"	16
+	"Manual control"	16
+	"T&B KX-4"	16
+	"T&B KX-4#Imperial"	16
+	"NULL Laser"	16
+	"Arakyd ST2"	500
+	"Krupx MG5"	500
+	"Dymek HM-6"	500
+	"Dymek HM-6a"	500
+	"Krupx MG7-A"	505
+	"Dymek HM-8"	500
+	"Frei-Tek MAG-2"	500
+	"Merr-Sonn NG2"	500
+	"Intruder"	500
+	"ArmaTek VL-61/79"	500
+	"XX-23 Homing Beacon"	500
+	"NULL"	500
+	"Krupx VL-4a"	10
+)
+
+#Objects		;! 14 total
+
+$Name: Traveller 1		;! Object #0
+$Class: N-1 Starfighter
+$Team: Friendly
+$Location: 2080.433838, -260.486450, 2229.392578
+$Orientation:
+	0.228753, 0.000000, 0.973485,
+	0.000000, 1.000000, 0.000000,
+	-0.973485, 0.000000, 0.228753
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 1.20
+$Warpin decel exp: 0.66
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+$Texture Replace:
++old: n-1
++new: n-1_gray
+
+$Name: Solar Flair		;! Object #1
+$Class: Corellian Star Shuttle
+$Team: Friendly
+$Location: 1530.436768, -260.486572, 2460.910645
+$Orientation:
+	0.228753, -0.000000, 0.973485,
+	0.000000, 1.000000, 0.000000,
+	-0.973485, 0.000000, 0.228753
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( has-time-elapsed 4 ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( or 
+   ( and 
+      ( is-event-true-delay 
+         "Run you out of Town" 
+         0 
+      )
+      ( < 
+         ( distance 
+            "Solar Flair" 
+            "Failure_Exit:1" 
+         )
+         1000 
+      )
+   )
+   ( and 
+      ( is-event-true-delay "Move Along" 0 ) 
+      ( < 
+         ( distance 
+            "Solar Flair" 
+            "Victory_Exit:1" 
+         )
+         11500 
+      )
+   )
+)
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+$Texture Replace:
++old: starshuttle
++new: starshuttle_blue
+
+$Name: Ledos Customs		;! Object #2
+$Class: XQ1 Platform
+$Team: Civilian
+$Location: 122.033691, 0.006150, -2957.386719
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret02
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret03
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret04
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret05
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret06
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret07
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret08
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret09
++Primary Banks: ( "Imperial Turbolaser#weak" )
++Subsystem: Turret10
++Primary Banks: ( "Quad Laser#Imperial" )
++Subsystem: Turret11
++Primary Banks: ( "Quad Laser#Imperial" )
++Subsystem: Turret12
++Primary Banks: ( "Quad Laser#Imperial" )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Special Hitpoints: 20000
++Group: 0
++Use Table Score:
++Score: 1000
+
+$Name: Imposer		;! Object #3
+$Class: CR90 Corvette#Imperial
+$Team: Civilian
+$Location: 402.031799, 155.196213, -2415.351563
+$Orientation:
+	0.621610, 0.000000, 0.783327,
+	0.000000, 1.000000, 0.000000,
+	-0.783327, 0.000000, 0.621610
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "scannable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
+
+$Name: LS - 1		;! Object #4
+$Class: T.I.E. Fighter
+$Team: Civilian
+$Location: 659.691956, -0.002466, -2493.387207
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "scannable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: LS - 2		;! Object #5
+$Class: T.I.E. Fighter
+$Team: Civilian
+$Location: 688.457581, -0.002465, -2449.636719
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: LS - 3		;! Object #6
+$Class: T.I.E. Fighter
+$Team: Civilian
+$Location: 645.428284, -0.002461, -2435.042969
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: LS - 4		;! Object #7
+$Class: T.I.E. Fighter
+$Team: Civilian
+$Location: 669.178284, -0.002455, -2382.351563
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 7
+
+$Name: LB - 1		;! Object #8
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 500.649109, -0.002461, -2317.663086
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Krupx VL-4a" "ArmaTek VL-61/79" )
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 9
+
+$Name: LB - 2		;! Object #9
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 536.217468, -0.002471, -2288.475586
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Krupx VL-4a" "ArmaTek VL-61/79" )
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 9
+
+$Name: LB - 3		;! Object #10
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 485.444031, -0.002454, -2265.163086
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Krupx VL-4a" "ArmaTek VL-61/79" )
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 9
+
+$Name: LB - 4		;! Object #11
+$Class: TIE/sa Bomber
+$Team: Hostile
+$Location: 517.365906, -0.002451, -2242.913086
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Secondary Banks: ( "Krupx VL-4a" "ArmaTek VL-61/79" )
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 9
+
+$Name: Move Along		;! Object #12
+$Class: T-65c X-wing
+$Team: Civilian
+$Location: 188759.578125, 0.015111, 240382.984375
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "stealth" "friendly-stealth-invisible" )
++Flags2: ( "cloaked" )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 10
+
+$Name: Hyperspace Preload_Ship		;! Object #13
+$Class: Nav Buoy
+$Team: Friendly
+$Location: 22796.140625, 0.000000, 16276.382813
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "no_collide" )
++Respawn priority: 0
++Score: 10
+
+#Wings		;! 3 total
+
+$Name: Traveller
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Traveller 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 1 total
+	"Traveller 1"
+)
++Flags: ( )
+
+$Name: LS -
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! LS - 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Ledos Customs
++Arrival Paths: ( "$bay02_main02-out" )
+$Arrival Cue: ( true ) 
+$Departure Location: Docking Bay
+$Departure Anchor: Ledos Customs
+$Departure Cue: ( is-event-true-delay "Move Along" 10 ) 
+$Ships: (		;! 4 total
+	"LS - 1"
+	"LS - 2"
+	"LS - 3"
+	"LS - 4"
+)
+$AI Goals: ( goals ( ai-guard "Ledos Customs" 50 ) )
++Flags: ( )
+
+$Name: LB -
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! LB - 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Ledos Customs
++Arrival Paths: ( "$bay06_main03-out" )
+$Arrival Cue: ( is-event-true-delay 
+   "Run you out of Town" 
+   30 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"LB - 1"
+	"LB - 2"
+	"LB - 3"
+	"LB - 4"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Flags: ( )
+
+#Events		;! 73 total
+
+$Formula: ( when 
+   ( true ) 
+   ( lock-primary-weapon "Traveller 1" ) 
+   ( lock-secondary-weapon "Traveller 1" ) 
+   ( never-warp "Traveller 1" ) 
+   ( ship-stealthy 
+      "Ledos Customs" 
+      "Imposer" 
+      "LS - 1" 
+      "LS - 2" 
+      "LS - 3" 
+      "LS - 4" 
+   )
+   ( set-subsystem-strength 
+      "Traveller 1" 
+      "Hull" 
+      @Player_Hull[100] 
+   )
+   ( script-eval 
+      "show_jumpoutpoint(false)" 
+   )
+   ( ship-guardian-threshold 
+      100 
+      "LS - 1" 
+      "LS - 2" 
+      "LS - 3" 
+      "LS - 4" 
+   )
+)
++Name: Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Solar Flair" ) 
+   ( set-subsystem-strength 
+      "Solar Flair" 
+      "Hull" 
+      @TS_Hull[100] 
+   )
+)
++Name: Fix Freighter Hull
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( if-then-else 
+   ( skill-level-at-least "Insane" ) 
+   ( modify-variable @Bribe_1[100] 500 ) 
+   ( if-then-else 
+      ( skill-level-at-least "Hard" ) 
+      ( modify-variable @Bribe_1[100] 400 ) 
+      ( if-then-else 
+         ( skill-level-at-least "Medium" ) 
+         ( modify-variable @Bribe_1[100] 300 ) 
+         ( if-then-else 
+            ( skill-level-at-least "Easy" ) 
+            ( modify-variable @Bribe_1[100] 200 ) 
+            ( do-nothing ) 
+         )
+      )
+   )
+)
++Name: Initial Bribe Amount
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 3 ) 
+   ( ship-unstealthy 
+      "Ledos Customs" 
+      "Imposer" 
+      "LS - 1" 
+      "LS - 2" 
+      "LS - 3" 
+      "LS - 4" 
+   )
+)
++Name: Unstealth Customs
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Solar Flair" ) 
+   ( cap-waypoint-speed "Solar Flair" 20 ) 
+   ( set-subsystem-strength 
+      "Solar Flair" 
+      "Hull" 
+      @TS_Hull[100] 
+   )
+   ( add-remove-escort "Solar Flair" 100 ) 
+   ( change-soundtrack "Sullust" ) 
+   ( add-goal 
+      "Solar Flair" 
+      ( ai-waypoints-once "Flair path" 89 ) 
+   )
+)
++Name: Tayana Fly Casual
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 1 ) 
+   ( change-soundtrack "Dagobah" ) 
+)
++Name: Music
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: PlayerArrivesFromHyperspace
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 5 ) 
+   ( send-message-list 
+      "Ledos Customs" 
+      "High" 
+      "LC - Identify Yourself" 
+      1000 
+      "Solar Flair" 
+      "High" 
+      "9s - We're Solar Flair" 
+      6000 
+      "Ledos Customs" 
+      "High" 
+      "LC - Prepare for inspection" 
+      9000 
+   )
+)
++Name: Stations Activity
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 20 ) 
+   ( add-goal 
+      "LS - 1" 
+      ( ai-guard "Solar Flair" 89 ) 
+   )
+   ( add-goal 
+      "LS - 2" 
+      ( ai-guard "Traveller 1" 89 ) 
+   )
+   ( add-goal 
+      "LS - 3" 
+      ( ai-guard "Traveller 1" 89 ) 
+   )
+)
++Name: LS to escort
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( distance-ship-subsystem 
+         "Traveller 1" 
+         "Ledos Customs" 
+         "MainCrane" 
+      )
+      1200 
+   )
+   ( clear-goals "LS - 2" "LS - 3" ) 
+   ( add-goal 
+      "LS - 2" 
+      ( ai-guard "Ledos Customs" 89 ) 
+   )
+   ( add-goal 
+      "LS - 3" 
+      ( ai-guard "Ledos Customs" 89 ) 
+   )
+)
++Name: LS Guard Station
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 25 ) 
+   ( set-unscanned "LS - 1" ) 
+   ( add-remove-escort "LS - 1" 10 ) 
+   ( training-msg "Scan LS - 1" ) 
+)
++Name: Make LS1 Scannable
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-cargo-known-delay 1 "LS - 1" ) 
+   ( do-nothing ) 
+)
++Name: Scan LS1
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Scan LS-1", -1)
+
+$Formula: ( when 
+   ( is-disabled-delay 0 "Move Along" ) 
+   ( do-nothing ) 
+)
++Name: Pass Through Customs
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Pass Through Customs", -1)
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay "Scan LS1" 1 ) 
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Zero" 
+            0 
+         )
+      )
+   )
+   ( hud-set-custom-gauge-active 
+      ( true ) 
+      "PlainText2" 
+   )
+   ( hud-set-text-num 
+      "PlainText2" 
+      @Bribe_1[100] 
+   )
+   ( training-msg "Bribe 1 Values" ) 
+   ( hud-set-custom-gauge-active 
+      ( true ) 
+      "PlainText" 
+   )
+   ( hud-set-text 
+      "PlainText" 
+      "Suggested Donation" 
+   )
+   ( script-eval 
+      "keyreset('1')" 
+      "keyreset('2')" 
+      "keyreset('3')" 
+      "keyreset('4')" 
+      "keyreset('5')" 
+      "keyreset('6')" 
+      "keyreset('7')" 
+      "keyreset('8')" 
+      "keyreset('9')" 
+      "keyreset('0')" 
+   )
+)
++Name: Reveal Bribe 1 Amount
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Bribe 1 Zero" 
+         1 
+      )
+      ( is-event-true-delay "Bribe 1 100" 1 ) 
+      ( is-event-true-delay "Bribe 1 200" 1 ) 
+      ( is-event-true-delay "Bribe 1 300" 1 ) 
+      ( is-event-true-delay "Bribe 1 400" 1 ) 
+      ( is-event-true-delay "Bribe 1 500" 1 ) 
+      ( is-event-true-delay "Bribe 1 600" 1 ) 
+      ( is-event-true-delay "Bribe 1 700" 1 ) 
+      ( is-event-true-delay "Bribe 1 800" 1 ) 
+      ( is-event-true-delay "Bribe 1 900" 1 ) 
+   )
+   ( hud-set-custom-gauge-active 
+      ( false ) 
+      "PlainText2" 
+   )
+   ( hud-set-custom-gauge-active 
+      ( false ) 
+      "PlainText" 
+   )
+   ( training-msg "Bribe 1 Submitted" ) 
+)
++Name: Bribe 1 Submitted
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Select Bribe Amount", -1)
++Objective key:  XSTR("Press Any Key 1 - 0", -1)
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( and 
+            ( is-event-true-delay 
+               "Reveal Bribe 1 Amount" 
+               0 
+            )
+            ( > 
+               ( script-eval-num "keypressed('0')" ) 
+               0 
+            )
+         )
+         ( is-event-true-delay 
+            "Reveal Bribe 1 Amount" 
+            16 
+         )
+         ( and 
+            ( is-event-true-delay 
+               "Make LS1 Scannable" 
+               45 
+            )
+            ( not 
+               ( is-event-true-delay "Scan LS1" 0 ) 
+            )
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Bribe 1 Zero
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('1')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 100 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      100 
+   )
+)
++Name: Bribe 1 100
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('2')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 200 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      200 
+   )
+)
++Name: Bribe 1 200
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('3')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 300 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      300 
+   )
+)
++Name: Bribe 1 300
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('4')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 400 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      400 
+   )
+)
++Name: Bribe 1 400
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('5')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 500 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      500 
+   )
+)
++Name: Bribe 1 500
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('6')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 600 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      600 
+   )
+)
++Name: Bribe 1 600
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('7')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 700 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      700 
+   )
+)
++Name: Bribe 1 700
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('8')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 800 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      800 
+   )
+)
++Name: Bribe 1 800
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 1 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('9')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 1 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 900 ) 
+   )
+   ( modify-variable 
+      @Submission_1[0] 
+      900 
+   )
+)
++Name: Bribe 1 900
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 1 Submitted" 
+         5 
+      )
+      ( < 
+         @Submission_1[0] 
+         ( / @Bribe_1[100] 2 ) 
+      )
+   )
+   ( send-message-list 
+      "Ledos Customs" 
+      "High" 
+      "LC - You Don't Check Out" 
+      0 
+   )
+)
++Name: Bribe 1 Fail
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 1 Submitted" 
+         5 
+      )
+      ( >= 
+         @Submission_1[0] 
+         ( / @Bribe_1[100] 2 ) 
+      )
+   )
+   ( send-message-list 
+      "Ledos Customs" 
+      "High" 
+      "LC - You Check Out" 
+      0 
+   )
+)
++Name: Bribe 1 Successful
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Bribe 1 Fail" 
+         20 
+      )
+      ( is-event-true-delay 
+         "Bribe 1 Successful" 
+         20 
+      )
+   )
+   ( send-message-list 
+      "Ledos Customs" 
+      "High" 
+      "LC - Detailed Scans" 
+      0 
+      "Solar Flair" 
+      "High" 
+      "9s - Bleeding Us Dry" 
+      20000 
+   )
+   ( modify-variable 
+      @Bribe_2[400] 
+      ( * 
+         2 
+         ( - @Bribe_1[100] @Submission_1[0] ) 
+      )
+   )
+   ( add-goal 
+      "Imposer" 
+      ( ai-waypoints-once "Imposer path" 89 ) 
+   )
+   ( cap-waypoint-speed "Imposer" 40 ) 
+)
++Name: Imposer Moves In
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-unscanned "Imposer" ) 
+   ( training-msg "Scan Imposer" ) 
+   ( add-remove-escort "Imposer" 15 ) 
+)
++Name: Imposer Scannable
++Repeat Count: 1
++Interval: 1
++Chained: 30
+
+$Formula: ( when 
+   ( is-cargo-known-delay 0 "Imposer" ) 
+   ( do-nothing ) 
+)
++Name: Imposer scanned
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Scan Imposer", -1)
+
+$Formula: ( when 
+   ( < @Bribe_2[400] 400 ) 
+   ( modify-variable @Bribe_2[400] 400 ) 
+)
++Name: Bribe 2 Minimum
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Imposer Scanned" 
+         1 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Zero" 
+            0 
+         )
+      )
+   )
+   ( hud-set-custom-gauge-active 
+      ( true ) 
+      "PlainText2" 
+   )
+   ( hud-set-text-num 
+      "PlainText2" 
+      @Bribe_2[400] 
+   )
+   ( training-msg "Bribe 2 Values" ) 
+   ( hud-set-custom-gauge-active 
+      ( true ) 
+      "PlainText" 
+   )
+   ( hud-set-text 
+      "PlainText" 
+      "Suggested Donation" 
+   )
+   ( script-eval 
+      "keyreset('1')" 
+      "keyreset('2')" 
+      "keyreset('3')" 
+      "keyreset('4')" 
+      "keyreset('5')" 
+      "keyreset('6')" 
+      "keyreset('7')" 
+      "keyreset('8')" 
+      "keyreset('9')" 
+      "keyreset('0')" 
+   )
+)
++Name: Reveal Bribe 2 Amount
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Bribe 2 Zero" 
+         1 
+      )
+      ( is-event-true-delay "Bribe 2 200" 1 ) 
+      ( is-event-true-delay "Bribe 2 400" 1 ) 
+      ( is-event-true-delay "Bribe 2 600" 1 ) 
+      ( is-event-true-delay "Bribe 2 800" 1 ) 
+      ( is-event-true-delay 
+         "Bribe 2 1000" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 2 1200" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 2 1400" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 2 1600" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 2 1800" 
+         1 
+      )
+   )
+   ( hud-set-custom-gauge-active 
+      ( false ) 
+      "PlainText2" 
+   )
+   ( hud-set-custom-gauge-active 
+      ( false ) 
+      "PlainText" 
+   )
+   ( training-msg "Bribe 2 Submitted" ) 
+)
++Name: Bribe 2 Submitted
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Select Bribe Amount", -1)
++Objective key:  XSTR("Press Any Key 1 - 0", -1)
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( and 
+            ( is-event-true-delay 
+               "Reveal Bribe 2 Amount" 
+               0 
+            )
+            ( > 
+               ( script-eval-num "keypressed('0')" ) 
+               0 
+            )
+         )
+         ( is-event-true-delay 
+            "Reveal Bribe 2 Amount" 
+            16 
+         )
+         ( and 
+            ( is-event-true-delay 
+               "Imposer Scannable" 
+               45 
+            )
+            ( not 
+               ( is-event-true-delay 
+                  "Imposer Scanned" 
+                  0 
+               )
+            )
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Bribe 2 Zero
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('1')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 200 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      200 
+   )
+)
++Name: Bribe 2 200
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('2')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 400 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      400 
+   )
+)
++Name: Bribe 2 400
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('3')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 600 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      600 
+   )
+)
++Name: Bribe 2 600
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('4')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 800 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      800 
+   )
+)
++Name: Bribe 2 800
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('5')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 1000 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      1000 
+   )
+)
++Name: Bribe 2 1000
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('6')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 1200 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      1200 
+   )
+)
++Name: Bribe 2 1200
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('7')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 1400 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      1400 
+   )
+)
++Name: Bribe 2 1400
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('8')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 1600 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      1600 
+   )
+)
++Name: Bribe 2 1600
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 2 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('9')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 2 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 1800 ) 
+   )
+   ( modify-variable 
+      @Submission_2[0] 
+      1800 
+   )
+)
++Name: Bribe 2 1800
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 2 Submitted" 
+         5 
+      )
+      ( < 
+         @Submission_2[0] 
+         ( / @Bribe_2[400] 2 ) 
+      )
+   )
+   ( send-message-list 
+      "Solar Flair" 
+      "High" 
+      "9s - They're mad" 
+      0 
+   )
+)
++Name: Bribe 2 Fail
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 2 Submitted" 
+         5 
+      )
+      ( >= 
+         @Submission_2[0] 
+         ( / @Bribe_2[400] 2 ) 
+      )
+   )
+   ( send-message-list 
+      "Solar Flair" 
+      "High" 
+      "9s - Appeased" 
+      0 
+   )
+)
++Name: Bribe 2 Successful
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Bribe 2 Fail" 
+         12 
+      )
+      ( is-event-true-delay 
+         "Bribe 2 Successful" 
+         8 
+      )
+   )
+   ( send-message-list 
+      "LS - 1" 
+      "High" 
+      "LS1 - Flagged" 
+      0 
+      "Solar Flair" 
+      "High" 
+      "9s - Determined to be jerks" 
+      12000 
+   )
+)
++Name: Flagged in the System
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( if-then-else 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 1 Successful" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Bribe 2 Successful" 
+         0 
+      )
+   )
+   ( modify-variable 
+      @Bribe_3[800] 
+      ( * 
+         2 
+         ( - @Bribe_2[400] @Submission_2[0] ) 
+      )
+   )
+   ( if-then-else 
+      ( or 
+         ( and 
+            ( not 
+               ( is-event-true-delay 
+                  "Bribe 1 Successful" 
+                  0 
+               )
+            )
+            ( is-event-true-delay 
+               "Bribe 2 Successful" 
+               0 
+            )
+         )
+         ( and 
+            ( is-event-true-delay 
+               "Bribe 1 Successful" 
+               0 
+            )
+            ( not 
+               ( is-event-true-delay 
+                  "Bribe 2 Successful" 
+                  0 
+               )
+            )
+         )
+      )
+      ( modify-variable @Bribe_3[800] 2000 ) 
+      ( modify-variable @Bribe_3[800] 3600 ) 
+   )
+)
++Name: Set Bribe 3 Amount
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 1 Successful" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Bribe 2 Zero" 
+         0 
+      )
+   )
+   ( modify-variable @Bribe_3[800] 800 ) 
+)
++Name: Bribe 3 Special Case
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Flagged in the System" 
+      20 
+   )
+   ( set-unscanned "LS - 1" ) 
+   ( training-msg "Scan LS - 1" ) 
+)
++Name: LS-1 Scannable Again
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-cargo-known-delay 0 "LS - 1" ) 
+   ( do-nothing ) 
+)
++Name: LS-1 Scanned Again
++Repeat Count: 1
++Interval: 1
++Chained: 1
++Objective:  XSTR("Rescan LS-1", -1)
+
+$Formula: ( when 
+   ( < @Bribe_3[800] 800 ) 
+   ( modify-variable @Bribe_3[800] 800 ) 
+)
++Name: Bribe 3 Minimum
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( > @Bribe_3[800] 3600 ) 
+   ( modify-variable @Bribe_3[800] 3600 ) 
+)
++Name: Bribe 3 Maximum
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "LS-1 Scanned Again" 
+         1 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Zero" 
+            0 
+         )
+      )
+   )
+   ( hud-set-custom-gauge-active 
+      ( true ) 
+      "PlainText2" 
+   )
+   ( hud-set-text-num 
+      "PlainText2" 
+      @Bribe_3[800] 
+   )
+   ( training-msg "Bribe 3 Values" ) 
+   ( hud-set-custom-gauge-active 
+      ( true ) 
+      "PlainText" 
+   )
+   ( hud-set-text 
+      "PlainText" 
+      "Suggested Donation" 
+   )
+   ( script-eval 
+      "keyreset('1')" 
+      "keyreset('2')" 
+      "keyreset('3')" 
+      "keyreset('4')" 
+      "keyreset('5')" 
+      "keyreset('6')" 
+      "keyreset('7')" 
+      "keyreset('8')" 
+      "keyreset('9')" 
+      "keyreset('0')" 
+   )
+)
++Name: Reveal Bribe 3 Amount
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Bribe 3 Zero" 
+         1 
+      )
+      ( is-event-true-delay "Bribe 3 400" 1 ) 
+      ( is-event-true-delay "Bribe 3 800" 1 ) 
+      ( is-event-true-delay 
+         "Bribe 3 1200" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 3 1600" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 3 2000" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 3 2400" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 3 2800" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 3 3200" 
+         1 
+      )
+      ( is-event-true-delay 
+         "Bribe 3 3600" 
+         1 
+      )
+   )
+   ( hud-set-custom-gauge-active 
+      ( false ) 
+      "PlainText2" 
+   )
+   ( hud-set-custom-gauge-active 
+      ( false ) 
+      "PlainText" 
+   )
+   ( training-msg "Bribe 3 Submitted" ) 
+)
++Name: Bribe 3 Submitted
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Select Bribe Amount", -1)
++Objective key:  XSTR("Press Any Key 1 - 0", -1)
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( and 
+            ( is-event-true-delay 
+               "Reveal Bribe 3 Amount" 
+               0 
+            )
+            ( > 
+               ( script-eval-num "keypressed('0')" ) 
+               0 
+            )
+         )
+         ( is-event-true-delay 
+            "Reveal Bribe 3 Amount" 
+            16 
+         )
+         ( and 
+            ( is-event-true-delay 
+               "LS-1 Scannable Again" 
+               45 
+            )
+            ( not 
+               ( is-event-true-delay 
+                  "LS-1 Scanned Again" 
+                  0 
+               )
+            )
+         )
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Bribe 3 Zero
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('1')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 400 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      400 
+   )
+)
++Name: Bribe 3 400
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('2')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 800 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      800 
+   )
+)
++Name: Bribe 3 800
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('3')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 1200 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      1200 
+   )
+)
++Name: Bribe 3 1200
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('4')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 1600 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      1600 
+   )
+)
++Name: Bribe 3 1600
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('5')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 2000 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      2000 
+   )
+)
++Name: Bribe 3 2000
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('6')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 2400 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      2400 
+   )
+)
++Name: Bribe 3 2400
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('7')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 2800 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      2800 
+   )
+)
++Name: Bribe 3 2800
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('8')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 3200 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      3200 
+   )
+)
++Name: Bribe 3 3200
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Reveal Bribe 3 Amount" 
+         0 
+      )
+      ( > 
+         ( script-eval-num "keypressed('9')" ) 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Bribe 3 Submitted" 
+            0 
+         )
+      )
+   )
+   ( modify-variable 
+      @Funds[1500] 
+      ( - @Funds[1500] 3600 ) 
+   )
+   ( modify-variable 
+      @Submission_3[0] 
+      3600 
+   )
+)
++Name: Bribe 3 3600
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 3 Submitted" 
+         5 
+      )
+      ( < 
+         @Submission_3[0] 
+         ( / @Bribe_3[800] 2 ) 
+      )
+   )
+   ( send-message-list 
+      "LS - 1" 
+      "High" 
+      "LS1 - Shut Down" 
+      0 
+      "Solar Flair" 
+      "High" 
+      "9s - Oops" 
+      9000 
+   )
+   ( set-object-position 
+      "JumpOutPoint:1" 
+      40 
+      -200000 
+      12 
+   )
+)
++Name: Bribe 3 Fail
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( clear-goals "Solar Flair" ) 
+   ( change-iff 
+      "Hostile" 
+      "Ledos Customs" 
+      "Imposer" 
+      "LS -" 
+   )
+   ( add-goal 
+      "Imposer" 
+      ( ai-guard "Ledos Customs" 99 ) 
+   )
+   ( unlock-primary-weapon "Traveller 1" ) 
+   ( unlock-secondary-weapon 
+      "Traveller 1" 
+   )
+   ( ship-guardian-threshold 
+      0 
+      "LS - 1" 
+      "LS - 2" 
+      "LS - 3" 
+      "LS - 4" 
+   )
+)
++Name: Run you out of Town
++Repeat Count: 1
++Interval: 1
++Chained: 15
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Run you out of Town" 
+      1 
+   )
+   ( add-goal 
+      "Solar Flair" 
+      ( ai-waypoints-once 
+         "Failure_Exit" 
+         120 
+      )
+   )
+   ( cap-waypoint-speed 
+      "Solar Flair" 
+      100 
+   )
+)
++Name: Freighter Jump Out Lose
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay "Move Along" 1 ) 
+   ( add-goal 
+      "Solar Flair" 
+      ( ai-waypoints-once 
+         "JumpOutPoint" 
+         120 
+      )
+   )
+   ( cap-waypoint-speed 
+      "Solar Flair" 
+      100 
+   )
+)
++Name: Freighter Jump Out Win
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( destroyed-or-departed-delay 
+      0 
+      "Solar Flair" 
+   )
+   ( script-eval 
+      "show_jumpoutpoint(true)" 
+      "blink_jumpoutpoint(true)" 
+   )
+   ( allow-warp "Traveller 1" ) 
+)
++Name: Hyper Out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Traveller 1" ) 
+   ( do-nothing ) 
+)
++Name: RTB
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Hyperspace", -1)
++Objective key:  XSTR("Face Exit and Press $Enter$", -1)
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Bribe 3 Submitted" 
+         5 
+      )
+      ( >= 
+         @Submission_3[0] 
+         ( / @Bribe_3[800] 2 ) 
+      )
+   )
+   ( send-message-list 
+      "Ledos Customs" 
+      "High" 
+      "LC - Move Along" 
+      0 
+   )
+)
++Name: Bribe 3 Successful
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( clear-goals "Solar Flair" ) 
+   ( if-then-else 
+      ( < 
+         ( + 
+            @Submission_1[0] 
+            @Submission_2[0] 
+            @Submission_3[0] 
+         )
+         1000 
+      )
+      ( modify-variable 
+         @Money[5] 
+         ( + @Money[5] 1 ) 
+      )
+      ( if-then-else 
+         ( > 
+            ( + 
+               @Submission_1[0] 
+               @Submission_2[0] 
+               @Submission_3[0] 
+            )
+            1500 
+         )
+         ( modify-variable 
+            @Money[5] 
+            ( - @Money[5] 1 ) 
+         )
+         ( do-nothing ) 
+      )
+   )
+   ( destroy-subsys-instantly 
+      "Move Along" 
+      "<all engines>" 
+   )
+)
++Name: Move Along
++Repeat Count: 1
++Interval: 1
++Chained: 10
+
+$Formula: ( when 
+   ( is-event-true-delay "Move Along" 0 ) 
+   ( do-nothing ) 
+)
++Name: Campaign Progress
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 3 total
+
+$Type: Primary
++Name: Pass Customs
+$MessageNew:  XSTR("Pass Through Imperial Customs", -1)
+$end_multi_text
+$Formula: ( and 
+   ( is-event-true-delay "Move Along" 4 ) 
+   ( not 
+      ( is-event-true-delay 
+         "Run you out of Town" 
+         0 
+      )
+   )
+)
+
+$Type: Primary
++Name: Don't Get Fleeced
+$MessageNew:  XSTR("Don't Get Cleaned Out", -1)
+$end_multi_text
+$Formula: ( and 
+   ( not 
+      ( > 
+         ( + 
+            @Submission_1[0] 
+            @Submission_2[0] 
+            @Submission_3[0] 
+         )
+         1500 
+      )
+   )
+   ( is-event-true-delay "Move Along" 1 ) 
+)
++No music
+
+$Type: Secondary
++Name: Stingy
+$MessageNew:  XSTR("Be Extra Stingy", -1)
+$end_multi_text
+$Formula: ( and 
+   ( < 
+      ( + 
+         @Submission_1[0] 
+         @Submission_2[0] 
+         @Submission_3[0] 
+      )
+      1500 
+   )
+   ( is-event-true-delay "Move Along" 7 ) 
+)
++No music
+
+#Waypoints		;! 5 lists total
+
+$Name: Flair path
+$List: (		;! 1 points in list
+	( 424.231415, -0.001605, -1762.265747 )
+)
+
+$Name: Imposer path
+$List: (		;! 3 points in list
+	( 669.218750, 25.038696, 159.722641 )
+	( 1068.888428, 13.230463, -1132.853760 )
+	( 760.583862, 0.000501, -2614.062256 )
+)
+
+$Name: JumpOutPoint
+$List: (		;! 1 points in list
+	( 234.707443, 0.000372, 10169.859375 )
+)
+
+$Name: Victory_Exit
+$List: (		;! 1 points in list
+	( 254.168961, 0.021773, 10498.694336 )
+)
+
+$Name: Failure_Exit
+$List: (		;! 1 points in list
+	( -2.061382, -2079.367920, -1397.121460 )
+)
+
+#Messages		;! 22 total
+
+
+$Name: LC - Identify Yourself
+$Team: -1
+$MessageNew:  XSTR("We have you on our screen now. Please identify yourselves.", -1)
+$end_multi_text
++Wave Name: S1_M2_Ledos_1.ogg
+
+$Name: LC - Prepare for inspection
+$Team: -1
+$MessageNew:  XSTR("Prepare for inspection, Solar Flair.  LS-1 will lead you in.  LS-2 and 3 will bring your escort fighter to the holding area.", -1)
+$end_multi_text
++Wave Name: S1_M2_Ledos_2.ogg
+
+$Name: LC - You Check Out
+$Team: -1
+$MessageNew:  XSTR("Your profile checks out, Flair.  Remain on your present course until we receive crosschecks from sector command.", -1)
+$end_multi_text
++Wave Name: S1_M2_Ledos_3.ogg
+
+$Name: LC - You Don't Check Out
+$Team: -1
+$MessageNew:  XSTR("Solar Flair, remain on your present course.  I don't know how these checks are done in whatever backwater you've crawled out of, but here we expect complete cooperation.  Don't make trouble for yourself.", -1)
+$end_multi_text
++Wave Name: S1_M2_Ledos_4.ogg
+
+$Name: LC - Detailed Scans
+$Team: -1
+$MessageNew:  XSTR("Forgive the intrusion, Solar Flair, but it seems a ship matching your configuration was involved in the recent tragedy at Bilbringi.  I'm sure you had nothing to do with it, but we have to be thorough in times like these.  Our customs corvette will be making a close pass for detailed scans.  Do not be alarmed.", -1)
+$end_multi_text
++Wave Name: S1_M2_Ledos_5.ogg
+
+$Name: LC - Move Along
+$Team: -1
+$MessageNew:  XSTR("LS-1, the crosschecks just came through.  We don't need to see their identification--these aren't the ships we're looking for.  Flair, you can go about your business.  Move along.", -1)
+$end_multi_text
++Wave Name: S1_M2_Ledos_6.ogg
+
+$Name: LS1 - Flagged
+$Team: -1
+$MessageNew:  XSTR("Solar Flair, you've just been flagged in our system.  This is your last chance to transmit a complete registry and original shipyard identification number or you will be boarded.", -1)
+$end_multi_text
++Wave Name: S1_M2_Vens_1.ogg
+
+$Name: LS1 - Shut Down
+$Team: -1
+$MessageNew:  XSTR("Solar Flair, shut down your engines immediately or you will be fired upon.  This is your final warning.", -1)
+$end_multi_text
++Wave Name: S1_M2_Vens_2.ogg
+
+$Name: 9s - We're Solar Flair
+$Team: -1
+$MessageNew:  XSTR("This is transport Solar Flair, requesting clearance to land at Ostro docking bay 8.", -1)
+$end_multi_text
++Wave Name: S1_M2_Nines_1.ogg
+
+$Name: 9s - Bleeding Us Dry
+$Team: -1
+$MessageNew:  XSTR("They are intent on bleeding our accounts dry, mistress.  I do not believe they will continue their investigation if we make a more substantial payment.  Scan the corvette's bridge.", -1)
+$end_multi_text
++Wave Name: S1_M2_Nines_2.ogg
+
+$Name: 9s - Appeased
+$Team: -1
+$MessageNew:  XSTR("We were not scanned, mistress.  It seems they are appeased.", -1)
+$end_multi_text
++Wave Name: S1_M2_Nines_3.ogg
+
+$Name: 9s - They're mad
+$Team: -1
+$MessageNew:  XSTR("We were not scanned, but the charge in their turbolaser capacitors indicates that they are not pleased with us.  You may expect further harassment.", -1)
+$end_multi_text
++Wave Name: S1_M2_Nines_4.ogg
+
+$Name: 9s - Determined to be jerks
+$Team: -1
+$MessageNew:  XSTR("This is highly unusual.  They seem determined to process us.  We will have to incur some debt to convince them to leave us alone.  Scan LS-1 again before Imposer comes about.", -1)
+$end_multi_text
++Wave Name: S1_M2_Nines_5.ogg
+
+$Name: 9s - Oops
+$Team: -1
+$MessageNew:  XSTR("I believe we have misjudged these Imperials.  Calculating hyperspace jump now.  I will wait for you at the usual place.", -1)
+$end_multi_text
++Wave Name: S1_M2_Nines_6.ogg
+
+$Name: Scan LS - 1
+$Team: -1
+$MessageNew:  XSTR("Transponder active on T.I.E. LS - 1", -1)
+$end_multi_text
+
+$Name: Bribe 1 Values
+$Team: -1
+$MessageNew:  XSTR("Donate to Kidz 4 Thisspias
+1 - 100 Credits
+2 - 200 Credits
+3 - 300 Credits
+4 - etc.", -1)
+$end_multi_text
+
+$Name: Bribe 1 Submitted
+$Team: -1
+$MessageNew:  XSTR("Thank you for your donation of $Submission_1 credits to Kidz 4 Thisspias!", -1)
+$end_multi_text
+
+$Name: Scan Imposer
+$Team: -1
+$MessageNew:  XSTR("Transponder active on Corvette Imposer", -1)
+$end_multi_text
+
+$Name: Bribe 2 Values
+$Team: -1
+$MessageNew:  XSTR("Donate to Save the Rontos
+1 - 200 Credits
+2 - 400 Credits
+3 - 600 Credits
+4 - etc.", -1)
+$end_multi_text
+
+$Name: Bribe 2 Submitted
+$Team: -1
+$MessageNew:  XSTR("Thank you for your donation of $Submission_2 credits to Save the Rontos!", -1)
+$end_multi_text
+
+$Name: Bribe 3 Values
+$Team: -1
+$MessageNew:  XSTR("Donate to Clone Widows
+1 - 400 Credits
+2 - 800 Credits
+3 - 1200 Credits
+4 - etc.", -1)
+$end_multi_text
+
+$Name: Bribe 3 Submitted
+$Team: -1
+$MessageNew:  XSTR("Thank you for your donation of $Submission_3 credits to Clone Widows!", -1)
+$end_multi_text
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 2 total
+
+$Num stars: 500
+$Ambient light level: 7895160
+
+$Bitmap List:
+$Sun: SunWhite
++Angles: 2.076942 0.000000 0.000000
++Scale: 0.500000
+$Starbitmap: Planet_Dagobah
++Angles: 0.000000 3.141593 0.000000
++ScaleX: 0.600000
++ScaleY: 0.600000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_Moon01
++Angles: 0.000000 4.712389 2.914700
++ScaleX: 4.000000
++ScaleY: 4.000000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: Dantooine
+$Briefing Music: None
+
+#End
+

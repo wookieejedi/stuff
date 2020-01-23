@@ -1,0 +1,3292 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("Quite A Mercenary", -1)
+$Author: Swash
+$Created: 03/08/15 at 14:38:18
+$Modified: 01/10/20 at 13:13:42
+$Notes:
+This is a FRED2_OPEN created mission.
+$End Notes:
+
+$Mission Desc:
+ XSTR("The smugglers assist the Rebel Alliance in capturing Imperial light cruiser Manarai.", -1)
+$end_multi_text
++Game Type Flags: 1
++Flags: 131074
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 4366.466797, 10722.057617, -20264.218750
++Viewer orient:
+	0.972271, 0.000000, 0.233858,
+	-0.105638, 0.892161, 0.439191,
+	-0.208639, -0.451717, 0.867422
+
+$Starting wing names: ( "Traveller" "Zeta" "Goop" )
+$Squadron wing names: ( "Chump" "Blue" "Gold" "Green" "Pink" )
+$Team-versus-team wing names: ( "Traveller" "Zeta" )
+
+$Skybox Model: starfield.pof
+
+$AI Profile: FOTG
+
+#Sexp_variables
+
+$Variables:
+(
+		0		"Money"		"5"		"number"		"save-on-mission-progress"
+		1		"Player_Hull"		"100"		"number"		"save-on-mission-progress"
+		2		"TS_Hull"		"100"		"number"		"save-on-mission-progress"
+)
+
+#Command Briefing
+
+$Stage Text:
+ XSTR("Mistress, I must be brief.  Commodore Rulona is offering a substantial reward for our participation in what the Rebels are calling $quoteOperation Dewback$quote, an ill-conceived attempt to capture an Imperial cruiser.  She is confident that her battle group will be able to outmaneuver and surround their target, though I remain skeptical.  Taking a warship intact in a hostile system has not been attempted since the days of the Clone Wars, and these Rebels are not exactly Jedi Knights.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: S1_M5_cb1.ogg
+
+$Stage Text:
+ XSTR("The Alliance will need your piloting skills in case things go badly, but interestingly, they are more concerned with Tayana Star's presence.  In the unlikely event that all goes to plan, the Imperial crew will need to be quickly removed from the cruiser.  As the Rebel freighters are needed for other tasks, we are the only non-combat vessel capable of ferrying the Imperials away.  I have made it clear to the Commodore that you will retain the right to bow out if you deem it too risky, but the Rebels clearly would prefer using us to their backup plan.  They will pay you $B 1,000 simply for our presence in their fleet, plus a further $B 4,000 should you send me into harm's way during the capture operation.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: S1_M5_cb2.ogg
+
+$Stage Text:
+ XSTR("I know that you are loath to participate directly in any part of this war, but our circumstances dictate that we have little choice in the matter.  Any revenue we can generate could be the difference between success and bankruptcy, and this particular opportunity will serve the dual purpose of regaining the Rebels' trust after the events of last week.  You will be briefed on the details of the mission tomorrow morning.", -1)
+$end_multi_text
+$Ani Filename: <default>
++Wave Filename: S1_M5_cb3.ogg
+
+#Briefing
+$start_briefing
+$num_stages: 5
+$start_stage
+$multi_text
+ XSTR("Mistress, it is good to see you again.  I did not think the Rebels would agree to release you so soon, but it appears they have more pressing concerns at the moment.  With only the shortest of pauses for an oil bath in the maintenance bay, I have been arguing tirelessly on your behalf since we were taken into custody, and I have succeeded in securing our freedom, provided that we assist the Rebels in this operation.  It seems they are about to begin.", -1)
+$end_multi_text
+$voice: S1_M5_b1.ogg
+$camera_pos: 7624.885742, 13030.989258, -15495.127930
+$camera_orient:
+	0.916807, 0.000001, 0.399331,
+	-0.247971, 0.783838, 0.569306,
+	-0.313010, -0.620966, 0.718628
+$camera_time: 500
+$num_lines: 0
+$num_icons: 1
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 28
+$team: Friendly
+$class: Dreadnaught-class Heavy Cruiser
+$pos: 900.611511, -0.001139, -665.390076
+$label:  XSTR("Restoration", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Continued pirate activities in and around the Japrael system have forced the Empire to split their cruisers.  Manarai has taken over guarding the most critical stations in orbit over Onderon while Master covers the rest of the system with the aid of the Japrael Defense Force.  Z-95 Green will attack the new mobile logging facility on the far side of Duxn in order to draw Master away from Onderon.  Our main starfighter force will then strike at platform Davro 4.", -1)
+$end_multi_text
+$voice: S1_M5_b2.ogg
+$camera_pos: 8888.988281, 14479.244141, -6980.327148
+$camera_orient:
+	0.519323, 0.000001, 0.854578,
+	-0.674591, 0.613898, 0.409945,
+	-0.524623, -0.789385, 0.318813
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: -1218.335449, -0.005498, -7081.505371
+$label:  XSTR("Master", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: 834.623047, -0.001536, 5006.124023
+$label:  XSTR("Manarai", -1)
++id: 3
+$hlight: 0
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Friendly
+$class: T-65c X-wing
+$pos: -103.471962, 172.679031, -1927.380127
+$label:  XSTR("Onderon", -1)
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Davro 4 has been moved deeper into Onderon's gravity well since our first attack two weeks ago.  Their fighter complement remains weakened, but they should still have a squadron on alert.  X-wing Blue will engage the TIEs as Y-wing Gold hits the platform, with Emora Leciq in Red assisting both groups as needed.  By the time the station's defenses have been neutralized, Manarai should be on her way to drive off the fighters.  Our fleet will then jump in on her escape vector, trapping the cruiser against the planet.", -1)
+$end_multi_text
+$voice: S1_M5_b3.ogg
+$camera_pos: 6609.256836, 10620.386719, -12126.154297
+$camera_orient:
+	0.924384, 0.000000, 0.381464,
+	-0.193640, 0.861580, 0.469238,
+	-0.328662, -0.507623, 0.796430
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: 3911.063721, -0.002297, 9051.250977
+$label:  XSTR("Manarai", -1)
++id: 3
+$hlight: 0
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Friendly
+$class: T-65c X-wing
+$pos: -3672.338867, 172.677338, 1763.944702
+$label:  XSTR("Onderon", -1)
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 15
+$team: Hostile
+$class: XQ2 Platform
+$pos: 1695.717529, 0.001930, 2740.112549
+$label:  XSTR("Davro 4", -1)
++id: 6
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Manarai's captain is a Clone Wars veteran with little love for the New Order, and we expect that he will surrender in order to save his crew.  He will also do everything possible to delay our capture operation.  Unfortunately for him, we have both Manarai and Master severely outgunned, and the Star Destroyer Excoriator is hours away and should be disabled before news of our attack here reaches them.  If Master does arrive and we are forced to fight both cruisers, we will be able to take them on one at a time.", -1)
+$end_multi_text
+$voice: S1_M5_b4.ogg
+$camera_pos: 2362.603516, 3960.188232, 27.686964
+$camera_orient:
+	0.907296, 0.000001, 0.420492,
+	-0.187887, 0.894621, 0.405403,
+	-0.376181, -0.446825, 0.811687
+$camera_time: 500
+$num_lines: 0
+$num_icons: 6
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 28
+$team: Friendly
+$class: Dreadnaught-class Heavy Cruiser
+$pos: -2297.880615, -0.004549, -2020.208496
+$label:  XSTR("Restoration", -1)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: 2671.366699, -0.003882, 1942.648804
+$label:  XSTR("Master", -1)
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: -850.283386, 0.000278, 6994.308105
+$label:  XSTR("Manarai", -1)
++id: 3
+$hlight: 1
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Hostile
+$class: BTL-A4 Y-wing
+$pos: -196.538422, -117.042244, -211.924164
+$label:  XSTR("Gold 4", -1)
++id: 4
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Friendly
+$class: T-65c X-wing
+$pos: -3672.338867, 172.677338, 1763.944702
+$label:  XSTR("Onderon", -1)
++id: 5
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 15
+$team: Hostile
+$class: XQ2 Platform
+$pos: 1695.717529, 0.001930, 2740.112549
+$label:  XSTR("Davro 4", -1)
++id: 6
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("Once we have confirmed that Manarai's weapons are powered down, we will send over our boarding party and a skeleton crew aboard Krayt Pearl.  After they secure the bridge, Tayana Star will be asked to transport Manarai's crew to a secure location.  Failing that, the crew will be hurried to the escape pods and launched towards the planet.  Once the ship is emptied, we will move the fleet out of Onderon's gravity well and jump to our primary staging area.  Good luck.", -1)
+$end_multi_text
+$voice: S1_M5_b5.ogg
+$camera_pos: 3848.177002, 5449.352051, -2553.271484
+$camera_orient:
+	0.972271, 0.000000, 0.233858,
+	-0.105638, 0.892161, 0.439191,
+	-0.208639, -0.451717, 0.867422
+$camera_time: 500
+$num_lines: 0
+$num_icons: 4
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 28
+$team: Friendly
+$class: Dreadnaught-class Heavy Cruiser
+$pos: 2610.326904, -0.001161, 7862.378906
+$label:  XSTR("Restoration", -1)
++id: 1
+$hlight: 0
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 18
+$team: Hostile
+$class: Carrack-class Light Cruiser
+$pos: -75.497444, -0.000550, 7173.103516
+$label:  XSTR("Manarai", -1)
++id: 3
+$hlight: 0
+$mirror: 1
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Action VI Transport
+$pos: 3226.673096, -133.171494, 12660.459961
+$label:  XSTR("Krayt Pearl", -1)
++id: 7
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 11
+$team: Friendly
+$class: Corellian Star Shuttle
+$pos: 3761.831543, 175.528763, 5227.234375
+$label:  XSTR("Tayana Star", -1)
++id: 8
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 22
+
+$Formula: ( and 
+   ( is-destroyed-delay 0 "Tayana Star" ) 
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+)
+$Multi text
+    XSTR("I'm sorry about the Star, Emora.  I know how much she meant to you.  The Commodore isn't happy about this, but we can still use your help.  We've been trying to get your people off of Duro, but it's not gonna be easy.  Let me know if you change your mind about my offer.  The Rebellion needs pilots like you, and it's not like you've got a lot of profitable avenues left to explore.  Take care-
+
+-Avon Du'Elo", -1)
+$end_multi_text
+$Voice: S1_M1_db5.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( is-destroyed-delay 0 "Manarai" ) 
+)
+$Multi text
+    XSTR("The Rebels have lost their prize and we have lost out on 4,000 credits, but I consider myself fortunate to be all in one piece.  It was foolish of Commodore Rulona to think that she could capture a warship like the Manarai under these conditions, but then, we were foolish enough to follow her.", -1)
+$end_multi_text
+$Voice: S1_M5_db1.ogg
+$Recommendation text:
+    XSTR("Find a way to prevent the mutiny from succeeding to score your best payout.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( is-event-true-delay 
+      "Manarai Communications X" 
+      0 
+   )
+   ( is-event-true-delay "Decline" 0 ) 
+)
+$Multi text
+    XSTR("The Rebels have their prize.  Commodore Rulona was no doubt disappointed that we did not participate in the capture operation, but given what happened, I believe it was a wise decision.", -1)
+$end_multi_text
+$Voice: S1_M5_db2.ogg
+$Recommendation text:
+    XSTR("Sending Tayana Star in will give you the chance to make more money.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( is-event-true-delay 
+      "Manarai Communications X" 
+      0 
+   )
+   ( is-event-true-delay "Accept" 0 ) 
+)
+$Multi text
+    XSTR("Thanks to your boldness and my fearless piloting, the Rebels have their prize, and we are 4,000 credits richer.  Commodore Rulona has extended her personal thanks to us and we have been scheduled to offload the Imperial crew at the Rebels' staging area.", -1)
+$end_multi_text
+$Voice: S1_M5_db3.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( is-event-true-delay 
+      "Tayana Star Fail Damage" 
+      0 
+   )
+)
+$Multi text
+    XSTR("Regrettably, Tayana Star took a great deal of damage during the battle, and I am afraid that once again, the money we made today will likely not cover the cost of repairs.  We seem to be made to suffer.", -1)
+$end_multi_text
+$Voice: S1_M5_db4.ogg
+$Recommendation text:
+    XSTR("Protect Tayana Star at by dealing with the mutiny and Master as quickly as possible.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( >= @Money[5] 5 ) 
+)
+$Multi text
+    XSTR("It may interest you to know that the Rebels have made an offer to purchase the Tayana Star and myself outright.  From what I have gathered, they intend to immediately deploy us into some sort of combat situation.  Suffice it to say, I politely declined on your behalf.  I know that you could never put a price on my tireless service and devotion to you, mistress.", -1)
+$end_multi_text
+$Voice: S1_M5_db5.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( >= @Money[5] 5 ) 
+)
+$Multi text
+    XSTR("According to Restoration's central computer, our friend Rohm N'jikko has finally succeeded in getting himself and his associates killed.  Apparently, he attacked a single flight of the Rebels' new fighter craft, seeking revenge for earlier losses, and was dispatched in spite of vastly superior numbers.", -1)
+$end_multi_text
+$Voice: S1_M5_db6.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( < @Money[5] 5 ) 
+)
+$Multi text
+    XSTR("Mistress, it is my sad duty to report that we have failed to break even for the month.  The Alliance has spirited some of our associates off of Duro, but they were relying on us to provide the revenue to move the heavy equipment.", -1)
+$end_multi_text
+$Voice: S1_M5_db7.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 10 ) 
+)
+$Multi text
+    XSTR("In reviewing the data for the past month, I have been amazed at how well we have done.  You have turned certain disaster into a small fortune.  Not only have we obtained enough funds to move all of our remaining operations off of Duro, but we have made substantive new contacts who have the power to make our business more successful than ever.
+
+All Tayana Starlanes vessels should be fully assembled within the week, and after the thrashing the Rebels gave them, I believe the remaining Blue Skull Pirates will be extremely receptive to our proposals.  If we can succeed in merging our organizations, we stand to profit massively from exploiting the Koordan Run and selling to the Rebels at below market rates.  We are going to be very rich.", -1)
+$end_multi_text
+$Voice: S1_M5_db8.ogg
+$Recommendation text:
+    XSTR("You have smuggled your way to the best possible outcome.  Congratulations!", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 9 ) 
+)
+$Multi text
+    XSTR("Considering how this journey began, we have done extremely well.  We have enough funds to move or replace all of the heavy equipment from our facilities on Duro, and the contacts we have made with the Alliance and the remaining Blue Skulls should lead to enough short term profits to ease our transition out of Imperial space.  The pirates in particular will not be able to continue operating without their fighter fleet and should be trying to cut their losses in any possible way.  Given that we are the only organization that knows the location of their base, I would call this a buyer's market.  Shall I make an offer for their corvette?", -1)
+$end_multi_text
+$Voice: S1_M5_db9.ogg
+$Recommendation text:
+    XSTR("Your smuggling record was almost perfect, but somewhere along the line there was a mission where you failed to achieve the best possible outcome.  Make sure to complete all secondary objectives to maximize your money making.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 8 ) 
+)
+$Multi text
+    XSTR("Given how this trip began, we have done quite well.  With the money we have made, we should be able to extract our personnel and most of the heavy equipment off of Duro.  We will arrive in Hutt Space with our connections intact, and I have already put out feelers to locate an adequate facility on Nar Shaddaa.  We will be a small fish in a big pond, but there should be no shortage of work, assuming we can avoid any further Imperial entanglements.
+
+Congratulations, Mistress. We are back in business.", -1)
+$end_multi_text
+$Voice: S1_M5_db10.ogg
+$Recommendation text:
+    XSTR("Your smuggling record was very good, but you failed to achieve the best outcome in one or two missions.  Make sure to complete all secondary objectives to maximize your money making.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 7 ) 
+)
+$Multi text
+    XSTR("In spite of our difficulties, we have actually turned a reasonable profit this month.  Our debts will be paid off within the week, and the Rebels have moved most of our people off of Duro, though the heavy equipment will likely prove too expensive to smuggle out.  With luck, we should find a facility on Nar Shaddaa that meets our needs, though we will certainly not enjoy the same level of security we had in the Core.  Still, with the way this trip began, I am pleased that we are in business at all.
+
+Well done, mistress.", -1)
+$end_multi_text
+$Voice: S1_M5_db11.ogg
+$Recommendation text:
+    XSTR("Your smuggling record was solid, but you failed to achieve the best outcome in some missions.  Make sure to complete all secondary objectives to capitalize on your money making opportunities.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 6 ) 
+)
+$Multi text
+    XSTR("Since the Bilbringi fiasco, we have managed to turn a small profit and should be on the move with our debts paid off shortly.  Regrettably, we do not have enough money to move our equipment off of Duro, but we will at least not be making the transition into Hutt Space empty-handed.  Speaking of equipment, I have noted that the Rebels are in possession of several used Class-6 escape pods, and I believe that the amount left in our accounts should be more than... Mistress?  Where are you going?", -1)
+$end_multi_text
+$Voice: S1_M5_db12.ogg
+$Recommendation text:
+    XSTR("You succeeded more than you failed through the course of the campaign, but you did not complete enough secondary objectives to capitalize on your opportunities and really bring home the serious cash money.  Take bigger risks if you wish to reap bigger rewards.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 5 ) 
+)
+$Multi text
+    XSTR("After factoring in the cost of maintenance, we appear to have broken even for the month.  Because we have failed to cover the cost of moving our operations off of Duro, we are left with nothing but the ship to our name.
+
+On the one hand, you must be disappointed that we have essentially been set back by several years of work, but I prefer to think of this as a learning experience.  If we had never associated ourselves with these revolutionaries, we would still be turning healthy profits rather than facing the prospect of appearing before the Hutts in an obvious position of weakness.
+
+In the future, I recommend that you think of our continued prosperity before dealing with undesirables on idealistic crusades.", -1)
+$end_multi_text
+$Voice: S1_M5_db13.ogg
+$Recommendation text:
+    XSTR("You have achieved a middling outcome, neither making nor losing a substantial sum of money through the course of the campaign.  Complete more secondary objectives to capitalize on your opportunities and bring home the big credits.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 4 ) 
+)
+$Multi text
+    XSTR("Though we are in some debt, we will be able to continue with our move to Hutt Space if you are willing to accept the Rebels' offer of a BFF-1 bulk freighter and cash in exchange for Tayana Star.  As you know, these are certainly lesser ships when compared to the Star Shuttle, but the Rebels have some pressing need for greater sublight speed and are offering us more than a fair deal.
+
+I will await your decision in the cargo hold.", -1)
+$end_multi_text
+$Voice: S1_M5_db14.ogg
+$Recommendation text:
+    XSTR("Though things could have been much worse, you have achieved a below-average outcome.  Complete more secondary objectives while preventing Tayana Star from getting beat up through the course of the campaign to capitalize on your opportunities and bring home the money.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 3 ) 
+)
+$Multi text
+    XSTR("With our Alliance contracts concluded, we are now badly in debt.  I believe we have to strip Tayana Star to the bone and downgrade to our backup systems in order to generate enough revenue to remain in business.  When we reach Hutt Space, we will have nothing but our reputation to go on and for you, mistress, that's not much.  And the Hutts are not known to deal fairly with debtors.
+
+Somehow, my longed-for escape pod seems further away than ever.", -1)
+$end_multi_text
+$Voice: S1_M5_db15.ogg
+$Recommendation text:
+    XSTR("Though things could have been worse, you have achieved a poor outcome.  Complete more secondary objectives while preventing Tayana Star from getting beat up through the course of the campaign to capitalize on your opportunities and bring home the money.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 2 ) 
+)
+$Multi text
+    XSTR("With our Alliance contracts concluded, it pains me to say that we are now in terrible debt.  You will have to sell your fighter and most of the Star's advanced systems to keep our heads above water.  We are going to be completely at the Hutts' mercy when we arrive in their territory.
+
+It is against my programming to have feelings, but I have bad feelings about this.  Things are going to get a lot worse before they get better.", -1)
+$end_multi_text
+$Voice: S1_M5_db16.ogg
+$Recommendation text:
+    XSTR("While not every mission was a complete failure, you have achieved a very poor outcome.  Complete more secondary objectives while preventing Tayana Star from getting beat up through the course of the campaign to capitalize on your opportunities and bring home the money you need.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 1 ) 
+)
+$Multi text
+    XSTR("With our Alliance contracts concluded, it pains me to say that we are now in catastrophic debt.  You will have to sell Tayana Star and your fighter to the Rebels to pay off our former associates, and I can see no future for us in this business, even with the Hutts.  
+
+You may wish to seriously consider Captain Du'Elo's offer of a position within the Alliance.  At the very least, they can feed you and offer you a measure of protection from your enemies.  Furthermore, I have noted the fact that all Alliance ships are equipped with multiple escape pods.  To me, the choice seems clear.
+
+I am very sorry, Mistress. But not surprised, based on your choices.", -1)
+$end_multi_text
+$Voice: S1_M5_db17.ogg
+$Recommendation text:
+    XSTR("While you didn't do the absolute worst you possibly could while still making it through the campaign, you have achieved a dreadful outcome.  Complete more secondary objectives while preventing Tayana Star from getting beat up through the course of the campaign to capitalize on your opportunities and bring home the money you so desperately need.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 0 ) 
+)
+$Multi text
+    XSTR("With our Alliance contracts concluded, it pains me to say that we are now completely bankrupt.  You will have to sell your fighter and what is left of Tayana Star to the Rebels to even begin to pay off our debts, and between our criminal standing in the Empire and your alienation of our best contacts, I seriously doubt that anyone will ever consider employing us again.
+
+This job was a disaster from the start, but it was your bungling of every single situation along the way that has truly doomed us.  My recommendation is that we start smuggling ourselves as far into the Rim as possible and attempt to find completely new careers, possibly in some sort of agrarian setting.  It will be a less glamorous life, but consider that the alternative is the spice mines of Kessel.", -1)
+$end_multi_text
+$Voice: S1_M5_db18.ogg
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( = @Money[5] 0 ) 
+)
+$Multi text
+    XSTR("If you would be so kind as to remove my restraining bolt, I will wipe my own memory so that I may continue to serve you with dignity.  And if I may say so, mistress, you are the worst smuggler in the history of the galaxy.  Closing down.", -1)
+$end_multi_text
+$Voice: S1_M5_db19.ogg
+$Recommendation text:
+    XSTR("You blew every mission, achieving the worst outcome possible while still making it through the campaign.  Congratulations!
+
+If you did not do this on purpose, completing more secondary objectives while preventing Tayana Star from getting beat up will help you reach a less painful outcome.  Better luck next time!", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-destroyed-delay 0 "Tayana Star" ) 
+   ( is-event-true-delay "Traitor" 0 ) 
+)
+$Multi text
+    XSTR("Welcome to my ship, alien.  As you seem to have run out of friends, you won't mind telling me all about your former associates.  Commander Rhenst, calibrate the mind probe for her species.  You two are going to become very well acquainted.", -1)
+$end_multi_text
+$Voice: S1_Captured.ogg
+$Recommendation text:
+    XSTR("Don't turn against the rebels.", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( not 
+      ( is-destroyed-delay 0 "Tayana Star" ) 
+   )
+   ( is-event-true-delay "Traitor" 0 ) 
+)
+$Multi text
+    XSTR("I know it is not my place to question your methods, mistress, but I fear our prospects will continue to sour if you insist on terminating our business associates in this fashion.  Perhaps you could find equal satisfaction in a line of work not involving laser cannons?  ", -1)
+$end_multi_text
+$Voice: S1_M2_db2.ogg
+$Recommendation text:
+    XSTR("Don't turn against the Rebels.", -1)
+$end_multi_text
+
+#Callsigns:
+$Callsign: Red 1
+
+#end
+
+
+#Players		;! 1 total
+
+$Starting Shipname: Traveller 1
+$Ship Choices: (
+	"RZ-1 A-wing"	5
+)
+
++Weaponry Pool: (
+	"T&B KX-5"	16
+	"T&B KX-9"	16
+	"T&B IX4"	17
+	"T&B IX4#imp"	17
+	"Gyrhil R-9X"	16
+	"Borstel RG-9"	16
+	"T&B KT6"	16
+	"Gyrhil 72"	16
+	"SFS L-s1"	16
+	"SFS L-s7.2"	16
+	"SFS L-s9.3"	16
+	"ArMek SW-4"	16
+	"ArMek SW-7a"	16
+	"Borstel NK-3"	16
+	"CEC AG-2G"	16
+	"Gunner control"	16
+	"Manual control"	16
+	"T&B KX-4"	16
+	"T&B KX-4#Imperial"	16
+	"NULL Laser"	16
+	"Arakyd ST2"	500
+	"Krupx MG5"	500
+	"Dymek HM-6"	500
+	"Dymek HM-6a"	500
+	"Krupx MG7-A"	505
+	"Krupx VL-4a"	500
+	"Dymek HM-8"	500
+	"Frei-Tek MAG-2"	500
+	"Merr-Sonn NG2"	500
+	"Intruder"	500
+	"ArmaTek VL-61/79"	500
+	"XX-23 Homing Beacon"	500
+	"NULL"	500
+)
+
+#Objects		;! 31 total
+
+$Name: Traveller 1		;! Object #0
+$Class: N-1 Starfighter
+$Callsign: Red 1
+
+$Team: Friendly
+$Location: 141.682419, 0.000000, -1541.079102
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 80
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 1.20
+$Warpin decel exp: 0.66
+$Determination: 10
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 12
+$Texture Replace:
++old: n-1
++new: n-1_gray
+
+$Name: Blue 1		;! Object #1
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 159.741470, 0.000010, -661.116455
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.10
+$Determination: 10
++Flags: ( "cargo-known" "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 8
+
+$Name: Blue 2		;! Object #2
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 100.856003, 74.825630, -922.189148
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.20
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 20
+
+$Name: Blue 3		;! Object #3
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 270.767792, 74.825645, -915.587280
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.30
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 12
+
+$Name: Blue 4		;! Object #4
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 41.018417, 172.675674, -1196.144531
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.40
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 16
+
+$Name: Blue 5		;! Object #5
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 188.045578, 172.675644, -1187.467651
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.50
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 14
+
+$Name: Blue 6		;! Object #6
+$Class: T-65c X-wing
+$Team: Friendly
+$Location: 342.216705, 172.675659, -1177.848755
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 5
+
+$Name: Gold 1		;! Object #7
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 14.048050, 0.000004, -764.334778
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.30
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 0
+
+$Name: Gold 2		;! Object #8
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: -41.981339, -57.378288, -976.334961
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.20
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 9
+
+$Name: Gold 3		;! Object #9
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 91.668121, -57.378311, -969.223938
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.40
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 18
+
+$Name: Gold 4		;! Object #10
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: -99.038925, -117.042236, -1272.638428
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.50
+$Determination: 10
++Flags: ( "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 13
+
+$Name: Gold 5		;! Object #11
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 53.074921, -117.042305, -1249.782959
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.60
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 10
+
+$Name: Gold 6		;! Object #12
+$Class: BTL-A4 Y-wing
+$Team: Friendly
+$Location: 212.538467, -117.042244, -1260.955688
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: Commander
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 100 0 )
++Subsystem: BombTurret
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Warpin time: 4.10
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 10
++Persona Index: 17
+
+$Name: Restoration		;! Object #13
+$Class: Dreadnaught-class Heavy Cruiser
+$Team: Friendly
+$Location: -576.716370, 0.006141, -1029.287354
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Manarai_Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
++Subsystem: Turret19
++Subsystem: Turret20
++Subsystem: Turret21
++Subsystem: Turret22
++Subsystem: Turret23
++Subsystem: Turret24
++Subsystem: Turret25
++Subsystem: Turret26
++Subsystem: Turret27
++Subsystem: Turret28
++Subsystem: Turret29
++Subsystem: Turret30
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Fleet Arrives" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "protect-ship" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 800
+
+$Name: Turkana		;! Object #14
+$Class: CR90 Corvette
+$Team: Friendly
+$Location: -3074.266602, -181.638977, -1393.485840
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Manarai_Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Fleet Arrives" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
+
+$Name: Jhoram Bel Adin		;! Object #15
+$Class: CR90 Corvette
+$Team: Friendly
+$Location: 1900.819092, 188.513840, -1401.714844
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Manarai_Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Fleet Arrives" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
+
+$Name: N'dian		;! Object #16
+$Class: Braha'tok-class gunship
+$Team: Friendly
+$Location: -1829.205811, 563.745117, -1749.489014
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Manarai_Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Fleet Arrives" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 90
+
+$Name: Krayt Pearl		;! Object #17
+$Class: Action VI Transport
+$Team: Friendly
+$Location: 837.099487, -133.157730, -521.111816
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Manarai_Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Fleet Arrives" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+
+$Name: Tayana Star		;! Object #18
+$Class: Corellian Star Shuttle
+$Team: Friendly
+$Location: -1827.668945, -448.832550, -1262.110107
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Manarai_Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Fleet Arrives" 
+   0 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 50
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 40
+$Texture Replace:
++old: starshuttle
++new: starshuttle_blue
+
+$Name: Manarai		;! Object #19
+$Class: Carrack-class Light Cruiser
+$Team: Hostile
+$Location: -33.374725, -89.683594, 2278.856689
+$Orientation:
+	-0.036258, 0.547459, 0.836049,
+	0.388448, 0.778533, -0.492950,
+	-0.920759, 0.306887, -0.240887
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 30
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 40
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 400
+
+$Name: Master		;! Object #20
+$Class: Carrack-class Light Cruiser
+$Team: Hostile
+$Location: -462.539185, -581.453979, -5532.089355
+$Orientation:
+	0.830806, -0.551702, 0.073380,
+	0.554488, 0.831855, -0.023647,
+	-0.047996, 0.060335, 0.997024
+$AI Behavior: None
+$AI Goals: ( goals ( ai-waypoints-once "Manarai_Path" 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 100
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: Turret01
++Subsystem: Turret02
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
++Subsystem: Turret06
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
++Subsystem: Turret10
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
++Subsystem: Turret14
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
++Subsystem: Turret18
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Manarai IFF Civilian" 
+   2 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "escort" )
++Flags2: ( )
++Respawn priority: 0
++Escort priority: 20
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 400
+
+$Name: Davro 4		;! Object #21
+$Class: XQ2 Platform
+$Team: Hostile
+$Location: -650.941101, 0.001560, 10312.439453
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 96
++Subsystem: Pilot
++Subsystem: Turret01
+$Damage: 100
++Subsystem: Turret02
+$Damage: 100
++Subsystem: Turret03
++Subsystem: Turret04
++Subsystem: Turret05
+$Damage: 100
++Subsystem: Turret06
+$Damage: 100
++Subsystem: Turret07
++Subsystem: Turret08
++Subsystem: Turret09
+$Damage: 100
++Subsystem: Turret10
+$Damage: 100
++Subsystem: Turret11
++Subsystem: Turret12
++Subsystem: Turret13
+$Damage: 100
++Subsystem: Turret14
+$Damage: 100
++Subsystem: Turret15
++Subsystem: Turret16
++Subsystem: Turret17
+$Damage: 100
++Subsystem: Turret18
+$Damage: 100
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 1000
+
+$Name: Alpha 1		;! Object #22
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 1044.126221, -0.000049, 10204.833984
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 2		;! Object #23
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 919.612976, -0.000047, 9967.195313
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 3		;! Object #24
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 1254.438477, 0.000012, 9908.403320
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 4		;! Object #25
+$Class: TIE/ln Fighter
+$Team: Hostile
+$Location: 1086.468140, -0.000022, 9661.390625
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rider 1		;! Object #26
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 171.697876, -581.457214, -7452.932617
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 50
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 25 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rider 2		;! Object #27
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 74.722313, -581.457336, -7612.359375
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 50
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 25 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rider 3		;! Object #28
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 338.907043, -581.457214, -7683.802734
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 50
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 25 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Rider 4		;! Object #29
+$Class: Z-95 Headhunter
+$Team: Hostile
+$Location: 247.183838, -581.457214, -7858.135742
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 50
++Initial Hull: 100
++Subsystem: Pilot
++Sbank Ammo: ( 25 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Hyperspace Preload_Ship		;! Object #30
+$Class: Nav Buoy
+$Team: Friendly
+$Location: 10757.072266, 0.000000, 16.460938
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( "no_collide" )
++Respawn priority: 0
++Score: 10
+
+#Wings		;! 5 total
+
+$Name: Traveller
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Traveller 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 1 total
+	"Traveller 1"
+)
++Flags: ( )
+
+$Name: Blue
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Blue 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 6 total
+	"Blue 1"
+	"Blue 2"
+	"Blue 3"
+	"Blue 4"
+	"Blue 5"
+	"Blue 6"
+)
+$AI Goals: ( goals ( ai-ignore-new "Manarai" 101 ) )
++Flags: ( )
+
+$Name: Gold
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gold 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 6 total
+	"Gold 1"
+	"Gold 2"
+	"Gold 3"
+	"Gold 4"
+	"Gold 5"
+	"Gold 6"
+)
+$AI Goals: ( goals ( ai-ignore-new "Manarai" 101 ) )
++Flags: ( )
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Docking Bay
++Arrival Distance: 0
+$Arrival Anchor: Davro 4
+$Arrival Cue: ( has-time-elapsed 26 ) 
+$Departure Location: Docking Bay
+$Departure Anchor: Davro 4
+$Departure Cue: ( is-event-true-delay 
+   "Davro 4 Friendly IFF" 
+   0 
+)
+$Ships: (		;! 4 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+	"Alpha 4"
+)
+$AI Goals: ( goals ( ai-chase-wing "Blue" 50 ) )
++Flags: ( )
+
+$Name: Rider
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Rider 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( is-event-true-delay 
+   "Manarai IFF Civilian" 
+   2 
+)
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Rider 1"
+	"Rider 2"
+	"Rider 3"
+	"Rider 4"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Flags: ( )
+
+#Events		;! 50 total
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-stealthy "Davro 4" "Manarai" ) 
+   ( never-warp "Traveller 1" ) 
+   ( ship-subsys-guardian-threshold 
+      100 
+      "Manarai" 
+      "Communications" 
+   )
+   ( set-subsystem-strength 
+      "Traveller 1" 
+      "Hull" 
+      ( + @Player_Hull[100] 15 ) 
+   )
+   ( script-eval 
+      "show_jumpoutpoint(false)" 
+   )
+)
++Name: Start
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 5 ) 
+   ( ship-unstealthy "Davro 4" "Manarai" ) 
+   ( send-message-list 
+      "Blue 1" 
+      "High" 
+      "B1 - Stand Clear" 
+      2000 
+   )
+)
++Name: PlayerArrivesFromHyperspace
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-time-elapsed 14 ) 
+      ( not 
+         ( is-event-true-delay "Traitor" 0 ) 
+      )
+   )
+   ( send-message-list 
+      "Blue 1" 
+      "High" 
+      "B1 - S-Foils" 
+      0 
+   )
+)
++Name: manual s-foils
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( script-eval 
+      "open_wings('Blue 1')" 
+      "open_wings('Blue 2')" 
+      "open_wings('Blue 3')" 
+      "open_wings('Blue 4')" 
+      "open_wings('Blue 5')" 
+      "open_wings('Blue 6')" 
+   )
+   ( lock-secondary-weapon 
+      "Blue 1" 
+      "Blue 2" 
+      "Blue 3" 
+      "Blue 4" 
+      "Blue 5" 
+      "Blue 6" 
+   )
+)
++Name: S-Foils Open
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( has-time-elapsed 16 ) 
+   ( clear-goals "Manarai" ) 
+)
++Name: Manarai Activates
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( add-goal 
+      "Manarai" 
+      ( ai-waypoints-once "Manarai_Path" 89 ) 
+   )
+   ( send-message-list 
+      "Gold 4" 
+      "High" 
+      "G3 - Manarai Pursuit" 
+      3000 
+   )
+)
++Name: Manarai In Pursuit
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 4 "Alpha" ) 
+      ( not 
+         ( is-event-true-delay "Traitor" 0 ) 
+      )
+   )
+   ( clear-goals "Blue" "Gold" ) 
+   ( add-goal 
+      "Blue" 
+      ( ai-chase "Alpha" 89 ) 
+   )
+   ( add-goal 
+      "Blue" 
+      ( ai-guard "Gold" 70 ) 
+   )
+   ( add-goal 
+      "Gold" 
+      ( ai-disarm-ship "Davro 4" 89 ) 
+   )
+   ( send-message-list 
+      "Blue 1" 
+      "High" 
+      "B1 - First Wave" 
+      2000 
+      "Gold 1" 
+      "High" 
+      "G1 - Starting our run" 
+      10000 
+   )
+   ( add-goal 
+      "Blue" 
+      ( ai-ignore-new "Manarai" 101 ) 
+   )
+   ( add-goal 
+      "Gold" 
+      ( ai-ignore-new "Manarai" 101 ) 
+   )
+)
++Name: TIEs Arrive
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-time-elapsed 5 ) 
+   ( add-goal 
+      "Blue" 
+      ( ai-waypoints-once "Manarai_Path" 89 ) 
+   )
+   ( add-goal 
+      "Gold" 
+      ( ai-waypoints-once "Manarai_Path" 89 ) 
+   )
+)
++Name: Fighters head for station
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Alpha" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Alpha
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy Alpha", -1)
+
+$Formula: ( when 
+   ( has-time-elapsed 90 ) 
+   ( clear-goals "Manarai" ) 
+)
++Name: Fleet Arrives
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( set-object-facing-object 
+      "Manarai" 
+      "Restoration" 
+      10000 
+      1 
+   )
+   ( send-message-list 
+      "Restoration" 
+      "High" 
+      "RES - Surrender" 
+      0 
+      "Manarai" 
+      "High" 
+      "MAN - Stalling" 
+      19000 
+      "Restoration" 
+      "High" 
+      "RES - Stop Stalling" 
+      11000 
+      "Manarai" 
+      "High" 
+      "MAN - We Surrender" 
+      9000 
+      "Restoration" 
+      "High" 
+      "RES - No Tricks" 
+      6000 
+   )
+)
++Name: Surrender Conversation
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( true ) 
+   ( change-iff "Friendly" "Manarai" ) 
+   ( set-shield-energy 0 "Manarai" ) 
+)
++Name: Manarai Friendly IFF
++Repeat Count: 1
++Interval: 1
++Chained: 42
+
+$Formula: ( when 
+   ( true ) 
+   ( clear-goals "Krayt Pearl" ) 
+   ( add-goal 
+      "Krayt Pearl" 
+      ( ai-dock 
+         "Manarai" 
+         "Docking Point" 
+         "Rearming Point" 
+         89 
+      )
+   )
+   ( send-message-list 
+      "Krayt Pearl" 
+      "High" 
+      "KP - Approach" 
+      0 
+      "Tayana Star" 
+      "High" 
+      "TS - Recommend No Go" 
+      15000 
+   )
+)
++Name: KP move to dock
++Repeat Count: 1
++Interval: 1
++Chained: 0
+
+$Formula: ( when-argument 
+   ( any-of 
+      "Restoration" 
+      "N'dian" 
+      "Turkana" 
+      "Jhoram Bel Adin" 
+   )
+   ( < 
+      ( distance "<argument>" "Manarai" ) 
+      1800 
+   )
+   ( clear-goals "<argument>" ) 
+   ( invalidate-argument "<argument>" ) 
+)
++Name: Rebel Ships Stop Near Manarai
++Repeat Count: -1
++Trigger Count: 4
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( has-docked-delay 
+         "Krayt Pearl" 
+         "Manarai" 
+         1 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay "Traitor" 0 ) 
+      )
+   )
+   ( send-message-list 
+      "Krayt Pearl" 
+      "High" 
+      "KP - Boarding Party In" 
+      5 
+      "Restoration" 
+      "High" 
+      "RES - Send In Tayana Star" 
+      5000 
+   )
+)
++Name: KP Docked
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( key-reset-multiple "1" "2" ) 
+   ( training-msg "Send Tayana Choice" ) 
+)
++Name: Choose
++Repeat Count: 1
++Interval: 1
++Chained: 12
+
+$Formula: ( when 
+   ( and 
+      ( or 
+         ( is-event-true-delay "Choose" 10 ) 
+         ( key-pressed "2" ) 
+      )
+      ( not 
+         ( is-event-true-delay "Accept" 0 ) 
+      )
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "TS - Staying Here" 
+      1000 
+      "Restoration" 
+      "High" 
+      "RES - Escape Pods" 
+      6000 
+   )
+   ( protect-ship "Tayana Star" ) 
+)
++Name: Decline
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay "Choose" 0 ) 
+      ( not 
+         ( is-event-true-delay "Decline" 0 ) 
+      )
+      ( key-pressed "1" ) 
+   )
+   ( send-message-list 
+      "Tayana Star" 
+      "High" 
+      "TS - Moving Into Position" 
+      1000 
+   )
+   ( add-goal 
+      "Krayt Pearl" 
+      ( ai-undock 90 ) 
+   )
+   ( add-goal 
+      "Krayt Pearl" 
+      ( ai-waypoints-once "KP_Path" 89 ) 
+   )
+)
++Name: Accept
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( add-goal 
+      "Tayana Star" 
+      ( ai-dock 
+         "Manarai" 
+         "Docking Point" 
+         "Rearming Point" 
+         100 
+      )
+   )
+)
++Name: TS Move to dock
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay 
+         "Manarai Friendly IFF" 
+         2 
+      )
+      ( and 
+         ( is-disarmed-delay 2 "Davro 4" ) 
+         ( not 
+            ( has-arrived-delay 0 "Manarai" ) 
+         )
+      )
+   )
+   ( change-iff 
+      "Friendly" 
+      "Davro 4" 
+      "Alpha" 
+   )
+   ( protect-ship "Davro 4" ) 
+)
++Name: Davro 4 Friendly IFF
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( is-event-true-delay "Decline" 25 ) 
+      ( is-event-true-delay "Accept" 22 ) 
+   )
+   ( send-message-list 
+      "Manarai" 
+      "High" 
+      "DAV - Problem" 
+      0 
+      "Manarai" 
+      "High" 
+      "GEL - Mutiny" 
+      14000 
+      "Manarai" 
+      "High" 
+      "MAN - Belay Order" 
+      12000 
+      "Restoration" 
+      "High" 
+      "RES - What's Up" 
+      16000 
+      "Manarai" 
+      "High" 
+      "DAV - Situation" 
+      5000 
+   )
+)
++Name: Problem on Manarai
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( change-iff "Civilian" "Manarai" ) 
+   ( ship-subsys-guardian-threshold 
+      0 
+      "Manarai" 
+      "Communications" 
+   )
+)
++Name: Manarai IFF Civilian
++Repeat Count: 1
++Interval: 1
++Chained: 50
+
+$Formula: ( when 
+   ( has-arrived-delay 2 "Master" ) 
+   ( send-message-list 
+      "Gold 4" 
+      "High" 
+      "G3 - Master Arrived" 
+      0 
+      "Restoration" 
+      "High" 
+      "RES - Intercept Rider" 
+      5000 
+   )
+   ( clear-goals "Blue" "Gold" ) 
+   ( add-goal 
+      "Blue" 
+      ( ai-stay-near-ship "Restoration" 89 ) 
+   )
+   ( add-goal 
+      "Gold" 
+      ( ai-stay-near-ship "Restoration" 89 ) 
+   )
+   ( set-armor-type 
+      "Manarai" 
+      ( true ) 
+      "Half" 
+      "Communications" 
+   )
+   ( set-armor-type 
+      "Master" 
+      ( true ) 
+      "Standard" 
+      "Hull" 
+   )
+   ( unlock-secondary-weapon 
+      "Blue 1" 
+      "Blue 2" 
+      "Blue 3" 
+      "Blue 4" 
+      "Blue 5" 
+      "Blue 6" 
+   )
+)
++Name: Master Here
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-destroyed-delay 0 "Rider" ) 
+   ( do-nothing ) 
+)
++Name: Destroy Rider
++Repeat Count: 1
++Interval: 1
++Chained: 8
++Objective:  XSTR("Destroy Rider", -1)
+
+$Formula: ( when 
+   ( and 
+      ( < 
+         ( distance "Tayana Star" "Manarai" ) 
+         1800 
+      )
+      ( not 
+         ( is-event-true-delay "Accept" 0 ) 
+      )
+   )
+   ( clear-goals "Tayana Star" ) 
+)
++Name: Tayana Stop Near Manarai
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Master Here" 
+         20 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Manarai Communications X" 
+            0 
+         )
+      )
+   )
+   ( send-message-list 
+      "Manarai" 
+      "High" 
+      "DAV - Things going badly" 
+      0 
+   )
+   ( add-goal 
+      "Blue" 
+      ( ai-chase "Rider" 99 ) 
+   )
+   ( add-goal 
+      "Gold" 
+      ( ai-chase "Master" 99 ) 
+   )
+)
++Name: Situation Getting Worse
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Situation Getting Worse" 
+         40 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Manarai Communications X" 
+            0 
+         )
+      )
+   )
+   ( send-message-list 
+      "Manarai" 
+      "High" 
+      "DAV - Lost the ship" 
+      0 
+   )
+)
++Name: Abandoning Ship
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( change-iff "Hostile" "Manarai" ) 
+   ( send-message-list 
+      "Restoration" 
+      "High" 
+      "RES - Kill Manarai" 
+      2000 
+   )
+   ( set-armor-type 
+      "Manarai" 
+      ( true ) 
+      "Half" 
+      "Hull" 
+   )
+)
++Name: Manarai IFF Hostile
++Repeat Count: 1
++Interval: 1
++Chained: 5
+
+$Formula: ( when 
+   ( or 
+      ( is-destroyed-delay 0 "Manarai" ) 
+      ( is-event-true-delay 
+         "Manarai Communications X" 
+         5 
+      )
+   )
+   ( set-object-facing-object 
+      "Restoration" 
+      "Master" 
+      18000 
+   )
+   ( set-object-facing-object 
+      "Jhoram Bel Adin" 
+      "Master" 
+      12000 
+   )
+   ( set-object-facing-object 
+      "Turkana" 
+      "Master" 
+      12000 
+   )
+   ( set-object-facing-object 
+      "N'dian" 
+      "Master" 
+      10000 
+   )
+)
++Name: Fleet Faces Master
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-subsystem-destroyed-delay 
+         "Manarai" 
+         "Communications" 
+         3 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Abandoning Ship" 
+            0 
+         )
+      )
+   )
+   ( change-iff "Friendly" "Manarai" ) 
+   ( send-message-list 
+      "Manarai" 
+      "High" 
+      "MAN - Mutiny Over" 
+      0 
+   )
+)
++Name: Manarai Communications X
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Manarai Communications X" 
+         6 
+      )
+      ( not 
+         ( percent-ships-destroyed 1 "Rider" ) 
+      )
+   )
+   ( change-iff "Friendly" "Rider" ) 
+   ( add-goal 
+      "Rider" 
+      ( ai-warp-out 120 ) 
+   )
+   ( send-message-list 
+      "Gold 4" 
+      "High" 
+      "G3 - Rider bugs out" 
+      2000 
+   )
+)
++Name: Rider Bugging Out
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( or 
+      ( and 
+         ( is-event-true-delay 
+            "Manarai Communications X" 
+            7 
+         )
+         ( not 
+            ( is-event-true-delay 
+               "Rider Bugging Out" 
+               0 
+            )
+         )
+      )
+      ( is-event-true-delay 
+         "Rider Bugging Out" 
+         6 
+      )
+   )
+   ( add-goal 
+      "Blue" 
+      ( ai-chase "Master" 95 ) 
+   )
+   ( send-message-list 
+      "Restoration" 
+      "High" 
+      "RES - Max Firepower" 
+      0 
+   )
+)
++Name: Master Coming In Message
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-destroyed-delay 1 "Master" ) 
+      ( or 
+         ( is-destroyed-delay 1 "Manarai" ) 
+         ( is-event-true-delay 
+            "Manarai Communications X" 
+            0 
+         )
+      )
+   )
+   ( send-message-list 
+      "Restoration" 
+      "High" 
+      "RES - RTB" 
+      0 
+   )
+)
++Name: Mission Over RTB
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( distance-ship-subsystem 
+         "Traveller 1" 
+         "Restoration" 
+         "Fighterbay" 
+      )
+      300 
+   )
+   ( end-mission ) 
+)
++Name: Dock With Restoration
++Repeat Count: 1
++Interval: 1
++Chained: 6
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Manarai Communications X" 
+         0 
+      )
+      ( is-event-true-delay 
+         "Mission Over RTB" 
+         9 
+      )
+      ( not 
+         ( percent-ships-destroyed 
+            1 
+            "Traveller 1" 
+            "Blue" 
+            "Gold" 
+            "Restoration" 
+            "Turkana" 
+            "Jhoram Bel Adin" 
+            "N'dian" 
+            "Krayt Pearl" 
+            "Tayana Star" 
+         )
+      )
+   )
+   ( send-message-list 
+      "Gold 4" 
+      "High" 
+      "G3 - Huge Success" 
+      0 
+   )
+)
++Name: Huge Success
++Repeat Count: 1
++Interval: 1
++Chained: 9
+
+$Formula: ( when 
+   ( < 
+      ( distance "Master" "Restoration" ) 
+      2400 
+   )
+   ( clear-goals "Master" ) 
+   ( add-goal 
+      "Master" 
+      ( ai-chase "Restoration" 89 ) 
+   )
+)
++Name: Master Attacks Restoration
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-iff "Traitor" "Traveller 1" ) 
+   ( change-iff "Neutral" "Traveller 1" ) 
+   ( script-eval 
+      "show_jumpoutpoint(true)" 
+   )
+   ( script-eval 
+      "blink_jumpoutpoint(true)" 
+   )
+   ( script-eval 
+      "open_wings('Blue 1')" 
+      "open_wings('Blue 2')" 
+      "open_wings('Blue 3')" 
+      "open_wings('Blue 4')" 
+      "open_wings('Blue 5')" 
+      "open_wings('Blue 6')" 
+   )
+   ( allow-warp "Traveller 1" ) 
+   ( training-msg "Traitor to the Rebs" ) 
+)
++Name: Traitor
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Traveller 1" ) 
+   ( do-nothing ) 
+)
++Name: Warp Out
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Hyperspace", -1)
++Objective key:  XSTR("Face Exit and Press $Enter$", -1)
+
+$Formula: ( when 
+   ( < 
+      ( hits-left "Tayana Star" ) 
+      ( - @TS_Hull[100] 6 ) 
+   )
+   ( send-message 
+      "Tayana Star" 
+      "Normal" 
+      "TS - Light Damage" 
+   )
+)
++Name: Tayana Star Light Damage
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( hits-left "Tayana Star" ) 
+      ( - @TS_Hull[100] 15 ) 
+   )
+   ( send-message 
+      "Tayana Star" 
+      "Normal" 
+      "TS - Fail Damage" 
+   )
+   ( modify-variable 
+      @Money[5] 
+      ( - @Money[5] 1 ) 
+   )
+)
++Name: Tayana Star Fail Damage
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Tayana Star" ) 10 ) 
+   ( send-message 
+      "Tayana Star" 
+      "Normal" 
+      "TS - Critical Damage" 
+   )
+)
++Name: Tayana Star Critical Damage
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < ( hits-left "Tayana Star" ) 3 ) 
+   ( send-message 
+      "Tayana Star" 
+      "Normal" 
+      "TS - Death" 
+   )
+)
++Name: Tayana Star Death Message
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( self-destruct "Tayana Star" ) 
+)
++Name: Tayana Star X
++Repeat Count: 1
++Interval: 1
++Chained: 3
+
+$Formula: ( when 
+   ( and 
+      ( not 
+         ( is-event-true-delay "Traitor" 0 ) 
+      )
+      ( is-event-true-delay 
+         "Mission Over RTB" 
+         0 
+      )
+      ( not 
+         ( is-destroyed-delay 0 "Tayana Star" ) 
+      )
+   )
+   ( do-nothing ) 
+)
++Name: Campaign Progress
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay 
+         "Manarai Communications X" 
+         0 
+      )
+      ( not 
+         ( is-event-true-delay 
+            "Tayana Star Fail Damage" 
+            0 
+         )
+      )
+      ( is-event-true-delay 
+         "Mission Over RTB" 
+         0 
+      )
+   )
+   ( modify-variable 
+      @Money[5] 
+      ( + @Money[5] 1 ) 
+   )
+)
++Name: In The Money
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( and 
+      ( is-event-true-delay "Accept" 0 ) 
+      ( is-event-true-delay 
+         "Abandoning Ship" 
+         10 
+      )
+   )
+   ( add-goal 
+      "Tayana Star" 
+      ( ai-undock 90 ) 
+   )
+   ( add-goal 
+      "Tayana Star" 
+      ( ai-waypoints-once "KP_Path" 89 ) 
+   )
+)
++Name: TS Undocks and Hull Breech
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay 
+      "Mission Over RTB" 
+      6 
+   )
+   ( do-nothing ) 
+)
++Name: Enter Hangar Order Trigger
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-departed-delay 0 "Traveller 1" ) 
+   ( do-nothing ) 
+)
++Name: Enter Hangar Order
++Repeat Count: 1
++Interval: 1
++Chained: 0
++Objective:  XSTR("Enter Restoration Hangar", -1)
+
+$Formula: ( when 
+   ( and 
+      ( has-arrived-delay 3 "Tayana Star" ) 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+   ( clear-goals "Tayana Star" ) 
+   ( add-goal 
+      "Tayana Star" 
+      ( ai-warp-out 120 ) 
+   )
+)
++Name: TS Traitor Run Away
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 0 "Tayana Star" ) 
+   ( set-subsystem-strength 
+      "Tayana Star" 
+      "Hull" 
+      ( + @TS_Hull[100] 15 ) 
+   )
+)
++Name: TS Set Hull
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 4 total
+
+$Type: Primary
++Name: Assist Rebels
+$MessageNew:  XSTR("Assist Rebels", -1)
+$end_multi_text
+$Formula: ( and 
+   ( is-event-true-delay 
+      "Mission Over RTB" 
+      0 
+   )
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+)
++No music
+
+$Type: Primary
++Name: Protect Tayana
+$MessageNew:  XSTR("Protect Tayana Star", -1)
+$end_multi_text
+$Formula: ( and 
+   ( not 
+      ( is-event-true-delay 
+         "Tayana Star Fail Damage" 
+         0 
+      )
+   )
+   ( is-destroyed-delay 0 "Master" ) 
+   ( not 
+      ( is-event-true-delay "Traitor" 0 ) 
+   )
+)
++No music
+
+$Type: Secondary
++Name: Make More Money
+$MessageNew:  XSTR("Earn Extra Money", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "In The Money" 
+   0 
+)
++No music
+
+$Type: Bonus
++Name: Spare Rider
+$MessageNew:  XSTR("Spare Rider Wing", -1)
+$end_multi_text
+$Formula: ( is-event-true-delay 
+   "Rider Bugging Out" 
+   0 
+)
+
+#Waypoints		;! 4 lists total
+
+$Name: Manarai_Path
+$List: (		;! 1 points in list
+	( -595.062378, 267.972595, 9429.457031 )
+)
+
+$Name: JumpOutPoint
+$List: (		;! 1 points in list
+	( -290.833984, -0.004835, -10016.449219 )
+)
+
+$Name: KP_Path
+$List: (		;! 1 points in list
+	( -3666.081787, 737.240417, 8011.366211 )
+)
+
+$Name: TS_Path
+$List: (		;! 1 points in list
+	( 2579.610840, 765.924438, 8028.945801 )
+)
+
+#Messages		;! 38 total
+
+
+$Name: B1 - Stand Clear
+$Team: -1
+$MessageNew:  XSTR("This is Captain Avon Du'Elo of the Rebel Alliance to all vessels in Onderon orbit.  Stand clear of station Davro 4.", -1)
+$end_multi_text
++Wave Name: S1_M5_DuElo_1.ogg
+
+$Name: G3 - Manarai Pursuit
+$Team: -1
+$MessageNew:  XSTR("Manarai is powered up and in pursuit.  Stay on target.", -1)
+$end_multi_text
++Wave Name: S1_M5_Bolk_1.ogg
+
+$Name: B1 - S-Foils
+$Team: -1
+$MessageNew:  XSTR("Lock S-foils in attack position.", -1)
+$end_multi_text
++Wave Name: R1_M5_Boss_3.ogg
+
+$Name: B1 - First Wave
+$Team: -1
+$MessageNew:  XSTR("Blue group, we're breaking up the first wave.  Red 1, follow the Y-wings in and make sure they don't pick up any tails.", -1)
+$end_multi_text
++Wave Name: S1_M5_DuElo_2.ogg
+
+$Name: RES - Surrender
+$Team: -1
+$MessageNew:  XSTR("Attention, Carrack Cruiser Manarai! This is Commodore Leks Rulona.  You have nowhere to go and reinforcements will not arrive in time to help you.  Surrender your ship and you have my word that no one will be harmed.  If you fight or attempt to sabotage your ship in any way, we will destroy you along with both stations and our targets on the planet surface.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_1.ogg
+
+$Name: MAN - Stalling
+$Team: -1
+$MessageNew:  XSTR("Rulona, I knew I'd be seeing you again.  It seems you've caught us with our vac suits around our ankles. Congratulations.  If we knew you Rebels had this much firepower, we never--", -1)
+$end_multi_text
++Wave Name: S1_M5_Unelgo_1.ogg
+
+$Name: RES - Stop Stalling
+$Team: -1
+$MessageNew:  XSTR("Stop stalling, Captain.  Surrender your ship in the next ten seconds or I'm going to vaporize every piece of Imperial property in this system.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_2.ogg
+
+$Name: MAN - We Surrender
+$Team: -1
+$MessageNew:  XSTR("We're powering down.  Stand by.", -1)
+$end_multi_text
++Wave Name: S1_M5_Unelgo_2.ogg
+
+$Name: RES - No Tricks
+$Team: -1
+$MessageNew:  XSTR("Prepare to evacuate your crew.  We have our guns trained on you, Manarai.  No tricks.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_3.ogg
+
+$Name: KP - Approach
+$Team: -1
+$MessageNew:  XSTR("This is the Pearl. We're making our approach.", -1)
+$end_multi_text
++Wave Name: R1_M2_Pearl_1.ogg
+
+$Name: TS - Recommend No Go
+$Team: -1
+$MessageNew:  XSTR("I have detected fighter launches on the planet, and Carrack Cruiser Master has just appeared on long-range sensors.  I do not know how long it will be before they arrive.  I recommend we do not participate in the boarding action.", -1)
+$end_multi_text
++Wave Name: S1_M5_Nines_1.ogg
+
+$Name: KP - Boarding Party In
+$Team: -1
+$MessageNew:  XSTR("We're docked.  The boarding party is in.", -1)
+$end_multi_text
++Wave Name: S1_M5_Pearl_1.ogg
+
+$Name: RES - Send In Tayana Star
+$Team: -1
+$MessageNew:  XSTR("Captain Leciq, please send Tayana Star in to pick up Manarai's crew.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_4.ogg
+
+$Name: TS - Staying Here
+$Team: -1
+$MessageNew:  XSTR("I have decided that we will stay here.", -1)
+$end_multi_text
++Wave Name: S1_M5_Nines_2.ogg
+
+$Name: TS - Moving Into Position
+$Team: -1
+$MessageNew:  XSTR("Oh my.  Moving into position.", -1)
+$end_multi_text
++Wave Name: S1_M5_Nines_3.ogg
+
+$Name: RES - Escape Pods
+$Team: -1
+$MessageNew:  XSTR("Very well.  Captain Davin, begin moving the crew to the escape pods.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_5.ogg
+
+$Name: DAV - Problem
+$Team: -1
+$MessageNew:  XSTR("Rulona, Davin here. We've got a problem.  We've reached the bridge, but several officers are unaccounted for.  I've got teams moving astern, but the ship is not secure.", -1)
+$end_multi_text
++Wave Name: S1_M5_Pearl_2.ogg
+
+$Name: GEL - Mutiny
+$Team: -1
+$MessageNew:  XSTR("Attention, all hands. This is Commander Gelmer.  The Captain is a traitor to the Empire!  Our ship must not be surrendered to Rebel terrorists.  Fight the scum to the last!  All ships, we require immediate assist--", -1)
+$end_multi_text
++Wave Name: S1_M5_Gelmer_1.ogg
+
+$Name: MAN - Belay Order
+$Team: -1
+$MessageNew:  XSTR("Belay that order!  Our duty is to protect the people of Onderon.  This ship will be hunted down and retaken, but not now.  Continue the evacuation.  I am taking full responsibility for the loss of this vessel.  Any man who disobeys my orders will be shot.", -1)
+$end_multi_text
++Wave Name: S1_M5_Unelgo_3.ogg
+
+$Name: RES - What's Up
+$Team: -1
+$MessageNew:  XSTR("Davin, what the hell is going on over there?", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_6.ogg
+
+$Name: DAV - Situation
+$Team: -1
+$MessageNew:  XSTR("A group of officers has sealed themselves inside the communications room.  We've disabled external comms, but they're still talking to the crew.  They're gonna take the ship if we can't do something about it.", -1)
+$end_multi_text
++Wave Name: S1_M5_Pearl_3.ogg
+
+$Name: RES - Intercept Rider
+$Team: -1
+$MessageNew:  XSTR("Blue group, intercept Rider wing.  Gold group, form up on us and prepare to attack Master.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_7.ogg
+
+$Name: DAV - Things going badly
+$Team: -1
+$MessageNew:  XSTR("I've lost contact with team two.  We can't stop them, the crew is trying to break into the bridge!", -1)
+$end_multi_text
++Wave Name: S1_M5_Pearl_4.ogg
+
+$Name: DAV - Lost the ship
+$Team: -1
+$MessageNew:  XSTR("Sorry, Commodore. We're losing the ship.  We have to get out of here--we'll try to reach the escape pods.  Davin out.", -1)
+$end_multi_text
++Wave Name: S1_M5_Pearl_5.ogg
+
+$Name: MAN - Mutiny Over
+$Team: -1
+$MessageNew:  XSTR("The mutiny has ended.  Master, turn around and get out of here while you still can!", -1)
+$end_multi_text
++Wave Name: S1_M5_Unelgo_4.ogg
+
+$Name: RES - Max Firepower
+$Team: -1
+$MessageNew:  XSTR("Good work, Red 1.  Master is still coming in.  All ships, you have your target.  Maximum firepower.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_8.ogg
+
+$Name: RES - RTB
+$Team: -1
+$MessageNew:  XSTR("All right. The fighters from the surface are retreating.  Let's finish up here.  All wings, return to the hangar bay.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_9.ogg
+
+$Name: G3 - Master Arrived
+$Team: -1
+$MessageNew:  XSTR("Light cruiser Master has arrived with escort.  It's Rider wing again.", -1)
+$end_multi_text
++Wave Name: S1_M5_Bolk_2.ogg
+
+$Name: G3 - Rider bugs out
+$Team: -1
+$MessageNew:  XSTR("Rider wing is retreating!  Smart pilots.", -1)
+$end_multi_text
++Wave Name: S1_M5_Bolk_3.ogg
+
+$Name: G3 - Huge Success
+$Team: -1
+$MessageNew:  XSTR("One cruiser down, one captured.  We were born to be pirates, boss.", -1)
+$end_multi_text
++Wave Name: S1_M5_Bolk_4.ogg
+
+$Name: G1 - Starting our run
+$Team: -1
+$MessageNew:  XSTR("This is Gold Leader.  We're starting our run.", -1)
+$end_multi_text
++Wave Name: R1_M5_Tir_2.ogg
+
+$Name: Send Tayana Choice
+$Team: -1
+$MessageNew:  XSTR("1 - Send in Tayana Star
+2 - Decline", -1)
+$end_multi_text
+
+$Name: TS - Light Damage
+$Team: -1
+$MessageNew:  XSTR("We are taking considerable damage, mistress.", -1)
+$end_multi_text
++Wave Name: S1_Nines_Hull_75.ogg
+
+$Name: TS - Fail Damage
+$Team: -1
+$MessageNew:  XSTR("The hull has been breached.  Deploying repair droids.", -1)
+$end_multi_text
++Wave Name: S1_Nines_Hull_50.ogg
+
+$Name: TS - Critical Damage
+$Team: -1
+$MessageNew:  XSTR("We have sustained critical damage!", -1)
+$end_multi_text
++Wave Name: S1_Nines_Hull_25.ogg
+
+$Name: TS - Death
+$Team: -1
+$MessageNew:  XSTR("Even a used escape pod would--", -1)
+$end_multi_text
++Wave Name: S1_Nines_Death.ogg
+
+$Name: RES - Kill Manarai
+$Team: -1
+$MessageNew:  XSTR("All ships, you have your target.  Maximum firepower.", -1)
+$end_multi_text
++Wave Name: S1_M5_Rulona_10.ogg
+
+$Name: Traitor to the Rebs
+$Team: -1
+$MessageNew:  XSTR("You have been flagged as an enemy vessel.", -1)
+$end_multi_text
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 3 total
+
+$Num stars: 500
+$Ambient light level: 7895160
+
+$Bitmap List:
+$Sun: SunWhite
++Angles: 5.724680 0.366519 1.431170
++Scale: 0.500000
+$Starbitmap: Planet_Endor
++Angles: 5.881760 0.000000 6.195919
++ScaleX: 6.000000
++ScaleY: 6.000000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_Moon02
++Angles: 6.003932 2.495821 1.989675
++ScaleX: 1.000000
++ScaleY: 1.000000
++DivX: 1
++DivY: 1
+$Starbitmap: Planet_Dagobah
++Angles: 1.308997 1.692969 4.206244
++ScaleX: 0.250000
++ScaleY: 0.250000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: Sullust
+$Briefing Music: None
+
+#End
+

@@ -1,0 +1,104 @@
+$Name: 2. The Koordan Run
+$Type: single
++Description:
+ XSTR("The Duros smuggler Emora Leciq and her underrated droid 9S9-RA7 struggle to avoid a fate worse than bankruptcy after a job for the Rebel Alliance goes to sith.
+ 
+ Length: 5 Missions
+ 
+ Difficulty: Intermediate", -1)
+$end_multi_text
+$Flags: 0
+
+
++Starting Ships: ( "N-1 Starfighter" )
+
++Starting Weapons: ( "T&B IX4#imp"  "Borstel RG-9"  "SFS L-s1"  "Krupx MG7-A"  "Krupx VL-4a" )
+
+
+$Mission: ExcS_m01.fs2
++Flags: 0
++Main Hall: 
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcS_m01.fs2" 
+         "Campaign progress" 
+      )
+      ( next-mission "ExcS_m02.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcS_m01.fs2" ) )
+)
+
++Level: 0
++Position: 0
+
+$Mission: ExcS_m02.fs2
++Flags: 0
++Main Hall: 
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcS_m02.fs2" 
+         "Campaign Progress" 
+      )
+      ( next-mission "ExcS_m03.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcS_m02.fs2" ) )
+)
+
++Level: 1
++Position: 0
+
+$Mission: ExcS_m03.fs2
++Flags: 0
++Main Hall: 
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcS_m03.fs2" 
+         "Campaign Progress" 
+      )
+      ( next-mission "ExcS_m04.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcS_m03.fs2" ) )
+)
+
++Level: 2
++Position: 0
+
+$Mission: ExcS_m04.fs2
++Flags: 0
++Main Hall: 
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcS_m04.fs2" 
+         "Campaign Progress" 
+      )
+      ( next-mission "ExcS_m05.fs2" )
+   )
+   ( ( true ) ( next-mission "ExcS_m04.fs2" ) )
+)
+
++Level: 3
++Position: 0
+
+$Mission: ExcS_m05.fs2
++Flags: 0
++Main Hall: 
++Formula: ( cond
+   (
+      ( is-previous-event-true 
+         "ExcS_m05.fs2" 
+         "Campaign Progress" 
+      )
+      ( end-of-campaign )
+   )
+   ( ( true ) ( next-mission "ExcS_m05.fs2" ) )
+)
+
++Level: 4
++Position: 0
+
+#End
+

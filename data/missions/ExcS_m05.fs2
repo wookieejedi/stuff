@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Quite A Mercenary", -1)
 $Author: Swash
 $Created: 03/08/15 at 14:38:18
-$Modified: 01/10/20 at 13:13:42
+$Modified: 01/16/20 at 15:50:32
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -737,7 +737,9 @@ $Formula: ( and
    ( is-event-true-delay "Traitor" 0 ) 
 )
 $Multi text
-    XSTR("Welcome to my ship, alien.  As you seem to have run out of friends, you won't mind telling me all about your former associates.  Commander Rhenst, calibrate the mind probe for her species.  You two are going to become very well acquainted.", -1)
+    XSTR("Welcome to my ship alien. 
+I see you have run out of friends, so I’m sure you won’t mind telling me all about your former associates. 
+Officer, calibrate the mind probe for use on this species. ", -1)
 $end_multi_text
 $Voice: S1_Captured.ogg
 $Recommendation text:
@@ -1028,7 +1030,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1059,7 +1060,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1090,7 +1090,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1121,7 +1120,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1152,7 +1150,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1183,7 +1180,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1805,15 +1801,17 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
++Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "no-shields" )
 +Flags2: ( "no_collide" )
 +Respawn priority: 0
++Group: 0
 +Score: 10
 
 #Wings		;! 5 total

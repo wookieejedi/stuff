@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Lies", -1)
 $Author: TopAce/Swash
 $Created: 03/14/11 at 18:03:19
-$Modified: 01/10/20 at 13:03:02
+$Modified: 01/16/20 at 17:29:54
 $Notes:
 $End Notes:
 
@@ -47,7 +47,9 @@ $Variables:
 #Command Briefing
 
 $Stage Text:
- XSTR("Imperial Intelligence has revealed that the Bilbringi 9 hypermatter processing facility has been supplying the Rebellion with fuel and materials.  Our next series of operations will put an end to this treason and allow us to identify and directly trace key Rebel supply lines.  We will then root out our enemies cell by cell.  Lieutenant Grilner will brief you on the details of your assignment.", -1)
+ XSTR("Imperial Intelligence has revealed that the Bilbringi 9 hypermatter processing facility has been supplying the Rebellion with fuel and materials.  
+Our next series of operations will put an end to this treason and allow us to identify and destroy key Rebel supply lines.
+Lieutenant Grilner will brief you on the details of your next assignment.", -1)
 $end_multi_text
 $Ani Filename: CB_imp
 +Wave Filename: I1_M2_cb1.ogg
@@ -400,11 +402,15 @@ $Formula: ( is-event-true-delay
    0 
 )
 $Multi text
-    XSTR("You have been found guilty of the crime of treason against the Emperor, and are to be executed immediately.  This betrayal is particularly disappointing coming from such a gifted and well bred individual.  You have not only failed yourself, your fleet, and your Emperor, but your family too will lose everything.  Be thankful that the circumstances of our deployment have spared you from Lord Vader's tender mercies.  You have one hour to prepare yourself.", -1)
+    XSTR("You have been found guilty of treason against the Empire and are to be executed.  
+This betrayal is particularly disappointing coming from an individual such as yourself.
+Not only have you failed the Emperor, but you have also failed your family, as they too will now lose all standing they have in Imperial society.
+Be thankful that the circumstances of our deployment have spared you from Vaders hand.
+You have one hour to prepare yourself.", -1)
 $end_multi_text
 $Voice: I1_Traitor.ogg
 $Recommendation text:
-    XSTR("Refrain from firing on friendly targets.", -1)
+    XSTR("Do not fire upon friendly craft.", -1)
 $end_multi_text
 
 #Players		;! 1 total
@@ -846,7 +852,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx VL-4a" "" )
 +Sbank Ammo: ( 13 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -875,7 +880,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx VL-4a" "" )
 +Sbank Ammo: ( 25 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -904,7 +908,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx VL-4a" "" )
 +Sbank Ammo: ( 13 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1751,15 +1754,17 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
++Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "no-shields" )
 +Flags2: ( "no_collide" )
 +Respawn priority: 0
++Group: 0
 +Score: 10
 
 #Wings		;! 7 total
@@ -3065,7 +3070,7 @@ $end_multi_text
 
 $Name: Mirror X - good
 $Team: -1
-$MessageNew:  XSTR("Mirror has been slave rigged--there's no one on board!", -1)
+$MessageNew:  XSTR("Mirror has been slave rigged. There's no one on board!", -1)
 $end_multi_text
 +Wave Name: l1_M2_Grilner_3.ogg
 
@@ -3077,7 +3082,7 @@ $end_multi_text
 
 $Name: Prioritize Y-wings
 $Team: -1
-$MessageNew:  XSTR("Prioritize the Y-wings$semicolon their torpedoes are a critical threat to the transports.", -1)
+$MessageNew:  XSTR("Prioritize the Y-wings. Their torpedoes are a critical threat to the transports.", -1)
 $end_multi_text
 +Wave Name: l1_M2_Grilner_5.ogg
 
@@ -3129,7 +3134,7 @@ $end_multi_text
 
 $Name: Alpha Traitor
 $Team: -1
-$MessageNew:  XSTR("Your family will pay the price for this treason, Wing Commander.  Fighters, destroy Alpha 1!", -1)
+$MessageNew:  XSTR("Your family will pay the price for this treason wing Commander.  All fighters, destroy Alpha 1!", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_9.ogg
 

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Questions", -1)
 $Author: TopAce/Swash
 $Created: 01/16/11 at 23:24:21
-$Modified: 01/10/20 at 13:04:30
+$Modified: 01/16/20 at 17:32:21
 $Notes:
 $End Notes:
 
@@ -24,7 +24,7 @@ $end_multi_text
 
 +Viewer pos: 6112.888672, -3216.932617, 33259.734375
 +Viewer orient:
-	0.998099, 0.000004, -0.061625,
+	0.998099, 0.000004, -0.061626,
 	-0.023276, -0.925905, -0.377039,
 	-0.057061, 0.377757, -0.924145
 
@@ -471,7 +471,9 @@ $Formula: ( not
    )
 )
 $Multi text
-    XSTR("In a typical act of desperation and cowardice, the Rebels cornered in the fueling station overloaded the facility's reactor rather than risking capture.  The resulting explosion killed thousands of workers, and it was only thanks to the scanning equipment sent in with the stormtrooper force that we were able to withdraw our men in time.", -1)
+    XSTR("In a typical act of desperation and cowardice, the Rebels that were cornered by our forces on the fueling station overloaded the installations reactor in an attempt to avoid capture.
+The resulting explosion killed thousands of workers. 
+Fortunately, the scanning equipment that was sent in with the stormtroopers alerted our soldiers ahead of time and they were able to withdraw before the explosion occurred.", -1)
 $end_multi_text
 $Voice: I1_M3_db1.ogg
 $Recommendation text:
@@ -488,7 +490,8 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("In spite of these terrorist acts, Alpha 1 distinguished himself today.  All three of the critical black market vessels are now transmitting clear signals, and will provide valuable information on the Rebel supply chains.", -1)
+    XSTR("In spite of these terrorist acts, Alpha 1 performed admirably today.  
+All three of the black market vessels are now transmitting clear signals to us and will provide valuable information on Rebel supply chains.", -1)
 $end_multi_text
 $Voice: I1_M3_db2.ogg
 $Recommendation text:
@@ -506,7 +509,7 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("Although Alpha 1 was unable to tag all three critical freighters before they could make the jump to lightspeed, we have acquired enough information to begin tracing the Rebel supply chains.", -1)
+    XSTR("Alpha 1 was unable to tag all three freighters before they could make the jump to hyperspace.Fortunately we managed to acquire a sufficient amount of information during the mission which will help us locate the Rebel supply chains.", -1)
 $end_multi_text
 $Voice: I1_M3_db3.ogg
 $Recommendation text:
@@ -523,7 +526,9 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("As Alpha 1 failed to tag any of the escaping freighters, we will have no way of bringing these criminals to justice.  Lord Vader will soon be visiting the site of the attack, and he will not be pleased with this performance.  He is a most creative man when it comes to finding ways to motivate his officers.", -1)
+    XSTR("Alpha 1 failed to tag the escaping freighters. 
+We have now lost our only chance to bring these criminals to justice. 
+Lord Vader will soon be visiting the site of the attack and he will not be pleased with yourperformance.", -1)
 $end_multi_text
 $Voice: I1_M3_db4.ogg
 $Recommendation text:
@@ -549,7 +554,9 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("Regrettably, our wing was unable to prevent the destruction of unarmed vessels during this engagement.  Greater restraint is required in dealing with civilians, even criminals.  We are soldiers, not butchers.", -1)
+    XSTR("Regrettably, our wing was unable to prevent the destruction of unarmed vessels during the engagement.
+Greater restraint is required in dealing with civilians, even criminals. 
+We are soldiers, not butchers.", -1)
 $end_multi_text
 $Voice: I1_M3_db5.ogg
 $Recommendation text:
@@ -572,7 +579,8 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("Although this was a dark day for the Empire, congratulations are in order for Tau squadron, who performed admirably in their first combat.  Your bravery is a credit to the entire wing.", -1)
+    XSTR("Although this was a dark day for the Empire, congratulations are in order for Tau squadron.
+They performed admirably during their first combat mission.", -1)
 $end_multi_text
 $Voice: I1_M3_db6.ogg
 $Recommendation text:
@@ -586,7 +594,8 @@ $Formula: ( not
    )
 )
 $Multi text
-    XSTR("It may be some time before we can bring peace to the victims of Bilbringi, but I assure you we will make the Rebel scum pay for what they have done here.  Dismissed.", -1)
+    XSTR("It may be some time before we can bring justice to the victims of Bilbringi, but make no mistake, we will make the Rebels pay for what they have done.
+Dismissed.", -1)
 $end_multi_text
 $Voice: I1_M3_db7.ogg
 $Recommendation text:
@@ -598,11 +607,15 @@ $Formula: ( is-event-true-delay
    0 
 )
 $Multi text
-    XSTR("You have been found guilty of the crime of treason against the Emperor, and are to be executed immediately.  This betrayal is particularly disappointing coming from such a gifted and well bred individual.  You have not only failed yourself, your fleet, and your Emperor, but your family too will lose everything.  Be thankful that the circumstances of our deployment have spared you from Lord Vader's tender mercies.  You have one hour to prepare yourself.", -1)
+    XSTR("You have been found guilty of treason against the Empire and are to be executed.
+This betrayal is particularly disappointing coming from an individual such as yourself.
+Not only have you failed the Emperor, but you have also failed your family, as they too will now lose all standing they have in Imperial society.
+Be thankful that the circumstances of our deployment have spared you from Vaders hand.
+You have one hour to prepare yourself.", -1)
 $end_multi_text
 $Voice: I1_Traitor.ogg
 $Recommendation text:
-    XSTR("Refrain from shooting friendly targets.", -1)
+    XSTR("Do not fire upon friendly craft.", -1)
 $end_multi_text
 
 #Players		;! 1 total
@@ -639,7 +652,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "XX-23 Homing Beacon" )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1412,7 +1424,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "" "" )
 +Sbank Ammo: ( 0 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1439,7 +1450,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "" "" )
 +Sbank Ammo: ( 0 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1466,7 +1476,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "" "" )
 +Sbank Ammo: ( 0 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1493,7 +1502,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "" "" )
 +Sbank Ammo: ( 0 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1749,7 +1757,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1778,7 +1785,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1806,7 +1812,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1834,7 +1839,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2119,7 +2123,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2147,7 +2150,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2333,15 +2335,17 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
++Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "no-shields" )
 +Flags2: ( "no_collide" )
 +Respawn priority: 0
++Group: 0
 +Score: 10
 
 #Wings		;! 8 total
@@ -4200,7 +4204,8 @@ $List: (		;! 1 points in list
 
 $Name: Ab - Attention
 $Team: -1
-$MessageNew:  XSTR("Attention, all vessels.  Power down your drives immediately and prepare to be boarded.  All traffic in and around the Bilbringi system is hereby suspended pending an investigation of this attack.  Failure to cooperate will be met with severe punishment.", -1)
+$MessageNew:  XSTR("Attention all vessels. Power down your drives immediately and prepare to be boarded.  All traffic in and around the Bilbringi system is hereby suspended pending an investigation of this attack.  
+Fail to cooperate and you will suffer the consequences of your actions.", -1)
 $end_multi_text
 +Wave Name: I1_M3_Ors_1.ogg
 
@@ -4212,7 +4217,7 @@ $end_multi_text
 
 $Name: Charmed surrenders
 $Team: -1
-$MessageNew:  XSTR("Charmed here.  Hold your fire, please!  We're shutting down engines now.", -1)
+$MessageNew:  XSTR("Charmed here.  Hold your fire please!  We're shutting down engines now.", -1)
 $end_multi_text
 +Wave Name: S1_M1_Charmed_1.ogg
 
@@ -4224,7 +4229,7 @@ $end_multi_text
 
 $Name: Zaltin 12 complains
 $Team: -1
-$MessageNew:  XSTR("This bacta is urgently needed on Taris, Convictor! You have no right to interfere with cartel operations!", -1)
+$MessageNew:  XSTR("This bacta is urgently needed on Taris Convictor! You have no right to interfere with cartel operations!", -1)
 $end_multi_text
 +Wave Name: S1_M1_Zaltin_1.ogg
 
@@ -4235,7 +4240,9 @@ $end_multi_text
 
 $Name: Droid - Initial Status
 $Team: -1
-$MessageNew:  XSTR("Four targets are present at the station. Three targets are inbound. Remember that the homing beacon drops vertically from the bombing bay, so fly above a ship to deploy it. ", -1)
+$MessageNew:  XSTR("Four targets are present at the station. 
+Three targets are inbound. 
+Remember that the homing beacon drops vertically from the bombing bay, so fly above a ship to deploy it. ", -1)
 $end_multi_text
 
 $Name: Droid - Zaltin Here

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Oaths", -1)
 $Author: Swash
 $Created: 11/21/14 at 14:43:46
-$Modified: 01/10/20 at 13:06:07
+$Modified: 01/16/20 at 17:15:07
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -22,11 +22,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -13795.041016, 43605.882813, -33671.453125
++Viewer pos: -237.424377, 4913.333496, -1570.429443
 +Viewer orient:
-	0.998999, -0.000001, 0.044725,
-	-0.026897, 0.798946, 0.600801,
-	-0.035733, -0.601403, 0.798146
+	0.999942, -0.000000, -0.010742,
+	0.010343, 0.270097, 0.962778,
+	0.002901, -0.962833, 0.270081
 
 $Starting wing names: ( "Alpha" "Beta" "Mu" )
 $Squadron wing names: ( "Alpha" "Beta" "Gamma" "Epsilon" "Mu" )
@@ -51,19 +51,25 @@ $Variables:
 #Command Briefing
 
 $Stage Text:
- XSTR("A plot has been revealed that could tear our fleet apart and leave the Empire in disarray.  Imperial Intelligence has for some time been attempting to identify a group of officers suspected of conspiring to stage a coup against the Emperor.  The names of these traitors were unknown until new evidence, corroborated by reports from agent Merrock Tan, implicated Captain Lurik Arkeen and the bridge crew of the Star Destroyer Excoriator.", -1)
+ XSTR("A plot has been revealed that could tear our fleet apart and leave the Empire in disarray.
+Imperial Intelligence has been trying to identify a group of officers that are suspected of planning a coup against the Emperor.
+The names of these traitors were unknown until new evidence, corroborated by reports from agent Merrock Tan, implicated Captain Lurik Arkeen and the bridge crew of the Star Destroyer Excoriator.", -1)
 $end_multi_text
 $Ani Filename: CB_imp.eff
 +Wave Filename: I1_M5_cb1.ogg
 
 $Stage Text:
- XSTR("While our sector fleets were stretched to their limits due to the Emperor's visit to the site of the Bilbringi tragedy, this destroyer departed Tanaab on false pretenses, intending to replace the enlisted men with a skeleton crew comprised of subhuman workers and revolutionaries.  Fortunately, their blindness led them to believe they could trust the anarchist Rebel Alliance, who had designs on taking Excoriator for themselves.  Their battle has left the destroyer crippled, but the Rebels were unable to capture her.", -1)
+ XSTR("While our sector fleets were stretched to their limits due to the Emperor's visit to the site of Bilbringi tragedy, this Star Destroyer departed Tanaab on false pretenses. 
+They intended to replace the enlisted men with a skeleton crew comprised of sub-human workers and revolutionaries.
+Their blindness led them to believe they could trust members of the Rebel Alliance, who were planning on taking Excoriator for themselves.
+The Rebels were unable to capture it, but the recent battle has left the destroyer crippled.", -1)
 $end_multi_text
 $Ani Filename: CB_imp.eff
 +Wave Filename: I1_M5_cb2.ogg
 
 $Stage Text:
- XSTR("We are the only ship in position to reach Excoriator before she can repair and escape, and we have been forced to leave our slower escort vessels behind.  If we cannot secure their unconditional surrender, we will have to destroy them in order to prevent this weapon from being used against the Empire and her citizenry.  These men wear our uniforms, but they have struck at the very heart of what it means and what we are.  Now is the time to strike back, for honor and the memory of our dead.", -1)
+ XSTR("Our ship is the only vessel that has a chance of reaching Excoriator before repairs on the shipare completed and it escapes.
+If we cannot secure their unconditional surrender, then we will have to destroy them in order to prevent this weapon from being used against us.", -1)
 $end_multi_text
 $Ani Filename: CB_imp.eff
 +Wave Filename: I1_M5_cb3.ogg
@@ -401,8 +407,12 @@ $end_icon
 $end_stage
 $start_stage
 $multi_text
- XSTR("A personal message from Captain Ors:
-At ease, Commander.  I will make this brief.  When you first came aboard, I suspected that you had gained this posting through your family connections alone and that you would endanger my ship and my men.  I am pleased to admit that I misjudged you.  Your performance as a pilot and a leader aboard Convictor has been exemplary.  I believe you have been testing our TIE Advanced prototype?  Perhaps now is the time for its first combat deployment.  Lord Vader will await your evaluation of the craft's performance.  Good hunting.
+ XSTR("At ease Commander. 
+Your performance as a fighter pilot aboard Convictor has been exemplary. 
+I believe you have been testing our TIE Advanced prototype, yes?
+Perhaps now is the time for its first combat deployment. 
+Lord Vader is awaiting your evaluation of the craft's performance. 
+Good hunting pilot.
 ", -1)
 $end_multi_text
 $voice: I1_M5_b5.ogg
@@ -592,7 +602,11 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("This was a dark day for the Empire.  Although we destroyed Excoriator, she managed to inflict severe damage on us in spite of major tactical disadvantages.  The blame does not rest solely with your fighter wing, but your performance indicated both a lack of preparedness and a level of hesitancy that is unacceptable in any Imperial officer, let alone a TIE pilot.  We should have delivered a triumphant victory for the Emperor here--his enemies were turned against each other, all we had to do was deliver the final stroke--and we failed him.  Our blunder also means that we will be unable to pursue those elements of the Rebel plot that escaped us.  Every day we stand idle in the repair yard is a day our enemies grow in strength and confidence.", -1)
+    XSTR("This was a dark day for the Empire. 
+Although we destroyed Excoriator, she managed to inflict severe damage on us in spite of majortactical disadvantages.
+The blame does not rest solely with your fighter wing. 
+Your performance showed a lack of preparedness and a level of hesitancy that is unacceptable.  We should have delivered a triumphant victory for the Emperor but we failed.
+In our current state we will be unable to pursue the Rebel force that escaped us.", -1)
 $end_multi_text
 $Voice: I1_M5_db1.ogg
 $Recommendation text:
@@ -614,7 +628,10 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("Excoriator is gone, and we will soon weed out the roots of her conspiracy.  The cost of their betrayal was high, but thanks to your successful strike, news of this victory will pass to every officer in the fleet, and we will emerge stronger for it.  The Excoriator plot ran deep, but surely not all the men left crewing her had been twisted against justice and the rule of law.  These innocent victims, like those at Bilbringi, will remind all of us to remain vigilant, so that such tragedies never again become necessary", -1)
+    XSTR("Excoriator is gone, and we will soon weed out the roots of the conspiracy that took place here.  
+The cost of their betrayal was high but thanks to your successful strike, news of this victory will pass to every officer in the fleet and we will emerge stronger for it.
+The Excoriator plot ran deep, but not all of the men left crewing her had been twisted against justice and the rule of law.
+These innocent victims, like those at Bilbringi will remind all of us to remain vigilant in the future.", -1)
 $end_multi_text
 $Voice: I1_M5_db2.ogg
 $Recommendation text:
@@ -633,7 +650,8 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("Putting aside the events of today's engagement, your tour is scheduled to end tomorrow, and you are no doubt curious as to where your next assignment will take you.", -1)
+    XSTR("Putting aside the events of today's engagement, your current tour is scheduled to end tomorrow.
+I’m sure you are curious as to know where your next assignment will take you.", -1)
 $end_multi_text
 $Voice: I1_M5_db3.ogg
 $Recommendation text:
@@ -653,7 +671,10 @@ $Formula: ( and
    ( = @Performance[1] 0 ) 
 )
 $Multi text
-    XSTR("In spite of your outstanding natural ability, your time on Convictor has been a disappointment to myself and the senior staff.  It is our opinion that you could better serve the Empire in a less critical command position$semicolon therefore, you are to be transferred to the Dreadnaught Reprisal where you will serve as a flight leader in her second squadron.  Dismissed.", -1)
+    XSTR("Your time here on Convictor has been a disappointment to say the least.  
+The senior staff and I believe you could better serve the Empire in a less demanding role.
+You are hereby reassigned to the Dreadnaught Reprisal where you will serve as flight leader in her second squadron. 
+Dismissed.", -1)
 $end_multi_text
 $Voice: I1_M5_db4.ogg
 $Recommendation text:
@@ -673,11 +694,15 @@ $Formula: ( and
    ( = @Performance[1] 1 ) 
 )
 $Multi text
-    XSTR("Although you have demonstrated an impressive natural aptitude for flying, our strategic enfeeblement during your tenure indicates that a smaller scale command might suit you better.  I have arranged for your transferal to the Victory II-class Star Destroyer Furious in the Outer Rim.  Perform well there and you can expect to be promoted and removed from active flight duty within a year.  Good luck with your career.", -1)
+    XSTR("Although you have demonstrated a natural ability at flying, the upset caused during your tenure indicates to me that a smaller scale command would suit you better.  
+I have arranged for your transferal to the Star Destroyer Furious in the Outer Rim territories.
+If you perform well there, a period of service leave may be possible within a year.
+Good luck with your career.", -1)
 $end_multi_text
 $Voice: I1_M5_db5.ogg
 $Recommendation text:
-    XSTR(" Your command performance was poor.  To obtain a better result, retry missions if their debriefings make it clear that you could have done better.", -1)
+    XSTR("Your command performance was poor.
+To obtain a better result, retry missions if their debriefings make it clear that you could have done better.", -1)
 $end_multi_text
 
 $Formula: ( and 
@@ -693,12 +718,15 @@ $Formula: ( and
    ( = @Performance[1] 2 ) 
 )
 $Multi text
-    XSTR("Your name and performance have caught the attention of Admiral Motti, and you are to be transferred to Grand Moff Tarkin's new base in the Atrivis sector.  Though you cannot expect to hold the same level of direct command responsibility there as you experienced aboard Convictor, you will soon find yourself in the company of the best pilots in the galaxy.  Good luck with your new assignment.
-", -1)
+    XSTR("Your performance level has been brought to the attention of Admiral Motti.
+He thinks a transfer to Tarkin's new base in the Atrivis sector will be eye-opening for you.
+You will not hold the same level of command responsibility, but you will have equally important duties to perform.
+Good luck with your new assignment.", -1)
 $end_multi_text
 $Voice: I1_M5_db6.ogg
 $Recommendation text:
-    XSTR("You performed adequately in your tour.  More aggressive pursuit of secondary objectives will yield better results.", -1)
+    XSTR("You performed adequately in your tour.  
+A more aggressive pursuit of secondary objectives will yield better results.", -1)
 $end_multi_text
 
 $Formula: ( and 
@@ -714,11 +742,15 @@ $Formula: ( and
    ( = @Performance[1] 3 ) 
 )
 $Multi text
-    XSTR("Your exemplary record indicates that you could be of great service to the Empire in a training role.  It seems that one of the chief instructors at the Prefsbelt IV Naval Academy has been unexpectedly reassigned to active duty, and I have recommended you for the position.  This should prove to be an excellent opportunity to advance your career.  Good luck, Commander.", -1)
+    XSTR("Your exemplary record indicates that you could be of great service to the Empire as an instructor.
+A chief instructor at the Prefsbelt IV Naval Academy has been reassigned and I have put in a recommendation for you to be his replacement. 
+This should prove to be an excellent opportunity for career advancement.
+Good luck Commander.", -1)
 $end_multi_text
 $Voice: I1_M5_db7.ogg
 $Recommendation text:
-    XSTR("While your tour of duty was a solid success, there was one mission where your performance was less than exemplary.  More aggressive pursuit of secondary objectives can yield an even better result.", -1)
+    XSTR("While your tour of duty was a solid success, there was one mission where your performance was less than exemplary.  
+A more aggressive pursuit of secondary objectives will yield an even better result.", -1)
 $end_multi_text
 
 $Formula: ( and 
@@ -734,11 +766,16 @@ $Formula: ( and
    ( = @Performance[1] 4 ) 
 )
 $Multi text
-    XSTR("I have taken the liberty of submitting your flight recordings and performance evaluations to Lord Vader, and you have been accepted into his elite Black Squadron.  There can be no greater honor than to fly alongside the Emperor's most trusted agent and the best star pilot in the galaxy.  You have brought great prestige to Convictor and her crew.  I salute your accomplishment.  Take the X1 prototype and rendezvous with Devastator as soon as the fleet is reassembled.  Congratulations, Commander.", -1)
+    XSTR("I recently submitted your performance evaluations to Lord Vader.
+You have been accepted into his elite Black Squadron.  
+There can be no greater honor than to fly alongside the Emperor's most trusted agent.
+You have brought great prestige to the Convictor and her crew, and I salute your accomplishment. 
+ Take the X1 prototype and rendezvous with Devastator as soon as the fleet is reassembled.  Congratulations Commander.", -1)
 $end_multi_text
 $Voice: I1_M5_db8.ogg
 $Recommendation text:
-    XSTR("This is the highest honor you can hope to receive.  Your tour of duty was a resounding success.", -1)
+    XSTR("This is the highest honor you can hope to receive.  
+Your tour of duty was a resounding success.", -1)
 $end_multi_text
 
 $Formula: ( or 
@@ -809,11 +846,15 @@ $Formula: ( and
    )
 )
 $Multi text
-    XSTR("You have been found guilty of the crime of treason against the Emperor, and are to be executed immediately.  This betrayal is particularly disappointing coming from such a gifted and well bred individual.  You have not only failed yourself, your fleet, and your Emperor, but your family too will lose everything.  Be thankful that the circumstances of our deployment have spared you from Lord Vader's tender mercies.  You have one hour to prepare yourself.", -1)
+    XSTR("You have been found guilty of treason against the Empire and are to be executed.  
+This betrayal is particularly disappointing coming from an individual such as yourself.
+Not only have you failed the Emperor, but you have also failed your family, as they too will now lose all standing they have in Imperial society.
+Be thankful that the circumstances of our deployment have spared you from Vaders hand.
+You have one hour to prepare yourself.", -1)
 $end_multi_text
 $Voice: I1_Traitor.ogg
 $Recommendation text:
-    XSTR("Refrain from shooting friendly targets.", -1)
+    XSTR("Do not fire upon friendly craft.", -1)
 $end_multi_text
 
 #Players		;! 1 total
@@ -2818,7 +2859,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2849,7 +2889,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2879,7 +2918,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2909,7 +2947,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Subsystem: Pilot
 +Secondary Banks: ( "Krupx MG7-A" "" )
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2938,7 +2975,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -2967,7 +3003,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Shields: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -3300,8 +3335,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Escort priority: 20
-+Special Hitpoints: 1000
-+Special Shield Points: 500
 +Orders Accepted: 0		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
@@ -3479,15 +3512,17 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
++Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "no-shields" )
 +Flags2: ( "no_collide" )
 +Respawn priority: 0
++Group: 0
 +Score: 10
 
 #Wings		;! 9 total
@@ -6330,19 +6365,22 @@ $end_multi_text
 
 $Name: Ors - Surely Not
 $Team: -1
-$MessageNew:  XSTR("The damage we are reading couldn't possibly have taken so many--where is your crew?", -1)
+$MessageNew:  XSTR("The damage we are reading couldn't possibly have caused the loss of so many. Where is your crew?", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_2.ogg
 
 $Name: Ber - Offloaded the troops
 $Team: -1
-$MessageNew:  XSTR("We have evacuated most of the surviviors to the 5th moon.  All escape pods have been jettisoned.  The captain knew we would not survive a renewed attack.  Before he died, he ordered the deployment of the mobile garrison base an--", -1)
+$MessageNew:  XSTR("We have evacuated most of the surviviors to the fifth moon.  All escape pods have been jettisoned.  The captain knew we wouldn't survive a renewed attack.  Before he died, he ordered the deployment of the mobile garrison base and...", -1)
 $end_multi_text
 +Wave Name: I1_M5_Berent_3.ogg
 
 $Name: Ors - Ors knows what's up
 $Team: -1
-$MessageNew:  XSTR("--and they are to believe their officers have stayed behind to scuttle the ship.  How good of you, Commander.", -1)
+$MessageNew:  XSTR("And they are to believe their officers have stayed behind to scuttle the ship?
+
+
+How good of you Commander.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_3.ogg
 
@@ -6354,19 +6392,19 @@ $end_multi_text
 
 $Name: Ors - Be Serious
 $Team: -1
-$MessageNew:  XSTR("Be serious, Commander.  Your situation is hopeless.  As your superior officer, I am ordering you to stand down immediately, if not for yourself then for the sake of your officers.", -1)
+$MessageNew:  XSTR("Look around you Commander. Your situation is hopeless.  As your superior officer I am ordering you to stand down immediately.If not for yourself then for the sake of your comrades.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_4.ogg
 
 $Name: Ber - No way man you suck
 $Team: -1
-$MessageNew:  XSTR("We're all dead men either way.  No, we won't stand down, not after Thisspias.  We've fought too hard for the Empire to see men like you and Tarkin destroy it. You will never set foot on my bridge.  Forgive me, sir.", -1)
+$MessageNew:  XSTR("We're all dead men either way.  No, we won't stand down. Not after Thisspias.  We've fought too hard for the Empire to see men like you and Tarkin destroy it. You will never set foot on my bridge.  Forgive me sir.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Berent_5.ogg
 
 $Name: Ors - Whatever kill them
 $Team: -1
-$MessageNew:  XSTR("As I thought.  Your deaths will serve the Emperor as a warning to all officers who are tempted to break their oaths.  Alpha, continue with your attack.  We will bring our weapons to bear as soon as Beta wing penetrates the outer defenses.  For the greater glory of the Empire.  Do your duty.", -1)
+$MessageNew:  XSTR("Your deaths will serve as a warning to all who consider breaking their allegiance to the empire. Alpha, continue with your attack.  We will bring our weapons to bear as soon as Beta wing penetrates the outer defenses.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_5.ogg
 
@@ -6396,7 +6434,7 @@ $end_multi_text
 
 $Name: Ors - Destroy engines nao
 $Team: -1
-$MessageNew:  XSTR("That ship should be dead in space by now, Alpha! Stop them!", -1)
+$MessageNew:  XSTR("That ship should be dead in space by now. Alpha! Stop them!", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_7.ogg
 
@@ -6420,19 +6458,19 @@ $end_multi_text
 
 $Name: Ors - Alpha 1 Traitor
 $Team: -1
-$MessageNew:  XSTR("Your family will pay the price for this treason, Wing Commander.  Fighters, destroy Alpha 1!", -1)
+$MessageNew:  XSTR("Your family will pay the price for this treason wing commander. All fighters, destroy Alpha 1!", -1)
 $end_multi_text
 +Wave Name: I1_M5_Ors_9.ogg
 
 $Name: Ber - Hey thanks buddy
 $Team: -1
-$MessageNew:  XSTR("We thank you, pilot, but you can't save us.  Our engineers are attempting to escape in our last Lambda shuttle.  Any assistance you can render would be most appreciated.", -1)
+$MessageNew:  XSTR("We thank you pilot, but you can't save us.  Our engineers are attempting to escape in our last Lambda shuttle.  Any assistance you can render would be most appreciated.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Berent_6.ogg
 
 $Name: Ber - Escape Coordinates
 $Team: -1
-$MessageNew:  XSTR("They're away.  You've done a great service, pilot.  I'm transmitting secured coordinates that will take you to safety.  Tell Lurik we died well.", -1)
+$MessageNew:  XSTR("They're away.  You've done a great service pilot.  I'm transmitting secured coordinates that will take you to safety.  Tell Lurik we died well.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Berent_7.ogg
 
@@ -6448,7 +6486,7 @@ $end_multi_text
 
 $Name: Ber - Shuttle Saved, no TIE Ad
 $Team: -1
-$MessageNew:  XSTR("They're away.  You've done a great service, pilot.", -1)
+$MessageNew:  XSTR("They're away.  You've done a great service pilot.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Berent_9.ogg
 
@@ -6486,7 +6524,7 @@ $end_multi_text
 
 $Name: Gun - Incoming
 $Team: -1
-$MessageNew:  XSTR("Our guns are set to engage Excoriator at range. Heads up, fighters.", -1)
+$MessageNew:  XSTR("Our guns are set to engage Excoriator at range. Heads up fighters.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Gun_3.ogg
 
@@ -6497,7 +6535,7 @@ $end_multi_text
 
 $Name: Gun - Disabled
 $Team: -1
-$MessageNew:  XSTR("Good job, fighters.  Now stand clear and let the big guns do the rest.", -1)
+$MessageNew:  XSTR("Good job fighters.  Now stand clear and let the big guns do the rest.", -1)
 $end_multi_text
 +Wave Name: I1_M5_Gun_4.ogg
 
@@ -6513,7 +6551,7 @@ $end_multi_text
 
 $Name: Ex Gone
 $Team: -1
-$MessageNew:  XSTR("Excoriator has been destroyed. Mission success, return to hangar. ", -1)
+$MessageNew:  XSTR("Excoriator has been destroyed. Mission success. Return to hangar. ", -1)
 $end_multi_text
 
 #Reinforcements		;! 3 total

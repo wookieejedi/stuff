@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("Burden of Command", -1)
 $Author: TopAce/swash
 $Created: 03/14/11 at 12:03:36
-$Modified: 01/11/20 at 14:13:26
+$Modified: 01/16/20 at 17:27:36
 $Notes:
 $End Notes:
 
@@ -21,11 +21,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 2704.848633, 10305.910156, 13578.057617
++Viewer pos: 920.000000, 7009.700195, 2368.899902
 +Viewer orient:
-	-0.991781, 0.000000, 0.127951,
-	-0.100114, 0.622729, -0.776007,
-	-0.079679, -0.782438, -0.617610
+	1.000000, 0.000000, -0.000000,
+	0.000000, 0.003595, 0.999994,
+	0.000000, -0.999994, 0.003595
 
 $Starting wing names: ( "Alpha" "Be" "Gam" )
 $Squadron wing names: ( "Alpha" "Be" "Gam" "De" "Eps" )
@@ -37,14 +37,14 @@ $AI Profile: FOTG
 #Command Briefing
 
 $Stage Text:
- XSTR("Congratulations on earning your posting to my ship, Commander$semicolon I look forward to evaluating the performance of our 
-fighter wing under your supervision.  Let's get right to it, then.  I know of your family, and don't think for a moment that there 
-will be any special treatment for you here aboard Convictor.  This is not some Moff's pleasure yacht.
+ XSTR("Congratulations Commander on earning a position aboard my ship. 
+I look forward to evaluating the performance of our fighter wing under your supervision.  
+Here aboard Convictor you will be directly involved in combat operations.
+For your initial tour I have assigned Lieutenant Grilner to serve as your wing duty officer.
+He will brief you on the operational status of our forces upon your arrival.
 
-On this tour you will see action and you will lose pilots.  I answer directly to Lord Vader himself, and I can assure you he is not interested in your family line.  Serve the Emperor well, and you will be rewarded.  Fail him, and you will wish you had died serving him well.  I have assigned Lieutenant Grilner to serve as your wing duty officer on the bridge$semicolon he will brief you on your force's current operational status upon your arrival.
-
--Captain Heillus Ors
-Imperial Star Destroyer Convictor", -1)
+-Captain H. Ors. 
+Imperial Star Destroyer Convictor.", -1)
 $end_multi_text
 $Ani Filename: CB_imp
 +Wave Filename: I1_M1_cb1.ogg
@@ -415,7 +415,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -443,7 +442,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -470,7 +468,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -497,7 +494,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1045,7 +1041,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1074,7 +1069,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1103,7 +1097,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1235,7 +1228,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1263,7 +1255,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1291,7 +1282,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1319,7 +1309,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1601,7 +1590,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1629,7 +1617,6 @@ $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
 +Sbank Ammo: ( 100 0 )
-+Subsystem: BombTurret
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace

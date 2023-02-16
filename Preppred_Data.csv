@@ -1,465 +1,465 @@
-Site_ID,Year,Month,Data_Name_Primary,Data_Name_Secondary,Value
-11,2007,11,Porites,astreoides,1
-13,2007,11,Diploria,labyrinthiformis,6
-13,2007,11,Porites,astreoides,3
-15,2007,11,Diploria,labyrinthiformis,1
-15,2007,11,Pseudodiploria,strigosa,1
-24,2007,11,Diploria,labyrinthiformis,6
-32,2007,11,Recruits,,5
-32,2007,11,Montastraea,cavernosa,1
-32,2007,11,Diploria,labyrinthiformis,18
-32,2007,11,Pseudodiploria,strigosa,7
-32,2007,11,Colpophyllia,natans,1
-32,2007,11,Porites,astreoides,3
-41,2007,11,Diploria,labyrinthiformis,2
-41,2007,11,Pseudodiploria,strigosa,1
-41,2007,11,Porites,astreoides,2
-42,2007,11,Meandrina,meandrites,1
-50,2007,11,Diploria,labyrinthiformis,2
-51,2007,11,Diploria,labyrinthiformis,1
-52,2007,11,Recruits,,1
-52,2007,11,Diploria,labyrinthiformis,3
-52,2007,11,Pseudodiploria,strigosa,3
-37,2008,5,Diploria,labyrinthiformis,2
-37,2008,5,Porites,astreoides,1
-38,2008,5,Diploria,labyrinthiformis,1
-38,2008,5,Porites,astreoides,1
-39,2008,5,Diploria,labyrinthiformis,8
-39,2008,5,Pseudodiploria,strigosa,3
-39,2008,5,Agaricia,sp.,8
-39,2008,5,Porites,astreoides,1
-39,2008,5,Dichocoenia,stokesi,3
-A,2008,5,Recruits,,4
-A,2008,5,Diploria,labyrinthiformis,5
-A,2008,5,Colpophyllia,natans,1
-A,2008,5,Agaricia,sp.,6
-A,2008,5,Porites,astreoides,3
-A,2008,5,Favia,fragum,4
-A,2008,5,Dichocoenia,stokesi,6
-G,2008,5,Diploria,labyrinthiformis,2
-G,2008,5,Porites,astreoides,1
-K,2008,5,Diploria,labyrinthiformis,2
-R,2008,5,Montastraea,cavernosa,1
-R,2008,5,Agaricia,sp.,1
-G,2008,11,Diploria,labyrinthiformis,1
-G,2008,11,Porites,astreoides,1
-I,2008,11,Diploria,labyrinthiformis,1
-I,2008,11,Pseudodiploria,strigosa,2
-1,2009,4,Diploria,labyrinthiformis,1
-1,2009,4,Pseudodiploria,strigosa,1
-1,2009,4,Porites,astreoides,1
-4,2009,4,Pseudodiploria,strigosa,2
-4,2009,4,Porites,astreoides,7
-5,2009,4,Diploria,labyrinthiformis,2
-5,2009,4,Porites,astreoides,2
-5,2009,4,Favia,meandrites,1
-6,2009,4,Montastraea,cavernosa,2
-6,2009,4,Diploria,labyrinthiformis,1
-6,2009,4,Pseudodiploria,strigosa,3
-6,2009,4,Colpophyllia,natans,2
-6,2009,4,Agaricia,sp.,5
-6,2009,4,Porites,astreoides,3
-9,2009,4,Porites,astreoides,1
-32,2009,4,Recruits,,1
-32,2009,4,Montastraea,cavernosa,2
-32,2009,4,Diploria,labyrinthiformis,18
-32,2009,4,Pseudodiploria,strigosa,8
-32,2009,4,Agaricia,sp.,3
-32,2009,4,Porites,astreoides,1
-32,2009,4,Favia,fragum,2
-37,2009,4,Pseudodiploria,strigosa,1
-38,2009,4,Porites,astreoides,2
-44,2009,4,Diploria,labyrinthiformis,1
-45,2009,4,Diploria,labyrinthiformis,4
-45,2009,4,Porites,astreoides,1
-V,2009,4,Agaricia,sp.,4
-V,2009,4,Porites,porites,1
-V,2009,4,Meandrina,meandrites,1
-1,2009,8,Pseudodiploria,strigosa,1
-1,2009,8,Colpophyllia,natans,1
-1,2009,8,Porites,astreoides,1
-5,2009,8,Recruits,,2
-5,2009,8,Diploria,labyrinthiformis,1
-5,2009,8,Porites,astreoides,7
-5,2009,8,Favia,fragum,1
-6,2009,8,Recruits,,1
-6,2009,8,Montastraea,annularis,3
-6,2009,8,Montastraea,cavernosa,4
-6,2009,8,Diploria,labyrinthiformis,2
-6,2009,8,Pseudodiploria,strigosa,2
-6,2009,8,Colpophyllia,natans,1
-6,2009,8,Agaricia,sp.,3
-6,2009,8,Porites,astreoides,7
-9,2009,8,Madracis,mirabilis,1
-37,2009,8,Diploria,labyrinthiformis,1
-37,2009,8,Pseudodiploria,strigosa,2
-37,2009,8,Agaricia,sp.,11
-37,2009,8,Porites,astreoides,1
-38,2009,8,Porites,astreoides,2
-38,2009,8,Diploria,labyrinthiformis,1
-41,2009,8,Diploria,labyrinthiformis,3
-41,2009,8,Pseudodiploria,strigosa,1
-41,2009,8,Agaricia,sp.,5
-41,2009,8,Porites,astreoides,1
-44,2009,8,Montastraea,annularis,1
-44,2009,8,Montastraea,cavernosa,2
-44,2009,8,Porites,astreoides,1
-45,2009,8,Favia,fragum,1
-50,2009,8,Montastraea,annularis,
-50,2009,8,Diploria,labyrinthiformis,7
-50,2009,8,Meandrina,meandrites,1
-53,2009,8,Montastraea,cavernosa,2
-53,2009,8,Diploria,labyrinthiformis,1
-60,2009,8,Pseudodiploria,strigosa,1
-A,2009,8,Recruits,,2
-A,2009,8,Diploria,labyrinthiformis,4
-A,2009,8,Agaricia,sp.,3
-A,2009,8,Porites,astreoides,4
-A,2009,8,Favia,fragum,1
-A,2009,8,Dichocoenia,stokesi,12
-I,2009,8,Diploria,labyrinthiformis,1
-I,2009,8,Agaricia,sp.,4
-5,2009,12,Diploria,labyrinthiformis,3
-5,2009,12,Porites,astreoides,7
-5,2009,12,Dichocoenia,stokesi,5
-6,2009,12,Diploria,labyrinthiformis,4
-6,2009,12,Pseudodiploria,strigosa,5
-6,2009,12,Agaricia,sp.,6
-6,2009,12,Porites,astreoides,5
-6,2009,12,Dichocoenia,stokesi,1
-9,2009,12,Montastraea,cavernosa,1
-9,2009,12,Porites,astreoides,1
-18,2009,12,Diploria,labyrinthiformis,1
-18,2009,12,Pseudodiploria,strigosa,1
-18,2009,12,Porites,astreoides,1
-32,2009,12,Diploria,labyrinthiformis,17
-32,2009,12,Pseudodiploria,strigosa,3
-32,2009,12,Colpophyllia,natans,1
-32,2009,12,Agaricia,sp.,3
-32,2009,12,Porites,astreoides,1
-37,2009,12,Diploria,labyrinthiformis,1
-37,2009,12,Pseudodiploria,strigosa,1
-37,2009,12,Colpophyllia,natans,1
-37,2009,12,Agaricia,sp.,10
-37,2009,12,Porites,astreoides,3
-38,2009,12,Diploria,labyrinthiformis,1
-38,2009,12,Agaricia,sp.,1
-38,2009,12,Porites,astreoides,3
-38,2009,12,Dichocoenia,stokesi,7
-40,2009,12,Montastraea,cavernosa,4
-40,2009,12,Diploria,labyrinthiformis,33
-40,2009,12,Pseudodiploria,strigosa,3
-40,2009,12,Agaricia,sp.,1
-40,2009,12,Porites,astreoides,1
-40,2009,12,Dichocoenia,stokesi,11
-41,2009,12,Diploria,labyrinthiformis,3
-41,2009,12,Pseudodiploria,strigosa,1
-41,2009,12,Agaricia,sp.,9
-41,2009,12,Porites,astreoides,1
-44,2009,12,Recruits,,1
-44,2009,12,Montastraea,cavernosa,2
-44,2009,12,Diploria,labyrinthiformis,1
-44,2009,12,Pseudodiploria,strigosa,1
-44,2009,12,Agaricia,sp.,16
-44,2009,12,Porites,astreoides,1
-45,2009,12,Agaricia,sp.,1
-45,2009,12,Dichocoenia,stokesi,3
-48,2009,12,Diploria,labyrinthiformis,25
-48,2009,12,Pseudodiploria,strigosa,3
-48,2009,12,Agaricia,sp.,21
-48,2009,12,Porites,porites,1
-48,2009,12,Porites,astreoides,7
-48,2009,12,Dichocoenia,stokesi,1
-50,2009,12,Diploria,labyrinthiformis,3
-50,2009,12,Agaricia,sp.,1
-53,2009,12,Agaricia,sp.,2
-60,2009,12,Diploria,labyrinthiformis,2
-60,2009,12,Pseudodiploria,strigosa,1
-60,2009,12,Agaricia,sp.,3
-60,2009,12,Porites,astreoides,2
-60,2009,12,Favia,fragum,1
-60,2009,12,Dichocoenia,stokesi,2
-I,2009,12,Diploria,labyrinthiformis,1
-I,2009,12,Agaricia,sp.,4
-I,2009,12,Dichocoenia,stokesi,1
-V,2009,12,Agaricia,sp.,1
-V,2009,12,Meandrina,meandrites,1
-1,2010,4,Colpophyllia,natans,1
-5,2010,4,Recruits,,1
-5,2010,4,Diploria,labyrinthiformis,3
-5,2010,4,Porites,astreoides,7
-5,2010,4,Dichocoenia,stokesi,2
-6,2010,4,Montastraea,cavernosa,4
-6,2010,4,Diploria,labyrinthiformis,3
-6,2010,4,Pseudodiploria,strigosa,4
-6,2010,4,Colpophyllia,natans,1
-6,2010,4,Agaricia,sp.,7
-6,2010,4,Porites,astreoides,3
-9,2010,4,Agaricia,sp.,1
-9,2010,4,Porites,astreoides,1
-32,2010,4,Montastraea,cavernosa,2
-32,2010,4,Diploria,labyrinthiformis,17
-32,2010,4,Pseudodiploria,strigosa,3
-32,2010,4,Agaricia,sp.,5
-32,2010,4,Porites,astreoides,1
-37,2010,4,Diploria,labyrinthiformis,1
-37,2010,4,Pseudodiploria,strigosa,1
-37,2010,4,Agaricia,sp.,14
-37,2010,4,Porites,astreoides,3
-37,2010,4,Dichocoenia,stokesi,1
-38,2010,4,Diploria,labyrinthiformis,1
-38,2010,4,Agaricia,sp.,1
-38,2010,4,Porites,astreoides,3
-38,2010,4,Favia,fragum,7
-40,2010,4,Montastraea,cavernosa,4
-40,2010,4,Diploria,labyrinthiformis,21
-40,2010,4,Pseudodiploria,strigosa,3
-40,2010,4,Agaricia,sp.,1
-40,2010,4,Porites,astreoides,3
-40,2010,4,Dichocoenia,stokesi,12
-41,2010,4,Diploria,labyrinthiformis,3
-41,2010,4,Pseudodiploria,strigosa,1
-41,2010,4,Agaricia,sp.,12
-41,2010,4,Porites,astreoides,2
-44,2010,4,Montastraea,cavernosa,2
-44,2010,4,Pseudodiploria,strigosa,1
-44,2010,4,Agaricia,sp.,19
-44,2010,4,Porites,porites,1
-44,2010,4,Porites,astreoides,1
-45,2010,4,Agaricia,sp.,2
-45,2010,4,Dichocoenia,stokesi,4
-50,2010,4,Diploria,labyrinthiformis,2
-50,2010,4,Agaricia,sp.,4
-53,2010,4,Agaricia,sp.,8
-53,2010,4,Porites,astreoides,1
-60,2010,4,Montastraea,cavernosa,1
-60,2010,4,Diploria,labyrinthiformis,1
-60,2010,4,Pseudodiploria,strigosa,1
-60,2010,4,Agaricia,sp.,7
-60,2010,4,Porites,astreoides,1
-60,2010,4,Favia,fragum,3
-60,2010,4,Dichocoenia,stokesi,9
-A,2010,4,Diploria,labyrinthiformis,5
-A,2010,4,Agaricia,sp.,1
-A,2010,4,Porites,astreoides,1
-I,2010,4,Diploria,labyrinthiformis,1
-I,2010,4,Agaricia,sp.,15
-I,2010,4,Dichocoenia,stokesi,1
-V,2010,4,Montastraea,cavernosa,1
-V,2010,4,Agaricia,sp.,5
-V,2010,4,Meandrina,meandrites,1
-9,2010,12,Montastraea,cavernosa,1
-9,2010,12,Agaricia,sp.,1
-9,2010,12,Porites,astreoides,1
-32,2010,12,Montastraea,cavernosa,2
-32,2010,12,Diploria,labyrinthiformis,14
-32,2010,12,Pseudodiploria,strigosa,3
-32,2010,12,Colpophyllia,natans,1
-32,2010,12,Agaricia,sp.,2
-32,2010,12,Porites,astreoides,1
-32,2010,12,Dichocoenia,stokesi,2
-36,2010,12,Agaricia,sp.,1
-36,2010,12,Dichocoenia,stokesi,2
-37,2010,12,Diploria,labyrinthiformis,1
-37,2010,12,Colpophyllia,natans,1
-37,2010,12,Agaricia,sp.,10
-37,2010,12,Porites,astreoides,1
-37,2010,12,Solenastrea,sp.,1
-40,2010,12,Montastraea,cavernosa,2
-40,2010,12,Diploria,labyrinthiformis,30
-40,2010,12,Colpophyllia,natans,3
-40,2010,12,Agaricia,sp.,1
-40,2010,12,Porites,astreoides,1
-40,2010,12,Favia,fragum,5
-40,2010,12,Dichocoenia,stokesi,1
-41,2010,12,Diploria,labyrinthiformis,2
-41,2010,12,Pseudodiploria,strigosa,1
-41,2010,12,Agaricia,sp.,18
-41,2010,12,Porites,astreoides,2
-44,2010,12,Montastraea,cavernosa,1
-44,2010,12,Agaricia,sp.,16
-44,2010,12,Porites,porites,1
-44,2010,12,Porites,astreoides,1
-44,2010,12,Meandrina,meandrites,1
-45,2010,12,Agaricia,sp.,8
-45,2010,12,Dichocoenia,stokesi,2
-48,2010,12,Diploria,labyrinthiformis,22
-48,2010,12,Pseudodiploria,strigosa,2
-48,2010,12,Agaricia,sp.,11
-48,2010,12,Porites,astreoides,6
-48,2010,12,Favia,fragum,2
-48,2010,12,Dichocoenia,stokesi,4
-50,2010,12,Diploria,labyrinthiformis,3
-50,2010,12,Agaricia,sp.,2
-53,2010,12,Agaricia,sp.,5
-53,2010,12,Solenastrea,sp.,1
-60,2010,12,Montastraea,cavernosa,1
-60,2010,12,Diploria,labyrinthiformis,2
-60,2010,12,Colpophyllia,natans,1
-60,2010,12,Agaricia,sp.,2
-60,2010,12,Dichocoenia,stokesi,2
-A,2010,12,Diploria,labyrinthiformis,9
-A,2010,12,Agaricia,sp.,2
-A,2010,12,Porites,astreoides,6
-A,2010,12,Meandrina,meandrites,1
-A,2010,12,Favia,fragum,12
-A,2010,12,Dichocoenia,stokesi,7
-G,2010,12,Diploria,labyrinthiformis,3
-G,2010,12,Agaricia,sp.,6
-G,2010,12,Porites,astreoides,1
-I,2010,12,Diploria,labyrinthiformis,1
-I,2010,12,Agaricia,sp.,4
-I,2010,12,Dichocoenia,stokesi,1
-V,2010,12,Agaricia,sp.,6
-V,2010,12,Meandrina,meandrites,1
-5,2011,4,Recruits,,3
-5,2011,4,Diploria,labyrinthiformis,3
-5,2011,4,Agaricia,sp.,1
-5,2011,4,Porites,astreoides,5
-5,2011,4,Favia,fragum,1
-5,2011,4,Dichocoenia,stokesi,1
-6,2011,4,Recruits,,4
-6,2011,4,Diploria,labyrinthiformis,2
-6,2011,4,Pseudodiploria,strigosa,6
-6,2011,4,Agaricia,sp.,6
-6,2011,4,Porites,astreoides,3
-6,2011,4,Stephanocoenia,intersepta,7
-9,2011,4,Montastraea,cavernosa,1
-9,2011,4,Agaricia,sp.,1
-9,2011,4,Porites,astreoides,1
-12,2011,4,Recruits,,3
-12,2011,4,Agaricia,sp.,1
-32,2011,4,Recruits,,2
-32,2011,4,Montastraea,cavernosa,4
-32,2011,4,Diploria,labyrinthiformis,16
-32,2011,4,Pseudodiploria,strigosa,3
-32,2011,4,Colpophyllia,natans,2
-32,2011,4,Agaricia,sp.,7
-32,2011,4,Porites,astreoides,1
-37,2011,4,Recruits,,6
-37,2011,4,Diploria,labyrinthiformis,2
-37,2011,4,Pseudodiploria,strigosa,1
-37,2011,4,Agaricia,sp.,5
-37,2011,4,Porites,astreoides,5
-40,2011,4,Recruits,,5
-40,2011,4,Montastraea,cavernosa,1
-40,2011,4,Diploria,labyrinthiformis,26
-40,2011,4,Pseudodiploria,strigosa,4
-40,2011,4,Porites,astreoides,2
-41,2011,4,Recruits,,9
-41,2011,4,Diploria,labyrinthiformis,3
-41,2011,4,Pseudodiploria,strigosa,1
-41,2011,4,Agaricia,sp.,16
-41,2011,4,Porites,astreoides,1
-44,2011,4,Recruits,,15
-44,2011,4,Montastraea,annularis,1
-44,2011,4,Pseudodiploria,strigosa,1
-44,2011,4,Agaricia,sp.,14
-44,2011,4,Porites,astreoides,1
-45,2011,4,Recruits,,9
-50,2011,4,Recruits,,6
-50,2011,4,Diploria,labyrinthiformis,3
-50,2011,4,Agaricia,sp.,3
-53,2011,4,Recruits,,6
-53,2011,4,Agaricia,sp.,6
-53,2011,4,Porites,astreoides,1
-60,2011,4,Recruits,,6
-60,2011,4,Montastraea,cavernosa,1
-60,2011,4,Diploria,labyrinthiformis,2
-60,2011,4,Pseudodiploria,strigosa,1
-A,2011,4,Recruits,,48
-A,2011,4,Diploria,labyrinthiformis,13
-A,2011,4,Pseudodiploria,strigosa,1
-A,2011,4,Agaricia,sp.,15
-A,2011,4,Porites,astreoides,8
-A,2011,4,Favia,fragum,4
-A,2011,4,Dichocoenia,stokesi,9
-G,2011,4,Dendrogyra,cylindrus,2
-G,2011,4,Agaricia,sp.,7
-G,2011,4,Porites,astreoides,1
-I,2011,4,Recruits,,17
-I,2011,4,Montastraea,annularis,1
-I,2011,4,Diploria,labyrinthiformis,2
-I,2011,4,Agaricia,sp.,5
-V,2011,4,Recruits,,1
-V,2011,4,Agaricia,sp.,4
-V,2011,4,Meandrina,meandrites,1
-6,2022,3,Diploria,labyrinthiformis,2
-6,2022,3,Pseudodiploria,strigosa,3
-6,2022,3,Agaricia,sp.,12
-6,2022,3,Porites,astreoides,6
-6,2022,3,Madracis,formosa,6
-9,2022,3,Pseudodiploria,strigosa,1
-9,2022,3,Agaricia,sp.,6
-9,2022,3,Porites,astreoides,4
-9,2022,3,Siderastrea,siderea/radians,1
-32,2022,3,Montastraea,cavernosa,3
-32,2022,3,Diploria,labyrinthiformis,2
-32,2022,3,Pseudodiploria,strigosa,1
-32,2022,3,Agaricia,sp.,4
-32,2022,3,Porites,astreoides,1
-32,2022,3,Dichocoenia,stokesi,3
-32,2022,3,Siderastrea,siderea/radians,1
-36,2022,3,Agaricia,sp.,3
-36,2022,3,Dichocoenia,stokesi,7
-40,2022,3,Montastraea,cavernosa,2
-40,2022,3,Diploria,labyrinthiformis,16
-40,2022,3,Pseudodiploria,strigosa,3
-40,2022,3,Agaricia,sp.,12
-40,2022,3,Dichocoenia,stokesi,2
-41,2022,3,Diploria,labyrinthiformis,3
-41,2022,3,Colpophyllia,natans,1
-41,2022,3,Agaricia,agaricites,1
-41,2022,3,Agaricia,sp.,66
-41,2022,3,Dichocoenia,stokesi,1
-44,2022,3,Recruits,,4
-44,2022,3,Diploria,labyrinthiformis,1
-44,2022,3,Pseudodiploria,strigosa,2
-44,2022,3,Agaricia,sp.,33
-44,2022,3,Porites,astreoides,2
-44,2022,3,Siderastrea,siderea/radians,1
-45,2022,3,Agaricia,sp.,27
-45,2022,3,Porites,astreoides,5
-45,2022,3,Dichocoenia,stokesi,13
-48,2022,3,Recruits,,5
-48,2022,3,Diploria,labyrinthiformis,3
-48,2022,3,Colpophyllia,,
-48,2022,3,Agaricia,sp.,1
-48,2022,3,Porites,astreoides,4
-48,2022,3,Dichocoenia,stokesi,16
-50,2022,3,Recruits,,3
-50,2022,3,Diploria,labyrinthiformis,3
-50,2022,3,Pseudodiploria,strigosa,2
-50,2022,3,Agaricia,agaricites,1
-50,2022,3,Agaricia,sp.,12
-50,2022,3,Porites,astreoides,2
-53,2022,3,Diploria,labyrinthiformis,2
-53,2022,3,Agaricia,sp.,9
-53,2022,3,Dichocoenia,stokesi,8
-60,2022,3,Recruits,,2
-60,2022,3,Montastraea,annularis,4
-60,2022,3,Diploria,labyrinthiformis,1
-60,2022,3,Agaricia,sp.,8
-60,2022,3,Porites,astreoides,1
-60,2022,3,Dichocoenia,stokesi,4
-60,2022,3,Siderastrea,siderea/radians,12
-A,2022,3,Recruits,,3
-A,2022,3,Diploria,labyrinthiformis,14
-A,2022,3,Pseudodiploria,strigosa,3
-A,2022,3,Colpophyllia,natans,1
-A,2022,3,Agaricia,agaricites,1
-A,2022,3,Agaricia,sp.,22
-A,2022,3,Porites,astreoides,9
-A,2022,3,Meandrina,meandrites,1
-A,2022,3,Dichocoenia,stokesi,15
-A,2022,3,Siderastrea,siderea/radians,5
-G,2022,3,Diploria,labyrinthiformis,2
-G,2022,3,Agaricia,sp.,23
-G,2022,3,Porites,astreoides,1
-G,2022,3,Dichocoenia,stokesi,13
-I,2022,3,Recruits,,5
-I,2022,3,Agaricia,sp.,56
-I,2022,3,Dichocoenia,stokesi,18
-V,2022,3,Agaricia,sp.,2
-V,2022,3,Meandrina,meandrites,1
-V,2022,3,Siderastrea,siderea/radians,2
+Site_ID,Year,Month,Date_Full,Data_Name_Primary,Data_Name_Secondary,Data_Name_Joined,Value
+11,2007,11,2007.875,Porites,astreoides,Porites astreoides,1
+13,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,6
+13,2007,11,2007.875,Porites,astreoides,Porites astreoides,3
+15,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+15,2007,11,2007.875,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+24,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,6
+32,2007,11,2007.875,Recruits,,Recruits ,5
+32,2007,11,2007.875,Montastraea,cavernosa,Montastraea cavernosa,1
+32,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,18
+32,2007,11,2007.875,Pseudodiploria,strigosa,Pseudodiploria strigosa,7
+32,2007,11,2007.875,Colpophyllia,natans,Colpophyllia natans,1
+32,2007,11,2007.875,Porites,astreoides,Porites astreoides,3
+41,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+41,2007,11,2007.875,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+41,2007,11,2007.875,Porites,astreoides,Porites astreoides,2
+42,2007,11,2007.875,Meandrina,meandrites,Meandrina meandrites,1
+50,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+51,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+52,2007,11,2007.875,Recruits,,Recruits ,1
+52,2007,11,2007.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+52,2007,11,2007.875,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+37,2008,5,2008.375,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+37,2008,5,2008.375,Porites,astreoides,Porites astreoides,1
+38,2008,5,2008.375,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+38,2008,5,2008.375,Porites,astreoides,Porites astreoides,1
+39,2008,5,2008.375,Diploria,labyrinthiformis,Diploria labyrinthiformis,8
+39,2008,5,2008.375,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+39,2008,5,2008.375,Agaricia,sp.,Agaricia sp.,8
+39,2008,5,2008.375,Porites,astreoides,Porites astreoides,1
+39,2008,5,2008.375,Dichocoenia,stokesi,Dichocoenia stokesi,3
+A,2008,5,2008.375,Recruits,,Recruits ,4
+A,2008,5,2008.375,Diploria,labyrinthiformis,Diploria labyrinthiformis,5
+A,2008,5,2008.375,Colpophyllia,natans,Colpophyllia natans,1
+A,2008,5,2008.375,Agaricia,sp.,Agaricia sp.,6
+A,2008,5,2008.375,Porites,astreoides,Porites astreoides,3
+A,2008,5,2008.375,Favia,fragum,Favia fragum,4
+A,2008,5,2008.375,Dichocoenia,stokesi,Dichocoenia stokesi,6
+G,2008,5,2008.375,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+G,2008,5,2008.375,Porites,astreoides,Porites astreoides,1
+K,2008,5,2008.375,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+R,2008,5,2008.375,Montastraea,cavernosa,Montastraea cavernosa,1
+R,2008,5,2008.375,Agaricia,sp.,Agaricia sp.,1
+G,2008,11,2008.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+G,2008,11,2008.875,Porites,astreoides,Porites astreoides,1
+I,2008,11,2008.875,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+I,2008,11,2008.875,Pseudodiploria,strigosa,Pseudodiploria strigosa,2
+1,2009,4,2009.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+1,2009,4,2009.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+1,2009,4,2009.291667,Porites,astreoides,Porites astreoides,1
+4,2009,4,2009.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,2
+4,2009,4,2009.291667,Porites,astreoides,Porites astreoides,7
+5,2009,4,2009.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+5,2009,4,2009.291667,Porites,astreoides,Porites astreoides,2
+5,2009,4,2009.291667,Favia,meandrites,Favia meandrites,1
+6,2009,4,2009.291667,Montastraea,cavernosa,Montastraea cavernosa,2
+6,2009,4,2009.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+6,2009,4,2009.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+6,2009,4,2009.291667,Colpophyllia,natans,Colpophyllia natans,2
+6,2009,4,2009.291667,Agaricia,sp.,Agaricia sp.,5
+6,2009,4,2009.291667,Porites,astreoides,Porites astreoides,3
+9,2009,4,2009.291667,Porites,astreoides,Porites astreoides,1
+32,2009,4,2009.291667,Recruits,,Recruits ,1
+32,2009,4,2009.291667,Montastraea,cavernosa,Montastraea cavernosa,2
+32,2009,4,2009.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,18
+32,2009,4,2009.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,8
+32,2009,4,2009.291667,Agaricia,sp.,Agaricia sp.,3
+32,2009,4,2009.291667,Porites,astreoides,Porites astreoides,1
+32,2009,4,2009.291667,Favia,fragum,Favia fragum,2
+37,2009,4,2009.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+38,2009,4,2009.291667,Porites,astreoides,Porites astreoides,2
+44,2009,4,2009.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+45,2009,4,2009.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,4
+45,2009,4,2009.291667,Porites,astreoides,Porites astreoides,1
+V,2009,4,2009.291667,Agaricia,sp.,Agaricia sp.,4
+V,2009,4,2009.291667,Porites,porites,Porites porites,1
+V,2009,4,2009.291667,Meandrina,meandrites,Meandrina meandrites,1
+1,2009,8,2009.625,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+1,2009,8,2009.625,Colpophyllia,natans,Colpophyllia natans,1
+1,2009,8,2009.625,Porites,astreoides,Porites astreoides,1
+5,2009,8,2009.625,Recruits,,Recruits ,2
+5,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+5,2009,8,2009.625,Porites,astreoides,Porites astreoides,7
+5,2009,8,2009.625,Favia,fragum,Favia fragum,1
+6,2009,8,2009.625,Recruits,,Recruits ,1
+6,2009,8,2009.625,Montastraea,annularis,Montastraea annularis,3
+6,2009,8,2009.625,Montastraea,cavernosa,Montastraea cavernosa,4
+6,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+6,2009,8,2009.625,Pseudodiploria,strigosa,Pseudodiploria strigosa,2
+6,2009,8,2009.625,Colpophyllia,natans,Colpophyllia natans,1
+6,2009,8,2009.625,Agaricia,sp.,Agaricia sp.,3
+6,2009,8,2009.625,Porites,astreoides,Porites astreoides,7
+9,2009,8,2009.625,Madracis,mirabilis,Madracis mirabilis,1
+37,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+37,2009,8,2009.625,Pseudodiploria,strigosa,Pseudodiploria strigosa,2
+37,2009,8,2009.625,Agaricia,sp.,Agaricia sp.,11
+37,2009,8,2009.625,Porites,astreoides,Porites astreoides,1
+38,2009,8,2009.625,Porites,astreoides,Porites astreoides,2
+38,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+41,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+41,2009,8,2009.625,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+41,2009,8,2009.625,Agaricia,sp.,Agaricia sp.,5
+41,2009,8,2009.625,Porites,astreoides,Porites astreoides,1
+44,2009,8,2009.625,Montastraea,annularis,Montastraea annularis,1
+44,2009,8,2009.625,Montastraea,cavernosa,Montastraea cavernosa,2
+44,2009,8,2009.625,Porites,astreoides,Porites astreoides,1
+45,2009,8,2009.625,Favia,fragum,Favia fragum,1
+50,2009,8,2009.625,Montastraea,annularis,Montastraea annularis,
+50,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,7
+50,2009,8,2009.625,Meandrina,meandrites,Meandrina meandrites,1
+53,2009,8,2009.625,Montastraea,cavernosa,Montastraea cavernosa,2
+53,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+60,2009,8,2009.625,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+A,2009,8,2009.625,Recruits,,Recruits ,2
+A,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,4
+A,2009,8,2009.625,Agaricia,sp.,Agaricia sp.,3
+A,2009,8,2009.625,Porites,astreoides,Porites astreoides,4
+A,2009,8,2009.625,Favia,fragum,Favia fragum,1
+A,2009,8,2009.625,Dichocoenia,stokesi,Dichocoenia stokesi,12
+I,2009,8,2009.625,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+I,2009,8,2009.625,Agaricia,sp.,Agaricia sp.,4
+5,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+5,2009,12,2009.958333,Porites,astreoides,Porites astreoides,7
+5,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,5
+6,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,4
+6,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,5
+6,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,6
+6,2009,12,2009.958333,Porites,astreoides,Porites astreoides,5
+6,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,1
+9,2009,12,2009.958333,Montastraea,cavernosa,Montastraea cavernosa,1
+9,2009,12,2009.958333,Porites,astreoides,Porites astreoides,1
+18,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+18,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+18,2009,12,2009.958333,Porites,astreoides,Porites astreoides,1
+32,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,17
+32,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+32,2009,12,2009.958333,Colpophyllia,natans,Colpophyllia natans,1
+32,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,3
+32,2009,12,2009.958333,Porites,astreoides,Porites astreoides,1
+37,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+37,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+37,2009,12,2009.958333,Colpophyllia,natans,Colpophyllia natans,1
+37,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,10
+37,2009,12,2009.958333,Porites,astreoides,Porites astreoides,3
+38,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+38,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,1
+38,2009,12,2009.958333,Porites,astreoides,Porites astreoides,3
+38,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,7
+40,2009,12,2009.958333,Montastraea,cavernosa,Montastraea cavernosa,4
+40,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,33
+40,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+40,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,1
+40,2009,12,2009.958333,Porites,astreoides,Porites astreoides,1
+40,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,11
+41,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+41,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+41,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,9
+41,2009,12,2009.958333,Porites,astreoides,Porites astreoides,1
+44,2009,12,2009.958333,Recruits,,Recruits ,1
+44,2009,12,2009.958333,Montastraea,cavernosa,Montastraea cavernosa,2
+44,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+44,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+44,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,16
+44,2009,12,2009.958333,Porites,astreoides,Porites astreoides,1
+45,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,1
+45,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,3
+48,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,25
+48,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+48,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,21
+48,2009,12,2009.958333,Porites,porites,Porites porites,1
+48,2009,12,2009.958333,Porites,astreoides,Porites astreoides,7
+48,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,1
+50,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+50,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,1
+53,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,2
+60,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+60,2009,12,2009.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+60,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,3
+60,2009,12,2009.958333,Porites,astreoides,Porites astreoides,2
+60,2009,12,2009.958333,Favia,fragum,Favia fragum,1
+60,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,2
+I,2009,12,2009.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+I,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,4
+I,2009,12,2009.958333,Dichocoenia,stokesi,Dichocoenia stokesi,1
+V,2009,12,2009.958333,Agaricia,sp.,Agaricia sp.,1
+V,2009,12,2009.958333,Meandrina,meandrites,Meandrina meandrites,1
+1,2010,4,2010.291667,Colpophyllia,natans,Colpophyllia natans,1
+5,2010,4,2010.291667,Recruits,,Recruits ,1
+5,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+5,2010,4,2010.291667,Porites,astreoides,Porites astreoides,7
+5,2010,4,2010.291667,Dichocoenia,stokesi,Dichocoenia stokesi,2
+6,2010,4,2010.291667,Montastraea,cavernosa,Montastraea cavernosa,4
+6,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+6,2010,4,2010.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,4
+6,2010,4,2010.291667,Colpophyllia,natans,Colpophyllia natans,1
+6,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,7
+6,2010,4,2010.291667,Porites,astreoides,Porites astreoides,3
+9,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,1
+9,2010,4,2010.291667,Porites,astreoides,Porites astreoides,1
+32,2010,4,2010.291667,Montastraea,cavernosa,Montastraea cavernosa,2
+32,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,17
+32,2010,4,2010.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+32,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,5
+32,2010,4,2010.291667,Porites,astreoides,Porites astreoides,1
+37,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+37,2010,4,2010.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+37,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,14
+37,2010,4,2010.291667,Porites,astreoides,Porites astreoides,3
+37,2010,4,2010.291667,Dichocoenia,stokesi,Dichocoenia stokesi,1
+38,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+38,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,1
+38,2010,4,2010.291667,Porites,astreoides,Porites astreoides,3
+38,2010,4,2010.291667,Favia,fragum,Favia fragum,7
+40,2010,4,2010.291667,Montastraea,cavernosa,Montastraea cavernosa,4
+40,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,21
+40,2010,4,2010.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+40,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,1
+40,2010,4,2010.291667,Porites,astreoides,Porites astreoides,3
+40,2010,4,2010.291667,Dichocoenia,stokesi,Dichocoenia stokesi,12
+41,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+41,2010,4,2010.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+41,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,12
+41,2010,4,2010.291667,Porites,astreoides,Porites astreoides,2
+44,2010,4,2010.291667,Montastraea,cavernosa,Montastraea cavernosa,2
+44,2010,4,2010.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+44,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,19
+44,2010,4,2010.291667,Porites,porites,Porites porites,1
+44,2010,4,2010.291667,Porites,astreoides,Porites astreoides,1
+45,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,2
+45,2010,4,2010.291667,Dichocoenia,stokesi,Dichocoenia stokesi,4
+50,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+50,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,4
+53,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,8
+53,2010,4,2010.291667,Porites,astreoides,Porites astreoides,1
+60,2010,4,2010.291667,Montastraea,cavernosa,Montastraea cavernosa,1
+60,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+60,2010,4,2010.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+60,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,7
+60,2010,4,2010.291667,Porites,astreoides,Porites astreoides,1
+60,2010,4,2010.291667,Favia,fragum,Favia fragum,3
+60,2010,4,2010.291667,Dichocoenia,stokesi,Dichocoenia stokesi,9
+A,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,5
+A,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,1
+A,2010,4,2010.291667,Porites,astreoides,Porites astreoides,1
+I,2010,4,2010.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+I,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,15
+I,2010,4,2010.291667,Dichocoenia,stokesi,Dichocoenia stokesi,1
+V,2010,4,2010.291667,Montastraea,cavernosa,Montastraea cavernosa,1
+V,2010,4,2010.291667,Agaricia,sp.,Agaricia sp.,5
+V,2010,4,2010.291667,Meandrina,meandrites,Meandrina meandrites,1
+9,2010,12,2010.958333,Montastraea,cavernosa,Montastraea cavernosa,1
+9,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,1
+9,2010,12,2010.958333,Porites,astreoides,Porites astreoides,1
+32,2010,12,2010.958333,Montastraea,cavernosa,Montastraea cavernosa,2
+32,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,14
+32,2010,12,2010.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+32,2010,12,2010.958333,Colpophyllia,natans,Colpophyllia natans,1
+32,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,2
+32,2010,12,2010.958333,Porites,astreoides,Porites astreoides,1
+32,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,2
+36,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,1
+36,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,2
+37,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+37,2010,12,2010.958333,Colpophyllia,natans,Colpophyllia natans,1
+37,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,10
+37,2010,12,2010.958333,Porites,astreoides,Porites astreoides,1
+37,2010,12,2010.958333,Solenastrea,sp.,Solenastrea sp.,1
+40,2010,12,2010.958333,Montastraea,cavernosa,Montastraea cavernosa,2
+40,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,30
+40,2010,12,2010.958333,Colpophyllia,natans,Colpophyllia natans,3
+40,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,1
+40,2010,12,2010.958333,Porites,astreoides,Porites astreoides,1
+40,2010,12,2010.958333,Favia,fragum,Favia fragum,5
+40,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,1
+41,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+41,2010,12,2010.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+41,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,18
+41,2010,12,2010.958333,Porites,astreoides,Porites astreoides,2
+44,2010,12,2010.958333,Montastraea,cavernosa,Montastraea cavernosa,1
+44,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,16
+44,2010,12,2010.958333,Porites,porites,Porites porites,1
+44,2010,12,2010.958333,Porites,astreoides,Porites astreoides,1
+44,2010,12,2010.958333,Meandrina,meandrites,Meandrina meandrites,1
+45,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,8
+45,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,2
+48,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,22
+48,2010,12,2010.958333,Pseudodiploria,strigosa,Pseudodiploria strigosa,2
+48,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,11
+48,2010,12,2010.958333,Porites,astreoides,Porites astreoides,6
+48,2010,12,2010.958333,Favia,fragum,Favia fragum,2
+48,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,4
+50,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+50,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,2
+53,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,5
+53,2010,12,2010.958333,Solenastrea,sp.,Solenastrea sp.,1
+60,2010,12,2010.958333,Montastraea,cavernosa,Montastraea cavernosa,1
+60,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+60,2010,12,2010.958333,Colpophyllia,natans,Colpophyllia natans,1
+60,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,2
+60,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,2
+A,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,9
+A,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,2
+A,2010,12,2010.958333,Porites,astreoides,Porites astreoides,6
+A,2010,12,2010.958333,Meandrina,meandrites,Meandrina meandrites,1
+A,2010,12,2010.958333,Favia,fragum,Favia fragum,12
+A,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,7
+G,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+G,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,6
+G,2010,12,2010.958333,Porites,astreoides,Porites astreoides,1
+I,2010,12,2010.958333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+I,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,4
+I,2010,12,2010.958333,Dichocoenia,stokesi,Dichocoenia stokesi,1
+V,2010,12,2010.958333,Agaricia,sp.,Agaricia sp.,6
+V,2010,12,2010.958333,Meandrina,meandrites,Meandrina meandrites,1
+5,2011,4,2011.291667,Recruits,,Recruits ,3
+5,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+5,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,1
+5,2011,4,2011.291667,Porites,astreoides,Porites astreoides,5
+5,2011,4,2011.291667,Favia,fragum,Favia fragum,1
+5,2011,4,2011.291667,Dichocoenia,stokesi,Dichocoenia stokesi,1
+6,2011,4,2011.291667,Recruits,,Recruits ,4
+6,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+6,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,6
+6,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,6
+6,2011,4,2011.291667,Porites,astreoides,Porites astreoides,3
+6,2011,4,2011.291667,Stephanocoenia,intersepta,Stephanocoenia intersepta,7
+9,2011,4,2011.291667,Montastraea,cavernosa,Montastraea cavernosa,1
+9,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,1
+9,2011,4,2011.291667,Porites,astreoides,Porites astreoides,1
+12,2011,4,2011.291667,Recruits,,Recruits ,3
+12,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,1
+32,2011,4,2011.291667,Recruits,,Recruits ,2
+32,2011,4,2011.291667,Montastraea,cavernosa,Montastraea cavernosa,4
+32,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,16
+32,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+32,2011,4,2011.291667,Colpophyllia,natans,Colpophyllia natans,2
+32,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,7
+32,2011,4,2011.291667,Porites,astreoides,Porites astreoides,1
+37,2011,4,2011.291667,Recruits,,Recruits ,6
+37,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+37,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+37,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,5
+37,2011,4,2011.291667,Porites,astreoides,Porites astreoides,5
+40,2011,4,2011.291667,Recruits,,Recruits ,5
+40,2011,4,2011.291667,Montastraea,cavernosa,Montastraea cavernosa,1
+40,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,26
+40,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,4
+40,2011,4,2011.291667,Porites,astreoides,Porites astreoides,2
+41,2011,4,2011.291667,Recruits,,Recruits ,9
+41,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+41,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+41,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,16
+41,2011,4,2011.291667,Porites,astreoides,Porites astreoides,1
+44,2011,4,2011.291667,Recruits,,Recruits ,15
+44,2011,4,2011.291667,Montastraea,annularis,Montastraea annularis,1
+44,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+44,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,14
+44,2011,4,2011.291667,Porites,astreoides,Porites astreoides,1
+45,2011,4,2011.291667,Recruits,,Recruits ,9
+50,2011,4,2011.291667,Recruits,,Recruits ,6
+50,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+50,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,3
+53,2011,4,2011.291667,Recruits,,Recruits ,6
+53,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,6
+53,2011,4,2011.291667,Porites,astreoides,Porites astreoides,1
+60,2011,4,2011.291667,Recruits,,Recruits ,6
+60,2011,4,2011.291667,Montastraea,cavernosa,Montastraea cavernosa,1
+60,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+60,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+A,2011,4,2011.291667,Recruits,,Recruits ,48
+A,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,13
+A,2011,4,2011.291667,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+A,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,15
+A,2011,4,2011.291667,Porites,astreoides,Porites astreoides,8
+A,2011,4,2011.291667,Favia,fragum,Favia fragum,4
+A,2011,4,2011.291667,Dichocoenia,stokesi,Dichocoenia stokesi,9
+G,2011,4,2011.291667,Dendrogyra,cylindrus,Dendrogyra cylindrus,2
+G,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,7
+G,2011,4,2011.291667,Porites,astreoides,Porites astreoides,1
+I,2011,4,2011.291667,Recruits,,Recruits ,17
+I,2011,4,2011.291667,Montastraea,annularis,Montastraea annularis,1
+I,2011,4,2011.291667,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+I,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,5
+V,2011,4,2011.291667,Recruits,,Recruits ,1
+V,2011,4,2011.291667,Agaricia,sp.,Agaricia sp.,4
+V,2011,4,2011.291667,Meandrina,meandrites,Meandrina meandrites,1
+6,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+6,2022,3,2022.208333,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+6,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,12
+6,2022,3,2022.208333,Porites,astreoides,Porites astreoides,6
+6,2022,3,2022.208333,Madracis,formosa,Madracis formosa,6
+9,2022,3,2022.208333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+9,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,6
+9,2022,3,2022.208333,Porites,astreoides,Porites astreoides,4
+9,2022,3,2022.208333,Siderastrea,siderea/radians,Siderastrea siderea/radians,1
+32,2022,3,2022.208333,Montastraea,cavernosa,Montastraea cavernosa,3
+32,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+32,2022,3,2022.208333,Pseudodiploria,strigosa,Pseudodiploria strigosa,1
+32,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,4
+32,2022,3,2022.208333,Porites,astreoides,Porites astreoides,1
+32,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,3
+32,2022,3,2022.208333,Siderastrea,siderea/radians,Siderastrea siderea/radians,1
+36,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,3
+36,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,7
+40,2022,3,2022.208333,Montastraea,cavernosa,Montastraea cavernosa,2
+40,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,16
+40,2022,3,2022.208333,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+40,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,12
+40,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,2
+41,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+41,2022,3,2022.208333,Colpophyllia,natans,Colpophyllia natans,1
+41,2022,3,2022.208333,Agaricia,agaricites,Agaricia agaricites,1
+41,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,66
+41,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,1
+44,2022,3,2022.208333,Recruits,,Recruits ,4
+44,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+44,2022,3,2022.208333,Pseudodiploria,strigosa,Pseudodiploria strigosa,2
+44,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,33
+44,2022,3,2022.208333,Porites,astreoides,Porites astreoides,2
+44,2022,3,2022.208333,Siderastrea,siderea/radians,Siderastrea siderea/radians,1
+45,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,27
+45,2022,3,2022.208333,Porites,astreoides,Porites astreoides,5
+45,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,13
+48,2022,3,2022.208333,Recruits,,Recruits ,5
+48,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+48,2022,3,2022.208333,Colpophyllia,,Colpophyllia ,
+48,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,1
+48,2022,3,2022.208333,Porites,astreoides,Porites astreoides,4
+48,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,16
+50,2022,3,2022.208333,Recruits,,Recruits ,3
+50,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,3
+50,2022,3,2022.208333,Pseudodiploria,strigosa,Pseudodiploria strigosa,2
+50,2022,3,2022.208333,Agaricia,agaricites,Agaricia agaricites,1
+50,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,12
+50,2022,3,2022.208333,Porites,astreoides,Porites astreoides,2
+53,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+53,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,9
+53,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,8
+60,2022,3,2022.208333,Recruits,,Recruits ,2
+60,2022,3,2022.208333,Montastraea,annularis,Montastraea annularis,4
+60,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,1
+60,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,8
+60,2022,3,2022.208333,Porites,astreoides,Porites astreoides,1
+60,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,4
+60,2022,3,2022.208333,Siderastrea,siderea/radians,Siderastrea siderea/radians,12
+A,2022,3,2022.208333,Recruits,,Recruits ,3
+A,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,14
+A,2022,3,2022.208333,Pseudodiploria,strigosa,Pseudodiploria strigosa,3
+A,2022,3,2022.208333,Colpophyllia,natans,Colpophyllia natans,1
+A,2022,3,2022.208333,Agaricia,agaricites,Agaricia agaricites,1
+A,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,22
+A,2022,3,2022.208333,Porites,astreoides,Porites astreoides,9
+A,2022,3,2022.208333,Meandrina,meandrites,Meandrina meandrites,1
+A,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,15
+A,2022,3,2022.208333,Siderastrea,siderea/radians,Siderastrea siderea/radians,5
+G,2022,3,2022.208333,Diploria,labyrinthiformis,Diploria labyrinthiformis,2
+G,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,23
+G,2022,3,2022.208333,Porites,astreoides,Porites astreoides,1
+G,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,13
+I,2022,3,2022.208333,Recruits,,Recruits ,5
+I,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,56
+I,2022,3,2022.208333,Dichocoenia,stokesi,Dichocoenia stokesi,18
+V,2022,3,2022.208333,Agaricia,sp.,Agaricia sp.,2
+V,2022,3,2022.208333,Meandrina,meandrites,Meandrina meandrites,1
+V,2022,3,2022.208333,Siderastrea,siderea/radians,Siderastrea siderea/radians,2
